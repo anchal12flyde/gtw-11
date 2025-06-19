@@ -40,12 +40,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;   
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;             
+  display: none;
 }
 
     /* Loader */
@@ -328,8 +328,8 @@ body::-webkit-scrollbar {
   }
   
   .client-login {
-    font-size: 20px;
-    padding: 0.5rem 1rem; 
+    font-size: 16px;
+    padding: 0.9rem 1rem; 
     display: block;
   }
 }
@@ -477,23 +477,7 @@ body::-webkit-scrollbar {
     font-size: 14px;
   }
 }
-.read-more-link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 650; 
-  font-size: 13px;
-  line-height: 0;
-  letter-spacing: 0em;
-  color: #000000;
-  display: block;
-  text-align: left;
-  margin-top: 2rem; 
-}
 
-@media (min-width: 768px) {
-  .read-more-link {
-    font-size: 16px;
-  }
-}
 
 .industry-description {
   font-family: 'Inter', sans-serif;
@@ -506,8 +490,8 @@ body::-webkit-scrollbar {
 
 @media (max-width: 640px) {
   .industry-description {
-    font-size: 11px;
-    line-height: 1em;
+    font-size: 12px;
+    line-height: 1.5em;
   }
 }
 .industry-tag {
