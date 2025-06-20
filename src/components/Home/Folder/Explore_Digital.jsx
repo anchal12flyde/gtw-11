@@ -6,7 +6,8 @@ export default function Explore_Digital() {
 
   return (
     <>
-      <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-12  pt-6">
+    <div className="pt-10">
+      <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-12">
         <div className=" block md:hidden absolute inset-0 flex items-center justify-center ">
           <div className="flex flex-col items-center space-y-50 px-6 py-4">
             <h2 className="text-[25vw] text-white/5 font-600 leading-none tracking-wider">
@@ -18,10 +19,13 @@ export default function Explore_Digital() {
           </div>
         </div>
 
-        <div className="relative  z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 sm:py-12 -mb-12">
-          <h2 className="section-heading mt-25 md:mt-0 mb-18 text-center lg:text-left">
-            We Build. We Digitize. We Transform.
-          </h2>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 sm:py-12 -mb-12">
+         <div className="text-left mb-12">
+            <div className="heading-systems flex flex-wrap  "> 
+           <p className="text-white">We Build.We Digitize.  </p>
+             {" "}   <p className="text-[#FFB100] "> We Transform.</p>
+             </div>
+          </div>
           <div className="max-w-6xl ">
             <div className="flex flex-col md:grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
               <div className="space-y-6 mt-4">
@@ -80,11 +84,11 @@ export default function Explore_Digital() {
         </div>
       </section>
 
-      <div className="gradient-yellow-section py-16 ">
+      <div className="gradient-yellow-section ">
         <div className="">
-          <div className="text-left mb-8 sm:block flex  ">
+          <div className="text-left mb-8 sm:block flex  mb-12  ">
             <div className="heading-systems flex flex-wrap gap-x-1">
-              <div className="w-[40px] sm:w-[110px]"></div>
+              <div className="w-[40px] sm:w-[110px] "></div>
               
               <p className="text-black">We build systems,</p>
              <p className="text-white ml-[45px] sm:ml-0 sm:text-center">not just screens.</p>
@@ -183,6 +187,7 @@ export default function Explore_Digital() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

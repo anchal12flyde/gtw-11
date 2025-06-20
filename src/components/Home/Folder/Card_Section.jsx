@@ -6,13 +6,11 @@ export default function Card_Section() {
 
   return (
 
-      <section className="px-4 sm:px-6 lg:px-8 bg-white p-12 pt-6">
+      <section className="px-4 sm:px-6 lg:px-8 bg-white pt-14 md:pt-0">
           <div className="max-w-6xl mx-auto px-4 lg:px-0 ml-2 sm:ml-22">
-          <div className="text-left max-w-2xl mb-8">
-          <h2 className="heading-systems">
-          <span className="text-black ">We build </span>
-          <span className="text-black ">systems</span>
-          <span className="text-black ">,</span>
+          <div className="text-left  mb-12">
+          <h2 className="heading-systems flex flex-wrap">
+          <span className="text-black">We build systems,</span>
           <span className="text-[#FFB100]"> not just screens.</span>
         </h2>
         </div>      

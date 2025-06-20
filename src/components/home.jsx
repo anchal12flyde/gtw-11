@@ -17,20 +17,21 @@ export default function Home() {
    <div className="min-h-screen flex flex-col">
       <Header/>
 
-    <main className="flex-grow">
-        <Hero_Section/>
-        
-        <Card_Section/>
+    <main className="flex-grow space-y-12">
+
+      <Hero_Section />
       
-        <Explore/>
+      <Card_Section />
 
-        
-        <Industries/>
-              
+      <Explore />
 
-      <Next_Steps/>
+      <Industries />
+
+      <Next_Steps />
 
     </main>
+
+
       <Footer/>
     </div>
 

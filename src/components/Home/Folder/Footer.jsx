@@ -38,7 +38,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className=" w-full bg-gray-100 text-black font-inter">
+    <footer className="w-full bg-gray-100 text-black font-inter">
       <div className="mx-auto pr-4 lg:pr-20 ml-4 sm:ml-18 py-10">        
         <div className="block sm:hidden w-full flex justify-center mb-4">
           <img
@@ -113,11 +113,12 @@ export default function Footer() {
                 </span>
 
               </button>
-              <ul
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+             <ul
+                className={`transition-opacity duration-300 ease-in-out ${
+                  openIndex === index ? 'opacity-100' : 'opacity-0 hidden'
                 } pl-2 text-gray-600`}
               >
+
                 {items.map((item, idx) => (
                   <li key={idx} className="py-1">{item}</li>
                 ))}

@@ -6,10 +6,10 @@ export default function Next_Steps() {
 
   return (
 
-      <section className="py-12 px-4  p-12 pt-6 ">
-        <div className="max-w-7xl mx-auto lg:px-0 ml-4 sm:ml-28 mr-4 sm:ml-28 sm:mr-28">
-          <h2 className="heading-systems text-black">Industries We Power</h2>
-          <div className="space-y-10 mt-12">
+      <section className="py-12 px-8 sm:px-4 ">
+        <div className="max-w-7xl mx-auto lg:px-0 ml-4 sm:ml-28 mr-4 sm:mr-28">
+          <h2 className="heading-systems text-black  mb-12">Industries We Power</h2>
+          <div className="space-y-10">
             {[
               'Commerce & Consumer Products',
               'Operation & Infrastructure',
@@ -29,15 +29,15 @@ export default function Next_Steps() {
                 </div>
                 <div className="block sm:hidden border-b border-[#FFB100] w-full mt-2"></div>
                           
-                <div className="w-full sm:w-auto">
-                  <div className="flex flex-wrap gap-3 sm:gap-6 mt-7">
-                    {Array(4).fill(0).map((_, i) => (
-                      <span key={i} className="industry-tag">
-                        E-commerce
-                      </span>
-                    ))}
-                  </div> 
-                </div>
+               <div className="w-full sm:w-auto">
+                <div className="grid grid-cols-2 sm:flex gap-6 sm:gap-10 mt-7">
+                  {Array(4).fill(0).map((_, i) => (
+                    <span key={i} className="industry-tag">
+                      E-commerce
+                    </span>
+                  ))}
+                </div> 
+              </div>
               </div>
             ))}
           </div>
