@@ -7,7 +7,7 @@ export default function Hero_Section() {
   return (
     <>
    
-      <section className="relative bg-white font-inter overflow-hidden pb-0">
+      <section className="relative bg-white font-inter overflow-hidden pb-0 pt-6">
       <div className="hidden md:block relative w-full h-[700px] ">
         <img
           src="/images/hero2.png"
@@ -15,16 +15,17 @@ export default function Hero_Section() {
           className="absolute inset-0 w-full h-full object-cover object-left"
         />
       </div>
-      <div className="block md:hidden relative w-full h-[750px] overflow-hidden">
+      <div className="block md:hidden relative w-full h-[750px] overflow-hidden ">
+       <div className="hero-banner-wrapper">
         <img
             src="/images/hero1.png"
             alt="Digital Transformation Mobile Banner"
-            className="relative  w-full h-[450px]  filter blur-none scale-80 opacity-55"
+            className="hero-banner-image"
         /> 
-        <div className="absolute bottom-0 left-0 w-full h-20 "></div>
+      </div>
     </div>
         <div className="block md:hidden px-4 -mt-99 pb-9 relative z-10  ">
-          <div className="  p-6 w-full max-w-full whitespace-nowrap  sm:ml-40">
+          <div className="p-6 w-full max-w-full whitespace-nowrap  sm:ml-40">
             <h1 className="heading-hero-mobile fade-in-up delay-200">
               Building the<br />
           
@@ -32,7 +33,7 @@ export default function Hero_Section() {
               <br />
                Modern Commerce 
             </h1>
-           <p className="heading-subtitle-mobile fade-in-up delay-200">
+           <p className="heading-subtitle-mobile fade-in-up delay-200 mt-4">
             From concept to code, commerce to<br />
             conversion, we design the technology<br />
             infrastructure for tomorrow’s businesses.

@@ -1,35 +1,12 @@
 "use client";
-import {useRef, useState } from "react";
+import { useRef, useState } from "react";
+import HoverVideo from "./VideoPlayer";
 
 export default function Explore_Digital() {
-const videoRef1 = useRef(null);
-  const videoRef2 = useRef(null);
 
-  const [isPlaying1, setIsPlaying1] = useState(false);
-  const [isPlaying2, setIsPlaying2] = useState(false);
-
-  const handlePlayPause = (videoRef, setIsPlaying, otherVideoRef, setOtherPlaying) => {
-    const video = videoRef.current;
-    const otherVideo = otherVideoRef.current;
-
-    if (!video) return;
-    if (otherVideo && !otherVideo.paused) {
-      otherVideo.pause();
-      setOtherPlaying(false);
-    }
-    if (video.paused || video.ended) {
-      video.muted = true;
-      video.play()
-        .then(() => setIsPlaying(true))
-        .catch((err) => console.error("Play failed:", err));
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
   return (
     <>
-      <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-2 md:py-12">
+      <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-12  pt-6">
         <div className=" block md:hidden absolute inset-0 flex items-center justify-center ">
           <div className="flex flex-col items-center space-y-50 px-6 py-4">
             <h2 className="text-[25vw] text-white/5 font-600 leading-none tracking-wider">
@@ -117,35 +94,9 @@ const videoRef1 = useRef(null);
             <div className=" flex-shrink-0 w-[40px] sm:w-[120px]"></div>
             <div className="flex flex-nowrap gap-12 pb-4 w-full ">
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
-                <div className="relative rounded-2xl">
-                  <video
-                    ref={videoRef1}
-                    src="/videos/Video2.mp4"
-                    className="w-full h-50 rounded-2xl object-cover"
-                    poster="/images/img4.png"
-                    controls={false}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button
-                      onClick={() =>
-                        handlePlayPause(videoRef1, setIsPlaying1, videoRef2, setIsPlaying2)
-                      }
-                      className="bg-white bg-opacity-80 rounded-full p-3 hover:scale-110 transition-transform shadow-md"
-                    >
-                      <svg
-                        className="w-6 h-6 text-[#FFB100]"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        {isPlaying1 ? (
-                          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                        ) : (
-                          <path d="M8 5v14l11-7z" />
-                        )}
-                      </svg>
-                    </button>
-                </div>
-                </div>
+
+                <HoverVideo src="/videos/vd2.mp4"  />
+                
                 <div className="flex flex-col gap-4 px-8">
                   <h3 className="ecom-heading text-left">
                     Ecommerce for Scale
@@ -196,35 +147,8 @@ const videoRef1 = useRef(null);
                 </div>
               </div>
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
-                <div className="relative rounded-2xl">
-                  <video
-                    ref={videoRef2}
-                    src="/videos/Video1.mp4"
-                    className="w-full h-50 rounded-2xl object-cover"
-                    poster="/images/img6.png"
-                    controls={false}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button
-                      onClick={() =>
-                        handlePlayPause(videoRef2, setIsPlaying2, videoRef1, setIsPlaying1)
-                      }
-                      className="bg-white bg-opacity-80 rounded-full p-3 hover:scale-110 transition-transform shadow-md"
-                    >
-                      <svg
-                        className="w-6 h-6 text-[#FFB100]"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        {isPlaying2 ? (
-                          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                        ) : (
-                          <path d="M8 5v14l11-7z" />
-                        )}
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+                <HoverVideo src="/videos/vd1.mp4"/>
+
                 <div className="flex flex-col gap-4 px-8">
                   <h3 className="ecom-heading text-left">
                     Ecommerce for Scale

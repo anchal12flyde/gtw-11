@@ -6,7 +6,7 @@ export default function Next_Steps() {
 
   return (
 
-      <section className="py-12 px-4 ">
+      <section className="py-12 px-4  p-12 pt-6 ">
         <div className="max-w-7xl mx-auto lg:px-0 ml-4 sm:ml-28 mr-4 sm:ml-28 sm:mr-28">
           <h2 className="heading-systems text-black">Industries We Power</h2>
           <div className="space-y-10 mt-12">

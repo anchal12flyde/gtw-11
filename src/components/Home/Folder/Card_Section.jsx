@@ -6,7 +6,7 @@ export default function Card_Section() {
 
   return (
 
-      <section className="px-4 sm:px-6 lg:px-8 bg-white mb-16 pt-0">
+      <section className="px-4 sm:px-6 lg:px-8 bg-white p-12 pt-6">
           <div className="max-w-6xl mx-auto px-4 lg:px-0 ml-2 sm:ml-22">
           <div className="text-left max-w-2xl mb-8">
           <h2 className="heading-systems">
