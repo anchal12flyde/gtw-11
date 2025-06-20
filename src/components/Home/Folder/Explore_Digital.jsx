@@ -9,8 +9,8 @@ export default function Explore_Digital() {
     <div className="pt-10">
       <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-12">
         <div className=" block md:hidden absolute inset-0 flex items-center justify-center ">
-          <div className="flex flex-col items-center space-y-50 px-6 py-4">
-            <h2 className="text-[25vw] text-white/5 font-600 leading-none tracking-wider">
+          <div className="flex flex-col items-center space-y-40 px-6 py-4">
+            <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
               From
             </h2>
             <h2 className="text-[25vw] text-white/5 font-600 leading-none tracking-wider">
@@ -26,61 +26,61 @@ export default function Explore_Digital() {
              {" "}   <p className="text-[#FFB100] "> We Transform.</p>
              </div>
           </div>
-          <div className="max-w-6xl ">
-            <div className="flex flex-col md:grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
-              <div className="space-y-6 mt-4">
-                <p className="left-column-text">Legacy systems</p>
-                <p className="left-column-text">Manual operations</p>
-                <p className="left-column-text">Scattered tech</p>
-              </div>
-              <div className=" md:col-span-2 flex flex-col md:flex-row items-center justify-center gap-30">
-                <div className="flex justify-center items-center md:hidden my-6">
-                  <svg
-                    className="w-50 h-12 text-[#FFB100] animate-arrowDown"
-                    viewBox="0 0 192 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 10L96 40L182 10"
-                      stroke="currentColor"
-                      strokeWidth="6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div className="hidden md:flex justify-center items-center my-6">
-                  <svg
-                    className="w-6 h-52 text-[#FFB100]  animate-arrowDown"
-                    viewBox="0 0 24 104"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2 2L20 52L2 102"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-                <div className="w-full max-w-[550px] mb-30 md:mb-0">
-                  <p className="right-column-text ">
-                    We help organizations rethink the way they run, by{" "}
-                    <span className="text-[#FFB100]">
-                      replacing complexity with clarity –
-                    </span>{" "}
-                    powered by purpose-built platforms.
-                  </p>
+          
+           <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35">
 
-                  <a href="#" className="explore-link pt-12 md:pt-12 block">
-                    Explore Digital Transformation
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="space-y-6 mt-4">
+            <p className="left-column-text">Legacy systems</p>
+            <p className="left-column-text">Manual operations</p>
+            <p className="left-column-text">Scattered tech</p>
           </div>
+
+          
+          <div className="flex justify-center items-center my-6">
+         
+            <svg
+              className="w-50 h-12 text-[#FFB100] animate-arrowDown md:hidden"
+              viewBox="0 0 192 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 10L96 40L182 10"
+                stroke="currentColor"
+                strokeWidth="6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+
+           
+            <svg
+              className="hidden md:block w-6 h-52 text-[#FFB100] animate-arrowDown"
+              viewBox="0 0 24 104"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2L20 52L2 102"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+          <div className=" flex-1 w-full  mb-30 md:mb-0">
+            <p className="right-column-text">
+              We help organizations rethink the way they run, by{" "}
+              <span className="text-[#FFB100]">replacing complexity with clarity –</span>{" "}
+              powered   by purpose-built platforms.
+            </p>
+            <a href="#" className="explore-link pt-12 md:pt-12 block">
+              Explore Digital Transformation
+            </a>
+          </div>
+        </div>
+
+          
         </div>
       </section>
 

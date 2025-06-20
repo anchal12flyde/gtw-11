@@ -7,9 +7,9 @@ export default function Next_Steps() {
   return (
 
       <section className="py-12 px-8 sm:px-4 ">
-        <div className="max-w-7xl mx-auto lg:px-0 ml-4 sm:ml-28 mr-4 sm:mr-28">
+        <div className="mx-auto lg:px-0 ml-4 sm:ml-28 mr-4 sm:mr-28">
           <h2 className="heading-systems text-black  mb-12">Industries We Power</h2>
-          <div className="space-y-10">
+          <div className="space-y-12">
             {[
               'Commerce & Consumer Products',
               'Operation & Infrastructure',
