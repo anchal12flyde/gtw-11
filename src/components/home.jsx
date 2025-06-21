@@ -14,26 +14,19 @@ export default function Home() {
 
   return (
     <>
-   <div className="min-h-screen flex flex-col">
-      <Header/>
+    <Header/>
+        <Hero_Section />
+        
+        <Card_Section />
 
-    <main className="flex-grow space-y-12">
+        <Explore />
 
-      <Hero_Section />
-      
-      <Card_Section />
+        <Industries />
 
-      <Explore />
-
-      <Industries />
-
-      <Next_Steps />
-
-    </main>
-
+        <Next_Steps />
 
       <Footer/>
-    </div>
+   
 
     </>
   )

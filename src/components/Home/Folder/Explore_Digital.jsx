@@ -6,22 +6,23 @@ export default function Explore_Digital() {
 
   return (
     <>
-    <div className="pt-10">
-      <section className="gradient-section text-white px-6 sm:px-10 mt-10 md:min-h-[200px] lg:min-h-[500px] py-12">
-        <div className=" block md:hidden absolute inset-0 flex items-center justify-center ">
-          <div className="flex flex-col items-center space-y-40 px-6 py-4">
+ 
+      <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white  mt-26">
+        <div className=" md:hidden absolute inset-0 flex items-center justify-center ">
+          <div className="flex flex-col items-center space-y-50 py-4">
             <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
               From
             </h2>
-            <h2 className="text-[25vw] text-white/5 font-600 leading-none tracking-wider">
+            <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
               To
             </h2>
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 sm:py-12 -mb-12">
-         <div className="text-left mb-12">
-            <div className="heading-systems flex flex-wrap  "> 
+       <div className="relative container pt-20 sm:pt-38">
+
+         <div className="mb-12">
+            <div className="heading-systems flex flex-wrap"> 
            <p className="text-white">We Build.We Digitize.  </p>
              {" "}   <p className="text-[#FFB100] "> We Transform.</p>
              </div>
@@ -84,19 +85,18 @@ export default function Explore_Digital() {
         </div>
       </section>
 
-      <div className="gradient-yellow-section ">
-        <div className="">
-          <div className="text-left mb-8 sm:block flex  mb-12  ">
-            <div className="heading-systems flex flex-wrap gap-x-1">
-              <div className="w-[40px] sm:w-[110px] "></div>
+      <div className="gradient-yellow-section util-flex util-flex-1 util-mx-1-5">
+          <div className="text-left sm:block flex  mb-12  ">
+            <div className="heading-systems flex flex-wrap ">
+              <div className=" "></div>
               
               <p className="text-black">We build systems,</p>
-             <p className="text-white ml-[45px] sm:ml-0 sm:text-center">not just screens.</p>
+             <p className="text-white">not just screens.</p>
              </div>
           </div>
           <div className="overflow-auto scrollbar-hide w-full flex">
-            <div className=" flex-shrink-0 w-[40px] sm:w-[120px]"></div>
-            <div className="flex flex-nowrap gap-12 pb-4 w-full ">
+            <div className=" flex-shrink-0"></div>
+            <div className="flex flex-nowrap gap-10 pb-4 w-full ">
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
 
                 <HoverVideo src="/videos/vd2.mp4"  />
@@ -120,7 +120,7 @@ export default function Explore_Digital() {
                     className="w-full h-50 "
                   />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4 px-4">
                   <h3 className="ecom-heading text-left">
                     A Campus Goes Digital
                   </h3>
@@ -183,12 +183,12 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
-              <div className=" flex-shrink-0  w-[20px] sm:w-[60px]"></div>
+              {/* <div className=" flex-shrink-0  w-[20px] sm:w-[60px]"></div> */}
             </div>
           </div>
-        </div>
+        
       </div>
-      </div>
+ 
     </>
   );
 }
