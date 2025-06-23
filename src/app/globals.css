@@ -123,12 +123,14 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 1024px) {
   .gtw-logo {
-    height: 3rem; 
+     max-height: 2rem;
+     width: auto;
   }
 }
 @media (max-width: 640px) {
   .gtw-logo {
     height: 2rem; 
+     width: auto;
   }
 }
 
@@ -615,8 +617,8 @@ transform: scale(1.15);
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  padding-bottom: 10vh;
-  padding-top: 10vh;
+  padding-bottom: 12vh;
+  padding-top: 12vh;
   font-family: 'Inter', sans-serif;
   max-width: 100%;
   margin: 0 auto; 
@@ -624,7 +626,6 @@ transform: scale(1.15);
 }
 
 .next-steps-section .icon {
-  background-color: #FFF3CB;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -635,47 +636,44 @@ transform: scale(1.15);
 }
 
 .next-steps-section .icon img {
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 150px;
 }
 
-.next-steps-section h2 {
-   font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
+.button-group {
+  display: flex;
+  flex-direction: row;        
+  align-items: center;        
+  justify-content: center;    
+  gap: 2.8rem;                
+  flex-wrap: wrap;            
 }
 
-.next-steps-section p {
-   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-  color: #cccccc;
-}
-
-.next-steps-section .cta-button {
+.cta-button {
   font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  max-width: 300px;
-  min-width: 200px;
   background-color: #FDBB00;
   color: #ffffff;
   font-weight: 400;
-  padding: 0.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
-  margin: 0 auto 1rem auto; /* Center horizontally */
-
   text-decoration: none;
   transition: background-color 0.3s;
+  width: 220px;           
+  text-align: center;
 }
 
-.next-steps-section .cta-button:hover {
-  background-color: #e6a800;
-}
 
+
+.next-steps-section p {
+   font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
 
 .category-heading {
   font-family: 'Inter', sans-serif;
@@ -1004,5 +1002,100 @@ transform: scale(1.15);
   .feature-subtitle {
     font-size: 26px;
   }
+}
+
+/* StepForm */
+
+.step-form-container {
+  font-family: 'Inter', sans-serif;
+  max-width: 100%;
+  margin-top: 3rem;
+  background-color: white;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #FFB100;
+  border-radius: 50%;
+}
+
+.custom-left-border {
+  border-left: 3px solid #FFB100;
+  padding-left: 1rem; 
+  margin-bottom: 30px;
+}
+.step-label {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.form-subheading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 20px;
+  
+}
+
+.select-wrapper {
+  position: relative;
+  width: 70%;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .select-wrapper {
+    width: 100%;
+  }
+}
+
+.custom-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem; 
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  appearance: none;
+}
+
+
+.chevron-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 4rem;
+  border: 1px solid #FFB100;
+  color: #FFB100;
+  background-color: transparent;
+  border-radius: 9999px;
+  font-weight: 500;
+  margin: 2rem auto 0 auto; 
+  transition: background-color 0.2s ease;
+}
+
+.next-button:hover {
+  background-color: #FFB100; 
+  color: black;
 }
 

@@ -14,39 +14,36 @@ export default function Header() {
   
     <header className="util-flex util-flex-1 util-mx-1-5 mt-2 sticky top-0 bg-white shadow-md z-50 transition-all duration-300 md:relative md:top-auto md:bg-transparent md:shadow-none">
        
-        <div className="container flex items-center justify-between h-12 ">
+        <div className="container flex items-center justify-between h-12">
+  <Link href="/">
+    <img src="/images/GTW_Logo.png" alt="GTW Logo" className="gtw-logo h-8 w-auto" />
+  </Link>
 
-          <Link href="/">
-          <img
-            src="/images/GTW_Logo.png"
-            alt="GTW Logo"
-            className="gtw-logo"
-          />
-        </Link>
+  
+  <nav className="hidden md:flex gap-6 items-center">
+    <Link className="nav-link" href="#">Web</Link>
+    <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
+    <Link className="nav-link" href="#">GTW SaaS Cloud</Link>
+    <Link className="nav-link" href="#">Digital Transformation</Link>
+    <Link className="nav-link" href="#">ExPro</Link>
+  </nav>
 
-          <nav className="hidden md:flex gap-6 navbar custom-navbar">
-            <Link className="nav-link" href="#">Web</Link>
-            <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
-            <Link className="nav-link" href="#">GTW SaaS Cloud</Link>
-            <Link className="nav-link" href="#">Digital Transformation</Link>
-            <Link className="nav-link" href="#">ExPro</Link>
-          </nav>
 
-          <div className="hidden md:block">
-            <Link href="" className="client-login">
-              Client Login
-            </Link>
-          </div>
+  <div className="hidden md:block">
+    <Link href="#" className="client-login">Client Login</Link>
+  </div>
 
-          <button
-            onClick={toggleMenu}
-            className="md:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none"
-          >
-            <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
-            <span className="block h-[2px] w-[30px] bg-gray-700 rounded-sm"></span>
-            <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
-          </button>
-        </div>
+  
+  <button
+    onClick={toggleMenu}
+    className="md:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none"
+  >
+    <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
+    <span className="block h-[2px] w-[30px] bg-gray-700 rounded-sm"></span>
+    <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
+  </button>
+</div>
+
 
 
             {isOpen && (

@@ -3,12 +3,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 
-export default function mobile_apps() {
+export default function ProductThinking() {
 
 
   return (
-
-
         <section className="feature-section util-flex util-flex-1 util-mx-1-5 ">
           <div className="feature-item   ">
             <h2 className="feature-title">Product Thinking First</h2>
