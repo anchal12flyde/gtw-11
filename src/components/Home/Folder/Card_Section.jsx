@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function Card_Section() {
   return (
@@ -27,8 +28,8 @@ export default function Card_Section() {
                   <p className="desktop-heading">Websites</p>
                 </div>
               </div>
-            </div>
-
+            </div> 
+         
             <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-full">
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
@@ -51,7 +52,8 @@ export default function Card_Section() {
                 </div>
               </div>
             </div>
-
+      
+           <Link href="/mobile_apps" >
             <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-full">
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
@@ -66,6 +68,7 @@ export default function Card_Section() {
                 </div>
               </div>
             </div>
+            </Link> 
           </div>
         </div>
      

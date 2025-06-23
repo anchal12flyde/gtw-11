@@ -16,15 +16,14 @@ export default function Header() {
        
         <div className="container flex items-center justify-between h-12 ">
 
-    <Link href="/">
-      <img
-        src="/images/GTW_Logo.png"
-        alt="GTW Logo"
-        className="h-12 block w-auto  "
-      />
-          </Link>
+          <Link href="/">
+          <img
+            src="/images/GTW_Logo.png"
+            alt="GTW Logo"
+            className="gtw-logo"
+          />
+        </Link>
 
-        
           <nav className="hidden md:flex gap-6 navbar custom-navbar">
             <Link className="nav-link" href="#">Web</Link>
             <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
