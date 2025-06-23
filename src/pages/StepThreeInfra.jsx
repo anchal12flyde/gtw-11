@@ -6,15 +6,12 @@ import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-export default function StepThreeWeb() {
+export default function StepThreeInfra() {
    const router = useRouter();
-  const [companyType, setCompanyType] = useState('');
-  const [startTime, setStartTime] = useState('');
-
- const handleNext = () => {
-    router.push('/StepFour'); 
-  };
-
+   const [companyType, setCompanyType] = useState('');
+   const [startTime, setStartTime] = useState('');
+   const [adminPanel,setAdminPanel] = useState('');
+   const [d2cMobileApp,setD2cMobileApp] = useState('');
 
   return (
 <>
@@ -36,9 +33,9 @@ export default function StepThreeWeb() {
           Track-Specific Questions
         </h1>
       </div>  
-       <p className="form-subheading   ">What kind of site you are looking for?</p>
+       <p className="form-subheading   ">Type of commerce?</p>
                 <div className="space-y-2 select-wrapper">
-                {['Marketing site', 'Portfolio', 'Startup launch', 'Brand storytelling'].map((option) => (
+                {['B2C (D2C)', 'B2B', 'Hybrid'].map((option) => (
                     <label key={option} className="flex items-center gap-2 cursor-pointer">
                     <input
                         type="radio"
@@ -52,9 +49,10 @@ export default function StepThreeWeb() {
                     </label>
                 ))}
                 </div>
-                <p className="form-subheading   ">Do you already have brand design or copy in place?</p>
+
+                <p className="form-subheading   ">Estimated number of SKUs or products?</p>
                 <div className="space-y-2 select-wrapper">
-                {['Marketing site', 'Portfolio', 'Startup launch', 'Brand storytelling'].map((option) => (
+                {['<100', '100–1000', '1000+'].map((option) => (
                     <label key={option} className="flex items-center gap-2 cursor-pointer">
                     <input
                         type="radio"
@@ -68,17 +66,40 @@ export default function StepThreeWeb() {
                     </label>
                 ))}
                 </div>
-                <p className="form-subheading   ">Any sites you admire or benchmarks?</p>
-                <input
-                    type="text"
-                    name="admiredSites"
-                    className="input-box"
-                />
+                <p className="form-subheading">Required integrations:</p>
+                <div className="space-y-2 select-wrapper">
+                {['Razorpay', 'Uniware','Meta Catalog','Others (input field)'].map((option) => (
+                    <label key={option} className="flex items-center gap-2 cursor-pointer">
+                    <input
+                        type="radio"
+                        name="adminPanel"
+                        value={option}
+                        checked={companyType === option}
+                        onChange={() => setAdminPanel(option)}
+                        className="form-radio text-yellow-500"
+                    />
+                    <span className="text-sm">{option}</span>
+                    </label>
+                ))}
+                </div>
+                <p className="form-subheading ">Do you also need a D2C mobile app?</p>
+                <div className="space-y-2 select-wrapper">
+                {['Yes', 'NO'].map((option) => (
+                    <label key={option} className="flex items-center gap-2 cursor-pointer">
+                    <input
+                        type="radio"
+                        name="d2cMobileApp"
+                        value={option}
+                        checked={companyType === option}
+                        onChange={() => setD2cMobileApp(option)}
+                        className="form-radio text-yellow-500"
+                    />
+                    <span className="text-sm">{option}</span>
+                    </label>
+                ))}
+                </div>
 
-
-
-      
-            <button onClick={handleNext} className="next-button">
+            <button className="next-button">
                 Next <ArrowRight size={16} />
             </button>
      

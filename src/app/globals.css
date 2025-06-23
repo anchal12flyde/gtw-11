@@ -1061,12 +1061,30 @@ transform: scale(1.15);
 .custom-select {
   width: 100%;
   padding: 0.75rem 1rem;
-  padding-right: 2.5rem; 
+  padding-right: 2.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   appearance: none;
+  max-width: 100%; 
+  box-sizing: border-box;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+  .select-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+    .custom-select {
+    overflow-wrap: break-word;
+    font-size: 0.875rem;
+  } 
+}
+
 
 
 .chevron-icon {
@@ -1092,6 +1110,7 @@ transform: scale(1.15);
   font-weight: 500;
   margin: 2rem auto 0 auto; 
   transition: background-color 0.2s ease;
+  margin-bottom: 5rem;
 }
 
 .next-button:hover {
@@ -1099,3 +1118,18 @@ transform: scale(1.15);
   color: black;
 }
 
+.input-box {
+  width: 100%;
+  padding: 6px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .input-box {
+    width: 60%;
+  }
+}
