@@ -98,18 +98,23 @@ body::-webkit-scrollbar {
 }
 
 .util-mx-1-5 {
-  padding-left: 6rem;  
-  padding-right: 6rem;
+  padding-left: 12vh;  
+  padding-right: 12vh;
 }
 
 @media (max-width: 768px) {
   .util-mx-1-5 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 3vh;
+    padding-right: 3vh;
   }
 }
 
-
+@media (min-width: 1600px) {
+  .util-mx-1-5 {
+    padding-left: 17vh;
+    padding-right: 17vh;
+  }
+}
 .heading-hero {
   font-family: var(--font-primary);
   font-weight:500;
@@ -572,14 +577,12 @@ body::-webkit-scrollbar {
   color: #ffffff;
   letter-spacing: 0em;
   line-height: 1.3em;
-
   background-color: #000000;
   padding: 1.6rem 1.6rem;
   border-radius: 0.5rem;
   width: 13rem;
   display: inline-block;
   text-align: center;
-
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -753,9 +756,10 @@ body::-webkit-scrollbar {
   font-family: 'Inter', sans-serif;
   display: grid;
   gap: 1.8rem;
-  padding: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   grid-template-columns: repeat(1, 1fr);
-  margin-right: 3.5rem;
+
 }
 
 .responsive-card {
@@ -767,7 +771,6 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
   text-align: center;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -790,7 +793,6 @@ body::-webkit-scrollbar {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; 
     gap: 1.2rem;
-    padding: 2rem 1rem;
     scrollbar-width: none; 
     -ms-overflow-style: none;
   }
@@ -814,13 +816,15 @@ body::-webkit-scrollbar {
 @media (min-width: 1024px) {
   .card-container {
     display: grid;
+    
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 
 .usecases-section {
-  padding: 4rem 1rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
   text-align: center;
   margin-top: 3rem;
 }
@@ -848,7 +852,7 @@ body::-webkit-scrollbar {
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 1rem;
-  padding-left: 2rem; 
+  
 }
 
 .usecase-title {
@@ -886,7 +890,7 @@ body::-webkit-scrollbar {
 
 .feature-section {
   font-family: 'Inter', sans-serif;
-  padding: 4rem 3rem;
+  padding-top: 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -902,8 +906,8 @@ body::-webkit-scrollbar {
 
 .feature-title {
   font-family: 'Inter', sans-serif;
-  font-size: 28px; 
-  font-weight: 600;
+  font-size: 30px; 
+  font-weight: 700;
   color: #000000;
   letter-spacing: 0em;
   margin-bottom: 0.5rem;
@@ -912,7 +916,7 @@ body::-webkit-scrollbar {
 .feature-subtitle {
   font-family: 'Inter', sans-serif;
   font-size: 15px; 
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0em;
   color: #000000;
 }
@@ -937,11 +941,11 @@ body::-webkit-scrollbar {
   }
 
   .feature-title {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .feature-subtitle {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 

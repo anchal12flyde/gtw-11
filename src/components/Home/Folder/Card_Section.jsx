@@ -14,7 +14,7 @@ export default function Card_Section() {
         </div>
         <div className="flex justify-center ">
           <div className="usecases-grid1">
-            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-[380px]">
+            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-full">
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
                 src="/images/img2.png"
@@ -29,7 +29,7 @@ export default function Card_Section() {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-[380px]">
+            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-full">
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
                 src="/images/img3.png"
@@ -52,7 +52,7 @@ export default function Card_Section() {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-[380px]">
+            <div className="relative rounded-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105 h-[480px] w-full">
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
                 src="/images/img1.png"
