@@ -15,7 +15,7 @@ export default function Hero_Section() {
           className="absolute inset-0 w-full h-full object-cover object-left"
         />
       </div>
-      <div className="block md:hidden relative w-full h-[750px] overflow-hidden ">
+      <div className="block md:hidden relative w-full h-[950px] overflow-hidden ">
        <div className="hero-banner-wrapper">
         <img
             src="/images/hero1.png"

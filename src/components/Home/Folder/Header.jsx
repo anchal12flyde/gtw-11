@@ -34,7 +34,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Link href="/login" className="client-login">
+            <Link href="" className="client-login">
               Client Login
             </Link>
           </div>
