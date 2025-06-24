@@ -20,33 +20,33 @@ export default function Header() {
   </Link>
 
   
-  <nav className="hidden md:flex gap-6 items-center">
+  {/* <nav className="hidden md:flex gap-6 items-center">
     <Link className="nav-link" href="#">Web</Link>
     <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
     <Link className="nav-link" href="#">GTW SaaS Cloud</Link>
     <Link className="nav-link" href="#">Digital Transformation</Link>
     <Link className="nav-link" href="#">ExPro</Link>
-  </nav>
+  </nav> */}
 
 
   <div className="hidden md:block">
-    <Link href="#" className="client-login">Client Login</Link>
+    <Link href="/StepOneForm" className="client-login">Get Started</Link>
   </div>
 
   
-  <button
+  {/* <button
     onClick={toggleMenu}
     className="md:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none"
   >
     <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
     <span className="block h-[2px] w-[30px] bg-gray-700 rounded-sm"></span>
     <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
-  </button>
+  </button> */}
 </div>
 
 
 
-            {isOpen && (
+            {/* {isOpen && (
             <div
                 className="fixed inset-0 z-40 bg-black/40  backdrop-saturate-150 md:hidden"
                 onClick={toggleMenu}
@@ -73,7 +73,7 @@ export default function Header() {
 
               </div>
             </div>
-            )}
+            )} */}
 
 
              

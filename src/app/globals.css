@@ -674,6 +674,34 @@ transform: scale(1.15);
   margin-bottom: 2rem;
   color: #ffffff;
 }
+.become-client {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; 
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 0em;
+  line-height: 1.3em;
+
+  background-color: #000000;
+  padding: 1.6rem 1.6rem;
+  border-radius: 0.5rem;
+  width: 13rem;
+  display: inline-block;
+  text-align: center;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.become-client:hover {
+  background-color: #FFB100;
+  color: #000000; 
+}
+
+@media (max-width: 640px) {
+  .become-client {
+    width: 100%;
+  }
+}
 
 .category-heading {
   font-family: 'Inter', sans-serif;

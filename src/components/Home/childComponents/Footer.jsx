@@ -76,7 +76,7 @@ export default function Footer() {
 
 
         <div className='util-flex util-flex-1 util-mx-1-5'>
-        <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-sm mb-12">
+        {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-sm mb-12">
           {categories.map(({ title, items }) => (
             <div key={title}>
               <h4 className="category-heading mb-3">{title}</h4><br />
@@ -87,12 +87,12 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
         </div>
 
-        {/* Mobile Accordion */}
+        
         <div className='util-flex util-flex-1 util-mx-1-5'>
-        <div className="block sm:hidden ">
+        {/* <div className="block sm:hidden ">
           {categories.map(({ title, items }, index) => (
             <div key={title} className="border-b border-gray-200 p-2 ">
               <button
@@ -121,7 +121,7 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
         <div className=" border-t border-gray-300 flex flex-col sm:flex-row sm:justify-between justify-center items-center text-sm text-gray-950 pt-14 ">
           <p className="company-name">General Tech Works Private Limited</p>
           <p className="mt-4 sm:mt-0 company-name">2025</p>
