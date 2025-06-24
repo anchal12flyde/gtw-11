@@ -15,14 +15,12 @@ export default function Next_Steps() {
           <h2 className='heading-systems'>Next Steps</h2>
           <p>Pick how you'd like to work with us.</p>
           <div class="button-group">
-        <Link href="#" class="cta-button">Become a Client</Link>
-        <Link href="/StepOneForm" class="cta-button">Join Our Team</Link>
+        <Link href="/StepOneForm" class="cta-button">Become a Client</Link>
+        <Link href="/Join_Our_Team/PersonalDetails" class="cta-button">Join Our Team</Link>
         <Link href="#" class="cta-button">Agency Partnerships</Link>
         </div>
         </div>
-      </div>
-
-     
+      </div>     
          )
 }
 

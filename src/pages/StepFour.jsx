@@ -62,7 +62,7 @@ export default function StepFour() {
                             type="radio"
                             name="startTime"
                             value={option}
-                            checked={companyType === option}
+                            checked={startTime === option}
                             onChange={() => setStartTime(option)}
                             className="form-radio text-yellow-500"
                         />

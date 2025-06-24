@@ -57,7 +57,7 @@ export default function StepThreeConsult() {
                         type="radio"
                         name="startTime"
                         value={option}
-                        checked={companyType === option}
+                        checked={startTime === option}
                         onChange={() => setStartTime(option)}
                         className="form-radio text-yellow-500"
                     />
@@ -73,7 +73,7 @@ export default function StepThreeConsult() {
                         type="radio"
                         name="adminPanel"
                         value={option}
-                        checked={companyType === option}
+                        checked={adminPanel === option}
                         onChange={() => setAdminPanel(option)}
                         className="form-radio text-yellow-500"
                     />

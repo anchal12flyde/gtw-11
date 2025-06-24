@@ -54,13 +54,13 @@ export default function StepThreeWeb() {
                 </div>
                 <p className="form-subheading   ">Do you already have brand design or copy in place?</p>
                 <div className="space-y-2 select-wrapper">
-                {['Marketing site', 'Portfolio', 'Startup launch', 'Brand storytelling'].map((option) => (
+                {['Yes', 'Portfolio', 'Partial', 'No'].map((option) => (
                     <label key={option} className="flex items-center gap-2 cursor-pointer">
                     <input
                         type="radio"
                         name="startTime"
                         value={option}
-                        checked={companyType === option}
+                        checked={startTime === option}
                         onChange={() => setStartTime(option)}
                         className="form-radio text-yellow-500"
                     />

@@ -118,7 +118,7 @@ body::-webkit-scrollbar {
 
 /* LOGO */
 .gtw-logo {
-  height: 3.5rem; 
+  height: 3rem; 
   width: auto;
 }
 @media (max-width: 1024px) {
@@ -1030,7 +1030,7 @@ transform: scale(1.15);
 .custom-left-border {
   border-left: 3px solid #FFB100;
   padding-left: 1rem; 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .step-label {
   font-weight: 600;
@@ -1041,7 +1041,7 @@ transform: scale(1.15);
   font-size: 1.2rem;
   font-weight: 500;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   
 }
 
@@ -1068,7 +1068,7 @@ transform: scale(1.15);
   appearance: none;
   max-width: 100%; 
   box-sizing: border-box;
-   overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -1076,16 +1076,9 @@ transform: scale(1.15);
 @media (max-width: 768px) {
   .select-wrapper {
     width: 100%;
-    overflow-x: hidden;
   }
-
-    .custom-select {
-    overflow-wrap: break-word;
-    font-size: 0.875rem;
-  } 
+   
 }
-
-
 
 .chevron-icon {
   position: absolute;
@@ -1115,7 +1108,7 @@ transform: scale(1.15);
 
 .next-button:hover {
   background-color: #FFB100; 
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .input-box {
@@ -1132,4 +1125,56 @@ transform: scale(1.15);
   .input-box {
     width: 60%;
   }
+}
+
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}s
+
+.skill-checkbox {
+
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.custom-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;       
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;         
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-upload-btn:hover {
+  background-color: #333;       
+}
+.custom-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-top: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.custom-textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #111;
 }
