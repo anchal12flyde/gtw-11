@@ -64,7 +64,7 @@ export default function Collaborate() {
           <div className="select-wrapper">
           <input
                 type="text"
-                placeholder="Enter your email address"
+                placeholder="Enter Time zone"
                 className="custom-select"
             />
 

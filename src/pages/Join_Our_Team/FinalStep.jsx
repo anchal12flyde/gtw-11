@@ -34,7 +34,7 @@ const [agreed, setAgreed] = useState(false);
                 <span className="step-label">Step 5</span>
               </div>
                <div className="custom-left-border">
-            <h1 className="heading-systems">Intent & Fit</h1>
+            <h1 className="heading-systems">Final Step</h1>
           </div>
 
           <div className="mt-6">

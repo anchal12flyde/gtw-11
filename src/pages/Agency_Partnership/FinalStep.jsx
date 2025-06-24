@@ -25,11 +25,11 @@ export default function PeronalDetails() {
         />
           <div className="step-indicator">
             <span className="dot"></span>
-            <span className="step-label">Step 1</span>
+            <span className="step-label">Step 5</span>
           </div>
          <div className="custom-left-border">  
         <h1 className="heading-systems">
-          Personal Details
+           Final Step
         </h1>
       </div>    
 

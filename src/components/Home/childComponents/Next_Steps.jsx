@@ -28,8 +28,8 @@ export default function Next_Steps() {
       </div>
 
       {/* Desktop View */}
-      <section className="hidden sm:block py-16  overflow-x-hidden">
-        <div className="max-w-7xl mx-auto text-center ml-1 sm:ml-26">
+      <section className="hidden sm:block py-22  overflow-x-hidden">
+        <div className="max-w-7xl mx-auto text-center ">
           <h2 className="heading-systems text-black mb-14">Next Steps</h2>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-full">

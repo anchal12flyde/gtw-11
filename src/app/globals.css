@@ -612,7 +612,6 @@ transform: scale(1.15);
   }
 }
    /* Next Step Section */
-
 .next-steps-section {
   background-color: #000000;
   color: #ffffff;
@@ -621,7 +620,6 @@ transform: scale(1.15);
   padding-top: 12vh;
   font-family: 'Inter', sans-serif;
   max-width: 100%;
-  margin: 0 auto; 
   margin-top: 7rem;
 }
 
@@ -668,10 +666,10 @@ transform: scale(1.15);
 
 
 .next-steps-section p {
-   font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   margin-top: 0.8rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   color: #ffffff;
 }
 .become-client {
@@ -681,14 +679,12 @@ transform: scale(1.15);
   color: #ffffff;
   letter-spacing: 0em;
   line-height: 1.3em;
-
   background-color: #000000;
   padding: 1.6rem 1.6rem;
   border-radius: 0.5rem;
   width: 13rem;
   display: inline-block;
   text-align: center;
-
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

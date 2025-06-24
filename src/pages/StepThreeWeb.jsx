@@ -54,7 +54,7 @@ export default function StepThreeWeb() {
                 </div>
                 <p className="form-subheading   ">Do you already have brand design or copy in place?</p>
                 <div className="space-y-2 select-wrapper">
-                {['Yes', 'Portfolio', 'Partial', 'No'].map((option) => (
+                {['Yes',  'Partial', 'No'].map((option) => (
                     <label key={option} className="flex items-center gap-2 cursor-pointer">
                     <input
                         type="radio"

@@ -39,7 +39,7 @@ export default function Footer() {
 
   return (
    
-    <footer className=" bg-gray-100 text-black font-inter  mt-26">
+    <footer className=" bg-gray-100 text-black font-inter">
       <div className=" py-10">        
        <div className=" sm:hidden w-full flex justify-center mb-4 py-2">
       <img

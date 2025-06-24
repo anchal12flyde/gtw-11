@@ -35,7 +35,7 @@ export default function Availability() {
 
           
           <p className="form-subheading ">
-            Why do you want to join General Tech Works?
+            When can you start?
           </p>
           <div className="space-y-2 select-wrapper">
                 {['Within a week', 'Within a month', 'Later'].map((option) => (
