@@ -9,7 +9,6 @@ export default function Explore_Digital() {
  
       <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white mt-26">
       
-      {/* Background heading for mobile */}
       <div className="md:hidden absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center space-y-50 py-4">
           <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
@@ -22,13 +21,12 @@ export default function Explore_Digital() {
       </div>
 
       <div className="relative container pt-20 sm:pt-38">
-        
-        {/* Animated heading */}
+      
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           className="mb-12"
         >
           <div className="heading-systems flex flex-wrap">
@@ -39,12 +37,11 @@ export default function Explore_Digital() {
 
         <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35">
 
-          {/* Left column */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="space-y-6 mt-4"
           >
             <p className="left-column-text">Legacy systems</p>
@@ -52,7 +49,6 @@ export default function Explore_Digital() {
             <p className="left-column-text">Scattered tech</p>
           </motion.div>
 
-          {/* Arrow */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -89,14 +85,14 @@ export default function Explore_Digital() {
             </svg>
           </motion.div>
 
-          {/* Right column */}
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            viewport={{ once: false }}
             className="flex-1 w-full mb-30 md:mb-0"
           >
+
             <p className="right-column-text">
               We help organizations rethink the way they run, by{" "}
               <span className="text-[#FFB100]">
