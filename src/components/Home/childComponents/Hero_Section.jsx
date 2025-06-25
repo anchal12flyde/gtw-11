@@ -11,7 +11,7 @@ export default function Hero_Section() {
    <div className='util-flex util-flex-1 util-mx-1-5'>
   <section className="relative bg-transparent font-inter overflow-hidden ">
 
-    {/* Desktop Banner Image */}
+  
     <div className="hidden md:block relative w-full h-[700px]">
       <img
         src="/images/hero2.png"
@@ -20,12 +20,12 @@ export default function Hero_Section() {
       />
     </div>
 
-    {/* Mobile Background Wrapper */}
+    
     <div className="block md:hidden relative w-full h-full">
       <div className="hero-banner-wrapper bg-mobile-hero"></div>
     </div>
 
-    {/* Mobile Text */}
+   
     <div className="block md:hidden relative">
       <div className="max-w-full">
         <motion.h1
@@ -54,7 +54,6 @@ export default function Hero_Section() {
       </div>
     </div>
 
-    {/* Desktop Text */}
     <div className="hidden md:block absolute inset-x-0 bottom-24">
       <motion.h1
         className="heading-hero"

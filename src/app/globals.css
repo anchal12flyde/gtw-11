@@ -364,26 +364,39 @@ transform: scale(1.15);
 }
 .gradient-yellow-section {
   background: linear-gradient(320deg, #ffb100 0%, #ffcd5d 100%);
-  height: 650px;
+  height: 700px;
   padding-top: 4rem;   
-  padding-bottom: 4rem;
+ 
 }
 @media (min-width: 640px) {
   .gradient-yellow-section {
     height: 700px;
     padding-top: 5rem;   
-    padding-bottom: 5rem;
+    
   }
 }
 
 @media (min-width: 1024px) {
   .gradient-yellow-section {
     padding-top: 6rem;  
-    padding-bottom: 6rem;
+ 
   }
 }
+.arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
 
-
+.arrow-button:hover {
+  transform: scale(1.05);
+}
+.arrow-button + .arrow-button {
+  margin-left: 0.5rem;
+}
 
 
 @media (max-width: 768px) {
@@ -607,8 +620,8 @@ transform: scale(1.15);
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  padding-bottom: 12vh;
-  padding-top: 12vh;
+  padding-bottom: 6vh;
+  padding-top: 6vh;
   font-family: 'Inter', sans-serif;
   max-width: 100%;
   margin-top: 7rem;
@@ -634,8 +647,8 @@ transform: scale(1.15);
   flex-direction: row;        
   align-items: center;        
   justify-content: center;    
-  gap: 2.8rem;                
-  flex-wrap: wrap;            
+  gap: 0.7rem;                
+  flex-wrap: wrap;   
 }
 
 .cta-button {
@@ -658,7 +671,7 @@ transform: scale(1.15);
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   margin-top: 0.8rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1.8rem;
   color: #ffffff;
 }
 .become-client {
