@@ -10,8 +10,6 @@ export default function Hero_Section() {
     <>
    <div className='util-flex util-flex-1 util-mx-1-5'>
   <section className="relative bg-transparent font-inter overflow-hidden ">
-
-  
     <div className="hidden md:block relative w-full h-[700px]">
       <img
         src="/images/hero2.png"

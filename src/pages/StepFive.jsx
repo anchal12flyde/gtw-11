@@ -11,7 +11,7 @@ export default function StepFive() {
    const router = useRouter();
 
    const handleNext = () => {
-    router.push('/'); 
+    router.push('/ThankYouPage/ThankYou'); 
   };
 
 

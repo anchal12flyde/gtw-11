@@ -10,7 +10,7 @@ export default function PeronalDetails() {
    const router = useRouter();
 
     const handleNext = () => {
-       router.push('/'); 
+       router.push('/ThankYouPage/ThankYou'); 
      };
    
      return (

@@ -16,7 +16,7 @@ const [agreed, setAgreed] = useState(false);
       alert("Please confirm your understanding to proceed.");
       return;
     }
-    router.push('/');
+    router.push('/ThankYouPage/ThankYou');
   };
 
   return (
