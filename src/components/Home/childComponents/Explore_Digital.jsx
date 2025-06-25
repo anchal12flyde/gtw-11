@@ -1,44 +1,65 @@
 "use client";
-import { useRef, useState } from "react";
 import HoverVideo from "./VideoPlayer";
+import { motion } from "framer-motion";
 
 export default function Explore_Digital() {
 
   return (
     <>
  
-      <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white  mt-26">
-        <div className=" md:hidden absolute inset-0 flex items-center justify-center ">
-          <div className="flex flex-col items-center space-y-50 py-4">
-            <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
-              From
-            </h2>
-            <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
-              To
-            </h2>
-          </div>
+      <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white mt-26">
+      
+      {/* Background heading for mobile */}
+      <div className="md:hidden absolute inset-0 flex items-center justify-center">
+        <div className="flex flex-col items-center space-y-50 py-4">
+          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+            From
+          </h2>
+          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+            To
+          </h2>
         </div>
+      </div>
 
-       <div className="relative container pt-20 sm:pt-38">
-
-         <div className="mb-12">
-            <div className="heading-systems flex flex-wrap"> 
-           <p className="text-white">We Build.We Digitize.  </p>
-             {" "}   <p className="text-[#FFB100] "> We Transform.</p>
-             </div>
+      <div className="relative container pt-20 sm:pt-38">
+        
+        {/* Animated heading */}
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <div className="heading-systems flex flex-wrap">
+            <p className="text-white">We Build. We Digitize.</p>
+            <p className="text-[#FFB100]">&nbsp;We Transform.</p>
           </div>
-          
-           <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35">
+        </motion.div>
 
-          <div className="space-y-6 mt-4">
+        <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35">
+
+          {/* Left column */}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-6 mt-4"
+          >
             <p className="left-column-text">Legacy systems</p>
             <p className="left-column-text">Manual operations</p>
             <p className="left-column-text">Scattered tech</p>
-          </div>
+          </motion.div>
 
-          
-          <div className="flex justify-center items-center my-6">
-         
+          {/* Arrow */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex justify-center items-center my-6"
+          >
             <svg
               className="w-50 h-12 text-[#FFB100] animate-arrowDown md:hidden"
               viewBox="0 0 192 50"
@@ -53,8 +74,6 @@ export default function Explore_Digital() {
                 strokeLinejoin="round"
               />
             </svg>
-
-           
             <svg
               className="hidden md:block w-6 h-52 text-[#FFB100] animate-arrowDown"
               viewBox="0 0 24 104"
@@ -68,22 +87,30 @@ export default function Explore_Digital() {
                 strokeLinecap="round"
               />
             </svg>
-          </div>
-          <div className=" flex-1 w-full  mb-30 md:mb-0">
+          </motion.div>
+
+          {/* Right column */}
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex-1 w-full mb-30 md:mb-0"
+          >
             <p className="right-column-text">
               We help organizations rethink the way they run, by{" "}
-              <span className="text-[#FFB100]">replacing complexity with clarity –</span>{" "}
-              powered   by purpose-built platforms.
+              <span className="text-[#FFB100]">
+                replacing complexity with clarity –
+              </span>{" "}
+              powered by purpose-built platforms.
             </p>
             <a href="#" className="explore-link pt-12 md:pt-12 block">
               Explore Digital Transformation
             </a>
-          </div>
+          </motion.div>
         </div>
-
-          
-        </div>
-      </section>
+      </div>
+    </section>
 
       <div className="gradient-yellow-section util-flex util-flex-1 util-mx-1-5">
           <div className="text-left sm:block flex  mb-12  ">

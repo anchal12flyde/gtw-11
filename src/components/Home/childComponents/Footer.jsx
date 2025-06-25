@@ -72,7 +72,7 @@ export default function Footer() {
       </button>
     </form>
   </div>
-</div>
+    </div>
 
 
         <div className='util-flex util-flex-1 util-mx-1-5'>
