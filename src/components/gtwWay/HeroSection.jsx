@@ -15,29 +15,14 @@ export default function HeroSection() {
       </video>
   <div className="util-flex util-flex-1 util-mx-1-5">
       
-      <div className="hero-section">
-      <h1 className="hero-heading">
-        Design Slow. Build Smart. <br /> Launch Fast.
-      </h1>
-      <p className="hero-subtext">
-        Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
-      </p>
-    </div>
-
-    {/* <div className="hero-section">
-     <h2 className="heading-systems flex flex-wrap">
-       <span className="text-[#FFB100]"> We Believe</span>
-            <span className="text-white">Timeless System</span>
-            <span className="text-[#FFB100]">Aren't Rushed</span>
-          </h2>
-          <p className="hero-subtext">
-       In a world obsessed with speed, we slow down where it matters at the drawing board. 
-       Because clarity at the start unlocks velocity at launch.
-      </p>
-
-
-
-    </div> */}
+     <div class="hero-section">
+  <h1>
+    Design Slow. Build Smart. <br /> Launch Fast. 
+  </h1>
+  <p>
+    Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
+  </p>
+</div>
 
     </div>
 

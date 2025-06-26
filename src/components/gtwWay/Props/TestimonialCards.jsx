@@ -2,19 +2,19 @@ import Image from 'next/image';
 
 const TestimonialCard = ({ avatar, quote, author }) => {
   return (
-    <div className="relative bg-white rounded-2xl shadow-lg p-6 w-full max-w-sm min-h-[250px]">
-      <div className="absolute top-[-10px] right-[-10px] opacity-0s">
+    <div className="relative bg-white rounded-2xl shadow-lg p-6 w-full max-w-sm min-h-[320px]"> 
+      <div className="absolute top-[-20px] right-[-10px] opacity-0s">
         <Image src="/images/assets/Vector.png" alt="quote" width={100} height={100} />
       </div>
       <Image
         src={avatar}
         alt={author}
-        width={48}
-        height={48}
-        className="rounded-full mb-4"
+        width={100}  
+        height={100}
+        className="rounded-full mb-16"
       />
-      <p className="text-black font-bold mb-4">{quote}</p>
-      <p className="text-gray-600 font-semibold text-sm">{author}</p>
+      <p className="text-black font-medium text-xl mb-4">{quote}</p>
+      <p className="text-gray-500 font-normal text-lg">{author}</p>
     </div>
   );
 };

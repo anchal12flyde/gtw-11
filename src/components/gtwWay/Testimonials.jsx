@@ -1,33 +1,60 @@
 import Head from 'next/head';
 import TestimonialCard from './Props/TestimonialCards';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 export default function Testimonials() {
+  const testimonials = [
+    {
+      avatar: "/images/assets/img1.png",
+      quote: "Design is not just what it looks like and feels like. Design is how it works.",
+      author: "Steve Jobs",
+    },
+    {
+      avatar: "/images/assets/img2.png",
+      quote: "There is nothing so useless as doing efficiently that which should not be done at all.",
+      author: "Peter Drucker",
+    },
+    {
+      avatar: "/images/assets/img3.png",
+      quote: "Longevity in this business is about being able to reinvent yourself or invent the future.",
+      author: "Satya Nadella",
+    },
+  ];
+
   return (
     <>
-      <Head>
-        <title>Testimonial Layout</title>
-      </Head>
-
-      <main className=" bg-gray-100 ">
-      
-        <div className=" flex flex-wrap justify-center gap-10 p-28">
-          <TestimonialCard
-            avatar="/public/images/assets/img1.jpg"
-            quote="Design is not just what it looks like and feels like. Design is how it works."
-            author="Steve Jobs"
-          />
-          <TestimonialCard
-            avatar="/images/assets/img2.jpg"
-            quote="There is nothing so useless as doing efficiently that which should not be done at all."
-            author="Peter Drucker"
-          />
-          <TestimonialCard
-            avatar="/images/assets/img3.jpg"
-            quote="Longevity in this business is about being able to reinvent yourself or invent the future."
-            author="Satya Nadella"
-          />
+      <main className="bg-gray-100 util-flex util-flex-1 util-mx-1-5">
+        <div className="util-grid util-grid-cols-auto util-gap-x-25 util-gap-y-15 util-py-28">
+          {testimonials.map((item, index) => (
+            <motion.div
+              key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.1 }} 
+              variants={fadeInUp}
+            >
+              <TestimonialCard
+                avatar={item.avatar}
+                quote={item.quote}
+                author={item.author}
+              />
+            </motion.div>
+          ))}
         </div>
-
       </main>
     </>
   );

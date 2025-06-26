@@ -117,17 +117,14 @@ export default function Explore_Digital() {
 
     </section>
 
+
+
             <div className="gradient-yellow-section util-flex util-flex-1 util-mx-1-5">
-              
-              
               <div className="relative flex items-left justify-between mb-12 w-full">
-            
               <h2 className="text-left font-semibold text-xl sm:text-2xl md:text-3xl flex-1 heading-systems ">
                 <span className="text-black">We build systems,</span>{" "}
                 <span className="block md:inline text-white">not just screens.</span>
               </h2>
-
-             
               <div className="hidden sm:flex gap-4">
                 <button className="arrow-button" onClick={scrollLeft}>
                   <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
@@ -137,8 +134,6 @@ export default function Explore_Digital() {
                 </button>
               </div>
             </div>
-
-
           <div className="overflow-auto scrollbar-hide w-full flex"  ref={scrollRef}>
             <div className=" flex-shrink-0"></div>
             <div className="flex flex-nowrap gap-10 pb-4 w-full ">

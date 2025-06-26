@@ -9,11 +9,7 @@ const fadeInUp = {
 
 export default function FoundationSection() {
   return (
-    < motion.div className="operate-section flex flex-col justify-start md:justify-center" variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-              transition={{ duration: 0.6, ease: "easeOut" }}>
+    < div className="operate-section flex flex-col justify-start md:justify-center" variants={fadeInUp}>
       <div className="util-flex util-flex-1 util-mx-1-5 mt-22 sm:mt-0">
         <div className="w-full md:w-[700px]">
           <motion.div className="heading-systems flex flex-wrap w-full md:w-[500px] " variants={fadeInUp}
@@ -45,6 +41,6 @@ export default function FoundationSection() {
           </motion.p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
