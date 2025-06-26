@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 
-
 export default function OperateAcrossSection() {
   const items = [
     { title: "Design like a founder", desc: "Think business, not just pixels" },
@@ -18,10 +17,13 @@ export default function OperateAcrossSection() {
       <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white mt-26">
         <div className="relative container pt-20 sm:pt-20 pb-20 sm:pb-0">
           <div className="mb-20">
-            <motion.div className="heading-systems text-white text-2xl font-semibold leading-snug"  initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.8, delay:  0.1 }}>
+            <motion.div
+              className="heading-systems text-white text-2xl font-semibold leading-snug"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
               <span>How</span>
               <span className="text-[#FFB100]"> We Operate</span>
               <span> Across</span>
@@ -36,8 +38,8 @@ export default function OperateAcrossSection() {
               <motion.div
                 key={index}
                 className="flex w-full max-w-sm mx-auto"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
