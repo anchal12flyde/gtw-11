@@ -41,7 +41,7 @@ export default function Explore_Digital() {
           >
             <div className="heading-systems flex flex-wrap">
               <p className="text-white">We Build. We Digitize.</p>
-              <p className="text-[#FFB100]">&nbsp;We Transform.</p>
+              <p className="text-[#FFB100]">We Transform.</p>
             </div>
           </motion.div>
 
