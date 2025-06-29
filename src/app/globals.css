@@ -1356,13 +1356,12 @@ input[type="checkbox"] {
 
 .philosophy-section p {
   font-size: 2rem;
-  max-width: 100%; /* 'full' is invalid, use 100% instead */
+  max-width: 100%;
   line-height: 1.6;
   margin-top: 2rem; 
   text-align: center;
 }
 
-/* Decrease font size for screens smaller than 768px */
 @media (max-width: 768px) {
   .philosophy-section p {
     font-size: 1rem;
@@ -1375,3 +1374,70 @@ input[type="checkbox"] {
   justify-content: flex-start;
 }
 
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 20; 
+  background-color: transparent;
+  margin-top: -150px; 
+}
+
+@media (min-width: 768px) {
+  .card-section {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: -180px;  /* bigger overlap on desktop */
+  }
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  padding: 2rem; /* more generous padding */
+  width: 100%;
+  max-width: 400px;  /* limit width so it doesn’t stretch too much on huge screens */
+  background: linear-gradient(to bottom, #FFB100, #FFCD5D);
+  color: black;
+  min-height: 500px;  /* taller card to match figma */
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 33.333%;
+  }
+}
+
+.card h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.55rem;
+  margin-bottom: 1rem;
+  text-align: left;
+ 
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: left;
+   line-height: 1.6rem;
+}
+
+.card-footer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}

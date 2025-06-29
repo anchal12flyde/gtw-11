@@ -34,14 +34,49 @@ export default function HeroSection() {
         <span>Timeless Systems</span>{" "}
         <span className="text-[#FFB100]">Aren’t Rushed.</span>
       </div>
-
-          <p>
+        <p>  
             In a world obsessed with speed, we slow down where it matters at the drawing board.
             Because clarity at the start unlocks velocity at launch.
           </p>
          
         </section>
+      </div >
+      <div className="util-flex util-flex-1 util-mx-1-5">
+       <section className="card-section">
+        {[
+          {
+            title: "Design Slow → Create with Clarity",
+            description:
+              "We start with the user — not the UI. We ask questions that hurt. Explore edge cases. Challenge assumptions. Because good design isn’t decoration. It’s strategic silence, confident pacing, and intuitive flows.",
+            action: "What it looks like in action:",
+          },
+          {
+            title: "Build Smart → Engineer for Scale",
+            description:
+              "We don’t duct-tape. We build with architecture in mind. Reusable logic. Modular structure. Clean APIs. Thoughtful DB design.",
+            action: "What it looks like in action:",
+          },
+          {
+            title: "Launch Fast → Move With Confidence",
+            description:
+              "We release fast — not frantically. Our agile approach is backed by analytics, versioning, and clarity in ownership. Because a strong launch is only the start of a smart feedback loop.",
+            action: "What it looks like in action:",
+          },
+        ].map((card, idx) => (
+          <div key={idx} className="card">
+            <div>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </div>
+            <div className="card-footer">
+              {card.action}
+              <span>➡️</span>
+            </div>
+          </div>
+        ))}
+      </section>
       </div>
+
       </div>
     </>
   );
