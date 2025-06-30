@@ -68,10 +68,15 @@ export default function HeroSection() {
               <h3>{card.title}</h3>
               <p>{card.description}</p>
             </div>
-            <div className="card-footer">
-              {card.action}
-              <span>➡️</span>
-            </div>
+           <div className="card-footer">
+            {card.action}
+            <img
+              src="/images/assets/arrow.png"
+              alt="arrow"
+              style={{ width: '40px', marginLeft: '4px', verticalAlign: 'middle' }}
+            />
+          </div>
+
           </div>
         ))}
       </section>

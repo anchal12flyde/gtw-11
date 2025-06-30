@@ -22,7 +22,7 @@ export default function Header() {
   <nav className="hidden md:flex gap-6 items-center">
     <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
     <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
-    <Link className="nav-link" href="#">GTW SaaS Cloud</Link>
+    <Link className="nav-link" href="/Consult">GTW SaaS Cloud</Link>
     <Link className="nav-link" href="#">Digital Transformation</Link>
     <Link className="nav-link" href="#">ExPro</Link>
   </nav>
@@ -48,7 +48,7 @@ export default function Header() {
                 onClick={toggleMenu}
               >
               <div
-                className={`absolute top-0 right-0 w-64 h-full  shadow-lg p-6 transform transition-all duration-500 ease-out
+                className={`absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 transform transition-all duration-500 ease-out
                   ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
                 onClick={(e) => e.stopPropagation()}
               >
@@ -59,12 +59,12 @@ export default function Header() {
                 >
                   &times;
                 </button>
-                <Link href="/about" className="block nav-link mt-12 mb-8">Philosophy</Link>
+                <Link href="/GTW_Way" className="block nav-link mt-12 mb-8">Philosophy</Link>
                 <Link href="/mobile_apps" className="block nav-link mb-8">Mobile Apps</Link>
-                <Link href="/services" className="block nav-link mb-8">GTW SaaS Cloud</Link>
+                <Link href="/Consult" className="block nav-link mb-8">GTW SaaS Cloud</Link>
                 <Link href="/blog" className="block nav-link mb-8">Digital Transformation</Link>
                 <Link href="/expro" className="block nav-link mb-8">ExPro</Link>
-                <Link href="/login" className="client-login mt-4 block">Client Login</Link>
+                <Link href="/login" className="client-login mt-4 block">Get Started</Link>
 
               </div>
             </div>
