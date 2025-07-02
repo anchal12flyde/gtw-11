@@ -34,8 +34,8 @@ export default function ConsultSection() {
                     </div>
 
                 <div className="flex flex-col gap-4 px-8">
-                    <h3 className="ecom-heading text-left">Systems-first</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Systems-first</h3>
+                    <p className="paragraphs-default">
                     Systems-first, not software-first
                     </p>
                 </div>
@@ -49,8 +49,8 @@ export default function ConsultSection() {
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">
-                    <h3 className="ecom-heading text-left">Systems-first</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Systems-first</h3>
+                    <p className="paragraphs-default">
                    Deep technical understanding + founder empathy
                     </p>
                 </div>
@@ -64,8 +64,8 @@ export default function ConsultSection() {
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">
-                    <h3 className="ecom-heading text-left">Systems-first</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Systems-first</h3>
+                    <p className="paragraphs-default">
                    Execution-ready thinking (unlike static strategy firms)
                     </p>
                 </div>
@@ -79,8 +79,8 @@ export default function ConsultSection() {
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">
-                    <h3 className="ecom-heading text-left">Systems-first</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Systems-first</h3>
+                    <p className="paragraphs-default">
                     Seamless handoff to in-house GTW product and dev teams
                     </p>
                 </div>
@@ -91,7 +91,7 @@ export default function ConsultSection() {
            
              <div className="flex justify-center mt-6 sm:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
-                 <img src="/images/Leftarrow1.png" alt="Left Arrow" className="w-10 h-10" />
+                 <img src="/images/Leftarrow2.png" alt="Left Arrow" className="w-10 h-10" />
                </button>
                <button className="arrow-button" onClick={scrollRight}>
                  <img src="/images/Rightarrow1.png" alt="Right Arrow" className="w-10 h-10" />

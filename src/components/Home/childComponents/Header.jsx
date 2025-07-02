@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import ClientButton from '@/components/globalcomponents/Button';
 
 
 export default function Header() {
@@ -22,14 +23,17 @@ export default function Header() {
   <nav className="hidden md:flex gap-6 items-center">
     <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
     <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
-    <Link className="nav-link" href="/Consult">GTW SaaS Cloud</Link>
+    <Link className="nav-link" href="/Consult">Consult</Link>
     <Link className="nav-link" href="#">Digital Transformation</Link>
     <Link className="nav-link" href="#">ExPro</Link>
   </nav>
 
 
   <div className="hidden md:block">
-    <Link href="/StepOneForm" className="client-login">Get Started</Link>
+   <ClientButton href="/StepOneForm" className="bg-black hover:bg-yellow-400">
+  Get Started
+</ClientButton>
+
   </div>
 
   
@@ -61,7 +65,7 @@ export default function Header() {
                 </button>
                 <Link href="/GTW_Way" className="block nav-link mt-12 mb-8">Philosophy</Link>
                 <Link href="/mobile_apps" className="block nav-link mb-8">Mobile Apps</Link>
-                <Link href="/Consult" className="block nav-link mb-8">GTW SaaS Cloud</Link>
+                <Link href="/Consult" className="block nav-link mb-8">Consult</Link>
                 <Link href="/blog" className="block nav-link mb-8">Digital Transformation</Link>
                 <Link href="/expro" className="block nav-link mb-8">ExPro</Link>
                 <Link href="/login" className="client-login mt-4 block">Get Started</Link>

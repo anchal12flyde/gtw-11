@@ -26,8 +26,8 @@ export default function Roadmap() {
                     />
                     </div>
                     <div className="flex flex-col gap-4">
-                    <h3 className="ecom-heading text-left">Discovery</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Discovery</h3>
+                    <p className="paragraphs-default">
                        We deep-dive into your workflows, tools, bottlenecks, and people.
                     </p>
                     </div>
@@ -53,8 +53,8 @@ export default function Roadmap() {
                     />
                     </div>
                     <div className="flex flex-col gap-4">
-                    <h3 className="ecom-heading text-left">Systems Map</h3>
-                    <p className="paragraph-default">
+                    <h3 className="ecom-headings text-left">Systems Map</h3>
+                    <p className="paragraphs-default">
                        We create a visual blueprint of your current and future tech architecture.
                     </p>
                     </div>
@@ -80,8 +80,8 @@ export default function Roadmap() {
                 />
                 </div>
                 <div className="flex flex-col gap-4">
-                <h3 className="ecom-heading text-left">Transformation Map</h3>
-                <p className="paragraph-default">
+                <h3 className="ecom-headings text-left">Transformation Map</h3>
+                <p className="paragraphs-default">
                     Prioritized, ROI-first plan with clear outcomes, timelines, and cost/effort.
                 </p>
                 </div>

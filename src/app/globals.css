@@ -256,25 +256,35 @@ body::-webkit-scrollbar {
   background-color: #FFB100;
   color: black;
 }
-
-.client-login {
+.client-button {
   font-family: 'Inter', sans-serif;
-  font-weight: 400; 
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 15px;
   color: #ffffff;
-  background-color: #000000;
-  text-align: center;
-  padding: 0.75rem 1.90rem; 
-  border-radius: 0.7rem;
+  display: inline-flex;
+  padding: 17px 23px;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 10px;
   line-height: 1;
-  letter-spacing: 0em;
-  display: inline-block;
+  letter-spacing: 0;
+  display: block;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
-.client-login:hover {
-  background-color: #FFB100;
-  color: #000000;
+@media (max-width: 640px) {
+  .client-button {
+    font-size: 15px;
+    border-radius: 10px;
+    display: inline-flex;
+    width: 305;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+
 .mobile-login-btn {
   font-family: 'Inter', sans-serif;
   display: inline-block;
@@ -410,11 +420,7 @@ transform: scale(1.15);
     font-size: 16px;
   }
   
-  .client-login {
-    font-size: 16px;
-    padding: 0.9rem 1rem; 
-    display: block;
-  }
+
 }
 .desktop-heading {
   font-family: 'Inter', sans-serif;
@@ -527,10 +533,12 @@ transform: scale(1.15);
 }
 .ecom-heading {
   font-family: 'Inter', sans-serif;
-  font-weight: 600; 
   color: #000000;
   letter-spacing: 0em;
-  line-height: 1.1;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
 @media (min-width: 1024px) {
@@ -1242,7 +1250,7 @@ input[type="checkbox"] {
 
 .division-title {
   font-family: 'Inter', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   color: #FFB100;
   letter-spacing: 0em;
@@ -1276,6 +1284,7 @@ input[type="checkbox"] {
     justify-content: center; 
   }
 }
+
 .operate-section::before {
   content: "";
   position: absolute;
@@ -1551,21 +1560,30 @@ input[type="checkbox"] {
 
 @media (max-width: 640px) {
   .custom-mobile-button {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 305;
   }
 }
  .yellow-strip {
-  font-family: 'Inter', sans-serif;
   background-color: #FFB100;
-  color: #000;
   text-align: center;
   padding: 2.5rem 2rem;
-  font-weight: 500; 
-  letter-spacing: 0em;
-  line-height: 1.2;
-  font-size: 20px; 
+  
   }
+   .yellow-strip p{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+   }
+   @media (max-width: 640px) {
+  .yellow-strip p{
+     font-size: 16px;
+  }
+}
   .campus-image-wrapper {
   position: relative;
   display: flex;
@@ -1577,10 +1595,42 @@ input[type="checkbox"] {
 .campus-image {
   width: 120px;      
   height: auto;
-  border-radius: 1rem; 
 }
 @media (max-width: 767px) {
   .hide-on-mobile {
     display: none !important;
   }
 }
+
+.ecom-headings {
+  color: #000;
+font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.2;
+}
+ 
+.paragraphs-default{
+color: #313131;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.2;
+}
+.operate-section p {
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .operate-section p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+

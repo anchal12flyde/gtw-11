@@ -108,7 +108,7 @@ export default function SuccessStories() {
             </div>
           </div>
         
-          <div className="flex justify-center gap-4 mt-6 sm:hidden">
+          <div className="flex justify-center  mt-6 sm:hidden">
             <button className="arrow-button" onClick={scrollLeft}>
               <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
             </button>

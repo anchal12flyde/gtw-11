@@ -33,11 +33,11 @@ export default function OperateAcrossSection() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 md:gap-y-20 gap-x-10 md:gap-x-40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-y-20 gap-x-10 md:gap-x-40">
             {items.map((item, index) => (
               <motion.div
                 key={index}
-                className="flex w-full max-w-sm mx-auto"
+                className="flex w-full max-w-sm "
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}

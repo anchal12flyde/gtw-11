@@ -1,4 +1,5 @@
 "use client";
+import ClientButton from "../globalcomponents/Button";
 
 import { motion } from "framer-motion";
 
@@ -11,7 +12,7 @@ export default function RebuildSection() {
   return (
     <>
     <div className="yellow-strip" >
-       <motion.p  variants={fadeInUp}
+       <motion.p   variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
@@ -36,7 +37,7 @@ export default function RebuildSection() {
           </motion.div>
 
           <motion.p
-            className="right-column-text mt-8 "
+            className=" mt-8 "
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -55,15 +56,15 @@ export default function RebuildSection() {
             viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             >
-            <a
+            <ClientButton
                 href="#"
-                className="custom-mobile-button bg-[#FFB100] text-black px-6 py-3 rounded-md text-center font-semibold transition"
+                className="bg-[#FFB100] text-black hover:bg-black hover:text-white"
             >
                 Schedule a Call
-            </a>
+            </ClientButton>
             <a
                 href="/transformation-framework.pdf"
-                className="custom-mobile-button border border-white text-white px-6 py-3 rounded-md text-center font-semibold hover:bg-white hover:text-black transition"
+                className="custom-mobile-button border border-white text-white px-6 py-3 rounded-md text-center font-normal hover:bg-white hover:text-black transition"
                 download
             >
                 Download Our Transformation Framework PDF
