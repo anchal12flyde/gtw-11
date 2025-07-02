@@ -20,7 +20,6 @@ export default function ConsultSection() {
               <h2 className=" flex-1 heading-systems ">
                    <span class="text-[#FFB100]">Why GTW</span> Consult
               </h2> 
-              
             </div>
         <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>
             <div className="flex-shrink-0"></div>
@@ -90,12 +89,12 @@ export default function ConsultSection() {
             </div>
 
            
-             <div className="flex justify-center gap-4 mt-6 sm:hidden">
+             <div className="flex justify-center mt-6 sm:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
-                 <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
+                 <img src="/images/Leftarrow1.png" alt="Left Arrow" className="w-10 h-10" />
                </button>
                <button className="arrow-button" onClick={scrollRight}>
-                 <img src="/images/RightArrow.png" alt="Right Arrow" className="w-10 h-10" />
+                 <img src="/images/Rightarrow1.png" alt="Right Arrow" className="w-10 h-10" />
                </button>
              </div>
  

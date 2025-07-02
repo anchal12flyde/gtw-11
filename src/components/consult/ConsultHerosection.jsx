@@ -19,10 +19,10 @@ export default function ConsultHerosection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
           <div className="hero-section">
-            <h1>
+            <h1 className="heading-hero">
              Rethink. <span className="text-[#FFB100]"> Rebuild.</span>   Reinvent.
             </h1>
-            <p>
+            <p className="heading-subtitle">
              We help organizations modernize how they operate with custom systems,
               smarter workflows, and tech that scales with clarity.
             </p>

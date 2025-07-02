@@ -19,10 +19,10 @@ export default function HeroSection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
           <div className="hero-section">
-            <h1>
+            <h1  className="heading-hero">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
-            <p>
+            <p className="heading-subtitle  ">
               Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
             </p>
           </div>
@@ -41,6 +41,7 @@ export default function HeroSection() {
          
         </section>
       </div >
+      
       <div className="util-flex util-flex-1 util-mx-1-5">
        <section className="card-section">
         {[

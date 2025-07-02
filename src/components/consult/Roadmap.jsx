@@ -70,7 +70,6 @@ export default function Roadmap() {
                 />
             </div>
             </div>
-
            
             <div className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px] ">
                 <div>

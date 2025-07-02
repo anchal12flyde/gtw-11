@@ -125,7 +125,7 @@ export default function Explore_Digital() {
                 <span className="text-black">We build systems,</span>{" "}
                 <span className="block md:inline text-white">not just screens.</span>
               </h2>
-              <div className="hidden sm:flex gap-4">
+              <div className="hidden sm:flex gap-0">
                 <button className="arrow-button" onClick={scrollLeft}>
                   <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
                 </button>
@@ -227,7 +227,7 @@ export default function Explore_Digital() {
             </div>
           </div>
         
-          <div className="flex justify-center gap-4 mt-6 sm:hidden">
+          <div className="flex justify-center  mt-6 sm:hidden">
             <button className="arrow-button" onClick={scrollLeft}>
               <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
             </button>

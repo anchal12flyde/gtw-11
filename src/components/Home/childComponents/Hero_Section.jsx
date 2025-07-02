@@ -25,7 +25,7 @@ export default function Hero_Section() {
 
    
     <div className="block md:hidden relative">
-      <div className="max-w-full">
+      <div className="">
         <motion.h1
           className="heading-hero-mobile"
           initial={{ opacity: 0, x: -60 }}
@@ -54,7 +54,8 @@ export default function Hero_Section() {
 
     <div className="hidden md:block absolute inset-x-0 bottom-24">
       <motion.h1
-        className="heading-hero"
+        className="heading-hero" 
+        style={{ color: "var(--text-color-dark)" }}
         initial={{ opacity: 0, x: -60  }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -65,7 +66,7 @@ export default function Hero_Section() {
         of Modern Commerce
       </motion.h1>
       <motion.p
-        className="heading-subtitle"
+        className="heading-subtitle text-gray-600"
         initial={{ opacity: 0, x: -60  }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}

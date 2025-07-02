@@ -23,7 +23,7 @@ export default function SuccessStories() {
                 <span className="block md:inline text-white">Our Success</span> {" "} 
                  <span className="text-black">Stories</span>
               </h2>
-              <div className="hidden sm:flex gap-4">
+              <div className="hidden sm:flex">
                 <button className="arrow-button" onClick={scrollLeft}>
                   <img src="/images/LeftArrow.png" alt="Left Arrow" className="w-10 h-10" />
                 </button>

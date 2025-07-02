@@ -8,6 +8,7 @@ import RebuildSection from "@/components/consult/RebuildSection"
 import SuccessStories from "@/components/consult/SuccessStories"
 import ConsultSection from '@/components/consult/ConsultSection'
 import Roadmap from "@/components/consult/Roadmap"
+import Next_Steps from '@/components/Home/childComponents/Next_Steps'
 
 export default function Consult() {
 
@@ -21,8 +22,7 @@ export default function Consult() {
       <WorkWithSection/>
       <ConsultSection/>
       <RebuildSection/>
-      
-      
+       <Next_Steps/>
          <Footer/>
     
     </>

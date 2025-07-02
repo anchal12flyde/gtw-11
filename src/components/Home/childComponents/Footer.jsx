@@ -144,7 +144,7 @@ export default function Footer() {
           viewport={{ once: false }}
           className="util-flex util-flex-1 util-mx-1-5"
         >
-          <div className=" flex flex-col sm:flex-row sm:justify-between justify-center items-center text-sm text-gray-950 pt-0 sm:mt-8">
+          <div className=" flex flex-col sm:flex-row sm:justify-between justify-center items-center text-sm text-gray-950 mt-8 sm:mt-8">
             <p className="company-name">General Tech Works Private Limited</p>
             <p className="mt-2 sm:mt-0 company-name">2025</p>
           </div>
