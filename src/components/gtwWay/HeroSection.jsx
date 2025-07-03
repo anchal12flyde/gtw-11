@@ -1,11 +1,14 @@
+import Header from "../Home/childComponents/Header";
 export default function HeroSection() {
+
   return (
     <>
+       
       <div className="hero-wrapper relative overflow-hidden min-h-screen">
        
-        <div className="absolute inset-0 h-screen  z-0">
+        <div className="absolute inset-0 h-screen">
           <video
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hero-video"
             autoPlay
             loop
             muted
@@ -14,15 +17,17 @@ export default function HeroSection() {
             <source src="/videos/LightRays.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+      
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+           <Header/>
         </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section">
             <h1  className="heading-hero">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
-            <p className="heading-subtitle  ">
+            <p className="heading-subtitles  ">
               Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
             </p>
           </div>
@@ -34,7 +39,10 @@ export default function HeroSection() {
         <span>Timeless Systems</span>{" "}
         <span className="text-[#FFB100]">Aren’t Rushed.</span>
       </div>
-        <p>  
+      <div>
+        
+      </div>
+        <p className="headings mt-4">  
             In a world obsessed with speed, we slow down where it matters at the drawing board.
             Because clarity at the start unlocks velocity at launch.
           </p>

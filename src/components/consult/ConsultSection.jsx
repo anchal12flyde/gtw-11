@@ -15,10 +15,10 @@ export default function ConsultSection() {
   };
   return (
  
-<section class="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-12 mt-20">
+<section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-12 mt-20">
     <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className=" flex-1 heading-systems ">
-                   <span class="text-[#FFB100]">Why GTW</span> Consult
+                   <span className="text-[#FFB100]">Why GTW</span> Consult
               </h2> 
             </div>
         <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>

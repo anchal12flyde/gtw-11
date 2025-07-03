@@ -6,7 +6,7 @@ export default function Roadmap() {
     
   return (
  
-<section class="bg-white util-flex util-flex-1 util-mx-1-5 mt-20">
+<section className="bg-white util-flex util-flex-1 util-mx-1-5 mt-20">
     <div className="relative flex items-left justify-between">
               <h2 className=" flex-1 heading-systems ">
                    How It <span class="text-[#FFB100]">Works</span>
@@ -34,11 +34,11 @@ export default function Roadmap() {
                 </div>
 
           <div className="flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile">        
-            <div className="justify-center items-center mt-8 sm:mt-30 sm:block hidden">
+            <div className=" justify-items-center mt-8 sm:mt-45 sm:block hidden">
                 <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
-                className="w-35 h-5 "
+                className="w-38 h-4 filter grayscale opacity-70"
                 />
             </div>
             </div>
@@ -62,11 +62,11 @@ export default function Roadmap() {
 
                 
                 <div className="flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile">        
-            <div className=" justify-center items-center mt-8 sm:mt-30 sm:block hidden">
+            <div className=" justify-items-center mt-8 sm:mt-45 sm:block hidden">
                 <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
-                className="w-35 h-5 "
+                className="w-38 h-4 filter grayscale opacity-70"
                 />
             </div>
             </div>

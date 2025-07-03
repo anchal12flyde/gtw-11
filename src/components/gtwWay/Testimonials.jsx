@@ -19,7 +19,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       avatar: "/images/assets/img1.png",
-      quote: "Design is not just what it looks like and feels like. Design is how it works.",
+      quote: "There is nothing so useless as doing efficiently that which should not be done at all.",
       author: "Steve Jobs",
     },
     {

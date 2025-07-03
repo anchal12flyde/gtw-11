@@ -46,7 +46,7 @@ export default function OperateAcrossSection() {
                 <div className="w-[3px] bg-[#FFB100] mr-3"></div>
                 <div>
                   <h3 className="division-title">{item.title}</h3>
-                  <p className="division-desc text-sm text-gray-600">{item.desc}</p>
+                  <p className="division-desc text-gray-600">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

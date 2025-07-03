@@ -18,19 +18,19 @@ export default function FoundationSection() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1 }}>
             <span>
-              We Don’t Chase Trends.
+              We Don’t Chase Trends.&nbsp;
             </span>
             <span className="text-[#FFB100]" >
-              We Build
+              We Build&nbsp;
             </span>
             <div >
-              <p> Foundations.</p>
+              <span> Foundations.</span>
             </div>
           </motion.div>
 
           <motion.p
-            className="right-column-text mt-8"
-            variants={fadeInUp}
+            className="headings mt-8"
+        variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
