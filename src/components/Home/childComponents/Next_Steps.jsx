@@ -31,7 +31,7 @@ export default function Next_Steps() {
 
   return (
    <>
-      {/* Mobile View */}
+      
         <div className="block sm:hidden">
       <div className="next-steps-section">
         <div className="util-flex util-flex-1 util-mx-1-5">
@@ -70,7 +70,7 @@ export default function Next_Steps() {
       </div>
     </div>
 
-      {/* Desktop View */}
+      
      <section className="hidden sm:block py-22 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="heading-systems text-black mb-14">Next Steps</h2>
@@ -80,7 +80,7 @@ export default function Next_Steps() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }} // triggers when 20% of div is in view
+          viewport={{ once: false, amount: 0.2 }} 
         >
           <motion.div variants={itemVariants}>
             <a href="/StepOneForm" className="become-client">

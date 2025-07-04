@@ -10,13 +10,12 @@ export default function GTW_Way() {
 
      return (
     <>
-     
     <HeroSection/>
     <OperateAcrossSection/>
     <Testimonials/>
     <FoundationSection/>
     <Next_Steps/>
     <Footer/>
-        </>
+    </>
       )
     }

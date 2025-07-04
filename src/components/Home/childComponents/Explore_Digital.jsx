@@ -101,7 +101,7 @@ export default function Explore_Digital() {
               viewport={{ once: false }}
               className="flex-1 w-full mb-30 md:mb-0"
             >
-              <p className="right-column-text">
+             < p className="right-column-text">
                 We help organizations rethink the way they run, by{" "}
                 <span className="text-[#FFB100]">
                   replacing complexity with clarity –
@@ -121,7 +121,7 @@ export default function Explore_Digital() {
 
             <div className="gradient-yellow-section util-flex util-flex-1 util-mx-1-5">
               <div className="relative flex items-left justify-between mb-12 w-full">
-              <h2 className="text-left font-semibold text-xl sm:text-2xl md:text-3xl flex-1 heading-systems ">
+              <h2 className="text-left  flex-1 heading-systems ">
                 <span className="text-black">We build systems,</span>{" "}
                 <span className="block md:inline text-white">not just screens.</span>
               </h2>
