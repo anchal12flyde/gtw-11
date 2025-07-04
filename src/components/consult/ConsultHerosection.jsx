@@ -25,7 +25,7 @@ export default function ConsultHerosection() {
             <h1 className="heading-hero">
              Rethink. <span className="text-[#FFB100]"> Rebuild.</span>   Reinvent.
             </h1>
-            <p className="heading-subtitles">
+            <p className="heading-subtitles w-[full] sm:w-[900px]">
              We help organizations modernize how they operate with custom systems,
               smarter workflows, and tech that scales with clarity.
             </p>

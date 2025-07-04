@@ -381,7 +381,6 @@ line-height: 1.2;
   <span className='bg-emerald-500'> 26.[Nav Link ] </span><br/>
  <span> Digital Transformation</span>
  font-size: 16px;
-
  <br/>
   
    <Footer/>

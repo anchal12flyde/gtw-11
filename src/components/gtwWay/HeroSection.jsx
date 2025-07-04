@@ -27,7 +27,7 @@ export default function HeroSection() {
             <h1  className="heading-hero">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
-            <p className="heading-subtitles  ">
+            <p className="heading-subtitles  w-[full] sm:w-[900px] ">
               Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function HeroSection() {
       <div>
         
       </div>
-        <p className="headings mt-4">  
+        <p className="headings mt-4 ">  
             In a world obsessed with speed, we slow down where it matters at the drawing board.
             Because clarity at the start unlocks velocity at launch.
           </p>

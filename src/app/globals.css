@@ -1484,12 +1484,10 @@ input[type="checkbox"] {
     max-height: 500px;
   }
 }
-
 .challenge-content {
   flex: 1 1 400px;
   max-width: 600px;
 }
-
 .challenge-subtitle {
   font-size: 1.2rem;
   color: #727171;
@@ -1499,8 +1497,7 @@ input[type="checkbox"] {
 
 .challenge-list {
   list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
+  
 }
 
 .challenge-list li {
@@ -1629,7 +1626,7 @@ input[type="checkbox"] {
 
 .campus-image {
   width: 120px;      
-  height: auto;
+  height: 90px;
 }
 @media (max-width: 767px) {
   .hide-on-mobile {
@@ -1638,7 +1635,7 @@ input[type="checkbox"] {
 }
 
 .ecom-headings {
-  color: #000;
+ 
 font-family: Inter;
 font-size: 26px;
 font-style: normal;
@@ -1647,7 +1644,7 @@ line-height: 1.2;
 }
  
 .paragraphs-default{
-color: #313131;
+
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
