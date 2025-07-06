@@ -11,6 +11,7 @@ const fadeInUp = {
 export default function Infrastructure() {
   return (
     <>
+    
    
     <div
       className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 "
