@@ -5,7 +5,8 @@ export default function StyleGuide() {
 
      return (
     <>
-  <span className='bg-emerald-500'> 1.[Home Page HERO SECTION Title] </span> <h1  className="heading-hero">
+    <div className=" justify-center items-center w-full text-center">
+        <span className='bg-emerald-500'> 1.[Home Page HERO SECTION Title] </span> <h1  className="heading-hero">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
             Header-1
@@ -22,6 +23,8 @@ export default function StyleGuide() {
   line-height: 1.2em;
   <br/>
 
+    </div>
+ <div className=" justify-center items-center w-full text-center">
   <span className='bg-emerald-500'> 2.[Home Page HERO SECTION  Subtitle] </span>   <p className="heading-subtitle text-gray-600">
         From concept to code, commerce to conversion, we design the<br />
         technology infrastructure for tomorrow’s businesses.
@@ -41,6 +44,9 @@ export default function StyleGuide() {
   letter-spacing: 0em;
   line-height: 1.4em;
   <br/>
+  </div>
+
+ <div className=" justify-center items-center w-full text-center">
 
    <span className='bg-emerald-500'> 3.[Home Page  Heading ] </span>      <h2 className="heading-systems flex flex-wrap">
             <span className="text-black">We build systems,</span>
@@ -55,6 +61,8 @@ export default function StyleGuide() {
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
      font-size: 28px;
 <br/>
+</div>
+ <div className=" justify-center items-center w-full text-center">
 
    <span className='bg-emerald-500'> 4.[Home Page  Text Upon Card] </span>         <p className="desktop-heading bg-black">Modern</p>
         <p className="desktop-heading bg-black">Websites</p>
@@ -68,7 +76,7 @@ export default function StyleGuide() {
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
      font-size: 34px;
 <br/>
-
+</div>
    <span className='bg-emerald-500'> 5.[Home Page  BLACK-section Left Column] </span>       <p className="left-column-text bg-black">Legacy systems</p>
              
 

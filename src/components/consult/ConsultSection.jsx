@@ -21,16 +21,16 @@ export default function ConsultSection() {
                    <span className="text-[#FFB100]">Why GTW</span> Consult
               </h2> 
             </div>
-        <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>
+        <div className="overflow-x-auto scroll-smooth scrollbar-hide w-full flex snap-x snap-mandatory" ref={scrollRef}>
             <div className="flex-shrink-0"></div>
-            <div className="flex flex-nowrap gap-6 pb-4 w-full">
+            <div className="flex flex-nowrap gap-6 pb-4 w-full ">
                 <div className="flex flex-col gap-26 bg-gray-100 rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
                 <div className="campus-image-wrapper ">
                     <img
                         src="/images/assets/eclipse.png"
                         alt="Campus"
-                        className="campus-image"
-                    />
+                        className="image"
+                    />  
                     </div>
 
                 <div className="flex flex-col gap-4 px-8">
@@ -45,7 +45,7 @@ export default function ConsultSection() {
                     <img
                     src="/images/assets/eclipse1.png"
                     alt="Campus"
-                    className="campus-image"
+                    className="image"
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">
@@ -60,7 +60,7 @@ export default function ConsultSection() {
                     <img
                     src="/images/assets/eclipse2.png"
                     alt="Campus"
-                    className="campus-image"
+                    className="image"
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">
@@ -75,7 +75,7 @@ export default function ConsultSection() {
                     <img
                     src="/images/assets/eclipse3.png"
                     alt="Campus"
-                    className="campus-image"
+                    className="image"
                     />
                 </div>
                 <div className="flex flex-col gap-4 px-8">

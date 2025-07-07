@@ -4,17 +4,20 @@ import ExproHeroSection from "@/components/expro/ExproHeroSection"
 import D2C from "@/components/expro/D2C"
 import TechStack from "@/components/expro/TechStack"
 import Infrastructure from "@/components/expro/Infrastructure"
-import ExecutionCapability from "@/components/consult/ExecutionCapability"
-
+import OutgrowStack from "@/components/expro/OutgrowStack"
+import ShopifyMagento from "@/components/expro/ShopifyMagento"
+import ChooseExpro from "@/components/expro/ChooseExpro"
 
 export default function Expro() {
 
      return (
     <>
        <ExproHeroSection/>
-       <ExecutionCapability/>
+       <OutgrowStack/>
        <D2C/>
        <TechStack/>
+       <ShopifyMagento/>
+       <ChooseExpro/>
        <Infrastructure/>
         <Footer/> 
            </>
