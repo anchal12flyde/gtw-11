@@ -5,7 +5,9 @@ export default function StyleGuide() {
 
      return (
     <>
-    <div className=" justify-center items-center w-full text-center">
+    <div className='grid gap-16 px-30 py-10 bg-gray-200'>
+   <div className="grid-row-1 justify-center bg-amber-50 items-center w-full text-center border border-b-black rounded-xl shadow-lg">
+
         <span className='bg-emerald-500'> 1.[Home Page HERO SECTION Title] </span> <h1  className="heading-hero">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
@@ -24,7 +26,8 @@ export default function StyleGuide() {
   <br/>
 
     </div>
- <div className=" justify-center items-center w-full text-center">
+ <div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 2.[Home Page HERO SECTION  Subtitle] </span>   <p className="heading-subtitle text-gray-600">
         From concept to code, commerce to conversion, we design the<br />
         technology infrastructure for tomorrow’s businesses.
@@ -45,12 +48,12 @@ export default function StyleGuide() {
   line-height: 1.4em;
   <br/>
   </div>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
- <div className=" justify-center items-center w-full text-center">
 
-   <span className='bg-emerald-500'> 3.[Home Page  Heading ] </span>      <h2 className="heading-systems flex flex-wrap">
+   <span className='bg-emerald-500'> 3.[Home Page  Heading ] </span>      <h2 className="heading-systems ">
             <span className="text-black">We build systems,</span>
-            <span className="text-[#FFB100]"> not just screens.</span>
+            <span className="text-[#ffe7b0]"> not just screens.</span>
           </h2>
           font-family: 'Inter', sans-serif;
   font-weight: 600; 
@@ -62,8 +65,7 @@ export default function StyleGuide() {
      font-size: 28px;
 <br/>
 </div>
- <div className=" justify-center items-center w-full text-center">
-
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
    <span className='bg-emerald-500'> 4.[Home Page  Text Upon Card] </span>         <p className="desktop-heading bg-black">Modern</p>
         <p className="desktop-heading bg-black">Websites</p>
   font-family: 'Inter', sans-serif;
@@ -77,6 +79,9 @@ export default function StyleGuide() {
      font-size: 34px;
 <br/>
 </div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
    <span className='bg-emerald-500'> 5.[Home Page  BLACK-section Left Column] </span>       <p className="left-column-text bg-black">Legacy systems</p>
              
 
@@ -90,6 +95,10 @@ export default function StyleGuide() {
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
       font-size: 26px;
 <br/>
+</div>
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 6.[Home Page  BLACK-section Right Column] </span><p className="right-column-text bg-black">
                 We help organizations rethink the way they run, by
@@ -104,6 +113,9 @@ export default function StyleGuide() {
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
        font-size: 26px;
 <br/>
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 7.[Home Page  Yellow-section Card Heading ] </span>
 
@@ -119,9 +131,15 @@ font-weight: 600;
 line-height: normal;
 
 <br/>
+
+
+
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
         font-size: 21px;
 <br/>
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 8.[Home Page  Yellow-section Card paragraph] </span>
 <p className="paragraph-default mt-6">
@@ -143,6 +161,11 @@ line-height: normal;
          font-size: 14px;
 <br/>
 
+</div>
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 9.[Home Page  Industry paragraph] </span>
   <p className="industry-description mt-4">
      We enable digital sales, customer journeys, and D2C operations.
@@ -154,8 +177,10 @@ line-height: normal;
   line-height: 1em;
 
 <br/>
+</div>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
-  <span className='bg-emerald-500'> 10.[Home Page  Industry list] </span>
+    <span className='bg-emerald-500'> 10.[Home Page  Industry list] </span>
 <p  className="industry-tag mt-4"> E-commerce </p>
   font-family: 'Inter', sans-serif;
   font-weight: 600; 
@@ -169,6 +194,11 @@ line-height: normal;
         font-size: 13px;
     line-height: 0;
 <br/>
+</div>
+
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 11.[Home Page  Next Step Form Button] </span>
    <a href="/StepOneForm" >
@@ -203,6 +233,10 @@ line-height: normal;
   width: 220px;           
   text-align: center;
 <br/>
+</div>
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 12.[GTW_Way HERO SECTION Sub-title] </span>
  <p className="headings mt-4">  
@@ -217,7 +251,10 @@ line-height: normal;
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
        font-size: 16px;
     text-align: center;   
-<br/>
+<br/></div>
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 13.[GTW_Way HERO SECTION CARD Heading ] </span>
    <h3>Design Slow → Create with Clarity</h3>
@@ -233,7 +270,9 @@ line-height: normal;
   color: black;
   min-height: 500px; 
 <br/>
-  
+</div>  
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 15.[GTW_Way Section 2nd Division 1] </span>
     <h3 className="division-title">Design like a founder</h3>
@@ -248,7 +287,10 @@ line-height: normal;
 <span className='bg-amber-400'>IN MOBILE</span> <br/>
          font-size: 22px; 
 <br/>
-  
+  </div>
+
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 16.[GTW_Way Section 2nd Division 2] </span>
   <p className="division-desc text-gray-600 bg-black">Think business, not just pixels</p>
@@ -263,6 +305,9 @@ line-height: normal;
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
        font-size: 17px;
 <br/>
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 17.[GTW_Way Testimonial Quote] </span>
     <p>There is nothing so useless as doing efficiently that which should not be done at all</p>INLINE CSS text-black font-medium text-xl 
@@ -270,10 +315,17 @@ line-height: normal;
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
        font-size: 17px;
 <br/>
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 18.[GTW_Way Testimonial Author] </span>
    <p>Steve Jobs</p> INLINE CSS -text-gray-500 font-normal text-lg
 <br/>
   
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 19.[Consult Section 2nd Subtitle] </span>
 <p className="challenge-subtitle">
@@ -283,8 +335,11 @@ line-height: normal;
   color: #727171;
   margin-bottom: 3rem;
   margin-top: 0.8rem;
-<br/>
+<br/></div>
  
+
+ <div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 20.[Consult Section 2nd Lists] </span>
   <p>Manual, error-prone operations</p>
    color: #727171;
@@ -299,6 +354,10 @@ line-height: normal;
     padding-top: 1.5rem;  
     font-size: 1.1rem;
 <br/>
+</div>
+
+ <div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 21.[Consult Section 2nd Numbers] </span>
   <p>  01 02 03</p>
    color: #727171;
@@ -306,6 +365,9 @@ line-height: normal;
   font-size: 0.7rem;
   margin-right: 0.75rem;
 <br/>
+</div>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 22.[Consult Section 2nd Contact Us] </span> <br/>
 <strong>GTW Consult Exists To Fix This.</strong>
  font-size: 1.5rem ;
@@ -314,6 +376,9 @@ line-height: normal;
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
        font-size: 1.2rem;
 <br/>
+</div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
 
   <span className='bg-emerald-500'> 23.[Consult Section 2nd Numbers] </span> <br/>
 <p href="#" className="cta-link">
@@ -327,7 +392,11 @@ line-height: normal;
   font-weight: 500;
   font-size: 1.1rem;
 <br/>
-  
+  </div>
+
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
+
   <span className='bg-emerald-500'> 24.[Consult Section 3rd paragraph] </span>  <br/>
 <p className="paragraphs-default">
                        We deep-dive into your workflows, tools, bottlenecks, and people.
@@ -340,6 +409,10 @@ font-weight: 500;
 line-height: 1.2;
 
 <br/>
+</div>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
+
   <span className='bg-emerald-500'> 25.[Consult Yellow Strip] </span>
 <p className="yellow-strip" >  We’re not here to write a 200-slide deck. We’re here to fix what’s slowing you down.</p>
  color: #000;
@@ -352,6 +425,9 @@ line-height: 1.2;
   <span className='bg-amber-400'>IN MOBILE</span> <br/>
         font-size: 16px;
 <br/>
+</div>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+
   <span className='bg-emerald-500'> 26.[Button] </span><br/>
   <button>Login </button><br/>
   font-family: 'Inter', sans-serif;
@@ -385,11 +461,15 @@ line-height: 1.2;
   text-align: center;
   transition: all 0.3s ease;
 <br/>
+</div>
 
-  <span className='bg-emerald-500'> 26.[Nav Link ] </span><br/>
+<div className="grid-row-1 justify-center items-center w-full text-center border border-b-black rounded-xl shadow-lg bg-amber-50">
+ <span className='bg-emerald-500'> 27.[Nav Link ] </span><br/>
  <span> Digital Transformation</span>
  font-size: 16px;
  <br/>
+ </div>
+ </div>
   
    <Footer/>
     </>

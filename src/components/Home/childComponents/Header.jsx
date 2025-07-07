@@ -13,27 +13,30 @@ export default function Header() {
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState("/images/GTW_Logo.png");
 
-  useEffect(() => {
-    const header = document.querySelector(".site-header");
-    if (header) {
-      if (
-        pathname === "/Consult" ||
-        pathname === "/GTW_Way" 
-      ) {
-        header.classList.add("transparent-header");
-        setLogoSrc("/images/whitelogo.png");
-      } else {
-        header.classList.remove("transparent-header");
-        setLogoSrc("/images/GTW_Logo.png");
-      }
+ useEffect(() => {
+  const header = document.querySelector(".site-header");
+  if (header) {
+    if (
+      pathname === "/Consult" ||
+      pathname === "/GTW_Way"
+    ) {
+      header.classList.add("transparent-header");
+      setLogoSrc("/images/whitelogo.png");
+    } else if (pathname === "/Expro") {
+      header.classList.remove("transparent-header");
+      setLogoSrc("/images/exproLogo.png");
+    } else {
+      header.classList.remove("transparent-header");
+      setLogoSrc("/images/GTW_Logo.png");
     }
-  }, [pathname]);
+  }
+}, [pathname]);
 
   return (
   
 <header
   className={`site-header util-flex util-flex-1 util-mx-1-5 mt-4 z-[999] w-full
-    ${pathname === "/Consult" || pathname === "/GTW_Way" ? "fixed top-0 left-0" : ""}
+    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "fixed top-0 left-0" : ""}
   `}
 >
 
@@ -56,13 +59,14 @@ export default function Header() {
     <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>
     <Link className="nav-link" href="/Consult">Digital Transformation</Link>
     <Link className="nav-link" href="/Expro">ExPro</Link>
+    <Link className='nav-link' href="/blog">Blog</Link>
   </nav>
 
 <div className="hidden md:block">
   <ClientButton
     href="/StepOneForm"
     className={`${
-      pathname === "/Consult" || pathname === "/GTW_Way"
+      pathname === "/Consult" || pathname === "/GTW_Way"|| pathname ==="/Expro"
         ? "bg-yellow-400 text-white"
         : "bg-black text-white"
     }`}
@@ -104,6 +108,7 @@ export default function Header() {
                 <Link href="/StyleGuide" className="block nav-link mb-8">GTW SaaS Cloud</Link>
                 <Link href="/Consult" className="block nav-link mb-8">Digital Transformation</Link>
                 <Link href="/Expro" className="block nav-link mb-8">ExPro</Link>
+                 <Link href="/blog" className="block nav-link mb-8">Blog</Link>
                 <Link href="/login" className="mobile-login-btn mt-4 block">Get Started</Link>
 
               </div>

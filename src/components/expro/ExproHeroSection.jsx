@@ -64,17 +64,17 @@ export default function ExproHeroSection() {
           </div>
           
         </div>
-         
-        {/* <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 align-top-left">
+
+         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 ">
        
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: false }}
-            className="mb-12"
+            className="mb-12 sm:0"
           >
-            <div className="heading-systems flex flex-wrap">
+            <div className="heading-systems flex flex-wrap ">
               <p className="text-white">The Problem&nbsp;</p>
               <p className="text-[#FFB100]">We Solve</p>
             </div>
@@ -86,7 +86,7 @@ export default function ExproHeroSection() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               viewport={{ once: false }}
-              className="left-column-text"
+              className="text-md"
             >
               <p className=" w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
                  Piecing together tools creates operational chaos.</p>
@@ -136,10 +136,11 @@ export default function ExproHeroSection() {
               viewport={{ once: false }}
               className="flex-1 w-full mb-30 md:mb-0"
             >
-             < p className="right-column-text">
-                ExPro fixes this.
-              </p>
-              <p href="#" className=" pt-12 md:pt-4 block">
+             <p className="text-2xl text-[#FFB100]">
+  ExPro fixes this.
+</p>
+
+              <p href="#" className="text-lg pt-8 md:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
                  and deep integrations it gives you true ownership of your commerce platform.
               </p>
@@ -147,7 +148,7 @@ export default function ExproHeroSection() {
           </div>
       
 
-      </div >  */}
+      </div >  
       
 
       </div>
