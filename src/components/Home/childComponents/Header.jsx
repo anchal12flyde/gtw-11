@@ -53,27 +53,30 @@ export default function Header() {
 
 
   
-  <nav className="hidden md:flex gap-6 items-center">
-    <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
-    <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
-    <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>
-    <Link className="nav-link" href="/Consult">Digital Transformation</Link>
-    <Link className="nav-link" href="/Expro">ExPro</Link>
-    <Link className='nav-link' href="/blog">Blog</Link>
-  </nav>
+    {pathname !== "/Expro" && (
+      <nav className="hidden md:flex gap-6 items-center">
+        <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
+        <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
+        <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>
+        <Link className="nav-link" href="/Consult">Digital Transformation</Link>
+        <Link className="nav-link" href="/Expro">ExPro</Link>
+        <Link className='nav-link' href="/Insights">Insights</Link>
+      </nav>
+    )}
 
-<div className="hidden md:block">
-  <ClientButton
-    href="/StepOneForm"
-    className={`${
-      pathname === "/Consult" || pathname === "/GTW_Way"|| pathname ==="/Expro"
-        ? "bg-yellow-400 text-white"
-        : "bg-black text-white"
-    }`}
-  >
-    Get Started
-  </ClientButton>
-</div>
+
+    <div className="hidden md:block">
+      <ClientButton
+        href="/StepOneForm"
+        className={`${
+          pathname === "/Consult" || pathname === "/GTW_Way"|| pathname ==="/Expro"
+            ? "bg-yellow-400 text-white"
+            : "bg-black text-white"
+        }`}
+      >
+        Get Started
+      </ClientButton>
+    </div>
 
 
   
@@ -103,20 +106,22 @@ export default function Header() {
                 >
                   &times;
                 </button>
-                <Link href="/GTW_Way" className="block nav-link mt-12 mb-8">Philosophy</Link>
-                <Link href="/mobile_apps" className="block nav-link mb-8">Mobile Apps</Link>
-                <Link href="/StyleGuide" className="block nav-link mb-8">GTW SaaS Cloud</Link>
-                <Link href="/Consult" className="block nav-link mb-8">Digital Transformation</Link>
-                <Link href="/Expro" className="block nav-link mb-8">ExPro</Link>
-                 <Link href="/blog" className="block nav-link mb-8">Blog</Link>
+                {pathname !== "/Expro" && (
+                    <>
+                      <Link href="/GTW_Way" className="block nav-link mt-12 mb-8">Philosophy</Link>
+                      <Link href="/mobile_apps" className="block nav-link mb-8">Mobile Apps</Link>
+                      <Link href="/StyleGuide" className="block nav-link mb-8">GTW SaaS Cloud</Link>
+                      <Link href="/Consult" className="block nav-link mb-8">Digital Transformation</Link>
+                      <Link href="/Expro" className="block nav-link mb-8">ExPro</Link>
+                      <Link href="/Insights" className="block nav-link mb-8">Insights</Link>
+                    </>
+                  )}
+
                 <Link href="/login" className="mobile-login-btn mt-4 block">Get Started</Link>
 
               </div>
             </div>
             )}
-
-
-             
             </header>
          
   )

@@ -3617,3 +3617,166 @@ gap: 6rem;
     font-size: 20px; 
   }
 }
+
+.hero {
+  margin-bottom: 60px;
+}
+
+.headline {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 52px;
+  text-transform: capitalize;
+}
+
+.highlight {
+  color: #ffb100;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #333;
+  max-width: 600px;
+  margin-top: 8px;
+}
+
+.tagline {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.feature {
+  margin-top: 40px;
+}
+
+.feature-text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  max-width: 400px;
+  margin-top: 4px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}.cards-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  flex-wrap: nowrap;
+  width: max-content;
+  padding-bottom: 10px;
+}
+
+.cardss {
+  width: 500px;
+  height: 290px;
+  background-color: #d9d9d9;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+.background-hero {
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url('/images/insights_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.insight-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 300px;
+  background: #ffffff;
+  border-radius: 0rem 0.2rem;
+  padding: 2rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content:top;
+  z-index: 10;
+}
+
+
+.insight-tags {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 1rem;
+ 
+}
+     
+
+.insight-link {
+  font-size: 0.875rem;
+  color: #007bff;
+  text-decoration: underline;
+  width: fit-content;
+}
+ .insight-card h2{
+font-size: 18px;
+font-weight: 500px;
+  }
+@media (min-width: 768px) {
+  .insight-card {
+    max-width: 700px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-card {
+    bottom: 0rem;
+    left: 0rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    width: 200px;
+    height: 100px;
+  }
+
+  .insight-tags {
+    flex-direction: row;
+    font-size: 12px;
+    margin-bottom:4px ;
+  }
+  .insight-card h2{
+font-size: 14px;
+font-weight: 300px;
+  }
+  .background-hero img{
+     width: 100%;
+  height: 200px;
+
+  }
+
+}

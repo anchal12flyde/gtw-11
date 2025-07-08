@@ -35,7 +35,7 @@ export default function ExproHeroSection() {
             <h1  className="heading-hero">
              Beyond Storefronts. We Build  <br /> Commerce Infrastructure.
             </h1>
-            <p className="heading-subtitles  w-[full] sm:w-[900px] ">
+            <p className="heading-subtitles w-[full] sm:w-[900px] ">
              ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale — not subscription bloat.
             </p>
             <motion.div
@@ -80,7 +80,7 @@ export default function ExproHeroSection() {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35">
+          <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35 pb-8">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -137,8 +137,8 @@ export default function ExproHeroSection() {
               className="flex-1 w-full mb-30 md:mb-0"
             >
              <p className="text-2xl text-[#FFB100]">
-  ExPro fixes this.
-</p>
+              ExPro fixes this.
+            </p>
 
               <p href="#" className="text-lg pt-8 md:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
@@ -152,6 +152,38 @@ export default function ExproHeroSection() {
       
 
       </div>
+       <main className="util-flex util-flex-1 util-mx-1-5 mb-30 mt-30">
+      <section className="hero">
+        <h2 className="heading-systems">
+          What <span className="text-[#FFB100]">You Get</span>
+        </h2>
+        <p className="subtext">
+          Shopify breaks when you scale. Headless is too headless. Piecing together tools creates operational chaos.
+        </p>
+      </section>
+
+      <section className="feature">
+        <p className="tagline"> Lightning-Fast Storefront</p>
+        <div className="grid">
+          <div className="feature-text">
+            <h3>Customer-Facing Features</h3>
+          </div>
+          <p className="description">
+            Built on the MERN stack with a production-ready admin panel, mobile apps, and deep integrations—it gives you true ownership of your commerce platform.
+          </p>
+        </div>
+
+       <div className="cards-container">
+  <div className="cards">
+    <div className="cardss" />
+    <div className="cardss" />
+    <div className="cardss" />
+  </div>
+</div>
+
+      </section>
+    </main>
+      
     </>
   );
 }
