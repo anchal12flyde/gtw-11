@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 
 export default function InsightHeroSection() {
   return (
@@ -14,8 +15,12 @@ export default function InsightHeroSection() {
             <span>Mobile App</span>
             <span>Mobile App</span>
           </div>
-          <h2 className="">Design Slow. Build Smart. Launch Fast.</h2>
-          <a href="#" className="insight-link">Read More</a>
+          <div className="w-[200px] sm:w-[400px]">
+             <h2 className=''>Design Slow. Build Smart. Launch Fast.</h2>
+          <Link href="#" className="insight-link">Read More</Link>
+
+          </div>
+         
         </div>
       </div>
     </div>

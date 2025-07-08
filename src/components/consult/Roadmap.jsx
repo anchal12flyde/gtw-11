@@ -43,7 +43,7 @@ export default function Roadmap() {
             className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
-            <img src="/images/assets/01.png" alt="Campus" className="campus-image" />
+            <img src="/images/assets/01.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Discovery</h3>
               <p className="paragraphs-default">
@@ -64,11 +64,12 @@ export default function Roadmap() {
               />
             </div>
           </motion.div>
+
           <motion.div
             className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
-            <img src="/images/assets/02.png" alt="Campus" className="campus-image" />
+            <img src="/images/assets/02.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Systems Map</h3>
               <p className="paragraphs-default">
@@ -76,6 +77,8 @@ export default function Roadmap() {
               </p>
             </div>
           </motion.div>
+
+          
           <motion.div
             className="flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
             variants={arrow}
@@ -88,11 +91,12 @@ export default function Roadmap() {
               />
             </div>
           </motion.div>
+
           <motion.div
             className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
-            <img src="/images/assets/03.png" alt="Campus" className="campus-image" />
+            <img src="/images/assets/03.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Transformation Map</h3>
               <p className="paragraphs-default">
