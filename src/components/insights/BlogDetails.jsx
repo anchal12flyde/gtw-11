@@ -152,7 +152,9 @@ export default function BlogDetails() {
                                 key={index}
                                 imageSrc={blog.imageSrc}
                                 title={blog.title}
-                                link={blog.link}
+                                 link={blog.link}
+                                category="CATEGORY"
+                                 linkText="Read More"
                                 />
                             ))}
                                   </div>

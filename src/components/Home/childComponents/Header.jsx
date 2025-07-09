@@ -61,6 +61,7 @@ export default function Header() {
         <Link className="nav-link" href="/Consult">Digital Transformation</Link>
         <Link className="nav-link" href="/Expro">ExPro</Link>
         <Link className='nav-link' href="/Insights">Insights</Link>
+        <Link className='nav-link' href="/SuccessStories">Success Stories</Link>
       </nav>
     )}
 
@@ -114,6 +115,7 @@ export default function Header() {
                       <Link href="/Consult" className="block nav-link mb-8">Digital Transformation</Link>
                       <Link href="/Expro" className="block nav-link mb-8">ExPro</Link>
                       <Link href="/Insights" className="block nav-link mb-8">Insights</Link>
+                      <Link href="/SuccessStories" className="block nav-link mb-8">Success Stories</Link>
                     </>
                   )}
 

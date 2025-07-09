@@ -2027,10 +2027,10 @@ gap: 6rem;
   width: 100%;
   height: auto;
   margin-top: 4rem;
-  border-radius: 0.2rem;
+
   overflow: hidden;
   position: relative;
-  background-image: url('/images/insights_bg.png');
+
   background-size: cover;
   background-position: center;
 }
@@ -2082,7 +2082,7 @@ gap: 6rem;
   bottom: 0;
   left: 0;
   width: 40%;
-  height: 10%; 
+  height: 8%; 
   background-color: #FFB100;
   transition: width 0.3s ease;
 }
@@ -2195,6 +2195,14 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
 text-transform: uppercase;
+}
+.blog-div .blog-details{
+color: #606060;
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.2;
 }
 .blog-title {
   border-bottom: 1px solid #707070; 

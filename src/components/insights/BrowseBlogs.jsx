@@ -93,8 +93,10 @@ export default function BrowseBlogs() {
               imageSrc={blog.imageSrc}
               title={blog.title}
               link={blog.link}
+              category="CATEGORY"
+              linkText="Read More"
             />
-          ))}
+             ))}
           </div>
 
          {visibleCount < blogData.length && (
