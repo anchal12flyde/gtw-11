@@ -11,7 +11,7 @@ export default function InsightHeroSection() {
           className="w-full h-auto object-cover"
         />
         <div className="insight-card">
-          <div className="insight-tags">
+          <div className="insight-tags mb-2 sm:mb-6">
             <span>Mobile App</span>
             <span>Mobile App</span>
           </div>

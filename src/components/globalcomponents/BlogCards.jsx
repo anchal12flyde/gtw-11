@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogCard({ imageSrc, title, category = "CATEGORY", link = "#" }) {
   return (
@@ -13,10 +14,10 @@ export default function BlogCard({ imageSrc, title, category = "CATEGORY", link 
           className="blog-cards"
         />
       </div>
-      <div className="p-4">
-        <p className="text-xs text-gray-500 mb-1 uppercase tracking-wide">{category}</p>
-        <h2 className="text-base font-medium text-gray-800">{title}</h2>
-        <a href={link} className="text-sm text-blue-500 mt-2 inline-block hover:underline">Read More</a>
+      <div className="blog-div">
+        <p>{category}</p>
+        <h2 className="blog-header mb-8">{title}</h2>
+       <Link href={link} className="insight-link">Read More</Link>
       </div>
     </div>
   );
