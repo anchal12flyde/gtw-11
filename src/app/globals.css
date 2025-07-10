@@ -2328,10 +2328,7 @@ line-height: 34px;
   font-weight: 600;
   color: #1F2937; 
 }
-.author-title {
-  font-size: 0.875rem; 
-  color: #6B7280; 
-}
+
 .quote-wrapper {
   position: relative;
 }
@@ -2395,6 +2392,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
+text-align: center;
 }
 
 .impact-number {
@@ -2440,4 +2438,63 @@ letter-spacing: -3.604px;
   font-size: 14.079px;
   line-height: 22.527px;
 }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  
+}
+
+.column1 {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 6px;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.row1-col {
+ border-radius: 20px;
+}
+
+.row2 {
+  background-color: #F5F5F7;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.column2 {
+  background-color: #F5F5F7;
+  padding: 44px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .column2 {
+    order: 2; 
+  }
+
+  .column1 {
+    order: 1;
+  }
+  .grid-title{
+    font-size: 14px;
+    line-height: 23.827px;
+  }
+}
+.grid-title{
+color: rgba(0, 0, 0, 0.93);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: 34px; 
 }

@@ -1,6 +1,5 @@
 'use client'
-import { useState } from 'react'
-import Link from 'next/link'
+import Head from 'next/head'
 import  Header from './Home/childComponents/Header'
 import Next_Steps from './Home/childComponents/Next_Steps'
 import Footer from './Home/childComponents/Footer'
@@ -14,6 +13,9 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+            <title>Home Page</title>
+          </Head>
     <Header/>
         <Hero_Section />
         

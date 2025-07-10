@@ -26,9 +26,7 @@ export default function BlogDetails() {
    
     return (
         <>
-          <Head>
-        <title>Blog Details</title>
-      </Head>
+          
             <div className="util-flex util-flex-1 util-mx-1-5">
                 <div className="px-0 sm:px-30">
                     

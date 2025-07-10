@@ -14,17 +14,17 @@ const items = [
    {
     imageSrc: "/images/assets/blog_img1.png",
     title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Blog_Details",
+    link: "/story_Details",
   },
   {
     imageSrc: "/images/assets/blog_img2.png",
     title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Blog_Details",
+    link: "/story_Details",
   },
   {
     imageSrc: "/images/assets/blog_img3.png",
     title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Blog_Details",
+    link: "/story_Details",
   },]
 export default function ImpactVolume() {
   return (

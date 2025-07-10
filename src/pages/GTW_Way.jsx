@@ -1,4 +1,5 @@
 'use client'
+import Head from 'next/head'
 import Footer from '../components/Home/childComponents/Footer'
 import HeroSection from '@/components/gtwWay/HeroSection'
 import OperateAcrossSection from '@/components/gtwWay/OperateAcrossSection'
@@ -10,6 +11,9 @@ export default function GTW_Way() {
 
      return (
     <>
+    <Head>
+        <title>Philosophy</title>
+      </Head>
     <HeroSection/>
     <OperateAcrossSection/>
     <Testimonials/>

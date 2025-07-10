@@ -15,8 +15,8 @@ export default function ShopifyMagento() {
      return (
 <>
     <div className="bg-[#F5F5F7]  py-22  mt-6">
-<div className="util-flex util-flex-1 util-mx-1-5"> 
-<div className="relative flex items-left justify-between mb-12 w-full ">
+    <div className="util-flex util-flex-1 util-mx-1-5"> 
+    <div className="relative flex items-left justify-between mb-12 w-full ">
               <h2 className="text-left  flex-1 heading-systems ">
                 <span className="text-[#FFB100]">Who</span>{" "}
                 <span>It's For</span>
@@ -30,15 +30,13 @@ export default function ShopifyMagento() {
                 </button>
               </div>
             </div>
-</div>
-              
+         </div>   
           <div className="">
             <div
             ref={scrollRef}
-            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide gap-12 sm:gap-0"
-          >
-            
-            <div className="flex-shrink-0 snap-start w-[90vw]  flex flex-col md:flex-row gap-12">
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide gap-12 sm:gap-0 ">
+                
+            <div className="flex-shrink-0 snap-start w-[90vw]  flex flex-col md:flex-row gap-12 ">
               <div className="w-[90vw] sm:w-[50vw] ">
                 <img
                   src="/images/assets/img9.png"
@@ -56,10 +54,7 @@ export default function ShopifyMagento() {
               you from map to momentum.
             </p>
           </div>
-
             </div>
-
-          
             <div className="flex-shrink-0 snap-start w-[90vw] sm:w-[90vw] flex flex-col md:flex-row gap-12">
               <div className="w-[90vw] sm:w-[50vw] ">
                 <img
@@ -99,6 +94,7 @@ export default function ShopifyMagento() {
                 </p>
               </div>
             </div>
+            <div className=" flex-shrink-0  w-[20px] sm:w-[200px]"></div>
           </div>
 
           </div>

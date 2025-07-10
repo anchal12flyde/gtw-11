@@ -1,4 +1,5 @@
 'use client'
+import Head from "next/head"
 import Footer from "@/components/Home/childComponents/Footer"
 import ExproHeroSection from "@/components/expro/ExproHeroSection"
 import D2C from "@/components/expro/D2C"
@@ -13,6 +14,9 @@ export default function Expro() {
 
      return (
     <>
+    <Head>
+        <title>Expro</title>
+      </Head>
        <ExproHeroSection/>
        <OperationalChaos/>
        <OutgrowStack/>

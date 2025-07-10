@@ -7,8 +7,6 @@ import Image from "next/image";
 
 export default function StoryDetails() {
       const [open, setOpen] = useState(false);
-  
-   
     return (
         <>
         <Head>
@@ -32,10 +30,9 @@ export default function StoryDetails() {
                     Previous
                 </Link>
                 </div>
- 
                     <div className="flex items-center gap-2 relative perspective">
                         <div
-                        className={`absolute left-[-150px] top-0 flex gap-2 origin-right flip-container ${
+                        className={`absolute left-[-125px] top-0 flex  origin-right flip-container ${
                             open ? "rotate-y-0" : "rotate-y-90"
                         }`}
                         >
@@ -44,21 +41,20 @@ export default function StoryDetails() {
                             alt="Facebook"
                             width={43}
                             height={43}
-                            className="hover:scale-110 transition-transform duration-300"
+                           
                             />
                             <Image
                             src="/images/assets/linkedinIcon.png"
                             alt="LinkedIn"
                             width={43}
                             height={43}
-                            className="hover:scale-110 transition-transform duration-300"
+                            
                             />
                             <Image
                             src="/images/assets/threadIcon.png"
                             alt="Threads"
                             width={43}
                             height={43}
-                            className="hover:scale-110 transition-transform duration-300"
                             />
                         </div>
 

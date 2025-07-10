@@ -1,6 +1,5 @@
 'use client'
-import { useState } from 'react'
-import Link from 'next/link'
+import Head from 'next/head'
 import  Header from '../components/Home/childComponents/Header'
 import Next_Steps from '../components/Home/childComponents/Next_Steps'
 import Footer from '../components/Home/childComponents/Footer'
@@ -14,6 +13,9 @@ export default function mobile_apps() {
 
   return (
     <>
+    <Head>
+        <title>Mobile Apps </title>
+      </Head>
             <Header/>
               <MobileAppDesign/>
             <MobileCards/>

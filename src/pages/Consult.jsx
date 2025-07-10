@@ -1,4 +1,5 @@
 'use client'
+import Head from "next/head"
 import Footer from "@/components/Home/childComponents/Footer"
 import ConsultHerosection from '@/components/consult/ConsultHerosection'
 import ChallengeSection from '@/components/consult/ChallengeSolve'
@@ -15,7 +16,9 @@ export default function Consult() {
 
      return (
     <>
-       
+       <Head>
+        <title>Digital Transformation</title>
+      </Head>
       <ConsultHerosection/>
       <ChallengeSection/>
       <ExecutionCapability/>
