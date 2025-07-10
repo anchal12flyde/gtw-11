@@ -9,7 +9,7 @@ import ConsultSection from '@/components/consult/ConsultSection'
 import Roadmap from "@/components/consult/Roadmap"
 import Next_Steps from '@/components/Home/childComponents/Next_Steps'
 import ExecutionCapability from "@/components/consult/ExecutionCapability"
-
+import YellowStrip from "@/components/consult/YellowStrip"
 
 export default function Consult() {
 
@@ -23,6 +23,7 @@ export default function Consult() {
       <SuccessStories/>
       <WorkWithSection/>
       <ConsultSection/>
+      <YellowStrip/>
       <RebuildSection/>
        <Next_Steps/>
          <Footer/>

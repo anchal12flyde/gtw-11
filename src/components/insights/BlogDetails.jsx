@@ -2,9 +2,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link"
 import Head from "next/head";
+import Image from "next/image";
 import BlogCard from "@/components/globalcomponents/BlogCards";
 
 export default function BlogDetails() {
+     const [open, setOpen] = useState(false);
     const blogData = [
    {
     imageSrc: "/images/assets/blog_img1.png",
@@ -47,10 +49,60 @@ export default function BlogDetails() {
                 </Link>
                 </div>
  
-                <div className="flex items-center gap-2">
-                    <img src="/images/assets/shareIcon.png" alt="Share" className="w-8 h-8" />
-                    <img src="/images/assets/shareLink.png" alt="Link" className="w-8 h-8" />
-                </div>
+                <div className="flex items-center gap-2 relative perspective">
+                                       <div
+                                       className={`absolute left-[-150px] top-0 flex gap-2 origin-right flip-container ${
+                                           open ? "rotate-y-0" : "rotate-y-90"
+                                       }`}
+                                       >
+                                           <Image
+                                           src="/images/assets/facebookIcon.png"
+                                           alt="Facebook"
+                                           width={43}
+                                           height={43}
+                                           className="hover:scale-110 transition-transform duration-300"
+                                           />
+                                           <Image
+                                           src="/images/assets/linkedinIcon.png"
+                                           alt="LinkedIn"
+                                           width={43}
+                                           height={43}
+                                           className="hover:scale-110 transition-transform duration-300"
+                                           />
+                                           <Image
+                                           src="/images/assets/threadIcon.png"
+                                           alt="Threads"
+                                           width={43}
+                                           height={43}
+                                           className="hover:scale-110 transition-transform duration-300"
+                                           />
+                                       </div>
+               
+                                   
+                                       <button
+                                           onClick={() => setOpen(!open)}
+                                           className="z-10 transition-transform duration-300"
+                                       >
+                                           <Image
+                                           src={
+                                               open
+                                               ? "/images/assets/crossIcon.png"
+                                               : "/images/assets/shareIcon.png"
+                                           }
+                                           alt="Toggle Share"
+                                           width={43}
+                                           height={43}
+                                           />
+                                       </button>
+               
+                                     
+                                       <Image
+                                           src="/images/assets/shareLink.png"
+                                           alt="Link"
+                                           width={43}
+                                           height={43}
+                                       />
+                                       </div>
                 </div>
 
                         <h1 className="heading-systems mb-6">

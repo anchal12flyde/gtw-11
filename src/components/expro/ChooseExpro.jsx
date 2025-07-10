@@ -13,22 +13,19 @@ export default function ChooseExpro() {
               </h2> 
             </div>
 
-<div className="stack-grid s">
+      <div className="stack-grid ">
 
-   <div className="stack-item">
-    <div className="stack-icon ">
-      <img
-        src="/images/assets/stack01.png"
-        alt="01"
-      />
-    </div>
-   <div class="parent-div">
-  <div class="stack-text">Full IP ownership — no licensing trap</div>
-</div>
-
-  </div>
-
-
+        <div className="stack-item">
+          <div className="stack-icon ">
+            <img
+              src="/images/assets/stack01.png"
+              alt="01"
+            />
+          </div>
+        <div class="parent-div">
+        <div class="stack-text">Full IP ownership — no licensing trap</div>
+      </div>
+        </div>
   <div className="stack-item">
     <div className="stack-icon">
       <img

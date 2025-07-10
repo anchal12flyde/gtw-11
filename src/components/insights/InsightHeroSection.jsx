@@ -17,7 +17,7 @@ export default function InsightHeroSection() {
           </div>
           <div className="w-[200px] sm:w-[400px]">
              <h2 className=''>Design Slow. Build Smart. Launch Fast.</h2>
-          <Link href="#" className="insight-link">Read More</Link>
+          <Link href="#" className="insight-link mt-8">Read More</Link>
 
           </div>
          

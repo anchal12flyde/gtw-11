@@ -11,13 +11,7 @@ const fadeInUp = {
 export default function RebuildSection() {
   return (
     <>
-    <div className="yellow-strip" >
-       <motion.p   variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-             transition={{ duration: 0.6, ease: "easeOut", delay: 0.01 }}> We’re not here to write a 200-slide deck. We’re here to fix what’s slowing you down.</motion.p> 
-      </div>
+    
     <div
       className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 "
       variants={fadeInUp}

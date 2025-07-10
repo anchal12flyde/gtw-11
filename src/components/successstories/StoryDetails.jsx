@@ -2,35 +2,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link"
 import Head from "next/head";
-import BlogCard from "@/components/globalcomponents/BlogCards";
+import Image from "next/image";
+
 
 export default function StoryDetails() {
-    const blogData = [
-   {
-    imageSrc: "/images/assets/story_img1.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Story_Details",
-  },
-  {
-    imageSrc: "/images/assets/story_img2.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Story_Details",
-  },
-  {
-    imageSrc: "/images/assets/story_img3.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/Story_Details",
-  },]
+      const [open, setOpen] = useState(false);
+  
    
     return (
         <>
-          <Head>
+        <Head>
         <title>Story Details</title>
       </Head>
             <div className="util-flex util-flex-1 util-mx-1-5">
                 <div className="px-0 sm:px-30">
-                    
-                 
+              
                     <div className="mt-20">
 
                 <div className="flex items-center justify-between mb-6">
@@ -47,10 +33,63 @@ export default function StoryDetails() {
                 </Link>
                 </div>
  
-                <div className="flex items-center gap-2">
-                    <img src="/images/assets/shareIcon.png" alt="Share" className="w-8 h-8" />
-                    <img src="/images/assets/shareLink.png" alt="Link" className="w-8 h-8" />
-                </div>
+                    <div className="flex items-center gap-2 relative perspective">
+                        <div
+                        className={`absolute left-[-150px] top-0 flex gap-2 origin-right flip-container ${
+                            open ? "rotate-y-0" : "rotate-y-90"
+                        }`}
+                        >
+                            <Image
+                            src="/images/assets/facebookIcon.png"
+                            alt="Facebook"
+                            width={43}
+                            height={43}
+                            className="hover:scale-110 transition-transform duration-300"
+                            />
+                            <Image
+                            src="/images/assets/linkedinIcon.png"
+                            alt="LinkedIn"
+                            width={43}
+                            height={43}
+                            className="hover:scale-110 transition-transform duration-300"
+                            />
+                            <Image
+                            src="/images/assets/threadIcon.png"
+                            alt="Threads"
+                            width={43}
+                            height={43}
+                            className="hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+
+                    
+                        <button
+                            onClick={() => setOpen(!open)}
+                            className="z-10 transition-transform duration-300"
+                        >
+                            <Image
+                            src={
+                                open
+                                ? "/images/assets/crossIcon.png"
+                                : "/images/assets/shareIcon.png"
+                            }
+                            alt="Toggle Share"
+                            width={43}
+                            height={43}
+                            />
+                        </button>
+
+                      
+                        <Image
+                            src="/images/assets/shareLink.png"
+                            alt="Link"
+                            width={43}
+                            height={43}
+                        />
+                        </div>
+
+               
+               
                 </div>
 
                         <h1 className="heading-systems mb-6">
@@ -95,9 +134,16 @@ export default function StoryDetails() {
                         <img
                             src="/images/assets/success_img.png"
                             alt="Insight Hero"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-auto object-cover pb-8"
                         />
+                          <p>Triarchy co-founder and creative director, Adam Taubenfligel - TRIARCHY</p>
                     </div>
+                    <p>Madgicx is an all-in-one ad management platform built specifically for Meta that embeds AI and automation at every level. Rather than manually monitoring dozens of ad sets and creatives, Madgicx continually analyzes account performance
+                            and reallocates budgets in real time. Its Autonomous Budget Optimizer uses AI “like a pro media buyer” to distribute spend optimally across campaigns and ad sets . Madgicx also includes advanced tools for creative testing, audience building,
+                            and automated rules. For example, Ads Manager 2.0 lets you apply bulk changes and engage AI Bidding algorithms to put more ad spend where it’s most effective . In practice, Madgicx acts as an AI assistant: it spots winning ads and audiences
+                            instantly, scales them automatically, and pauses wasteful elements – 24/7. (See the table below for a comparison of manual vs. Madgicx-enhanced tactics.)
+                        </p>
+                  
 
                     <div className="flex flex-col gap-y-6">
                         <div >
@@ -123,29 +169,13 @@ export default function StoryDetails() {
                         </div>
                       
                     </div>
+                     
 
 
                     
                   </div>
 
-                   <div className="mt-20">
-                       <h1 className="heading-systems">
-                          More Success Stories
-                        </h1>
-
-                         <div className="grid-cols-blog mt-10">
-                                  {blogData.map((blog, index) => (
-                                <BlogCard
-                                key={index}
-                                imageSrc={blog.imageSrc}
-                                title={blog.title}
-                                 link={blog.link}
-                                details= {blog.details}
-                                linkText="View Story"
-                                />
-                            ))}
-                                  </div>
-                     </div>
+                   
 
 
                 </div>
