@@ -32,7 +32,7 @@ export default function ConsultHerosection() {
             </p>
              <ClientButton
                         href="#"
-                        className="bg-[#FFB100] text-black hover:bg-black hover:text-white mt-8"
+                        className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100] mt-8"
                     >
                        Start a Consult Sprint
                     </ClientButton>

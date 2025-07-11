@@ -1,7 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link"
-import Head from "next/head";
 import Image from "next/image";
 import BlogCard from "@/components/globalcomponents/BlogCards";
 
@@ -41,7 +40,7 @@ export default function BlogDetails() {
                     <img
                     src="/images/assets/backArrow.png"
                     alt="Back"
-                    className="w-2 h-2 mr-1"
+                    className="w-2 h-3 mr-2"
                     />
                     Back to GTW Blog
                 </Link>
@@ -49,7 +48,7 @@ export default function BlogDetails() {
  
                 <div className="flex items-center gap-2 relative perspective">
                                        <div
-                                       className={`absolute left-[-150px] top-0 flex gap-2 origin-right flip-container ${
+                                       className={`absolute left-[-120px] top-0 flex  origin-right flip-container ${
                                            open ? "rotate-y-0" : "rotate-y-90"
                                        }`}
                                        >

@@ -71,11 +71,10 @@ export default function Header() {
         href="/StepOneForm"
         className={`${
           pathname === "/Consult" || pathname === "/GTW_Way"|| pathname ==="/Expro"
-            ? "bg-yellow-400 text-white"
-            : "bg-black text-white"
+            ? "bg-[#FFB100] text-white hover:bg-[#ffaa00]"
+            : "bg-black text-white hover:bg-[#FFB100] hover:text-black"
         }`}
-      >
-        Get Started
+      >Get Started
       </ClientButton>
     </div>
 

@@ -18,7 +18,7 @@ export default function ChooseExpro() {
         <div className="stack-item">
           <div className="stack-icon ">
             <img
-              src="/images/assets/stack01.png"
+              src="/images/assets/stack1.png"
               alt="01"
             />
           </div>
@@ -29,7 +29,7 @@ export default function ChooseExpro() {
   <div className="stack-item">
     <div className="stack-icon">
       <img
-        src="/images/assets/stack02.png"
+        src="/images/assets/stack2.png"
         alt="02"
       />
     </div>
@@ -42,7 +42,7 @@ export default function ChooseExpro() {
   <div className="stack-item">
     <div className="stack-icon ">
       <img
-        src="/images/assets/stack03.png"
+        src="/images/assets/stack3.png"
         alt="03"
       />
     </div>
@@ -56,7 +56,7 @@ export default function ChooseExpro() {
   <div className="stack-item">
     <div className="stack-icon ">
       <img
-        src="/images/assets/stack04.png"
+        src="/images/assets/stack4.png"
         alt="04"
       />
     </div>

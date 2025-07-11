@@ -20,19 +20,19 @@ export default function StoryDetails() {
                 <div className="flex items-center justify-between mb-6">
                <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-[#F5F5F7] p-[12px_16px]">
                 <Link
-                    href="/Insights"
+                    href="/SuccessStories"
                     className="flex items-center text-sm text-[#727171] hover:underline">
                     <img
                     src="/images/assets/backArrow.png"
                     alt="Back"
-                    className="w-2 h-2 mr-1"
+                    className="w-2 h-3 mr-2"
                     />
                     Previous
                 </Link>
                 </div>
                     <div className="flex items-center gap-2 relative perspective">
                         <div
-                        className={`absolute left-[-125px] top-0 flex  origin-right flip-container ${
+                        className={`absolute left-[-120px] top-0 flex  origin-right flip-container ${
                             open ? "rotate-y-0" : "rotate-y-90"
                         }`}
                         >

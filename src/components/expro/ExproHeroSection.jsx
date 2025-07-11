@@ -48,7 +48,7 @@ export default function ExproHeroSection() {
             >
             <ClientButton
                 href="#"
-                className="bg-[#FFB100] text-black hover:bg-black hover:text-white"
+                className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100]"
             >
              Explore The Platform
             </ClientButton>

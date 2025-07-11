@@ -52,7 +52,7 @@ export default function RebuildSection() {
             >
             <ClientButton
                 href="#"
-                className="bg-[#FFB100] text-black hover:bg-black hover:text-white"
+                className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100]"
             >
                 Schedule a Call
             </ClientButton>
