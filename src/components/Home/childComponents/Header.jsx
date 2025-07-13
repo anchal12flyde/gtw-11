@@ -4,14 +4,32 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import ClientButton from '@/components/globalcomponents/Button';
 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
+
+  const [scrolled, setScrolled] = useState(true);
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState("/images/GTW_Logo.png");
+
+useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 50) {
+        console.log("hello");
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
  useEffect(() => {
   const header = document.querySelector(".site-header");
@@ -34,12 +52,12 @@ export default function Header() {
 
   return (
   
-<header
-  className={`site-header util-flex util-flex-1 util-mx-1-5 mt-4 z-[999] w-full
-    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "fixed top-0 left-0" : ""}
+ <header
+  className={`site-header ${scrolled ? '' : 'slide-down'} util-flex util-flex-1 util-mx-1-5 mt-4 
+    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "fixed-header" : "" }
   `}
 >
-
+  
 
        <div className="container flex items-center justify-between h-12">
       <Link href="/">

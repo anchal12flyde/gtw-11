@@ -1,11 +1,8 @@
 "use client";
-import Image from "next/image";
-
 
 export default function ChooseExpro() {
        return (
 <>
-
 <section className="bg-white util-flex util-flex-1 util-mx-1-5 my-20">
     <div className="relative flex items-left justify-between mb-12">
               <h2 className=" flex-1 heading-systems ">
@@ -22,7 +19,7 @@ export default function ChooseExpro() {
               alt="01"
             />
           </div>
-        <div class="parent-div">
+        <div class="parent-div ">
         <div class="stack-text">Full IP ownership — no licensing trap</div>
       </div>
         </div>

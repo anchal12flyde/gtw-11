@@ -1,6 +1,8 @@
 "use client";
 
 export default function ExecutionCapability() {
+
+
   const timelineItems = [
     {
       title: "Workflow audit + tech landscape mapping",
@@ -33,6 +35,7 @@ export default function ExecutionCapability() {
       image: "/images/assets/icon5.png",
     },
   ];
+  
 
   return (
     <>

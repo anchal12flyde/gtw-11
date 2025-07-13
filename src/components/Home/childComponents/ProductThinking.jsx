@@ -8,17 +8,36 @@ export default function ProductThinking() {
 
   return (
         <section className="feature-section util-flex util-flex-1 util-mx-1-5 ">
-          <div className="feature-item   ">
-            <h2 className="feature-title">Product Thinking First</h2>
-            <p className="feature-subtitle">We help you refine scope, not just ship tasks</p>
-          </div>
-          <div className="feature-item ">
-            <h2 className="feature-title">Cross-Platform Mastery</h2>
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
+  <div>
+    <img src="/images/assets/mobileIcon1.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+  </div>
+
+  <div>
+    <h2 className="feature-title">Product Thinking First</h2>
+    <p className="feature-subtitle">We help you refine scope, not just ship tasks</p>
+  </div>
+</div>
+
+          <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
+            <div>
+    <img src="/images/assets/mobileIcon2.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+  </div>
+          <div>
+        <h2 className="feature-title">Cross-Platform Mastery</h2>
             <p className="feature-subtitle">iOS + Android from a single, native-feeling codebase</p>
           </div>
-          <div className="feature-item ">
-            <h2 className="feature-title">QA + Scale Support</h2>
+            
+          </div>
+          <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
+            <div>
+            <img src="/images/assets/mobileIcon3.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+          </div>
+          <div>
+             <h2 className="feature-title">QA + Scale Support</h2>
             <p className="feature-subtitle">From first deploy to v2, we are with you at every build stage</p>
+          </div>
+         
           </div>
         </section>
        

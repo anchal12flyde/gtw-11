@@ -34,7 +34,7 @@ export default function ShopifyMagento() {
           <div className="">
             <div
             ref={scrollRef}
-            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide gap-12 sm:gap-0 ">
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide gap-12 sm:gap-0 ml-8 lg:ml-0 mr-8 lg:mr-0 ">
                 
             <div className="flex-shrink-0 snap-start w-[90vw]  flex flex-col md:flex-row gap-12 ">
               <div className="w-[90vw] sm:w-[50vw] ">
@@ -76,7 +76,7 @@ export default function ShopifyMagento() {
             </div>
 
             <div className="flex-shrink-0 snap-start w-[90vw] sm:w-[90vw] flex flex-col md:flex-row gap-12">
-              <div className="w-[90vw] sm:w-[50vw] ">
+              <div className=" w-[90vw] sm:w-[50vw] ">
                 <img
                   src="/images/assets/img9.png"
                   alt="Global"

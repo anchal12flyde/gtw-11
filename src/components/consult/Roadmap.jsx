@@ -37,26 +37,26 @@ export default function Roadmap() {
         whileInView="show"
         viewport={{ once: false, amount: 0.5 }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-5 w-full items-center justify-center">
+        <div className="flex flex-wrap lg:flex-nowrap">
 
           <motion.div
-            className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
             <img src="/images/assets/01.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
-              <h3 className="ecom-headings text-left">Discovery</h3>
-              <p className="paragraphs-default">
+              <h3 className="ecom-heading text-left">Discovery</h3>
+              <p className="paragraphs-defaul text-left">
                 We deep-dive into your workflows, tools, bottlenecks, and people.
               </p>
             </div>
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
+            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
             variants={arrow}
           >
-            <div className="justify-items-center mt-8 sm:mt-47 sm:block hidden">
+            <div className="justify-items-center  sm:mt-37 mr-15  sm:block hidden">
               <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
@@ -66,13 +66,13 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
             <img src="/images/assets/02.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Systems Map</h3>
-              <p className="paragraphs-default">
+              <p className="paragraphs-defaul text-left">
                 We create a visual blueprint of your current and future tech architecture.
               </p>
             </div>
@@ -80,10 +80,10 @@ export default function Roadmap() {
 
           
           <motion.div
-            className="flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
+            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
             variants={arrow}
           >
-            <div className="justify-items-center mt-8 sm:mt-47 sm:block hidden">
+            <div className="justify-items-center sm:mt-37 mr-15 sm:block hidden">
               <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
@@ -93,13 +93,13 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
             variants={card}
           >
             <img src="/images/assets/03.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
-              <h3 className="ecom-headings text-left">Transformation Map</h3>
-              <p className="paragraphs-default">
+              <h3 className="ecom-heading text-left">Transformation Map</h3>
+              <p className="paragraphs-defaul text-left">
                 Prioritized, ROI-first plan with clear outcomes, timelines, and cost/effort.
               </p>
             </div>

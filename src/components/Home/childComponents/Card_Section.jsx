@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Card_Section() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <section className="bg-white mt-16 sm:mt-0">
+      <section className="bg-white ">
 
        
         <motion.div

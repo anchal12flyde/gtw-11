@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function BlogCard({ imageSrc, title, category, link, linkText,details }) {
   return (
-    <div className="h-[480px] rounded-[22px] bg-[#F5F5F7] shadow-md overflow-hidden flex flex-col">
+    <div className="h-[480px] rounded-[22px] bg-[#F5F5F7] overflow-hidden flex flex-col">
       <div className="h-[250px] relative">
         <Image
           src={imageSrc}

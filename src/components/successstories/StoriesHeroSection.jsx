@@ -61,7 +61,7 @@ export default function StoriesHeroSection() {
                        Focus. As a partner, if a solution does not exist they are willing to 
                        work with you to  assist in developing one or offering alternative approaches.
                 </p>
-                <img src="/images/assets/vector.png" className="vector"/>
+                <img src="/images/assets/Vector.png" className="vector"/>
                 <Link href='#'  className="insight-link">Read More</Link>
                 </div>
                 </div>

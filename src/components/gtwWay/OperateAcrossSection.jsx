@@ -33,24 +33,25 @@ export default function OperateAcrossSection() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-y-20 gap-x-10 md:gap-x-40">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
-                className="flex w-full max-w-sm "
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="w-[3px] bg-[#FFB100] mr-3"></div>
-                <div>
-                  <h3 className="division-title">{item.title}</h3>
-                  <p className="division-desc text-gray-600">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <div className="flex flex-wrap justify-between gap-8">
+  {items.map((item, index) => (
+    <motion.div
+      key={index}
+      className="across-card flex w-full sm:w-[48%] lg:w-[24%] max-w-sm"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+    >
+      <div className="w-[3px] bg-[#FFB100] mr-3"></div>
+      <div>
+        <h3 className="division-title">{item.title}</h3>
+        <p className="division-desc text-gray-600">{item.desc}</p>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
         </div>
       </section>
     </>

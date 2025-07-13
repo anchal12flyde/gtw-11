@@ -28,9 +28,9 @@
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
-                  className="space-y-4 sm:space-y-0 sm:flex sm:justify-between sm:items-start sm:border-b sm:border-[#FFB100] sm:pb-6"
+                  className="consumer-product pb-6 sm:flex sm:justify-between sm:items-start sm:border-b sm:border-[#FFB100]"
                 >
-                  <div className="sm:max-w">
+                  <div className="product-left">
                     <h3 className="ecom-heading">{title}</h3>
                     <p className="industry-description mt-4">
                       We enable digital sales, customer journeys, and D2C operations.
@@ -38,8 +38,8 @@
                   </div>
                   <div className="block sm:hidden border-b border-[#FFB100] w-full mt-2"></div>
 
-                  <div className="w-full sm:w-auto">
-                    <div className="grid grid-cols-2 sm:flex gap-6 sm:gap-10 mt-7">
+                  <div className="product-right">
+                    <div className="sm:flex gap-6 sm:gap-10 mt-4">
                       {Array(4)
                         .fill(0)
                         .map((_, i) => (

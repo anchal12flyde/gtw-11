@@ -8,13 +8,13 @@ export default function Hero_Section() {
 
   return (
     <>
-   <div className='util-flex util-flex-1 util-mx-1-5'>
-  <section className="relative bg-transparent font-inter overflow-hidden ">
+   <div className=''>
+  <section className="relative bg-transparent font-inter overflow-hidden min-h-screen">
     <div className="hidden md:block relative w-full h-[700px]">
       <img
         src="/images/hero2.png"
         alt="Digital Transformation Banner"
-        className="absolute inset-0 w-full h-full object-cover object-left"
+        className="absolute object-cover object-left"
       />
     </div>
 
@@ -23,7 +23,7 @@ export default function Hero_Section() {
       <div className="hero-banner-wrapper bg-mobile-hero"></div>
     </div>
 
-   
+   <div className='util-flex util-flex-1 util-mx-1-5'>
     <div className="block md:hidden relative">
       <div className="">
         <motion.h1
@@ -51,8 +51,9 @@ export default function Hero_Section() {
         </motion.p>
       </div>
     </div>
+</div>
 
-    <div className="hidden md:block absolute inset-x-0 bottom-24">
+    <div className="hidden md:block absolute  bottom-24 util-mx-1-5 ">
       <motion.h1
         className="heading-hero" 
         style={{ color: "var(--text-color-dark)" }}

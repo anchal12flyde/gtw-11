@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from 'lucide-react';
 
 export default function ChallengeSection() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -69,7 +70,7 @@ export default function ChallengeSection() {
         <strong>GTW Consult Exists To Fix This.</strong>
         <a href="#" className="cta-link">
           Contact Us
-          <img src="/images/assets/Arrow 1.png" alt="arrow" />
+           <ArrowRight className="w-6 h-10  " />
         </a>
       </motion.div>
     </motion.div>

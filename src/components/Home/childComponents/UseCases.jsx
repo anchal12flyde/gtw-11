@@ -12,7 +12,7 @@ export default function mobile_apps() {
           <h2 className="usecases-heading ">
             Usecases <span className="usecases-subheading">(Quick Deployment)</span>
           </h2>
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-y-6">
+         <div className="flex flex-wrap justify-between gap-8">
           {[
             { title: 'Marketplaces', desc: 'Buyer-seller, review, filters, listings' },
             { title: 'SaaS Extensions', desc: 'Mobile access to SaaS platforms' },
@@ -27,7 +27,7 @@ export default function mobile_apps() {
             { title: 'Fintech & Payments', desc: 'Mobile access to SaaS platforms' },
             { title: 'Real Estate', desc: 'Buyer-seller, review, filters, listings' },
           ].map((item, index) => (
-            <div key={index} className="flex">
+            <div key={index} className="across-card flex w-full sm:w-[48%] lg:w-[24%] max-w-sm">
               <div className="w-[3px] bg-[#fbbf24] mr-3"></div>
               <div>
                 <h3 className="usecase-title text-lg font-semibold">{item.title}</h3>

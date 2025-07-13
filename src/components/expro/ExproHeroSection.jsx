@@ -80,15 +80,15 @@ export default function ExproHeroSection() {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-12 md:gap-35 pb-8">
+          <div className="flex flex-col md:flex-row text-center md:text-left gap-12 md:gap-35 pb-8">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               viewport={{ once: false }}
-              className="text-md"
+              className=" expro-left"
             >
-              <p className=" w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
+              <p className="w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
                  Piecing together tools creates operational chaos.</p>
              
             </motion.div>
@@ -140,7 +140,7 @@ export default function ExproHeroSection() {
               ExPro fixes this.
             </p>
 
-              <p href="#" className="text-lg pt-8 md:pt-4 block">
+              <p href="#" className="expro-right pt-8 md:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
                  and deep integrations it gives you true ownership of your commerce platform.
               </p>
