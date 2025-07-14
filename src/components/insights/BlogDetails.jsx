@@ -30,7 +30,7 @@ export default function BlogDetails() {
                 <div className="px-0 sm:px-30">
                     
                  
-                    <div className="mt-20">
+                    <div className="mt-30">
 
                 <div className="flex items-center justify-between mb-6">
                <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-[#F5F5F7] p-[12px_16px]">

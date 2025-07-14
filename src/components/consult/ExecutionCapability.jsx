@@ -2,7 +2,6 @@
 
 export default function ExecutionCapability() {
 
-
   const timelineItems = [
     {
       title: "Workflow audit + tech landscape mapping",
