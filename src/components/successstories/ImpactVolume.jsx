@@ -1,7 +1,11 @@
 'use client'
 import BlogCard from "../globalcomponents/BlogCards";
+import { motion } from "framer-motion";
 
-
+const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 
 const items = [
@@ -30,11 +34,15 @@ export default function ImpactVolume() {
   return (
     <>
 
-    <section className="mt-20 bg-white util-flex util-flex-1 util-mx-1-5 mb-20">
+    <section className="mt-26 bg-white util-flex util-flex-1 util-mx-1-5 ">
      <div className="px-0 sm:px-30">
         
         <div className="mb-20 blog-reading flex flex-col gap-y-16">
-                      <div className="flex flex-col gap-y-6">
+                      <motion.div className="flex flex-col gap-y-6"  initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={fadeInUp}
+         transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1}}>
                         <h3>Madgicx Overview: AI & Automation for Efficient Meta Ads</h3>
                         <p>Madgicx is an all-in-one ad management platform built specifically for Meta that embeds AI and automation at every level. Rather than manually monitoring dozens of ad sets and creatives, Madgicx continually analyzes account performance
                             and reallocates budgets in real time. Its Autonomous Budget Optimizer uses AI “like a pro media buyer” to distribute spend optimally across campaigns and ad sets . Madgicx also includes advanced tools for creative testing, audience building,
@@ -44,17 +52,22 @@ export default function ImpactVolume() {
 
                        <div className="flex flex-col gap-y-8">
                             {[...Array(4)].map((_, index) => (
-                            <div key={index}>
+                            <motion.div key={index}
+                         initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false}}
+                      variants={fadeInUp}
+                      transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1 }}>
                                <p><span>Align on True ROI:</span> Optimize for profitability, not vanity metrics.  Madgicx provides click and impression data, but make sure you’re measuring CAC against customer lifetime value (LTV).  As Madgicx’s own blog warns, many marketers 
                                “focus on vanity metrics instead of profitability”. Don’t fall into that trap.  For MVNOs, a customer’s true value (often many times their monthly bill) should guide thresholds and scale decisions.
 </p>
 
-                            </div>
+                            </motion.div>
                             ))}
                             <p>By adhering to these practices and continuously reviewing Madgicx’s insights, MVNO media buyers can maintain low CAC even as they scale.  The combination of sophisticated audience segmentation, AI budget management, and automated campaign rules 
                                 creates a machine for efficiency – dramatically reducing the manual effort needed while delivering measurably lower CAC and higher returns.</p>
                         </div>
-                    </div>
+                    </motion.div>
                     </div>
       <h2 className="heading-systems text-center  mb-8">
         Impact That Speaks Volumes
@@ -63,6 +76,7 @@ export default function ImpactVolume() {
         {items.map((item, index) => (
           <div
             key={index}
+             
             className="stack-volume hover:scale-[1.02] transition-transform">
             <span className="impact-number">{item.number}</span>
             <span className="impact-text">{item.text}</span>
@@ -70,7 +84,7 @@ export default function ImpactVolume() {
         ))}
       </div>
 
-       <div className="mt-20 ">
+       <div className="mt-26 mb-26">
                        <h1 className="heading-systems">
                            Related Articles
                         </h1>

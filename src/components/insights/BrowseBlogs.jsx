@@ -81,8 +81,8 @@ export default function BrowseBlogs() {
       <Head>
         <title>Insights</title>
       </Head>
-      <div className="">
-        <main className="util-flex util-flex-1 util-mx-1-5 py-24">
+      <div className="mt-26 mb-26">
+        <main className="util-flex util-flex-1 util-mx-1-5 ">
           <div className="blog-title">
             <h1>Browse All Blogs</h1>
           </div>
@@ -100,7 +100,7 @@ export default function BrowseBlogs() {
           </div>
 
          {visibleCount < blogData.length && (
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-15">
           <button
             href="#"
             className="client-button bg-white text-[#FFB100] border border-[#FFB100] hover:bg-[#FFB100] hover:text-white"

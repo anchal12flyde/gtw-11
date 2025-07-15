@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@react-spring/web": "^10.0.1",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.19.1",
@@ -17,7 +18,8 @@
     "next": "^15.3.3",
     "next-scroll-restorer": "^0.10.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

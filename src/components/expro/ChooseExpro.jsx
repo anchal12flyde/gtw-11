@@ -3,7 +3,7 @@
 export default function ChooseExpro() {
        return (
 <>
-<section className="bg-white util-flex util-flex-1 util-mx-1-5 my-20">
+<section className="bg-white util-flex util-flex-1 util-mx-1-5 mt-26">
     <div className="relative flex items-left justify-between mb-12">
               <h2 className=" flex-1 heading-systems ">
                     <span class="text-[#FFB100]">Why Choose</span> Expro

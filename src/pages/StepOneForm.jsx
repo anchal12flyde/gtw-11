@@ -19,7 +19,7 @@ export default function StepOneForm() {
 <>
  
  <Header/>
-  <div className=" util-flex util-flex-1 util-mx-1-5 mt-20">
+  <div className=" util-flex util-flex-1 util-mx-1-5 ">
     <div className="step-form-container ">
       <div className="step-indicator">
         <span className="dot"></span>

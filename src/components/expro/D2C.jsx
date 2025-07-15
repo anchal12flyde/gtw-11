@@ -14,7 +14,7 @@ export default function D2C() {
   const defaultImage = images[1];
 
   return (
-    <section className="challenge-section">
+    <section className="challenge-section mt-26">
       <div className="challenge-container util-flex util-flex-1 util-mx-1-5">
         <div className="challenge-image">
           <img
@@ -24,8 +24,8 @@ export default function D2C() {
         </div>
      <motion.div
       className="challenge-content"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
@@ -45,8 +45,8 @@ export default function D2C() {
             key={index}
             onMouseEnter={() => setHoveredItem(index + 1)}
             onMouseLeave={() => setHoveredItem(null)}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once:false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >

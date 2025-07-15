@@ -9,8 +9,8 @@
       'Operation & Infrastructure',
     ]
       return (
-      <div className='util-flex util-flex-1 util-mx-1-5'>
-        <section className="mt-20">
+      <div className='util-flex util-flex-1 util-mx-1-5 mt-26'>
+        <section className="">
           <h2 className="heading-systems text-black mb-12">Who <span className="text-[#FFB100]" >We Work</span>  With   </h2>
           <div className="space-y-12">
             {industryList.map((title, index) => {

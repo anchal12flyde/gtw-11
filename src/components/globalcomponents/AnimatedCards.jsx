@@ -26,11 +26,11 @@ const AnimatedCards = ({ cards }) => {
           <div className="card-overlay">
             <div className="overlay-content">
               <h3 className="card-action">{card.action}</h3>
-              <ul>
-                {card.overlayItems?.map((item, itemIdx) => (
-                  <li key={itemIdx}>{item}</li>
-                ))}
-              </ul>
+             <ul className="list-disc pl-5">
+              {card.overlayItems?.map((item, itemIdx) => (
+                <li key={itemIdx}>{item}</li>
+              ))}
+            </ul>
             </div>
           </div>
         </div>

@@ -124,7 +124,7 @@ export default function Explore_Digital() {
 
 
 
-            <div className="gradient-yellow-section ">
+            <div className="gradient-yellow-section pt-16">
               <div className="util-flex util-flex-1 util-mx-1-5">
               <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className="text-left  flex-1 heading-systems ">

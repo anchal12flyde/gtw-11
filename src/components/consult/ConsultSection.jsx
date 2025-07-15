@@ -15,16 +15,27 @@ export default function ConsultSection() {
   };
   return (
  
-<section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-12 mt-20">
+<section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26 overflow-y-visible">
     <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className=" flex-1 heading-systems ">
                    <span className="text-[#FFB100]">Why GTW</span> Consult
               </h2> 
             </div>
-        <div className="overflow-x-auto scroll-smooth scrollbar-hide w-full flex snap-x snap-mandatory" ref={scrollRef}>
-            <div className="flex-shrink-0"></div>
-            <div className="flex flex-nowrap gap-6 pb-4 w-full ">
-                <div className="flex flex-col gap-26 bg-gray-100 rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+            
+          
+            <div
+            ref={scrollRef}
+            style={{
+            transform: 'translateX(0)',
+            scrollBehavior: 'smooth',
+            display: 'flex',
+            scrollSnapType: 'x mandatory',
+            overflowX: 'auto', 
+        }}
+        className="scrollbar-hide"
+        >
+            <div className="flex flex-initial gap-6 pb-4  ">
+                <div className="consult-card">
                 <div className="campus-image-wrapper ">
                     <img
                         src="/images/assets/eclipse.png"
@@ -40,7 +51,8 @@ export default function ConsultSection() {
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-gray-100 rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+
+                <div className="consult-card">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/eclipse1.png"
@@ -55,7 +67,7 @@ export default function ConsultSection() {
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-gray-100 rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+                <div className="consult-card">
                 <div className="campus-image-wrapper">
                     <img
                     src="/images/assets/eclipse2.png"
@@ -70,7 +82,7 @@ export default function ConsultSection() {
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-gray-100 rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+                <div className="consult-card">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/eclipse3.png"
@@ -86,6 +98,7 @@ export default function ConsultSection() {
                 </div>
                 </div>
             </div>
+            
             </div>
 
            

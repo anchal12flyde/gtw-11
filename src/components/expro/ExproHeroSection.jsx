@@ -1,12 +1,27 @@
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
+const revealVariants = {
+  hidden: { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" },
+  visible: {
+    opacity: 1,
+    clipPath: "inset(0% 0% 0% 0%)",
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
+
 
 export default function ExproHeroSection() {
+   const { ref, inView } = useInView({ triggerOnce: false });
   
 
   return (
@@ -21,6 +36,7 @@ export default function ExproHeroSection() {
             loop
             muted
             playsInline
+            preload="auto"
           >
             <source src="/videos/expro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -32,12 +48,31 @@ export default function ExproHeroSection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section">
-            <h1  className="heading-hero">
-             Beyond Storefronts. We Build  <br /> Commerce Infrastructure.
-            </h1>
-            <p className="heading-subtitles w-[full] sm:w-[900px] ">
-             ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale — not subscription bloat.
-            </p>
+            <motion.h1
+        className="heading-hero"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={revealVariants}
+      >
+        Beyond Storefronts. We Build <br /> Commerce Infrastructure.
+      </motion.h1>
+
+      <motion.p
+        className="heading-subtitles w-full sm:w-[900px] mt-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={{
+          ...revealVariants,
+          visible: {
+            ...revealVariants.visible,
+            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+          },
+        }}
+      >
+        ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale — not subscription bloat.
+      </motion.p>
             <motion.div
             className="flex flex-col sm:flex-row gap-4 mt-8"
             variants={fadeInUp}
@@ -97,7 +132,7 @@ export default function ExproHeroSection() {
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.9 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="flex justify-center items-center "
             >
               <svg
@@ -142,7 +177,7 @@ export default function ExproHeroSection() {
 
               <p href="#" className="expro-right pt-8 md:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
-                 and deep integrations it gives you true ownership of your commerce platform.
+                 and deep integrations it gives you false ownership of your commerce platform.
               </p>
             </motion.div>
           </div>

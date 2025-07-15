@@ -14,7 +14,7 @@ export default function ShopifyMagento() {
     
      return (
 <>
-    <div className="bg-[#F5F5F7]  py-22  mt-6">
+    <div className="bg-[#F5F5F7]  py-22  mt-26">
     <div className="util-flex util-flex-1 util-mx-1-5"> 
     <div className="relative flex items-left justify-between mb-12 w-full ">
               <h2 className="text-left  flex-1 heading-systems ">

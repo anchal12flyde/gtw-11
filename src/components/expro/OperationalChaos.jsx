@@ -5,7 +5,7 @@ export default function OperationalChaos(){
 
       return (
     <>
-     <main className="util-flex util-flex-1 util-mx-1-5 mb-30 mt-30">
+     <main className="util-flex util-flex-1 util-mx-1-5  mt-26">
       <section className="hero">
         <h2 className="heading-systems">
           What <span className="text-[#FFB100]">You Get</span>

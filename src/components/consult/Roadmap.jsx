@@ -24,14 +24,14 @@ export default function Roadmap() {
 
   return (
     <section className="bg-white util-flex util-flex-1 util-mx-1-5 mt-20">
-      <div className="relative flex items-left justify-between">
+      <div className="relative flex ">
         <h2 className="flex-1 heading-systems">
           How It <span className="text-[#FFB100]">Works</span>
         </h2>
       </div>
 
       <motion.div
-        className="w-full flex mt-16"
+        className="w-full flex mt-12"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -40,7 +40,7 @@ export default function Roadmap() {
         <div className="flex flex-wrap lg:flex-nowrap">
 
           <motion.div
-            className="work-card work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card work-card flex flex-col gap-10  h-[300px] sm:h-auto justify-end"
             variants={card}
           >
             <img src="/images/assets/01.png" alt="Campus" className="number-image" />
@@ -53,7 +53,7 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
+            className="work-card flex flex-col gap-10  h-auto hide-on-mobile"
             variants={arrow}
           >
             <div className="justify-items-center  sm:mt-37 mr-15  sm:block hidden">
@@ -66,7 +66,7 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
             variants={card}
           >
             <img src="/images/assets/02.png" alt="Campus" className="number-image" />
@@ -80,7 +80,7 @@ export default function Roadmap() {
 
           
           <motion.div
-            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[400px] hide-on-mobile"
+            className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
           >
             <div className="justify-items-center sm:mt-37 mr-15 sm:block hidden">
@@ -93,7 +93,7 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="work-card flex flex-col gap-10 bg-white rounded-3xl h-[300px] sm:h[400px]"
+            className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
             variants={card}
           >
             <img src="/images/assets/03.png" alt="Campus" className="number-image" />

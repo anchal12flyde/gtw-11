@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
 
 export default function ChallengeSection() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -15,18 +16,21 @@ export default function ChallengeSection() {
   const defaultImage = images[1];
 
   return (
-    <section className="challenge-section">
+    <section className="challenge-section ">
       <div className="challenge-container util-flex util-flex-1 util-mx-1-5">
         <div className="challenge-image">
-          <img
-            src={hoveredItem ? images[hoveredItem] : defaultImage}
-            alt="People abstract image"
-          />
+          <Image
+  src={hoveredItem ? images[hoveredItem] : defaultImage}
+  alt="People abstract image"
+  width={500}
+  height={300} 
+  priority={hoveredItem !== null} 
+/>
         </div>
      <motion.div
       className="challenge-content"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+   initial={{ opacity: 0, x: -50 }}
+whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
@@ -49,8 +53,8 @@ export default function ChallengeSection() {
             key={index}
             onMouseEnter={() => setHoveredItem(index + 1)}
             onMouseLeave={() => setHoveredItem(null)}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once:false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
@@ -62,8 +66,8 @@ export default function ChallengeSection() {
 
       <motion.div
         className="cta-box"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >

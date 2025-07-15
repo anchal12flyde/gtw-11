@@ -94,7 +94,7 @@ export default function BrowseStories() {
       </Head>
       <div 
        className="">
-        <main className="util-flex util-flex-1 util-mx-1-5 py-24">
+        <main className="util-flex util-flex-1 util-mx-1-5 mt-26">
           <h1 className="heading-systems mb-6">
            Success Stories – How GTW Transforms Businesses
         </h1>
@@ -112,7 +112,7 @@ export default function BrowseStories() {
           </div>
 
          {visibleCount < blogData.length && (
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-15">
           <button
             href="#"
             className="client-button bg-white text-[#FFB100] border border-[#FFB100] hover:bg-[#FFB100] hover:text-white"
@@ -122,8 +122,6 @@ export default function BrowseStories() {
           </button>
         </div>
       )}
-
-       
         </main>
       </div>
     </>

@@ -14,7 +14,7 @@ export default function Infrastructure() {
     
    
     <div
-      className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 "
+      className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 mt-26 mb-26"
       variants={fadeInUp}
     >
       <div className="mt-22 sm:mt-0">

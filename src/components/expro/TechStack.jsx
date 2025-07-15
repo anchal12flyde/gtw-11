@@ -12,7 +12,7 @@ export default function TechStack() {
   };
   return (
  
-<section className=" util-flex util-flex-1 util-mx-1-5 py-12 mt-20">
+<section className=" util-flex util-flex-1 util-mx-1-5  mt-26">
     <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className=" flex-1 heading-systems ">
                    Tech Stack

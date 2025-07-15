@@ -32,8 +32,8 @@ export default function Next_Steps() {
   return (
    <>
       
-        <div className="block sm:hidden">
-      <div className="next-steps-section">
+        <div className="block sm:hidden mt-26">
+      <div className="next-steps-section ">
         <div className="util-flex util-flex-1 util-mx-1-5">
           <div className="icon">
             <img src="/images/Next_Icon.png" alt="Icon" />
@@ -71,8 +71,8 @@ export default function Next_Steps() {
     </div>
 
       
-     <section className="hidden sm:block py-22 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto text-center">
+     <section className="hidden sm:block overflow-x-hidden util-flex util-flex-1 util-mx-1-5 mt-26 mb-26">
+      <div className=" text-center">
         <h2 className="heading-systems text-black mb-14">Next Steps</h2>
 
         <motion.div

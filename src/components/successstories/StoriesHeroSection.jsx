@@ -1,6 +1,7 @@
 'use client'
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function StoriesHeroSection() {
     const scrollRef = useRef(null);
@@ -15,7 +16,7 @@ export default function StoriesHeroSection() {
 
   return (
     <>
-    <div className="util-flex util-flex-1 util-mx-1-5 mt-30 relative">
+    <div className="util-flex util-flex-1 util-mx-1-5 mt-20 relative">
          <h1 className="heading-systems mb-6">
            Success Stories – How GTW Transforms Businesses
         </h1>
@@ -37,10 +38,22 @@ export default function StoriesHeroSection() {
             <div className="column1">
             <div className="row1">
                 <div className="row1-col">
-                    <img src="/images/assets/grid1.png"/>
+                    <Image
+              src="/images/assets/grid1.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
                 <div className="row1-col">
-                    <img src="/images/assets/grid2.png"/>
+              <Image
+              src="/images/assets/grid2.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
             </div>
            <div className="row2"> 
@@ -72,10 +85,22 @@ export default function StoriesHeroSection() {
             <div className="column1">
             <div className="row1">
                 <div className="row1-col">
-                    <img src="/images/assets/grid1.png"/>
+                    <Image
+              src="/images/assets/grid1.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
                 <div className="row1-col">
-                    <img src="/images/assets/grid2.png"/>
+                    <Image
+              src="/images/assets/grid2.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
             </div>
            <div className="row2"> 
@@ -95,7 +120,7 @@ export default function StoriesHeroSection() {
                        Focus. As a partner, if a solution does not exist they are willing to 
                        work with you to  assist in developing one or offering alternative approaches.
                 </p>
-                <img src="/images/assets/vector.png" className="vector"/>
+                <img src="/images/assets/Vector.png" className="vector"/>
                 <Link href='#'  className="insight-link">Read More</Link>
                 </div>
                 </div>
@@ -107,10 +132,22 @@ export default function StoriesHeroSection() {
             <div className="column1">
             <div className="row1">
                 <div className="row1-col">
-                    <img src="/images/assets/grid1.png"/>
+                     <Image
+              src="/images/assets/grid1.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
                 <div className="row1-col">
-                    <img src="/images/assets/grid2.png"/>
+                    <Image
+              src="/images/assets/grid2.png"
+              alt=""
+              width={500}  
+              height={300}
+              className="w-full h-auto" 
+            />
                 </div>
             </div>
            <div className="row2"> 
@@ -130,7 +167,7 @@ export default function StoriesHeroSection() {
                        Focus. As a partner, if a solution does not exist they are willing to 
                        work with you to  assist in developing one or offering alternative approaches.
                 </p>
-                <img src="/images/assets/vector.png" className="vector"/>
+                <img src="/images/assets/Vector.png" className="vector"/>
                 <Link href='#'  className="insight-link">Read More</Link>
                 </div>
                 </div>

@@ -1,14 +1,19 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function InsightHeroSection() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <div className="background-hero mt-36">
-        <img
-          src="/images/insights_bg.png"
-          alt="Insight Hero"
-          className="w-full h-auto object-cover"
+      <div className="background-hero mt-15">
+         <Image
+        src="/images/insights_bg.png"
+        alt="Insight Hero"
+        className="w-full h-auto object-cover"
+        width={1920}  
+        height={1080} 
+        placeholder="empty"
+        priority
         />
         <div className="insight-card">
           <div className="insight-tags mb-2 sm:mb-6">

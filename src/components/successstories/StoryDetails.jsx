@@ -3,6 +3,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link"
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 
 export default function StoryDetails() {
@@ -15,7 +22,7 @@ export default function StoryDetails() {
             <div className="util-flex util-flex-1 util-mx-1-5">
                 <div className="px-0 sm:px-30">
               
-                    <div className="mt-30">
+                    <div className="mt-15">
 
                 <div className="flex items-center justify-between mb-6">
                <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-[#F5F5F7] p-[12px_16px]">
@@ -117,59 +124,60 @@ export default function StoryDetails() {
                     
                     
 
-                     <div className="mt-20 blog-reading flex flex-col gap-y-16">
-                    <div >
-                        <p>
-                            The MVNO (Mobile Virtual Network Operator) market is fiercely competitive. B2C MVNOs often lack the brand recognition of major carriers, face high churn rates, and must offer aggressive pricing to win customers. This combination 
-                            drives customer acquisition costs (CAC) higher than in many industries. In fact, analysts note that because MVNOs compete with established carriers, they “face higher customer acquisition costs, making growth-hacking techniques … 
-                            especially valuable to get more impact from lean budgets” . For expert media buyers, cutting CAC by 20–30% can dramatically boost ROI. Meta (Facebook/Instagram) Ads remain a top channel for MVNO growth – but success now hinges on 
-                            smart automation and data-driven tactics rather than manual bidding. Madgicx’s AI-powered platform offers just such tools to turbocharge Meta campaigns and squeeze waste out of ad spend.
-                        </p>
-                    </div>
-                      <div className="background-hero">
-                        <img
-                            src="/images/assets/success_img.png"
-                            alt="Insight Hero"
-                            className="w-full h-auto object-cover pb-8"
-                        />
-                          <p>Triarchy co-founder and creative director, Adam Taubenfligel - TRIARCHY</p>
-                    </div>
-                    <p>Madgicx is an all-in-one ad management platform built specifically for Meta that embeds AI and automation at every level. Rather than manually monitoring dozens of ad sets and creatives, Madgicx continually analyzes account performance
-                            and reallocates budgets in real time. Its Autonomous Budget Optimizer uses AI “like a pro media buyer” to distribute spend optimally across campaigns and ad sets . Madgicx also includes advanced tools for creative testing, audience building,
-                            and automated rules. For example, Ads Manager 2.0 lets you apply bulk changes and engage AI Bidding algorithms to put more ad spend where it’s most effective . In practice, Madgicx acts as an AI assistant: it spots winning ads and audiences
-                            instantly, scales them automatically, and pauses wasteful elements – 24/7. (See the table below for a comparison of manual vs. Madgicx-enhanced tactics.)
-                        </p>
-                  
+                <div className="mt-20 blog-reading flex flex-col gap-y-8">
+   
+      <motion.div
+        className="background-hero"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={fadeInUp}
+         transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.2 }}
+      >
+        <img
+          src="/images/assets/success_img.png"
+          alt="Insight Hero"
+          className="w-full h-auto object-cover pb-4"
+        />
+        <p>Triarchy co-founder and creative director, Adam Taubenfligel - TRIARCHY</p>
+      </motion.div>
 
-                    <div className="flex flex-col gap-y-6">
-                        <div >
-                        <h3>Madgicx Overview: AI & Automation for Efficient Meta Ads</h3>
-                        <p className="mt-4">Madgicx is an all-in-one ad management platform built specifically for Meta that embeds AI and automation at every level. Rather than manually monitoring dozens of ad sets and creatives, Madgicx continually analyzes account performance
-                            and reallocates budgets in real time. Its Autonomous Budget Optimizer uses AI “like a pro media buyer” to distribute spend optimally across campaigns and ad sets . Madgicx also includes advanced tools for creative testing, audience building,
-                            and automated rules. For example, Ads Manager 2.0 lets you apply bulk changes and engage AI Bidding algorithms to put more ad spend where it’s most effective . In practice, Madgicx acts as an AI assistant: it spots winning ads and audiences
-                            instantly, scales them automatically, and pauses wasteful elements – 24/7. (See the table below for a comparison of manual vs. Madgicx-enhanced tactics.)
-                        </p>
-                        </div>
-                            <div className="flex flex-col gap-y-8">
-                            {[...Array(3)].map((_, index) => (
-                            <div key={index}>
-                                <h4>Budget Allocation</h4>
-                               <ul className="mt-2 list-disc pl-5">
-                                <li>Manual Meta Ads - Static budgets; manual shifts‍</li>
-                                <li>With Madgicx (AI/Automation) - Autonomous Budget Optimizer (ABO) reallocates budget by performance</li>
-                                <li>Impact on CAC - Cuts wasted spend; lowers CAC</li>
-                                </ul>
+     
 
-                            </div>
-                            ))}
-                        </div>
-                      
-                    </div>
-                     
+      <motion.div
+        className="flex flex-col gap-y-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={fadeInUp}
+         transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1}}
+      >
+        <div>
+          <h3>Madgicx Overview: AI & Automation for Efficient Meta Ads</h3>
+          <p className="mt-4">Madgicx is an all-in-one ad management platform...</p>
+        </div>
 
-
-                    
-                  </div>
+        <div className="flex flex-col gap-y-8">
+          {[...Array(3)].map((_, index) => (
+            <motion.div
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false}}
+              variants={fadeInUp}
+               transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1 }}
+            >
+              <h4>Budget Allocation</h4>
+              <ul className="mt-2 list-disc pl-5">
+                <li>Manual Meta Ads - Static budgets; manual shifts‍</li>
+                <li>With Madgicx (AI/Automation) - Autonomous Budget Optimizer (ABO)...</li>
+                <li>Impact on CAC - Cuts wasted spend; lowers CAC</li>
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
 
                    
 
