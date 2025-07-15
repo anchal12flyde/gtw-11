@@ -4,6 +4,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import AnimatedInput from '../Animation/AnimatedInput';
 
 const skillsList = [
   "Brand Identity", "UI/UX Design", "Web Design", "Motion Graphics", "Illustration", "Strategy",
@@ -30,7 +31,7 @@ export default function Partnership() {
   return (
 <>
  <Header/>
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
         <div className="step-form-container ">
              <ArrowLeft
           className="cursor-pointer mb-5 text-gray-400"
@@ -75,12 +76,8 @@ export default function Partnership() {
 
           <p className="form-subheading">Have you worked with dev partners before?</p>
             <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="yes / no"
-                className="custom-select"
-            />
-            </div>
+                       <AnimatedInput placeholder="Yes/No" />
+                   </div>
             <p className="form-subheading ">What type of work would you love to collaborate on?</p>
           <div className="select-wrapper">
           <textarea

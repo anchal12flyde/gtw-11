@@ -30,9 +30,8 @@ export default function StoriesHeroSection() {
        </div>
        
        <div ref={scrollRef}
-            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-10">
-             
-              <div className="responsive-snap-container  div-container">
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-10 gap-6">
+             <div className="responsive-snap-container div-container ">
             
               <div className="grid-container ">
             <div className="column1">
@@ -67,7 +66,7 @@ export default function StoriesHeroSection() {
                 </div>
                 </div>
 
-             <div className="responsive-snap-container div-container">
+             <div className="responsive-snap-container div-container ">
             
               <div className="grid-container ">
             <div className="column1">
@@ -102,7 +101,7 @@ export default function StoriesHeroSection() {
                 </div>
                 </div>
 
-          <div className="responsive-snap-container div-container">
+          <div className="responsive-snap-container div-container ">
             
               <div className="grid-container ">
             <div className="column1">

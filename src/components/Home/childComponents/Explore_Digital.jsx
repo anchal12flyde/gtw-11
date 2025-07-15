@@ -6,14 +6,19 @@ import { useRef } from "react";
 export default function Explore_Digital() {
   const scrollRef = useRef(null);
 
+   const CARD_WIDTH = 320 + 40; 
+
   const scrollLeft = () => {
-    scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -CARD_WIDTH, behavior: 'smooth' });
+    }
   };
 
   const scrollRight = () => {
-    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: CARD_WIDTH, behavior: 'smooth' });
+    }
   };
-
 
   return (
     <>
@@ -119,7 +124,8 @@ export default function Explore_Digital() {
 
 
 
-            <div className="gradient-yellow-section util-flex util-flex-1 util-mx-1-5">
+            <div className="gradient-yellow-section ">
+              <div className="util-flex util-flex-1 util-mx-1-5">
               <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className="text-left  flex-1 heading-systems ">
                 <span className="text-black">We build systems,</span>{" "}
@@ -134,10 +140,13 @@ export default function Explore_Digital() {
                 </button>
               </div>
             </div>
-          <div className="overflow-auto scrollbar-hide w-full flex"  ref={scrollRef}>
-            <div className=" flex-shrink-0"></div>
-            <div className="flex flex-nowrap gap-10 pb-4 w-full ">
-              <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
+            </div>
+
+          <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide w-full flex"  ref={scrollRef}>
+            
+            <div className="flex flex-nowrap gap-10 pb-4  ">
+       <div className=" yellow-container">
+              <div className="flex flex-col gap-8 bg-white rounded-3xl w-80  h-[400px] overflow-hidden">
 
                 <HoverVideo src="/videos/vd2.mp4"  />
                 
@@ -152,6 +161,8 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
+</div>
+
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
                 <div className="relative rounded-2xl">
                   <img
@@ -223,7 +234,27 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
-              {/* <div className=" flex-shrink-0  w-[20px] sm:w-[60px]"></div> */}
+               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
+                <div className="relative rounded-2xl">
+                  <img
+                    src="/images/img4.png"
+                    alt="Campus"
+                    className="w-full h-50 "
+                  />
+                </div>
+                <div className="flex flex-col gap-4 px-4">
+                  <h3 className="ecom-heading text-left">
+                    A Campus Goes Digital
+                  </h3>
+                  <p className="paragraph-default ">
+                    Built a full-stack MERN platform for Itel Mobiles to support
+                    D2C sales, stock sync, and campaign-driven demand — built to
+                    scale across India.
+                  </p>
+                </div>
+              </div>
+              
+               <div className=" flex-shrink-0  w-[10px] sm:w-[50px]"></div>
             </div>
           </div>
         

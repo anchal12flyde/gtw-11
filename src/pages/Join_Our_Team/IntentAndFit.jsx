@@ -19,7 +19,7 @@ export default function IntentAndFit() {
   return (
     <>
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-gray-400"

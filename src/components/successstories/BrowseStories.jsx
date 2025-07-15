@@ -92,7 +92,8 @@ export default function BrowseStories() {
       <Head>
         <title>Success Stories</title>
       </Head>
-      <div className="">
+      <div 
+       className="">
         <main className="util-flex util-flex-1 util-mx-1-5 py-24">
           <h1 className="heading-systems mb-6">
            Success Stories – How GTW Transforms Businesses

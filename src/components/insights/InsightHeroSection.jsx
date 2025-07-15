@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function InsightHeroSection() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <div className="background-hero">
+      <div className="background-hero mt-36">
         <img
           src="/images/insights_bg.png"
           alt="Insight Hero"

@@ -54,7 +54,7 @@ useEffect(() => {
   
  <header
   className={`site-header ${scrolled ? '' : 'slide-down'} util-flex util-flex-1 util-mx-1-5 mt-4 
-    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "fixed-header" : "" }
+    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "" : "" }
   `}
 >
   

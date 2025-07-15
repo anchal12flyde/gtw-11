@@ -4,6 +4,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import AnimatedInput from '../Animation/AnimatedInput';
 
 const skillsList = [
   "White label", "Co-branded", "Referral-based", " On-demand support", "Retainers"
@@ -28,7 +29,7 @@ export default function Collaborate() {
     return (
   <>
    <Header/>
-        <div className="util-flex util-flex-1 util-mx-1-5">
+        <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
           <div className="step-form-container ">
                <ArrowLeft
             className="cursor-pointer mb-5 text-gray-400"
@@ -62,13 +63,8 @@ export default function Collaborate() {
 
              <p className="form-subheading ">Time zone / availability</p>
           <div className="select-wrapper">
-          <input
-                type="text"
-                placeholder="Enter Time zone"
-                className="custom-select"
-            />
-
-          </div>
+                     <AnimatedInput placeholder="Enter Time Zone" />
+                 </div>
 
           <p className="form-subheading">How did you find us?</p>
           <div className="select-wrapper">

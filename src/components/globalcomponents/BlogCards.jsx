@@ -1,5 +1,3 @@
-// components/globalcomponents/BlogCard.js
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +17,7 @@ export default function BlogCard({ imageSrc, title, category, link, linkText,det
         <h2 className="blog-header ">{title}</h2>
         <h5 className="blog-details mt-2">{details} </h5>
         {link && linkText && (
-          <Link href={link} className="insight-link mt-10">{linkText}</Link>
+          <Link href={link} className="insight-link mt-10" >{linkText}</Link>
         )}
       </div>
     </div>

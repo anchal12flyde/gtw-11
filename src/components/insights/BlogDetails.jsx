@@ -102,7 +102,7 @@ export default function BlogDetails() {
                                        </div>
                 </div>
 
-                        <h1 className="heading-systems mb-6">
+                        <h1 className="heading-systems mb-8">
                             Design Slow. Build Smart. Launch Fast.
                         </h1>
                       <div className="blog-details-text flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
@@ -121,7 +121,7 @@ export default function BlogDetails() {
 
                     </div>
 
-                    <div className="background-hero">
+                    <div className="background-hero mt-16">
                         <img
                             src="/images/insights_bg.png"
                             alt="Insight Hero"

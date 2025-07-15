@@ -4,7 +4,6 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import AnimatedInput from "./Animation/AnimatedInput";
-import AnimatedRadioGroup from "./Animation/AnimatedRadioGroup";
 import { motion } from "framer-motion";
 
 export default function StepTwoForm() {
@@ -17,7 +16,7 @@ export default function StepTwoForm() {
   return (
     <>
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
         <div className="step-form-container" >
           <ArrowLeft
             className="cursor-pointer mb-5 text-gray-400"

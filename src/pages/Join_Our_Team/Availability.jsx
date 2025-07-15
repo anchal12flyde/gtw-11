@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
+import AnimatedInput from '../Animation/AnimatedInput';
 
 
 
@@ -18,7 +19,7 @@ export default function Availability() {
   return (
     <>
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-gray-400"
@@ -55,12 +56,8 @@ export default function Availability() {
 
                  <p className="form-subheading">Are you open to freelance / trial assignments?</p>
             <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="yes / no"
-                className="custom-select"
-            />
-            </div>
+                       <AnimatedInput placeholder="Yes/No" />
+                   </div>
 
           <button className="next-button" onClick={handleNext}>
             Next <ArrowRight size={16} />

@@ -4,6 +4,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import AnimatedInput from '../Animation/AnimatedInput';
 
 
 export default function AgencyDetails() {
@@ -17,7 +18,7 @@ export default function AgencyDetails() {
   return (
 <>
  <Header/>
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-20">
         <div className="step-form-container ">
              <ArrowLeft
           className="cursor-pointer mb-5 text-gray-400"
@@ -33,38 +34,18 @@ export default function AgencyDetails() {
           Studio / Agency Details
         </h1>
       </div>    
-          <p className="form-subheading">Agency / Studio Name</p>
+           <div className="select-wrapper">
+                      <AnimatedInput placeholder="Enter your Agency/Studio name" />
+                  </div>
             <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="Enter your Agency / Studio Name"
-                className="custom-select"
-            />
-            </div>
-            <p className="form-subheading">Website or Portfolio</p>
-            <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="Enter your Website or Portfolio url"
-                className="custom-select"
-            />
-            </div>
-             <p className="form-subheading">Instagram / Dribbble (optional) </p>
-            <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="Enter your Instagram / Dribbble"
-                className="custom-select"
-            />
-            </div>
-            <p className="form-subheading">City & Country</p>
-            <div className="select-wrapper">
-            <input
-                type="text"
-                placeholder="Enter your City & Country"
-                className="custom-select"
-            />
-            </div>
+                       <AnimatedInput placeholder="Enter your Website or Portfolio URL" />
+                   </div>
+              <div className="select-wrapper">
+                         <AnimatedInput placeholder="Enter your Instagram or Dribble" />
+                     </div>
+           <div className="select-wrapper">
+                      <AnimatedInput placeholder="Enter your City or Country" />
+                  </div>
             <p className="form-subheading ">
            Team Size
           </p>
