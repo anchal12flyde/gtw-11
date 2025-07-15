@@ -2,7 +2,17 @@
 import { motion } from 'framer-motion';
 
 
-
+const revealVariants = {
+  hidden: { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" }, 
+  visible: {
+    opacity: 1,
+    clipPath: "inset(0% 0% 0% 0%)", 
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
 export default function Hero_Section() {
 
 
@@ -28,10 +38,10 @@ export default function Hero_Section() {
       <div className="">
         <motion.h1
           className="heading-hero-mobile"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={revealVariants}
         >
           Building the<br />
           <span className="text-[#FFB100]">Digital Backbone</span> of
@@ -40,10 +50,16 @@ export default function Hero_Section() {
         </motion.h1>
         <motion.p
           className="heading-subtitle-mobile mt-4"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={{
+          ...revealVariants,
+          visible: {
+            ...revealVariants.visible,
+            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+          },
+        }}
         >
           From concept to code, commerce to<br />
           conversion, we design the technology<br />
@@ -57,10 +73,10 @@ export default function Hero_Section() {
       <motion.h1
         className="heading-hero" 
         style={{ color: "var(--text-color-dark)" }}
-        initial={{ opacity: 0, x: -60  }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
+       initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={revealVariants}
       >
         Building the <span className="text-[#FFB100]">Digital Backbone</span>
         <br />
@@ -68,10 +84,16 @@ export default function Hero_Section() {
       </motion.h1>
       <motion.p
         className="heading-subtitle text-gray-600"
-        initial={{ opacity: 0, x: -60  }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={{
+          ...revealVariants,
+          visible: {
+            ...revealVariants.visible,
+            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+          },
+        }}
       >
         From concept to code, commerce to conversion, we design the<br />
         technology infrastructure for tomorrow’s businesses.
