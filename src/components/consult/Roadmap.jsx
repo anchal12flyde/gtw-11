@@ -40,12 +40,12 @@ export default function Roadmap() {
         <div className="flex flex-wrap lg:flex-nowrap">
 
           <motion.div
-            className="work-card work-card flex flex-col gap-10  h-[300px] sm:h-auto justify-end"
+            className="work-card flex flex-col gap-10  h-[300px] sm:h-auto justify-end"
             variants={card}
           >
             <img src="/images/assets/01.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
-              <h3 className="ecom-heading text-left">Discovery</h3>
+              <h3 className="ecom-headings text-left">Discovery</h3>
               <p className="paragraphs-defaul text-left">
                 We deep-dive into your workflows, tools, bottlenecks, and people.
               </p>
@@ -53,10 +53,10 @@ export default function Roadmap() {
           </motion.div>
 
           <motion.div
-            className="work-card flex flex-col gap-10  h-auto hide-on-mobile"
+            className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
           >
-            <div className="justify-items-center  sm:mt-37 mr-15  sm:block hidden">
+            <div className="justify-items-center sm:mt-37 sm:block hidden ">
               <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
@@ -64,6 +64,7 @@ export default function Roadmap() {
               />
             </div>
           </motion.div>
+
 
           <motion.div
             className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
@@ -83,7 +84,7 @@ export default function Roadmap() {
             className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
           >
-            <div className="justify-items-center sm:mt-37 mr-15 sm:block hidden">
+            <div className="justify-items-center sm:mt-37 sm:block hidden ">
               <img
                 src="/images/assets/Arrow 2.png"
                 alt="Arrow"
@@ -98,12 +99,14 @@ export default function Roadmap() {
           >
             <img src="/images/assets/03.png" alt="Campus" className="number-image" />
             <div className="flex flex-col gap-4">
-              <h3 className="ecom-heading text-left">Transformation Map</h3>
+              <h3 className="ecom-headings text-left">Transformation Map</h3>
               <p className="paragraphs-defaul text-left">
-                Prioritized, ROI-first plan with clear outcomes, timelines, and cost/effort.
+                We create a visual blueprint of your current and future tech architecture.
               </p>
             </div>
           </motion.div>
+
+        
         </div>
       </motion.div>
     </section>
