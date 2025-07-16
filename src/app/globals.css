@@ -925,19 +925,10 @@ line-height: normal;
   text-align: center;
 }
 
-.usecases-heading {
-  font-family: 'Inter', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 4rem;
-  text-align: left;  
-  letter-spacing: 0em;
-}
 
 .usecases-subheading {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+ 
   color: #6b7280;
   letter-spacing: 0em;
 }

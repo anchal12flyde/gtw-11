@@ -125,6 +125,18 @@ export default function StoryDetails() {
                     
 
                 <div className="mt-20 blog-reading flex flex-col gap-y-8">
+                         <motion.div  initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                        variants={fadeInUp}
+                        transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.2 }}>
+                        <p>
+                            The MVNO (Mobile Virtual Network Operator) market is fiercely competitive. B2C MVNOs often lack the brand recognition of major carriers, face high churn rates, and must offer aggressive pricing to win customers. This combination 
+                            drives customer acquisition costs (CAC) higher than in many industries. In fact, analysts note that because MVNOs compete with established carriers, they “face higher customer acquisition costs, making growth-hacking techniques … 
+                            especially valuable to get more impact from lean budgets” . For expert media buyers, cutting CAC by 20–30% can dramatically boost ROI. Meta (Facebook/Instagram) Ads remain a top channel for MVNO growth – but success now hinges on 
+                            smart automation and data-driven tactics rather than manual bidding. Madgicx’s AI-powered platform offers just such tools to turbocharge Meta campaigns and squeeze waste out of ad spend.
+                        </p>
+                    </motion.div>
    
       <motion.div
         className="background-hero"
