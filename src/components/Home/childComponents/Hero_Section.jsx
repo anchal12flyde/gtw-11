@@ -83,7 +83,7 @@ export default function Hero_Section() {
         of Modern Commerce
       </motion.h1>
       <motion.p
-        className="heading-subtitle text-gray-600"
+        className="heading-subtitle text-[#313131]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}

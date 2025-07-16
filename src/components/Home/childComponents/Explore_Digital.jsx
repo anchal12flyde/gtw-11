@@ -171,7 +171,7 @@ export default function Explore_Digital() {
                     className="w-full h-50 "
                   />
                 </div>
-                <div className="flex flex-col gap-4 px-4">
+                <div className="flex flex-col gap-4 px-8">
                   <h3 className="ecom-heading text-left">
                     A Campus Goes Digital
                   </h3>
@@ -242,7 +242,7 @@ export default function Explore_Digital() {
                     className="w-full h-50 "
                   />
                 </div>
-                <div className="flex flex-col gap-4 px-4">
+                <div className="flex flex-col gap-4 px-8">
                   <h3 className="ecom-heading text-left">
                     A Campus Goes Digital
                   </h3>
