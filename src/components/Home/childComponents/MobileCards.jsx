@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 
-export default function mobile_apps() {
+export default function MobileCards() {
 
 
   return (

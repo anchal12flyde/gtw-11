@@ -923,7 +923,6 @@ line-height: normal;
   padding-top: 4rem;
   padding-bottom: 5rem;
   text-align: center;
-  margin-top: 3rem;
 }
 
 .usecases-heading {
@@ -954,8 +953,8 @@ line-height: normal;
 
 .usecase-title {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 400;
   color: #111827;
   letter-spacing: 0em;
   text-align: left;
@@ -964,7 +963,7 @@ line-height: normal;
 
 .usecase-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #111827;
   letter-spacing: 0em;
@@ -987,12 +986,10 @@ line-height: normal;
 
 .feature-section {
   font-family: 'Inter', sans-serif;
-  padding-top: 5rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 5rem;
- 
  
 }
 
@@ -1000,18 +997,18 @@ line-height: normal;
 
 .feature-title {
   font-family: 'Inter', sans-serif;
-  font-size: 30px; 
-  font-weight: 700;
+  font-size: 31px; 
+  font-weight: 400;
   color: #000000;
-  letter-spacing: 0em;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+
 }
 
 .feature-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 15px; 
-  font-weight: 700;
-  letter-spacing: 0em;
+  font-size: 18px; 
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: #000000;
 }
 
@@ -1029,11 +1026,11 @@ line-height: normal;
 @media (min-width: 1024px) {
  
   .feature-title {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   .feature-subtitle {
-    font-size: 26px;
+    font-size: 30px;
   }
 }
 

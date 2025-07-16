@@ -3,12 +3,12 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 
-export default function mobile_apps() {
+export default function Usecases() {
 
 
   return (
 
-        <section className="usecases-section bg-gray-50 util-flex util-flex-1 util-mx-1-5 ">
+        <section className="usecases-section bg-gray-50 util-flex util-flex-1 util-mx-1-5 mt-26">
           <h2 className="usecases-heading ">
             Usecases <span className="usecases-subheading">(Quick Deployment)</span>
           </h2>

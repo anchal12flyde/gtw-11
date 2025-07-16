@@ -7,10 +7,10 @@ export default function ProductThinking() {
 
 
   return (
-        <section className="feature-section util-flex util-flex-1 util-mx-1-5 ">
-      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
-  <div>
-    <img src="/images/assets/mobileIcon1.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+        <section className="feature-section util-flex util-flex-1 util-mx-1-5 mt-26 ">
+      <div className="flex flex-col md:flex-row items-start sm:items-center  gap-4 md:gap-10">
+  <div >
+    <img src="/images/assets/mobileIcon1.png" className="w-25 h-25 md:w-30 md:h-30" alt="Icon" />
   </div>
 
   <div>
@@ -19,9 +19,9 @@ export default function ProductThinking() {
   </div>
 </div>
 
-          <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-start sm:items-center md:justify-items-start gap-4 md:gap-10">
             <div>
-    <img src="/images/assets/mobileIcon2.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+    <img src="/images/assets/mobileIcon2.png" className="w-25 h-25 md:w-30 md:h-30" alt="Icon" />
   </div>
           <div>
         <h2 className="feature-title">Cross-Platform Mastery</h2>
@@ -29,9 +29,9 @@ export default function ProductThinking() {
           </div>
             
           </div>
-          <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-start sm:items-center md:justify-items-start gap-4 md:gap-10">
             <div>
-            <img src="/images/assets/mobileIcon3.png" className="w-20 h-20 md:w-30 md:h-30" alt="Icon" />
+            <img src="/images/assets/mobileIcon3.png" className="w-25 h-25 md:w-30 md:h-30" alt="Icon" />
           </div>
           <div>
              <h2 className="feature-title">QA + Scale Support</h2>

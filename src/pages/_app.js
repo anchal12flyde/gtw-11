@@ -9,6 +9,7 @@
 import { useState, useEffect } from 'react';
 import "@/app/globals.css"
 import Loader from '@/components/Home/Loader/Loader';
+import { FormProvider } from '@/context/FormContext';
 
 export default function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? <Loader /> : <Component {...pageProps} />}
+      {loading ? <Loader /> :<FormProvider> <Component {...pageProps} /></FormProvider>}
     </>
   );
 }
