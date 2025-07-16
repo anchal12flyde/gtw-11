@@ -46,7 +46,7 @@ export default function Explore_Digital() {
           >
             <div className="heading-systems flex flex-wrap">
               <p className="text-white">We Build. We Digitize.</p>
-              <p className="text-[#FFB100]">We Transform.</p>
+              &nbsp;<p className="text-[#FFB100]">We Transform.</p>
             </div>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
-</div>
+            </div>
 
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80 flex-shrink-0 h-[400px] overflow-hidden">
                 <div className="relative rounded-2xl">

@@ -72,7 +72,7 @@ useEffect(() => {
 
   
     {pathname !== "/Expro" && (
-      <nav className="hidden md:flex gap-6 items-center">
+      <nav className="hidden xl:flex gap-6 items-center">
         <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
         <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
         <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>
@@ -84,7 +84,7 @@ useEffect(() => {
     )}
 
 
-    <div className="hidden md:block">
+    <div className="hidden xl:block">
       <ClientButton
         href="/StepOneForm"
         className={`${
@@ -98,14 +98,16 @@ useEffect(() => {
 
 
   
-  <button
-    onClick={toggleMenu}
-    className="toggle-menu md:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none "
-  >
-    <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
-    <span className="block h-[2px] w-[30px] bg-gray-700 rounded-sm"></span>
-    <span className="block h-[2px] w-[24px] bg-gray-700 rounded-sm ml-[6px]"></span>
-  </button>
+<button
+  onClick={toggleMenu}
+  className="toggle-menu xl:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none"
+>
+  <span className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "bg-white" : "bg-gray-700"}`}></span>
+  <span className={`block h-[2px] w-[30px] rounded-sm ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "bg-white" : "bg-gray-700"}`}></span>
+  <span className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "bg-white" : "bg-gray-700"}`}></span>
+</button>
+
+
 </div>
             {isOpen && (
             <div
@@ -136,7 +138,7 @@ useEffect(() => {
                     </>
                   )}
 
-                <Link href="/login" className="mobile-login-btn mt-4 block">Get Started</Link>
+                <Link href="/StepOneForm" className="mobile-login-btn mt-4 block">Get Started</Link>
 
               </div>
             </div>

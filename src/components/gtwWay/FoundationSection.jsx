@@ -36,7 +36,7 @@ export default function FoundationSection() {
             viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           >
-            That’s the GTW Way — slow when it matters, smart where it counts,
+            That’s the GTW Way, slow when it matters, smart where it counts,
             and fast when it’s time to move.
           </motion.p>
         </div>

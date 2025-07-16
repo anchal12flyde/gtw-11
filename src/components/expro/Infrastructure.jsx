@@ -19,16 +19,17 @@ export default function Infrastructure() {
     >
       <div className="mt-22 sm:mt-0">
         <div className="w-full md:w-[700px]">
-          <motion.div
-            className="heading-systems flex flex-wrap w-full md:w-[600px]"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          >
-           Launch Your Own Infrastructure. Not Someone Else’s Platform.
-          </motion.div>
+        <motion.div
+  className="heading-systems flex flex-wrap w-full md:w-[600px] justify-center text-center md:text-left"
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false }}
+  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+>
+  Launch Your Own Infrastructure. Not Someone Else’s Platform.
+</motion.div>
+
 
         <motion.div
             className="flex flex-col sm:flex-row gap-4 mt-8"
@@ -46,7 +47,7 @@ export default function Infrastructure() {
             </ClientButton>
             <a
                 href="/transformation-framework.pdf"
-                className="custom-mobile-button border border-white text-white px-6 py-3 rounded-md text-center font-normal hover:bg-white hover:text-black transition"
+                className="custom-mobile-button "
                 download
             >
                 Download Our Transformation Framework PDF

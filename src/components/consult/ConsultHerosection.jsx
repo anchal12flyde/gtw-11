@@ -46,7 +46,7 @@ export default function ConsultHerosection() {
       </motion.h1>
 
       <motion.p
-        className="heading-subtitles w-full sm:w-[900px] mt-6"
+        className="heading-subtitles w-full sm:w-[900px] mt-6 mb-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -65,7 +65,7 @@ export default function ConsultHerosection() {
      
         <ClientButton
           href="#"
-          className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100] mt-8"
+          className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100] "
         >
           Start a Consult Sprint
         </ClientButton>
