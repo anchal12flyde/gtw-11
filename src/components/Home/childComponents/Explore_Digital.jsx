@@ -265,8 +265,7 @@ export default function Explore_Digital() {
             <button className="arrow-button" onClick={scrollRight}>
               <img src="/images/RightArrow.png" alt="Right Arrow" className="w-10 h-10" />
             </button>
-          </div>
-                  
+          </div>             
       </div>
  
     </>
