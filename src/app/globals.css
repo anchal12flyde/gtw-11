@@ -1299,15 +1299,19 @@ input[type="checkbox"] {
 }
 
 .util-grid-cols-auto {
-  grid-template-columns: repeat(1, 1fr); /* Default: 1 column (stacked) */
+  grid-template-columns: repeat(1, 1fr); 
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .util-grid-cols-auto {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards on MacBook & large screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
-
+@media (max-width:640px){
+   .util-grid-cols-auto {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 .util-gap-x-25 {
   column-gap: 2.25rem;
 }
