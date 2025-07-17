@@ -7,14 +7,10 @@ export default function MobileAppsDesign() {
     
     <div className='util-flex util-flex-1 util-mx-1-5'>
       <section className="mobile-section flex flex-col sm:flex-row  pt-30  space-x-24 ">
-                <h2 className="heading-hero justify-items-center "
-                 
-                >
+                <h2 className="heading-hero justify-items-center">
                   Mobile Apps
                   </h2>
-                <div className="mobile-divider"
-                 
-                ></div>
+                <div className="mobile-divider"></div>
                 <p className="heading-subtitle text-[#313131]  mt-2"
                  
                 >
