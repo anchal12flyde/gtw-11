@@ -85,7 +85,7 @@ export default function ImpactVolume() {
       </div>
 
        <div className="mt-26 mb-26">
-                       <h1 className="heading-systems">
+                       <h1 className="heading-systems text-center">
                            Related Articles
                         </h1>
 

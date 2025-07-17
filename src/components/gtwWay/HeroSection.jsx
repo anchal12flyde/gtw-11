@@ -1,18 +1,7 @@
 import Header from "../Home/childComponents/Header";
 import AnimatedCards from "../globalcomponents/AnimatedCards";
-import { motion } from "framer-motion";
 
-const revealVariants = {
-  hidden: { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" }, 
-  visible: {
-    opacity: 1,
-    clipPath: "inset(0% 0% 0% 0%)", 
-    transition: {
-      duration: 1,
-      ease: "easeOut",
-    },
-  },
-};
+
 
 export default function HeroSection() {
    const data = [
@@ -78,31 +67,19 @@ export default function HeroSection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section">
-           <motion.h1
+           <h1
         className="heading-hero"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={revealVariants}
+      
       >
         Design Slow. Build Smart. <br /> Launch Fast.
-      </motion.h1>
+      </h1>
 
-      <motion.p
+      <p
         className="heading-subtitles w-full sm:w-[900px] mt-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={{
-          ...revealVariants,
-          visible: {
-            ...revealVariants.visible,
-            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
-          },
-        }}
+        
       >
         Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
-      </motion.p>
+      </p>
           </div>
         </div>
         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 align-top-left">

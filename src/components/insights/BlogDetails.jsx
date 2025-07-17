@@ -231,7 +231,7 @@ export default function BlogDetails() {
                     </motion.div>
                   </div>
                    <div className="mt-26">
-                       <h1 className="heading-systems">
+                       <h1 className="heading-systems text-center">
                            Related Articles
                         </h1>
 

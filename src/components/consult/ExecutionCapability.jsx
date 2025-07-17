@@ -50,7 +50,7 @@ export default function ExecutionCapability() {
         Backed By <span className="text-[#FFB100]">Execution Capability</span>.
       </h2>
             {timelineItems.map((item, index) => (
-              <div className="timeline-item mt-10" key={index}>
+              <div className="timeline-item mt-18" key={index}>
                 <div className="flex flex-col md:flex-row items-left gap-6 md:gap-70">
                   <div className="timeline-image order-1 md:order-2">
                     <img src={item.image} alt="" />

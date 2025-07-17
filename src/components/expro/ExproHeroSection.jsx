@@ -1,23 +1,10 @@
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
-import { motion } from "framer-motion";
+
 import { useInView } from 'react-intersection-observer';
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
-const revealVariants = {
-  hidden: { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" },
-  visible: {
-    opacity: 1,
-    clipPath: "inset(0% 0% 0% 0%)",
-    transition: {
-      duration: 1,
-      ease: "easeOut",
-    },
-  },
-};
+
+
 
 
 export default function ExproHeroSection() {
@@ -48,38 +35,23 @@ export default function ExproHeroSection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section">
-            <motion.h1
+            <h1
         className="heading-hero"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={revealVariants}
+       
       >
         Beyond Storefronts. We Build <br /> Commerce Infrastructure.
-      </motion.h1>
+      </h1>
 
-      <motion.p
+      <p
         className="heading-subtitles w-full sm:w-[900px] mt-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={{
-          ...revealVariants,
-          visible: {
-            ...revealVariants.visible,
-            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
-          },
-        }}
+      
       >
-        ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale — not subscription bloat.
-      </motion.p>
-            <motion.div
+        ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale, not subscription bloat.
+      </p>
+            <div
             className="flex flex-col sm:flex-row gap-4 mt-8"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+        
+          
             >
             <ClientButton
                 href="#"
@@ -94,7 +66,7 @@ export default function ExproHeroSection() {
             >
                 Book A Technical Demo
             </a>
-            </motion.div>
+            </div>
             
           </div>
           
@@ -102,7 +74,7 @@ export default function ExproHeroSection() {
 
          <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 ">
        
-          <motion.div
+          <div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -113,10 +85,10 @@ export default function ExproHeroSection() {
               <p className="text-white">The Problem&nbsp;</p>
               <p className="text-[#FFB100]">We Solve</p>
             </div>
-          </motion.div>
+          </div>
 
           <div className="flex flex-col md:flex-row text-center md:text-left gap-12 md:gap-35 pb-8">
-            <motion.div
+            <div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -126,9 +98,9 @@ export default function ExproHeroSection() {
               <p className="w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
                  Piecing together tools creates operational chaos.</p>
              
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.9 }}
@@ -162,14 +134,9 @@ export default function ExproHeroSection() {
                   strokeLinecap="round"
                 />
               </svg>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
-              viewport={{ once: false }}
-              className="flex-1 w-full mb-30 md:mb-0"
+            <div className="flex-1 w-full mb-30 md:mb-0"
             >
              <p className="text-2xl text-[#FFB100]">
               ExPro fixes this.
@@ -179,7 +146,7 @@ export default function ExproHeroSection() {
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
                  and deep integrations it gives you false ownership of your commerce platform.
               </p>
-            </motion.div>
+            </div>
           </div>
       
 

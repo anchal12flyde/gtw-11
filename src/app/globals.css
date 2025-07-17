@@ -1833,7 +1833,6 @@ line-height: 34px;
 
 .timeline-item {
   position: relative;
-  margin-bottom: 4rem;
   padding-left: 3rem; 
   align-items: center;
 }
@@ -2032,7 +2031,8 @@ line-height: 34px;
   gap: 24px;
   margin-bottom: 8rem;
   margin-top: 8rem;
-}.cards-container {
+}
+.cards-container {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -2050,11 +2050,11 @@ line-height: 34px;
   margin-top: 32px;
   flex-wrap: nowrap;
   width: max-content;
-  padding-bottom: 10px;
+  
 }
 
 .cardss {
-  width: 500px;
+  width: 435px;
   height: 290px;
   background-color: #d9d9d9;
   flex: 0 0 auto;
@@ -2225,6 +2225,14 @@ margin-bottom: 4rem;
     }
   }
 }
+  @media (min-width: 1800px) {
+    .grid-cols-fixed-4 {
+      grid-template-columns: repeat(4, minmax(0, min(100%, 380px))); 
+      column-gap: 92px; 
+      row-gap: 92px;    
+    }
+  }
+
 
 .blog-cards {
   position: relative; 

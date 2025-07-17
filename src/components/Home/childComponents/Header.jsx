@@ -111,7 +111,7 @@ useEffect(() => {
 </div>
             {isOpen && (
             <div
-                className="fixed inset-0 z-40 bg-black/40  backdrop-saturate-150 md:hidden mobile-drawer"
+                className="fixed inset-0 z-40 bg-black/40  backdrop-saturate-150 xl:hidden mobile-drawer"
                 onClick={toggleMenu}
               >
               <div

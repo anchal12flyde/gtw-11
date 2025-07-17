@@ -1,19 +1,9 @@
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
 import { useInView } from 'react-intersection-observer';
-import { motion } from "framer-motion";
 
-const revealVariants = {
-  hidden: { opacity: 0, clipPath: "inset(100% 0% 0% 0%)" },
-  visible: {
-    opacity: 1,
-    clipPath: "inset(0% 0% 0% 0%)",
-    transition: {
-      duration: 1,
-      ease: "easeOut",
-    },
-  },
-};
+
+
 
 export default function ConsultHerosection() {
     const { ref, inView } = useInView({ triggerOnce: false });
@@ -35,32 +25,20 @@ export default function ConsultHerosection() {
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
           <div className="hero-section">
-            <motion.h1
+            <h1
         className="heading-hero"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={revealVariants}
+       
       >
         Rethink. <span className="text-[#FFB100]">Rebuild.</span> Reinvent.
-      </motion.h1>
+      </h1>
 
-      <motion.p
+      <p
         className="heading-subtitles w-full sm:w-[900px] mt-6 mb-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        variants={{
-          ...revealVariants,
-          visible: {
-            ...revealVariants.visible,
-            transition: { duration: 1, ease: "easeOut", delay: 0.2 },
-          },
-        }}
+       
       >
         We help organizations modernize how they operate with custom systems,
         smarter workflows, and tech that scales with clarity.
-      </motion.p>
+      </p>
 
      
         <ClientButton

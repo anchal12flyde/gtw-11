@@ -20,7 +20,7 @@ export default function TechStack() {
             </div>
         <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>
             <div className="flex-shrink-0"></div>
-            <div className="flex flex-nowrap gap-6 pb-4 w-full">
+            <div className="flex flex-nowrap gap-6  w-full">
                 <div className="flex flex-col gap-26 bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]  w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
                 <div className="campus-image-wrapper ">
                     <img

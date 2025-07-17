@@ -172,7 +172,7 @@ export default function StoriesHeroSection() {
                 </div>
                 </div>
                 </div>
-           <div className=" flex-shrink-0  w-[20px] sm:w-[400px]"></div>
+           <div className=" flex-shrink-0  w-[20px] sm:w-[400px] lg:w-[800px]"></div>
  
 
 
