@@ -14,8 +14,8 @@ export default function OperateAcrossSection() {
 
   return (
     <>
-      <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white mt-26">
-        <div className="relative container pt-20 sm:pt-20 pb-20 sm:pb-0">
+      <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white py-20 mt-26">
+        <div className="relative container ">
           <div className="mb-20">
             <motion.div
               className="heading-systems text-white text-2xl font-semibold leading-snug"
@@ -33,7 +33,7 @@ export default function OperateAcrossSection() {
             </motion.div>
           </div>
 
-      <div className="flex flex-wrap justify-between gap-8">
+      <div className="flex flex-wrap justify-between gap-12">
   {items.map((item, index) => (
     <motion.div
       key={index}

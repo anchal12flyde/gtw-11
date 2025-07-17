@@ -8,7 +8,7 @@ export default function MobileCards() {
 
   return (
     
-       <section className="card-container-wrapper  util-flex util-flex-1 util-mx-1-5">
+       <section className="card-container-wrapper  util-flex util-flex-1 util-mx-1-5 mt-26">
           <div className="card-container scrollable-mobile">
             <div className="responsive-card"></div>
             <div className="responsive-card"></div>

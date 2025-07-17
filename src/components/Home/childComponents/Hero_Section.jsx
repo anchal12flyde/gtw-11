@@ -56,7 +56,7 @@ export default function Hero_Section() {
         <br />
         of Modern Commerce
       </h1>
-      <p  className="heading-subtitle text-[#313131]">
+      <p  className="heading-subtitle text-[#313131] mt-2">
         From concept to code, commerce to conversion, we design the<br />
         technology infrastructure for tomorrow’s businesses.
       </p>

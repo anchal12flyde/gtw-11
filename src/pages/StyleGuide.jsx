@@ -34,7 +34,7 @@ export default function StyleGuide() {
       </p>
        font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 26px;
   line-height: 1.3;
   margin-top: 22px;
   letter-spacing: 1;<br/>

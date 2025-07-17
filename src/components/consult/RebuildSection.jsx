@@ -58,7 +58,7 @@ export default function RebuildSection() {
             </ClientButton>
             <a
                 href="/transformation-framework.pdf"
-                className="custom-mobile-button border border-white text-white px-6 py-3 rounded-md text-center font-normal hover:bg-white hover:text-black transition"
+                className="custom-mobile-button "
                 download
             >
                 Download Our Transformation Framework PDF

@@ -72,7 +72,7 @@ useEffect(() => {
 
   
     {pathname !== "/Expro" && (
-      <nav className="hidden xl:flex gap-6 items-center">
+      <nav className="hidden xl:flex gap-6 ">
         <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
         <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
         <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>

@@ -148,9 +148,9 @@ body::-webkit-scrollbar {
 .heading-subtitle {
    font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 26px;
   line-height: 1.3;
-  margin-top: 22px;
+
   letter-spacing: 1;
 }
 
@@ -186,9 +186,13 @@ body::-webkit-scrollbar {
 
 .nav-link {
   transition: all 0.3s ease;
+  font-size: 16px;
   text-decoration: none;
   position: relative;
   color: inherit;
+  letter-spacing: 0em;
+  line-height: 0;
+
 }
 
 .nav-link:hover {
@@ -224,14 +228,11 @@ body::-webkit-scrollbar {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 15px;
- 
   padding: 12px 16px;
   justify-content: center;
   text-align: center;
   border-radius: 8px;
-  line-height: 1;
   letter-spacing: 0;
-
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -335,13 +336,13 @@ body::-webkit-scrollbar {
 }
 .gradient-yellow-section {
   background: linear-gradient(320deg, #ffb100 0%, #ffcd5d 100%);
-  height: 700px;
+  height: auto;
  
  
 }
 @media (min-width: 640px) {
   .gradient-yellow-section {
-    height: 700px;
+    height: auto;
   
     
   }
@@ -392,14 +393,14 @@ body::-webkit-scrollbar {
 }
 .gradient-section {
   background: linear-gradient(to bottom, #000000 0%, #2c2c2c 100%);
-  min-height: 600px;
+  min-height: auto;
   color: #ffffff;
   position: relative;
 }
 
 @media (max-width: 768px) {
   .gradient-section {
-    min-height: 200px; 
+    min-height: auto; 
   }
 }
 .yellow-container {
@@ -445,9 +446,8 @@ body::-webkit-scrollbar {
   font-weight: 400; 
   color: #ffffff;
   letter-spacing: 0em;
-  line-height: 1.3;
   font-size: 19px; 
-  margin-bottom: 1.1em;
+ 
 }
 
 @media (min-width: 1024px) {
@@ -461,7 +461,7 @@ body::-webkit-scrollbar {
   font-weight: 340; 
   color: #ffffff;
   letter-spacing: 0em;
-  line-height: 1.2;
+  line-height: 1.1;
   font-size: 16px; 
   
 }
@@ -472,19 +472,6 @@ body::-webkit-scrollbar {
   }
 }
 
-.right-column-link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #ffffff;
-  letter-spacing: 0em;
-  line-height: 0;
-  text-decoration: underline;
-}
-
-.right-column-link:hover {
-  color: #FFB100;
-}
 
 .explore-link {
   font-family: 'Inter', sans-serif;
@@ -495,7 +482,6 @@ body::-webkit-scrollbar {
   line-height: 0;
   text-decoration: underline;
   display: inline-block;
-  margin-top: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -506,7 +492,6 @@ body::-webkit-scrollbar {
 @media (min-width: 1024px) {
   .explore-link {
     font-size: 24px;
-    margin-top: 0.2em;
   }
 }
 .ecom-heading {
@@ -786,14 +771,8 @@ line-height: normal;
   }
 
   .mobile-section {
-    align-items: center !important;
-    justify-content: center;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 1rem !important;
+    display: flex;
+    margin: auto;
   }
 }
 
@@ -809,22 +788,16 @@ line-height: normal;
     display: block;
     height: 78px;
     border-left: 2px solid #FFB100;
-    margin: 0 2rem;
     width: auto;
   }
 }
 
 
-.card-container-wrapper {
-  overflow-x: hidden;
-}
 
 .card-container {
   font-family: 'Inter', sans-serif;
   display: grid;
   gap: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   grid-template-columns: repeat(1, 1fr);
 
 }
@@ -832,55 +805,38 @@ line-height: normal;
 .responsive-card {
   font-family: 'Inter', sans-serif;
   background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(1, 1, 1, 1);
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ 
   text-align: center;
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: 450px;
-  min-width: 270px;
   scroll-snap-align: center;
-  flex: 0 0 auto;
+  
 }
 
 .responsive-card:hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
-
-@media (max-width: 639px) {
-  .card-container {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; 
-    gap: 1.2rem;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-  }
-
-  .responsive-card {
-    width: 80%;
-    max-width: 320px;
-  }
-}
-.card-container::-webkit-scrollbar {
-  display: none; 
-}
-
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (min-width: 500px) and (max-width: 639px) {
   .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+
+@media (min-width: 640px) and (max-width: 1300px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
   .card-container {
     display: grid;
     
@@ -899,7 +855,7 @@ line-height: normal;
 .usecases-subheading {
   font-family: 'Inter', sans-serif;
  
-  color: #6b7280;
+  color: #727171;
   letter-spacing: 0em;
 }
 
@@ -958,7 +914,7 @@ line-height: normal;
 
 .feature-title {
   font-family: 'Inter', sans-serif;
-  font-size: 31px; 
+  font-size: 30px; 
   font-weight: 400;
   color: #000000;
   letter-spacing: 0.01em;
@@ -987,11 +943,11 @@ line-height: normal;
 @media (min-width: 1024px) {
  
   .feature-title {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .feature-subtitle {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
@@ -1307,14 +1263,11 @@ input[type="checkbox"] {
   text-align: center;
   position: relative;
   overflow: hidden;
+  
 }
 
 
 
-.align-top-left {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 
 .card-section {
   display: flex;
@@ -1646,13 +1599,12 @@ input[type="checkbox"] {
   font-family: 'Inter', sans-serif;
   border: 1px solid white;
   color: white;
+  font-size: 15px;
   padding: 12px 16px; 
   border-radius: 8px; 
   text-align: center;
-   line-height: 1;
   letter-spacing: 0;
- 
-  font-weight: 400;   
+  font-weight: 300;   
   transition: all 0.3s ease; 
   background-color: transparent;
 }
@@ -1671,6 +1623,7 @@ input[type="checkbox"] {
   }
 }
 
+
 .consult-card {
   display: flex;
   flex-direction: column;
@@ -1681,10 +1634,31 @@ input[type="checkbox"] {
   flex-shrink: 0;
   height: 400px;
   border: 1px solid #d1d5db;
-transition: transform 0.3s ease-in-out, z-index 0.3s;
+  transition: transform 0.3s ease-in-out, z-index 0.3s;
   position: relative;
   transform: translateX(0);
 }
+
+
+.consult-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem; 
+  padding-bottom: 1rem;
+}
+
+
+@media screen and (min-width: 1600px) {
+  .consult-container {
+    gap: 3.4rem; 
+  }
+
+  .consult-card {
+    width: 24rem; 
+    height: 440px;
+  }
+}
+
 
 /* .consult-card:hover {
   transform: translateY(-1.8rem); 
@@ -1774,14 +1748,14 @@ line-height: 1.2;
 @media (max-width: 768px) {
   .headings{
     font-size: 16px;
-    text-align: center;
+  
   }
 }
 
 .heading-subtitles {
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 25px;
+  font-size: 26px;
   line-height: 1.3;
   margin-top: 22px;
   letter-spacing: 1;
@@ -1811,9 +1785,7 @@ font-weight: 400;
 line-height: 34px; 
 }
 
-.timeline-wrapper {
-  padding: 6rem 0;
-}
+
 
 .timeline {
   position: relative;
@@ -2246,7 +2218,7 @@ font-family: Inter;
 font-size: 22px;
 font-style: normal;
 font-weight: 600;
-line-height: 1.5;
+line-height: 1.2;
 
 }
 .blog-div{

@@ -14,7 +14,7 @@ export default function Usecases() {
               transition={{ duration: 0.8, delay: 0.1 }}>
             Usecases <span className="usecases-subheading">(Quick Deployment)</span>
           </motion.h2>
-         <div className="flex flex-wrap justify-between gap-8">
+         <div className="flex flex-wrap justify-between gap-12">
           {[
             { title: 'Marketplaces', desc: 'Buyer-seller, review, filters, listings' },
             { title: 'SaaS Extensions', desc: 'Mobile access to SaaS platforms' },

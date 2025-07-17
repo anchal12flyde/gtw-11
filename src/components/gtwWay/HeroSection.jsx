@@ -82,21 +82,20 @@ export default function HeroSection() {
       </p>
           </div>
         </div>
-        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 align-top-left">
+        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10">
         <section className="philosophy-section">
-        <div className="heading-systems w-full md:w-[500px] mx-auto ">
+        <div className="heading-systems w-full max-w-[500px] mx-auto">
         <span className="text-[#FFB100]">We Believe</span>{" "}
         <span>Timeless Systems</span>{" "}
         <span className="text-[#FFB100]">Aren’t Rushed.</span>
       </div>
-      <div>
-        
-      </div>
+      
+      <div className="w-full max-w-[900px] mx-auto">
         <p className="headings mt-4 ">  
             In a world obsessed with speed, we slow down where it matters at the drawing board.
             Because clarity at the start unlocks velocity at launch.
           </p>
-         
+         </div>
         </section>
       </div >
       

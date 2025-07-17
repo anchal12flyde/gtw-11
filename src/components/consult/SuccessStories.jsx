@@ -16,7 +16,7 @@ export default function SuccessStories() {
 
 
   return (
-        <div className="gradient-yellow-section  pt-16 mt-26">
+        <div className="gradient-yellow-section  py-20 mt-26">
               <div className="util-flex util-flex-1 util-mx-1-5">
               <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className="text-left font-semibold text-xl sm:text-2xl md:text-3xl  heading-systems ">
@@ -37,7 +37,7 @@ export default function SuccessStories() {
 
           <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide w-full flex"  ref={scrollRef}>
           
-            <div className="flex flex-nowrap gap-10 pb-4  ">
+            <div className="flex flex-nowrap gap-10  ">
             <div className=" yellow-container">
               <div className="flex flex-col gap-8 bg-white rounded-3xl w-80  h-[400px] overflow-hidden">
 

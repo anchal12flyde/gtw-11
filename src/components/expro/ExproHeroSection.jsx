@@ -1,14 +1,14 @@
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
+import { motion } from "framer-motion";
 
-import { useInView } from 'react-intersection-observer';
 
 
 
 
 
 export default function ExproHeroSection() {
-   const { ref, inView } = useInView({ triggerOnce: false });
+  
   
 
   return (
@@ -61,7 +61,7 @@ export default function ExproHeroSection() {
             </ClientButton>
             <a
                 href="/transformation-framework.pdf"
-                className="custom-mobile-button border border-white text-white px-6 py-3 rounded-md text-center font-normal hover:bg-white hover:text-black transition"
+                className="custom-mobile-button"
                 download
             >
                 Book A Technical Demo
@@ -72,23 +72,35 @@ export default function ExproHeroSection() {
           
         </div>
 
-         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 ">
-       
-          <div
+         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 pb-20">
+        <div className="md:hidden absolute inset-0 flex items-center justify-center">
+        <div   className="flex flex-col items-center space-y-42 ">
+          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+            From
+          </h2>
+          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+            To
+          </h2>
+        </div>
+      </div>
+
+
+
+          <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: false }}
-            className="mb-12 sm:0"
+            className="mb-12 "
           >
             <div className="heading-systems flex flex-wrap ">
               <p className="text-white">The Problem&nbsp;</p>
               <p className="text-[#FFB100]">We Solve</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col md:flex-row text-center md:text-left gap-12 md:gap-35 pb-8">
-            <div
+          <div className="flex flex-col md:flex-row text-center md:text-left gap-14 md:gap-35 ">
+            <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -98,9 +110,9 @@ export default function ExproHeroSection() {
               <p className="w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
                  Piecing together tools creates operational chaos.</p>
              
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.9 }}
@@ -108,7 +120,7 @@ export default function ExproHeroSection() {
               className="flex justify-center items-center "
             >
               <svg
-                className="w-50 h-12 text-[#FFB100] animate-arrowDown md:hidden"
+                className="w-50 text-[#FFB100] animate-arrowDown md:hidden"
                 viewBox="0 0 192 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +134,7 @@ export default function ExproHeroSection() {
                 />
               </svg>
               <svg
-                className="hidden md:block w-6 h-52 text-[#FFB100] animate-arrowDown"
+                className="hidden md:block w-8 text-[#FFB100] animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,9 +146,13 @@ export default function ExproHeroSection() {
                   strokeLinecap="round"
                 />
               </svg>
-            </div>
+            </motion.div>
 
-            <div className="flex-1 w-full mb-30 md:mb-0"
+            <motion.div className="flex-1 "
+             initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1.2, duration: 1 }}
+              viewport={{ once: false }}
             >
              <p className="text-2xl text-[#FFB100]">
               ExPro fixes this.
@@ -146,8 +162,9 @@ export default function ExproHeroSection() {
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
                  and deep integrations it gives you false ownership of your commerce platform.
               </p>
-            </div>
+            </motion.div>
           </div>
+          
       
 
       </div >  

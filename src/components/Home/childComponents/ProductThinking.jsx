@@ -29,7 +29,7 @@ export default function ProductThinking() {
 
   
       <motion.div
-        className="flex flex-col md:flex-row items-start sm:items-center md:justify-items-start gap-4 md:gap-10"
+        className="flex flex-col md:flex-row items-start sm:items-center  gap-4 md:gap-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -47,7 +47,7 @@ export default function ProductThinking() {
 
    
       <motion.div
-        className="flex flex-col md:flex-row items-start sm:items-center md:justify-items-start gap-4 md:gap-10"
+        className="flex flex-col md:flex-row items-start sm:items-center gap-4 md:gap-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}

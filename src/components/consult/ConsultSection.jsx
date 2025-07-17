@@ -15,7 +15,7 @@ export default function ConsultSection() {
   };
   return (
  
-<section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26 overflow-y-visible">
+<section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26 ">
     <div className="relative flex items-left justify-between mb-12 w-full">
               <h2 className=" flex-1 heading-systems ">
                    <span className="text-[#FFB100]">Why GTW</span> Consult
@@ -34,7 +34,7 @@ export default function ConsultSection() {
         }}
         className="scrollbar-hide"
         >
-            <div className="flex flex-initial gap-6 pb-4  ">
+            <div className="consult-container">
                 <div className="consult-card">
                 <div className="campus-image-wrapper ">
                     <img
@@ -102,7 +102,7 @@ export default function ConsultSection() {
             </div>
 
            
-             <div className="flex justify-center mt-6 sm:hidden">
+             <div className="flex justify-center mt-6 lg:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
                  <img src="/images/Leftarrow2.png" alt="Left Arrow" className="w-10 h-10" />
                </button>

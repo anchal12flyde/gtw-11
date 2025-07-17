@@ -21,7 +21,7 @@ export default function BlogCard({ imageSrc, title, category, link, linkText,det
 </div>
 
       <div className="blog-div ">
-        {category && <p>{category}</p>}
+        {category && <p className="mb-2">{category}</p>}
         <h2 className="blog-header ">{title}</h2>
         <h5 className="blog-details mt-2">{details} </h5>
         {link && linkText && (
