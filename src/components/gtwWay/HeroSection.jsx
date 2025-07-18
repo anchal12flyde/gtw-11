@@ -46,10 +46,8 @@ export default function HeroSection() {
 
   return (
     <>
-       
-      <div className="hero-wrapper relative overflow-hidden min-h-screen">
-       
-        <div className="absolute inset-0 h-screen">
+     <div className="hero-wrapper relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 h-screen">
           <video
             className="w-full h-full object-cover hero-video"
             autoPlay
@@ -68,7 +66,7 @@ export default function HeroSection() {
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section">
            <h1
-        className="heading-hero"
+        className="heading-heros"
       
       >
         Design Slow. Build Smart. <br /> Launch Fast.
@@ -82,7 +80,7 @@ export default function HeroSection() {
       </p>
           </div>
         </div>
-        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10">
+        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10 mt-45">
         <section className="philosophy-section">
         <div className="heading-systems w-full max-w-[500px] mx-auto">
         <span className="text-[#FFB100]">We Believe</span>{" "}

@@ -26,7 +26,7 @@ export default function ConsultHerosection() {
         <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
           <div className="hero-section">
             <h1
-        className="heading-hero"
+        className="heading-heros"
        
       >
         Rethink. <span className="text-[#FFB100]">Rebuild.</span> Reinvent.

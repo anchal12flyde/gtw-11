@@ -230,7 +230,7 @@ export default function BlogDetails() {
                         </div>
                     </motion.div>
                   </div>
-                   <div className="mt-26">
+                   <div className="mt-26 mb-26 md:mb-0">
                        <h1 className="heading-systems text-center">
                            Related Articles
                         </h1>

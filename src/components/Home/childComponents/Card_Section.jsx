@@ -23,7 +23,7 @@ export default function Card_Section() {
         </motion.div>
 
         
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly lg:justify-start ">
           <div className="usecases-grid1">
 
            

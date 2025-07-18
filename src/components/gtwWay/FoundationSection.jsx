@@ -9,38 +9,38 @@ const fadeInUp = {
 
 export default function FoundationSection() {
   return (
-    < div className="operate-section flex flex-col justify-start md:justify-center" variants={fadeInUp}>
-      <div className="util-flex util-flex-1 util-mx-1-5 mt-22 sm:mt-0">
-        <div className="w-full md:w-[700px]">
-          <motion.div className="heading-systems flex flex-wrap w-full md:w-[500px] " variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false }}
-              transition={{ duration: 0.6, ease: "easeOut" ,delay: 0.1 }}>
-            <span>
-              We Don’t Chase Trends.&nbsp;
-            </span>
-            <span className="text-[#FFB100]" >
-              We Build&nbsp;
-            </span>
-            <div >
-              <span> Foundations.</span>
-            </div>
-          </motion.div>
-
-          <motion.p
-            className="headings mt-8"
+   <div className="operate-section flex flex-col items-center md:items-start text-center md:text-left" variants={fadeInUp}>
+  <div className="util-flex util-flex-1 util-mx-1-5 mt-22 sm:mt-0  ">
+    <div className="w-full md:w-[700px] flex flex-col items-center md:items-start">
+      <motion.div
+        className="heading-systems flex flex-wrap w-full md:w-[500px] justify-center md:justify-start text-center md:text-left"
         variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-          >
-            That’s the GTW Way, slow when it matters, smart where it counts,
-            and fast when it’s time to move.
-          </motion.p>
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+      >
+        <span>We Don’t Chase Trends.&nbsp;</span>
+        <span className="text-[#FFB100]">We Build&nbsp;</span>
+        <div>
+          <span>Foundations.</span>
         </div>
-      </div>
+      </motion.div>
+
+      <motion.p
+        className="headings mt-8 text-center md:text-left"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+      >
+        That’s the GTW Way, slow when it matters, smart where it counts,
+        and fast when it’s time to move.
+      </motion.p>
     </div>
+  </div>
+</div>
+
   );
 }

@@ -24,7 +24,7 @@
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
-                  className="pb-6 sm:flex sm:justify-between sm:items-start sm:border-b sm:border-[#FFB100]"
+                  className="pb-0 md:pb-6 md:flex md:justify-between md:items-start sm:border-b sm:border-[#FFB100]"
                 >
                   <div className="product-left">
                     <h3 className="ecom-heading">{title}</h3>
@@ -35,7 +35,7 @@
                   <div className="block sm:hidden border-b border-[#FFB100] w-full mt-2"></div>
 
                   <div className="product-right">
-                    <div className="sm:flex gap-6 sm:gap-10 mt-4">
+                    <div className="md:flex gap-8 sm:gap-10 mt-2 md:mt-8 ">
                       {Array(4)
                         .fill(0)
                         .map((_, i) => (

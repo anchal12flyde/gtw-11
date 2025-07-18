@@ -14,7 +14,7 @@ export default function Infrastructure() {
     
    
     <div
-      className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 mt-26 mb-26"
+      className="operate-section flex flex-col justify-center items-center util-flex util-flex-1 util-mx-1-5 text-center lg:text-left lg:items-start mt-26 "
       variants={fadeInUp}
     >
       <div className="mt-22 sm:mt-0">
@@ -32,7 +32,7 @@ export default function Infrastructure() {
 
 
         <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-8"
+            className="flex flex-col items-center  justify-start gap-4 mt-8 w-full buttons-align-700"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"

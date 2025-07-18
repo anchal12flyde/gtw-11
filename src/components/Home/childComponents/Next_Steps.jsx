@@ -32,7 +32,7 @@ export default function Next_Steps() {
   return (
    <>
       
-        <div className="block md:hidden mt-26">
+        <div className="block md:hidden ">
       <div className="next-steps-section ">
         <div className="util-flex util-flex-1 util-mx-1-5">
           <div className="icon">

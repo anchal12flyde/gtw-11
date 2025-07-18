@@ -3,13 +3,7 @@ import ClientButton from "../globalcomponents/Button";
 import { motion } from "framer-motion";
 
 
-
-
-
-
 export default function ExproHeroSection() {
-  
-  
 
   return (
     <>
@@ -34,9 +28,9 @@ export default function ExproHeroSection() {
         </div>
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
-          <div className="hero-section">
+          <div className="hero-section ">
             <h1
-        className="heading-hero"
+        className="heading-heros"
        
       >
         Beyond Storefronts. We Build <br /> Commerce Infrastructure.
@@ -72,7 +66,7 @@ export default function ExproHeroSection() {
           
         </div>
 
-         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 pb-20">
+         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 py-30 ">
         <div className="md:hidden absolute inset-0 flex items-center justify-center">
         <div   className="flex flex-col items-center space-y-42 ">
           <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
