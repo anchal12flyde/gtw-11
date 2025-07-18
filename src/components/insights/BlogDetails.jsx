@@ -40,10 +40,10 @@ export default function BlogDetails() {
         <>
           
             <div className="util-flex util-flex-1 util-mx-1-5">
-                <div className="px-0 sm:px-30">
+                <div className="px-0 lg:px-30">
                     
                  
-                    <div className="mt-20">
+                    <div className="mt-15">
 
                 <div className="flex items-center justify-between mb-6">
                <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-[#F5F5F7] p-[12px_16px]">
@@ -236,17 +236,17 @@ export default function BlogDetails() {
                         </h1>
 
                          <div className="grid-cols-blog mt-10">
-                                  {blogData.map((blog, index) => (
-                                <BlogCard
-                                key={index}
-                                imageSrc={blog.imageSrc}
-                                title={blog.title}
-                                 link={blog.link}
-                                category="CATEGORY"
-                                 linkText="Read More"
-                                />
+                            {blogData.map((blog, index) => (
+                            <BlogCard
+                            key={index}
+                            imageSrc={blog.imageSrc}
+                            title={blog.title}
+                            link={blog.link}
+                            category="CATEGORY"
+                            linkText="Read More"
+                            />
                             ))}
-                                  </div>
+                            </div>
                      </div>
 
 

@@ -17,7 +17,7 @@ export default function ChallengeSection() {
 
   return (
     <section className="challenge-section ">
-      <div className="challenge-container util-flex util-flex-1 util-mx-1-5 mt-14">
+      <div className="challenge-container util-flex util-flex-1 util-mx-1-5 mt-26">
         <div className="challenge-image">
           <Image
   src={hoveredItem ? images[hoveredItem] : defaultImage}
@@ -77,7 +77,7 @@ whileInView={{ opacity: 1, x: 0 }}
            <ArrowRight className="w-6 h-10  " />
         </a>
       </motion.div>
-      
+
     </motion.div>
       </div>
     </section>
