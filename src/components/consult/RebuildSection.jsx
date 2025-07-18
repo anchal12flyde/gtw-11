@@ -16,8 +16,8 @@ export default function RebuildSection() {
       className="operate-section flex flex-col justify-start md:justify-center util-flex util-flex-1 util-mx-1-5 "
       variants={fadeInUp}
     >
-      <div className="mt-22 sm:mt-0">
-        <div className="w-full md:w-[700px]">
+      <div className="mt-22 lg:mt-0">
+        <div className="w-full lg:w-[700px]">
           <motion.div
             className="heading-systems flex flex-wrap w-full md:w-[600px]"
             variants={fadeInUp}
@@ -43,7 +43,7 @@ export default function RebuildSection() {
 
          
         <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-8"
+        className="flex flex-col items-start justify-start gap-4 mt-8 buttons-align-700"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"

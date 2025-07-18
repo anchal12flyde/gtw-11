@@ -39,7 +39,7 @@
                   <div className="block sm:hidden border-b border-[#FFB100] w-full mt-2"></div>
 
                   <div className="product-right">
-                    <div className="sm:flex gap-6 sm:gap-10 mt-4">
+                    <div className="md:flex gap-8 md:gap-10  mt-4">
                       {Array(4)
                         .fill(0)
                         .map((_, i) => (

@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function InsightHeroSection() {
   return (
-    <div className="util-flex util-flex-1 util-mx-1-5">
-      <div className="background-hero mt-15">
+    <div className="util-flex util-flex-1 util-mx-1-5 mt-15">
+      <div className="background-hero">
          <Image
         src="/images/insights_bg.png"
         alt="Insight Hero"
@@ -15,14 +15,14 @@ export default function InsightHeroSection() {
         placeholder="empty"
         priority
         />
-        <div className="insight-card">
-          <div className="insight-tags mb-2 sm:mb-6">
+        <div className="insight-card space-y-4">
+          <div className="insight-tags">
             <span>Mobile App</span>
             <span>Mobile App</span>
           </div>
-          <div className="w-[200px] sm:w-[400px]">
-             <h2 className=''>Design Slow. Build Smart. Launch Fast.</h2>
-          <Link href="#" className="insight-link mt-8">Read More</Link>
+          <div className="content-wrapper space-y-10">
+             <h2>Design Slow. Build Smart. Launch Fast.</h2>
+          <Link href="#" className="insight-link">Read More</Link>
 
           </div>
          

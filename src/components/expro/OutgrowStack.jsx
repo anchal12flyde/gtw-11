@@ -48,7 +48,7 @@ export default function OutgrowStack() {
 
   return (
     <>
-      <div className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 mt-26">
+      <div className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 mt-26 py-20">
         <div className="timeline-wrapper">
            <h4 className="text-[24px] font-semibold text-black  mb-8 sm:mb-[-60px]">
            Integrations That<br/> Matter

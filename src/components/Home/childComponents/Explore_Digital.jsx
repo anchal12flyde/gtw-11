@@ -44,7 +44,8 @@ export default function Explore_Digital() {
             viewport={{ once: false }}
             className="mb-12"
           >
-            <div className="heading-systems flex flex-wrap">
+         <div className="heading-systems flex flex-wrap justify-center text-center w-full md:justify-start md:text-left">
+
               <p className="text-white">We Build. We Digitize.</p>
               &nbsp;<p className="text-[#FFB100]">We Transform.</p>
             </div>

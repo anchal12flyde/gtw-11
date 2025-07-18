@@ -77,6 +77,7 @@ whileInView={{ opacity: 1, x: 0 }}
            <ArrowRight className="w-6 h-10  " />
         </a>
       </motion.div>
+      
     </motion.div>
       </div>
     </section>

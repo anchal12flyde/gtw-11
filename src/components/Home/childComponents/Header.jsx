@@ -127,18 +127,19 @@ useEffect(() => {
                   &times;
                 </button>
                 {pathname !== "/Expro" && (
-                    <>
-                      <Link href="/GTW_Way" className="block nav-link mt-12 mb-8">Philosophy</Link>
-                      <Link href="/mobile_apps" className="block nav-link mb-8">Mobile Apps</Link>
-                      <Link href="/StyleGuide" className="block nav-link mb-8">GTW SaaS Cloud</Link>
-                      <Link href="/Consult" className="block nav-link mb-8">Digital Transformation</Link>
-                      <Link href="/Expro" className="block nav-link mb-8">ExPro</Link>
-                      <Link href="/Insights" className="block nav-link mb-8">Insights</Link>
-                      <Link href="/SuccessStories" className="block nav-link mb-8">Success Stories</Link>
-                    </>
+                    <div className='space-y-10'>
+                      <Link href="/GTW_Way" className="block nav-link mt-12 ">Philosophy</Link>
+                      <Link href="/mobile_apps" className="block nav-link">Mobile Apps</Link>
+                      <Link href="/StyleGuide" className="block nav-link ">GTW SaaS Cloud</Link>
+                      <Link href="/Consult" className="block nav-link ">Digital Transformation</Link>
+                      <Link href="/Expro" className="block nav-link">ExPro</Link>
+                      <Link href="/Insights" className="block nav-link ">Insights</Link>
+                      <Link href="/SuccessStories" className="block nav-link ">Success Stories</Link>
+                      <Link href="/StepOneForm" className="mobile-login-btn  block">Get Started</Link>
+                    </div>
                   )}
 
-                <Link href="/StepOneForm" className="mobile-login-btn mt-4 block">Get Started</Link>
+              
 
               </div>
             </div>

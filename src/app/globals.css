@@ -150,7 +150,6 @@ body::-webkit-scrollbar {
   font-weight: 400;
   font-size: 26px;
   line-height: 1.3;
-
   letter-spacing: 1;
 }
 
@@ -236,35 +235,21 @@ body::-webkit-scrollbar {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-@media (max-width: 640px) {
-  .client-button {
-    font-size: 15px;
-    border-radius: 8px;
-    display: inline-flex;
-    width: 305;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .mobile-login-btn {
   font-family: 'Inter', sans-serif;
   display: inline-flex;
-  padding: 12px 23px;     
-  border-radius: 10px;       
-  color: black;
-  background-color: #000000;
-  font-size: 15px;   
-   color: #ffffff;       
-  font-weight: 300;            
-  text-align: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 300;
   transition: all 0.3s ease;
+  
+
 }
 
-.mobile-login-btn:hover {
-  background-color: #FFB100;
-  color: black;
-}
+
+
 .hero-banner-wrapper {
   position: relative;
   width: 100%;
@@ -331,7 +316,7 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 640px) {
   .heading-systems {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .gradient-yellow-section {
@@ -561,7 +546,7 @@ line-height: normal;
 
 @media (max-width: 640px) {
   .industry-tag {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 0;
      padding-right: 4.2px;
   }
@@ -1547,10 +1532,10 @@ input[type="checkbox"] {
   background-color: #f5f5f5;
   padding: 1.9rem;
   border-radius: 4px;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+   transition: background-color 0.3s ease;
 }
 .cta-box strong{
   font-size: 1.5rem ;
@@ -1571,9 +1556,9 @@ input[type="checkbox"] {
   width: 20px;                  
   height: auto;
 }
-.cta-link:hover {
-  text-decoration: underline;
-  color: #FFB100;
+.cta-box:hover {
+  background-color: #FFB100;
+  
 }
 
 @media (max-width: 768px) {
@@ -1628,14 +1613,20 @@ input[type="checkbox"] {
   color: black;
 }
 
+@media (min-width: 700px) {
+  .buttons-align-700 {
+    flex-direction: row;
+    justify-content: start;
+  }
+}
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .custom-mobile-button {
     margin-left: auto;
     margin-right: auto;
     width: 305;
   }
-}
+} */
 
 
 .consult-card {
@@ -1864,7 +1855,7 @@ line-height: 34px;
 .timeline-content p {
   color: #727171;
   font-family: Inter;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   margin: 0.5rem 0 0 0;
@@ -2049,33 +2040,58 @@ line-height: 34px;
 }
 .background-hero {
   width: 100%;
-  height: auto;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
 }
 
 
+.background-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
 .insight-card {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 700px;
-  height: 300px;
+  width: 70%; 
+  max-width: 700px; 
+  height: auto; 
   background: #ffffff;
   border-radius: 0rem 0.2rem;
-  padding: 2rem 2rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  justify-content:top;
+  justify-content: top;
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .insight-card {
+    width: 70%; 
+    padding-top: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-card {
+    width: 80%; 
+    height: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 
 .insight-tags {
-  font-size: 16px;
+  font-size: 1rem; /* scales with root font-size */
   color: #888;
   display: flex;
   gap: 1rem;
@@ -2083,20 +2099,17 @@ line-height: 34px;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;
   text-decoration-color: #FFB100;
-  text-decoration-thickness: 5%; 
-  text-underline-offset: 25%; 
+  text-decoration-thickness: 5%;
+  text-underline-offset: 25%;
   text-underline-position: from-font;
-  
 }
- 
+
 .insight-link {
   position: relative;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   color: #888;
   text-decoration: none;
-  line-height: 1; 
-  padding-bottom: 2px;
 }
 
 .insight-link::after {
@@ -2105,7 +2118,7 @@ line-height: 34px;
   bottom: 0;
   left: 0;
   width: 40%;
-  height: 8%; 
+  height: 2px;
   background-color: #FFB100;
   transition: width 0.3s ease;
 }
@@ -2114,54 +2127,43 @@ line-height: 34px;
   width: 100%;
 }
 
- .insight-card h2{
-color: #000;
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: 1.2;
-margin-bottom: 4rem;
-  }
-@media (min-width: 768px) {
-  .insight-card {
-    max-width: 700px;
-    padding: 2rem;
-  }
+.insight-card h2 {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: clamp(20px, 2.5vw, 32px); /* Responsive between 20px–32px */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
 }
 
+.insight-card .content-wrapper {
+  width: 70%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+/* Mobile Styles */
 @media (max-width: 480px) {
-  .insight-card {
-    bottom: 0rem;
-    left: 0rem;
-    padding: 1.3rem;
-    font-size: 0.8rem;
-    width: 270px;
-    height: 158px;
-  }
   .insight-tags {
-    flex-direction: row;
-    font-size: 10px;
-    
+    font-size: 0.75rem; /* 12px */
+    gap: 0.5rem;
   }
-  .insight-card h2{
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: capitalize;
-    margin-bottom: 2rem;
-  }
-  .background-hero img{
-   width: 390px;
-   height: 264px;
 
+  .insight-card .content-wrapper {
+    width: 100%;
   }
+
   .insight-link {
-  font-size: 14px ;
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .background-hero img {
+    width: 390px;
+    height: 264px;
   }
 }
+
 
 .perspective {
   perspective: 1000px;
