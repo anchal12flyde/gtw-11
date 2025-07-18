@@ -2049,7 +2049,7 @@ line-height: 34px;
 
 .background-hero img {
   width: 100%;
-  height: auto;
+  height: 364px;
   object-fit: cover;
   display: block;
   max-width: 100%;
@@ -2200,7 +2200,7 @@ line-height: 34px;
      justify-content: center;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 440px) {
     .grid-cols-fixed-4 {
       grid-template-columns: repeat(2, minmax(0, min(100%, 345px)));
       column-gap: 20px;
