@@ -31,7 +31,7 @@ export default function RebuildSection() {
       </motion.div>
 
       <motion.p
-        className="headings mt-8"
+        className="headings mt-6"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"

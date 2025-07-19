@@ -28,7 +28,7 @@ export default function FoundationSection() {
       </motion.div>
 
       <motion.p
-        className="headings mt-8 text-center md:text-left"
+        className="headings mt-6 text-center md:text-left"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
