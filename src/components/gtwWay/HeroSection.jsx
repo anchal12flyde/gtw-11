@@ -80,8 +80,9 @@ export default function HeroSection() {
       </p>
           </div>
         </div>
-        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10 mt-45  ">
-        <section className="philosophy-section">
+
+        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 ">
+        <section className="philosophy-section mix-blend-difference ">
         <div className="heading-systems w-full max-w-[500px] mx-auto">
         <span className="text-[#FFB100]">We Believe</span>{" "}
         <span>Timeless Systems</span>{" "}

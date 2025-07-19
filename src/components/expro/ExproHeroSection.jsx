@@ -69,7 +69,7 @@ export default function ExproHeroSection() {
         </div>
 
          <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 py-30 ">
-        <div className="md:hidden absolute inset-0 flex items-center justify-center">
+        <div className="lg:hidden absolute inset-0 flex items-center justify-center">
         <div   className="flex flex-col items-center space-y-42 ">
           <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
             From
@@ -89,13 +89,13 @@ export default function ExproHeroSection() {
             viewport={{ once: false }}
             className="mb-12 "
           >
-            <div className="heading-systems flex flex-wrap ">
+            <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
               <p className="text-white">The Problem&nbsp;</p>
               <p className="text-[#FFB100]">We Solve</p>
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row text-center md:text-left gap-14 md:gap-35 ">
+          <div className="flex flex-col lg:flex-row  items-center justify-evenly text-center lg:text-left gap-14 md:gap-35 ">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -130,7 +130,7 @@ export default function ExproHeroSection() {
                 />
               </svg>
               <svg
-                className="hidden md:block w-8 text-[#FFB100] animate-arrowDown"
+                className="hidden lg:block w-8 text-[#FFB100] animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function ExproHeroSection() {
               ExPro fixes this.
             </p>
 
-              <p href="#" className="expro-right pt-8 md:pt-4 block">
+              <p href="#" className="expro-right pt-8 lg:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel, mobile apps,
                  and deep integrations it gives you false ownership of your commerce platform.
               </p>

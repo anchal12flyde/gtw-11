@@ -9,11 +9,11 @@ const fadeInUp = {
 
 export default function FoundationSection() {
   return (
-   <div className="operate-section flex flex-col items-center md:items-start text-center md:text-left " variants={fadeInUp}>
-  <div className="util-flex util-flex-1 util-mx-1-5   ">
+   <div className="operate-section flex flex-col items-center md:items-start text-center md:text-left" variants={fadeInUp}>
+  <div className="util-flex util-flex-1 util-mx-1-5 mt-22 sm:mt-0  ">
     <div className="w-full md:w-[700px] flex flex-col items-center md:items-start">
       <motion.div
-        className="heading-systems flex flex-wrap w-full lg:w-[500px] justify-center lg:justify-start text-center lg:text-left"
+        className="heading-systems flex flex-wrap w-full md:w-[500px] justify-center md:justify-start text-center md:text-left"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -28,7 +28,7 @@ export default function FoundationSection() {
       </motion.div>
 
       <motion.p
-        className="headings mt-6 text-center lg:text-left"
+        className="headings mt-8 text-center md:text-left"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
