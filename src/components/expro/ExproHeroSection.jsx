@@ -10,9 +10,9 @@ export default function ExproHeroSection() {
        
       <div className="hero-wrapper relative overflow-hidden min-h-screen ">
        
-        <div className="absolute inset-0 h-screen">
+        <div className="absolute inset-0 min-h-screen bg-black">
           <video
-            className="w-full h-full object-cover hero-video"
+            className=" hero-video"
             autoPlay
             loop
             muted
@@ -23,8 +23,10 @@ export default function ExproHeroSection() {
             Your browser does not support the video tag.
           </video>
       
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black"></div>
            <Header/>
+       
+
         </div>
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">

@@ -23,7 +23,7 @@ export default function ConsultSection() {
             </div>
             
           
-            <div
+            {/* <div
             ref={scrollRef}
             style={{
             transform: 'translateX(0)',
@@ -99,10 +99,10 @@ export default function ConsultSection() {
                 </div>
             </div>
             
-            </div>
+            </div> */}
 
            
-             <div className="flex justify-center mt-6 lg:hidden">
+             {/* <div className="flex justify-center mt-6 lg:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
                  <img src="/images/Leftarrow2.png" alt="Left Arrow" className="w-10 h-10" />
                </button>
@@ -110,7 +110,7 @@ export default function ConsultSection() {
                  <img src="/images/Rightarrow1.png" alt="Right Arrow" className="w-10 h-10" />
                </button>
              </div>
- 
+  */}
 </section>
 
  );

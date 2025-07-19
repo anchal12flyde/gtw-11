@@ -25,7 +25,7 @@ export default function Explore_Digital() {
  
       <section className="util-flex util-flex-1 util-mx-1-5 gradient-section text-white mt-26 py-20">
       
-      <div className="md:hidden absolute inset-0 flex items-center justify-center">
+      <div className="lg:hidden absolute inset-0 flex items-center justify-center">
         <div   className="flex flex-col items-center space-y-42 ">
           <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
             From
@@ -44,14 +44,14 @@ export default function Explore_Digital() {
             viewport={{ once: false }}
             className="mb-12"
           >
-         <div className="heading-systems flex flex-wrap justify-center text-center w-full md:justify-start md:text-left">
+         <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
 
               <p className="text-white">We Build. We Digitize.</p>
               &nbsp;<p className="text-[#FFB100]">We Transform.</p>
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center justify-evenly text-center md:text-left gap-14 md:gap-35">
+          <div className="flex flex-col lg:flex-row items-center justify-evenly text-center lg:text-left gap-14 lg:gap-35">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -72,7 +72,7 @@ export default function Explore_Digital() {
               className="flex justify-center items-center"
             >
               <svg
-                className="w-50  text-[#FFB100] animate-arrowDown md:hidden"
+                className="w-50  text-[#FFB100] animate-arrowDown lg:hidden"
                 viewBox="0 0 192 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export default function Explore_Digital() {
                 />
               </svg>
               <svg
-                className="hidden md:block w-8  text-[#FFB100] animate-arrowDown"
+                className="hidden lg:block w-8  text-[#FFB100] animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
