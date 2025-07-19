@@ -14,7 +14,7 @@
 
     return (
       <div className='util-flex util-flex-1 util-mx-1-5'>
-        <section className="mt-26 mb-26">
+        <section className="mt-26 mb-26 md:mb-0">
           <h2 className="heading-systems text-black mb-12">Industries We Power</h2>
           <div className="space-y-12">
             {industryList.map((title, index) => {

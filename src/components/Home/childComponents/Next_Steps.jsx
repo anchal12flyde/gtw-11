@@ -71,7 +71,7 @@ export default function Next_Steps() {
     </div>
 
       
-     <section className="hidden md:block overflow-x-hidden  mt-26 mb-26">
+     <section className="hidden md:block overflow-x-hidden mt-26 mb-26">
       <div className=" text-center">
         <h2 className="heading-systems text-black mb-14">Next Steps</h2>
 
