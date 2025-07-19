@@ -13,7 +13,7 @@ export default function FoundationSection() {
   <div className="util-flex util-flex-1 util-mx-1-5   ">
     <div className="w-full md:w-[700px] flex flex-col items-center md:items-start">
       <motion.div
-        className="heading-systems flex flex-wrap w-full md:w-[500px] justify-center md:justify-start text-center md:text-left"
+        className="heading-systems flex flex-wrap w-full lg:w-[500px] justify-center lg:justify-start text-center lg:text-left"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -28,7 +28,7 @@ export default function FoundationSection() {
       </motion.div>
 
       <motion.p
-        className="headings mt-6 text-center md:text-left"
+        className="headings mt-6 text-center lg:text-left"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"

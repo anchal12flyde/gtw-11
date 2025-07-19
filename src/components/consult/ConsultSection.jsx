@@ -23,7 +23,7 @@ export default function ConsultSection() {
             </div>
             
           
-            {/* <div
+            <div
             ref={scrollRef}
             style={{
             transform: 'translateX(0)',
@@ -34,8 +34,8 @@ export default function ConsultSection() {
         }}
         className="scrollbar-hide"
         >
-            <div className="consult-container">
-                <div className="consult-card">
+            <div className="flex flex-nowrap gap-4  w-full">
+                <div className="tech-card justify-between rounded-3xl">
                 <div className="campus-image-wrapper ">
                     <img
                         src="/images/assets/eclipse.png"
@@ -44,7 +44,7 @@ export default function ConsultSection() {
                     />  
                     </div>
 
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4 ">
                     <h3 className="ecom-headings text-left">Systems-first</h3>
                     <p className="paragraphs-default">
                     Systems-first, not software-first
@@ -52,7 +52,7 @@ export default function ConsultSection() {
                 </div>
                 </div>
 
-                <div className="consult-card">
+                <div className="tech-card justify-between  rounded-3xl">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/eclipse1.png"
@@ -60,14 +60,14 @@ export default function ConsultSection() {
                     className="image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4 ">
                     <h3 className="ecom-headings text-left">Systems-first</h3>
                     <p className="paragraphs-default">
                    Deep technical understanding + founder empathy
                     </p>
                 </div>
                 </div>
-                <div className="consult-card">
+                <div className="tech-card justify-between rounded-3xl">
                 <div className="campus-image-wrapper">
                     <img
                     src="/images/assets/eclipse2.png"
@@ -75,14 +75,14 @@ export default function ConsultSection() {
                     className="image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4">
                     <h3 className="ecom-headings text-left">Systems-first</h3>
                     <p className="paragraphs-default">
                    Execution-ready thinking (unlike static strategy firms)
                     </p>
                 </div>
                 </div>
-                <div className="consult-card">
+                <div className="tech-card justify-between rounded-3xl">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/eclipse3.png"
@@ -90,7 +90,7 @@ export default function ConsultSection() {
                     className="image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4 ">
                     <h3 className="ecom-headings text-left">Systems-first</h3>
                     <p className="paragraphs-default">
                     Seamless handoff to in-house GTW product and dev teams
@@ -99,10 +99,10 @@ export default function ConsultSection() {
                 </div>
             </div>
             
-            </div> */}
+            </div>
 
            
-             {/* <div className="flex justify-center mt-6 lg:hidden">
+             <div className="flex justify-center mt-6 lg:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
                  <img src="/images/Leftarrow2.png" alt="Left Arrow" className="w-10 h-10" />
                </button>
@@ -110,7 +110,7 @@ export default function ConsultSection() {
                  <img src="/images/Rightarrow1.png" alt="Right Arrow" className="w-10 h-10" />
                </button>
              </div>
-  */}
+ 
 </section>
 
  );

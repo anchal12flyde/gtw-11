@@ -30,6 +30,7 @@ useEffect(() => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  
 
  useEffect(() => {
   const header = document.querySelector(".site-header");
@@ -49,6 +50,12 @@ useEffect(() => {
     }
   }
 }, [pathname]);
+
+ const isActive = (href) => {
+    return pathname === href || 
+           (href === "/GTW_Way" && pathname.startsWith("/GTW_Way")) ||
+           (href === "/Consult" && pathname.startsWith("/Consult"));
+  };
 
   return (
   
@@ -73,14 +80,14 @@ useEffect(() => {
   
     {pathname !== "/Expro" && (
       <nav className="hidden xl:flex gap-6 ">
-        <Link className="nav-link" href="/GTW_Way">Philosophy</Link>
-        <Link className="nav-link" href="/mobile_apps">Mobile Apps</Link>
-        <Link className="nav-link" href="/StyleGuide">GTW SaaS Cloud</Link>
-        <Link className="nav-link" href="/Consult">Digital Transformation</Link>
-        <Link className="nav-link" href="/Expro">ExPro</Link>
-        <Link className='nav-link' href="/Insights">Insights</Link>
-        <Link className='nav-link' href="/SuccessStories">Success Stories</Link>
-      </nav>
+            <Link className={`nav-link ${isActive("/GTW_Way") ? 'active' : ''}`} href="/GTW_Way">Philosophy</Link>
+            <Link className={`nav-link ${isActive("/mobile_apps") ? 'active' : ''}`} href="/mobile_apps">Mobile Apps</Link>
+            <Link className={`nav-link ${isActive("/StyleGuide") ? 'active' : ''}`} href="/StyleGuide">GTW SaaS Cloud</Link>
+            <Link className={`nav-link ${isActive("/Consult") ? 'active' : ''}`} href="/Consult">Digital Transformation</Link>
+            <Link className={`nav-link ${isActive("/Expro") ? 'active' : ''}`} href="/Expro">ExPro</Link>
+            <Link className={`nav-link ${isActive("/Insights") ? 'active' : ''}`} href="/Insights">Insights</Link>
+            <Link className={`nav-link ${isActive("/SuccessStories") ? 'active' : ''}`} href="/SuccessStories">Success Stories</Link>
+          </nav>
     )}
 
 

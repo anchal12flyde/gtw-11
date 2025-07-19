@@ -19,9 +19,9 @@ export default function TechStack() {
               </h2> 
             </div>
         <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>
-            <div className="flex-shrink-0"></div>
-            <div className="flex flex-nowrap gap-6  w-full">
-                <div className="flex flex-col gap-26 bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]  w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+          
+            <div className="flex flex-nowrap gap-4  w-full">
+                <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]">
                 <div className="campus-image-wrapper ">
                     <img
                         src="/images/assets/expro1.png"
@@ -30,14 +30,15 @@ export default function TechStack() {
                     />
                     </div>
 
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4  ">
                     <h3 className="ecom-headings text-left text-white">Frontend</h3>
                     <p className="paragraphs-default text-white">
                     React, Next.js, Tailwind
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+
+                <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/expro2.png"
@@ -45,14 +46,15 @@ export default function TechStack() {
                     className="campus-image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4 ">
                     <h3 className="ecom-headings text-left text-white">Mobile</h3>
                     <p className="paragraphs-default text-white">
                    React Native
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+
+                <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]">
                 <div className="campus-image-wrapper">
                     <img
                     src="/images/assets/expro3.png"
@@ -60,14 +62,15 @@ export default function TechStack() {
                     className="campus-image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4">
                     <h3 className="ecom-headings text-left text-white">Backend</h3>
                     <p className="paragraphs-default text-white">
                    Node.js, Express, MongoDB
                     </p>
                 </div>
                 </div>
-                <div className="flex flex-col gap-26 bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] w-80 flex-shrink-0 h-[400px] overflow-hidden border border-gray-300">
+
+                <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)]">
                 <div className="campus-image-wrapper ">
                     <img
                     src="/images/assets/expro4.png"
@@ -75,7 +78,7 @@ export default function TechStack() {
                     className="campus-image"
                     />
                 </div>
-                <div className="flex flex-col gap-4 px-8">
+                <div className="flex flex-col gap-4">
                     <h3 className="ecom-headings text-left text-white">Infra</h3>
                     <p className="paragraphs-default text-white">
                     AWS / Render / Vercel
@@ -86,7 +89,7 @@ export default function TechStack() {
             </div>
 
            
-             <div className="flex justify-center mt-6 sm:hidden">
+             <div className="flex justify-center mt-6 lg:hidden">
                <button className="arrow-button" onClick={scrollLeft}>
                  <img src="/images/Leftarrow2.png" alt="Left Arrow" className="w-10 h-10" />
                </button>
