@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function D2C() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -55,6 +57,22 @@ export default function D2C() {
           </motion.li>
         ))}
       </ul>
+  
+  <Link href="/Audit/AboutYou" passHref>
+      <motion.div
+        className="cta-box cursor-pointer"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <strong>Already Have an app?</strong>
+    <div className="cta-link flex items-center gap-2">
+      Request an Audit
+      <ArrowRight className="w-6 h-10" />
+    </div>
+      </motion.div>
+</Link>
 
     </motion.div>
       </div>

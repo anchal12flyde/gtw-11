@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function AnimatedInput({ label, placeholder, type = "text" }) {
+export default function AnimatedInput({ label, placeholder, type = "text", name, autoComplete }) {
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState("");
 
@@ -33,6 +33,9 @@ export default function AnimatedInput({ label, placeholder, type = "text" }) {
         onChange={(e) => setValue(e.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
+        placeholder={placeholder}
+        name={name}
+        autoComplete={autoComplete}
         className="w-full border border-gray-300 rounded-md px-3 py-2 pt-5 text-sm focus:outline-none "
        
       />

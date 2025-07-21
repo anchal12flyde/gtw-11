@@ -18,7 +18,7 @@ export default function ExproHeroSection() {
             muted
             playsInline
             preload="auto"
-          >
+             >
             <source src="/videos/expro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -79,10 +79,7 @@ export default function ExproHeroSection() {
           </h2>
         </div>
       </div>
-
-
-
-          <motion.div
+      <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
