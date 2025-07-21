@@ -28,7 +28,7 @@ export default function Confirmation() {
              <ArrowLeft
           className="cursor-pointer mb-5 text-gray-400"
           size={30}
-          onClick={() => router.push('/Audit/FocusGoals')} 
+          onClick={() => router.push('/Audit/YourGoals')} 
         />
           <div className="step-indicator">
             <span className="dot"></span>
