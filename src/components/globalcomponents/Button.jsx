@@ -14,12 +14,7 @@ const ClientButton = ({ href, children, className = "" }) => {
       </Link>
 
      
-      <Link
-        href={href}
-         className={`mobile-login-btn !inline-block lg:!hidden ${className}`}
-      >
-        {children}
-      </Link>
+   
     </>
   );
 };

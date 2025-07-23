@@ -1,13 +1,13 @@
 export default function Testimonial() {
   return (
     <div className="bg-[#F5F5F7] text-center mt-20  util-flex util-flex-1 util-mx-1-5 ">
-      <div className="quote-wrapper relative mx-0 sm:mx-30 ">
+      <div className="  mx-0 sm:mx-30 ">
         <img
           src="/images/assets/quote1.png"
           alt="opening quote"
           className="quote-img-open "
         />
-        <div className="quote-text-wrapper ">
+        <div className="quote-text-wrapper">
           <p className="quote-text">
             TransExpert has been an exceptional partner to work with. Not only
             have they brought forward strategic solutions, but have allowed us
@@ -26,9 +26,7 @@ export default function Testimonial() {
           alt="closing quote"
           className="quote-img-close"
         />
-       
       </div>
-      
     </div>
 
   );

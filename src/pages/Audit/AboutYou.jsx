@@ -43,7 +43,7 @@ export default function AboutYou() {
               name="email"
               autoComplete="email"/>
               </div>
-             <div className="select-wrapper">
+             <div className="select-wrapper ">
                <CountryCode 
         value={phone}
         onChange={setPhone}

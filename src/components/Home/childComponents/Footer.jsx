@@ -77,11 +77,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="flex-grow px-4 py-2 rounded-full border border-gray-300 w-[65%] sm:w-96 lg:w-[500px] placeholder:text-sm sm:placeholder:text-base"
+                className="flex-grow px-4 py-2 rounded-full border border-gray-300 w-[50%] sm:w-96 lg:w-[500px] placeholder:text-sm sm:placeholder:text-base"
               />
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded-full w-[35%] sm:w-40 lg:w-48"
+                className="bg-black text-white px-4 py-2 rounded-full w-[50%] sm:w-40 lg:w-48 text-sm lg:text-base"
               >
                 Subscribe
               </button>
@@ -90,8 +90,8 @@ export default function Footer() {
         </motion.div>
 
 
-        <div className='util-flex util-flex-1 util-mx-1-5'>
-        {/* <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-sm mb-12">
+        <div className='company-information'>
+        <div className="company-info">
           {categories.map(({ title, items }) => (
             <div key={title}>
               <h4 className="category-heading mb-3">{title}</h4><br />
@@ -102,12 +102,12 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div> */}
+        </div>
         </div>
 
         
         <div className='util-flex util-flex-1 util-mx-1-5'>
-        {/* <div className="block sm:hidden ">
+        <div className="block sm:hidden ">
           {categories.map(({ title, items }, index) => (
             <div key={title} className="border-b border-gray-200 p-2 ">
               <button
@@ -136,7 +136,7 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div> */}
+        </div>
        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

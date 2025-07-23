@@ -9,6 +9,7 @@ import OutgrowStack from "@/components/expro/OutgrowStack"
 import ShopifyMagento from "@/components/expro/ShopifyMagento"
 import ChooseExpro from "@/components/expro/ChooseExpro"
 import OperationalChaos from "@/components/expro/OperationalChaos"
+import HeadlessSection from "@/components/expro/HeadlessSection"
 
 export default function Expro() {
 
@@ -18,7 +19,8 @@ export default function Expro() {
         <title>Expro</title>
       </Head>
        <ExproHeroSection/>
-       <OperationalChaos/>
+       <HeadlessSection/>
+       {/* <OperationalChaos/> */}
        <OutgrowStack/>
        <D2C/>
        <TechStack/>

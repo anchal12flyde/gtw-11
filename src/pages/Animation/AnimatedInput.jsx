@@ -2,7 +2,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function AnimatedInput({ label, placeholder, type = "text", name, autoComplete }) {
+export default function AnimatedInput({ label, placeholder, type = "text", name, autoComplete 
+  
+}) {
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState("");
 
@@ -13,7 +15,7 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
       <label
         style={{
           position: "absolute",
-          top: isActive ? "0.25rem" : "50%",
+          top: isActive ? "0.25rem" : "60%",
           left: "0.75rem",
           fontSize: isActive ? "0.7rem" : "0.95rem",
           color: isActive ? "#FFB100" : "",

@@ -37,9 +37,9 @@ export default function StoryDetails() {
                     Previous
                 </Link>
                 </div>
-                    <div className="flex items-center gap-2 relative perspective">
+                    <div className="flex items-center gap-2 relative perspective cursor-pointer">
                         <div
-                        className={`absolute left-[-120px] top-0 flex  origin-right flip-container ${
+                        className={`absolute left-[-120px] top-0 flex  origin-right flip-container cursor-pointer ${
                             open ? "rotate-y-0" : "rotate-y-90"
                         }`}
                         >
@@ -68,7 +68,7 @@ export default function StoryDetails() {
                     
                         <button
                             onClick={() => setOpen(!open)}
-                            className="z-10 transition-transform duration-300"
+                            className="z-10 transition-transform duration-300 cursor-pointer  "
                         >
                             <Image
                             src={
@@ -101,7 +101,7 @@ export default function StoryDetails() {
                       <div className="blog-details-text flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '26px' }}>
                             <span className="category">Category:</span>
-                            <p className="insight-tags" style={{ display: 'flex', gap: '46px', margin: 0 }}>
+                            <p className="insight-tags" >
                             <span>Mobile App</span>
                             <span>Mobile App</span>
                             </p>

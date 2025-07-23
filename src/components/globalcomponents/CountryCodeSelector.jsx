@@ -9,11 +9,7 @@ export default function CountryCode({ value, onChange }) {
       defaultCountry="in"
       value={value}
       onChange={onChange}
-      inputClassName="form-control w-full "
-      countrySelectorStyleProps={{
-        buttonClassName: "country-selector-btn",
-        dropdownClassName: "country-selector-dropdown"
-      }}
-    />
+      inputClassName="w-full "
+      />
   );
 }

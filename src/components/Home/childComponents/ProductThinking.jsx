@@ -8,10 +8,10 @@ export default function ProductThinking() {
   }
 
   return (
-    <section className="feature-section util-flex util-flex-1 util-mx-1-5 mt-26">
+    <section className="feature-section util-flex util-flex-1 util-mx-1-5 mt-26 mb-26">
     
       <motion.div
-        className="flex flex-col md:flex-row items-start sm:items-center gap-4 md:gap-16"
+        className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -19,7 +19,7 @@ export default function ProductThinking() {
         variants={fadeUpLeftToRight}
       >
         <div>
-          <img src="/images/assets/mobileIcon1.png" className="w-25 h-25 md:w-30 md:h-30" alt="Icon" />
+          <img src="/images/assets/mobileIcon1.png" className="w-25 h-25 lg:w-30 lg:h-30" alt="Icon" />
         </div>
         <div>
           <h2 className="feature-title">Product Thinking First</h2>
@@ -29,7 +29,7 @@ export default function ProductThinking() {
 
   
       <motion.div
-        className="flex flex-col md:flex-row items-start sm:items-center  gap-4 md:gap-16"
+        className="flex flex-col lg:flex-row items-start lg:items-center  gap-4 lg:gap-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -37,7 +37,7 @@ export default function ProductThinking() {
         variants={fadeUpLeftToRight}
       >
         <div>
-          <img src="/images/assets/mobileIcon2.png" className="w-25 h-25 md:w-30 md:h-30" alt="Icon" />
+          <img src="/images/assets/mobileIcon2.png" className="w-25 h-25 lg:w-30 lg:h-30" alt="Icon" />
         </div>
         <div>
           <h2 className="feature-title">Cross-Platform Mastery</h2>
@@ -47,7 +47,7 @@ export default function ProductThinking() {
 
    
       <motion.div
-        className="flex flex-col md:flex-row items-start sm:items-center gap-4 md:gap-16"
+        className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}

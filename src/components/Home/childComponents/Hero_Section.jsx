@@ -36,7 +36,7 @@ export default function Hero_Section() {
           Modern Commerce
         </h1>
         <p
-          className="heading-subtitle-mobile mt-4"
+          className="heading-subtitle-mobile mt-4 mb-26"
         >
           From concept to code, commerce to<br />
           conversion, we design the technology<br />

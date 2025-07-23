@@ -73,7 +73,7 @@ export default function HeroSection() {
       </h1>
 
       <p
-        className="heading-subtitles w-full sm:w-[900px] mt-6"
+        className="heading-subtitles w-full sm:w-[900px] mt-4"
         
       >
         Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.

@@ -11,7 +11,7 @@ export default function MobileAppsDesign() {
                   Mobile Apps
                   </h2>
                 <div className="mobile-divider"></div>
-                <p className="heading-subtitle text-[#313131]"
+                <p className="heading-subtitle text-[#313131] mt-4 lg:mt-0"
                  
                 >
                   Designed to Scale, Perform, <br />

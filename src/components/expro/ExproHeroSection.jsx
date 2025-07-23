@@ -23,7 +23,7 @@ export default function ExproHeroSection() {
             Your browser does not support the video tag.
           </video>
       
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black"></div>
            <Header/>
        
 
@@ -32,20 +32,15 @@ export default function ExproHeroSection() {
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
           <div className="hero-section ">
             <h1
-        className="heading-heros"
-       
-      >
-        Beyond Storefronts. We Build <br /> Commerce Infrastructure.
+        className="heading-heros w-full lg:w-[900px]"  >
+        Beyond Storefronts.<br className="block sm:hidden" /> We Build Commerce Infrastructure.
       </h1>
 
-      <p
-        className="heading-subtitles w-full sm:w-[900px] mt-6"
-      
-      >
+      <p className="heading-subtitles w-full sm:w-[900px] mt-4">
         ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale, not subscription bloat.
       </p>
             <div
-            className="flex flex-col sm:flex-row gap-4 mt-8"
+            className="flex flex-col sm:flex-row gap-4 py-16"
         
           
             >
