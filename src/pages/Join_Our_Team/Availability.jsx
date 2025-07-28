@@ -22,9 +22,9 @@ export default function Availability() {
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container">
           <ArrowLeft
-            className="cursor-pointer mb-5 text-gray-400"
+            className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push('/Join_Our_Team/RoleAndSkills')}
+            onClick={() => router.push("/Join_Our_Team/RoleAndSkills")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
@@ -34,30 +34,32 @@ export default function Availability() {
             <h1 className="heading-systems"> Availability</h1>
           </div>
 
-          
-          <p className="form-subheading ">
-            When can you start?
-          </p>
+          <p className="form-subheading ">When can you start?</p>
           <div className="space-y-2 select-wrapper">
-                {['Within a week', 'Within a month', 'Later'].map((option) => (
-                    <label key={option} className="flex items-center gap-2 cursor-pointer">
-                    <input
-                        type="radio"
-                        name="startTime"
-                        value={option}
-                        checked={startTime === option}
-                        onChange={() => setStartTime(option)}
-                        className="form-radio text-yellow-500"
-                    />
-                    <span className="text-sm">{option}</span>
-                    </label>
-                ))}
-                </div>
+            {["Within a week", "Within a month", "Later"].map((option) => (
+              <label
+                key={option}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="startTime"
+                  value={option}
+                  checked={startTime === option}
+                  onChange={() => setStartTime(option)}
+                  className="form-radio "
+                />
+                <span className="text-sm">{option}</span>
+              </label>
+            ))}
+          </div>
 
-                 <p className="form-subheading">Are you open to freelance / trial assignments?</p>
-            <div className="select-wrapper">
-                       <AnimatedInput placeholder="Yes/No" />
-                   </div>
+          <p className="form-subheading">
+            Are you open to freelance / trial assignments?
+          </p>
+          <div className="select-wrapper">
+            <AnimatedInput placeholder="Yes/No" />
+          </div>
 
           <button className="next-button" onClick={handleNext}>
             Next <ArrowRight size={16} />

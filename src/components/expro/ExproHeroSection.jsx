@@ -7,10 +7,8 @@ export default function ExproHeroSection() {
 
   return (
     <>
-       
       <div className="hero-wrapper relative overflow-hidden min-h-screen ">
-       
-        <div className="absolute inset-0 min-h-screen bg-black">
+        <div className="absolute inset-0 min-h-screen bg-secondary">
           <video
             className=" hero-video"
             autoPlay
@@ -18,63 +16,58 @@ export default function ExproHeroSection() {
             muted
             playsInline
             preload="auto"
-             >
+          >
             <source src="/videos/expro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-      
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black"></div>
-           <Header/>
-       
 
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary/70 to-secondary"></div>
+          <Header />
         </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white-color1">
           <div className="hero-section ">
-            <h1
-        className="heading-heros w-full lg:w-[900px]"  >
-        Beyond Storefronts.<br className="block sm:hidden" /> We Build Commerce Infrastructure.
-      </h1>
+            <h1 className="heading-heros w-full lg:w-[900px]">
+              Beyond Storefronts.
+              <br className="block sm:hidden" /> We Build Commerce
+              Infrastructure.
+            </h1>
 
-      <p className="heading-subtitles w-full sm:w-[900px] mt-4">
-        ExPro is our full-stack eCommerce engine built for high-growth brands that need control, speed, and scale, not subscription bloat.
-      </p>
-            <div
-            className="flex flex-col sm:flex-row gap-4 py-16"
-        
-          
-            >
-            <ClientButton
+            <p className="heading-subtitles w-full sm:w-[900px] mt-4">
+              ExPro is our full-stack eCommerce engine built for high-growth
+              brands that need control, speed, and scale, not subscription
+              bloat.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 pb-8 sm:items-center  ">
+              <ClientButton
                 href="#"
-                className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100]"
-            >
-             Explore The Platform
-            </ClientButton>
-            <a
+                className="bg-primary text-secondary hover:bg-white-color1 hover:text-primary"
+              >
+                Explore The Platform
+              </ClientButton>
+              <a
                 href="/transformation-framework.pdf"
                 className="custom-mobile-button"
                 download
-            >
+              >
                 Book A Technical Demo
-            </a>
+              </a>
             </div>
-            
           </div>
-          
         </div>
 
-         <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 py-30 ">
-        <div className="lg:hidden absolute inset-0 flex items-center justify-center">
-        <div   className="flex flex-col items-center space-y-42 ">
-          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
-            From
-          </h2>
-          <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
-            To
-          </h2>
-        </div>
-      </div>
-      <motion.div
+        <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 py-30 ">
+          <div className="lg:hidden absolute inset-0 flex items-center justify-center">
+            <div className="flex flex-col items-center space-y-42 ">
+              <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+                From
+              </h2>
+              <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
+                To
+              </h2>
+            </div>
+          </div>
+          <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -82,8 +75,8 @@ export default function ExproHeroSection() {
             className="mb-12 "
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
-              <p className="text-white">The Problem&nbsp;</p>
-              <p className="text-[#FFB100]">We Solve</p>
+              <p className="text-white-color1">The Problem&nbsp;</p>
+              <p className="text-primary">We Solve</p>
             </div>
           </motion.div>
 
@@ -95,9 +88,10 @@ export default function ExproHeroSection() {
               viewport={{ once: false }}
               className=" expro-left"
             >
-              <p className="w-[full] sm:w-[500px]">Shopify breaks when you scale. Headless is too headless.
-                 Piecing together tools creates operational chaos.</p>
-             
+              <p className="w-[full] sm:w-[500px]">
+                Shopify breaks when you scale. Headless is too headless. Piecing
+                together tools creates operational chaos.
+              </p>
             </motion.div>
 
             <motion.div
@@ -108,7 +102,7 @@ export default function ExproHeroSection() {
               className="flex justify-center items-center "
             >
               <svg
-                className="w-50 text-[#FFB100] animate-arrowDown md:hidden"
+                className="w-50 text-primary animate-arrowDown md:hidden"
                 viewBox="0 0 192 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +116,7 @@ export default function ExproHeroSection() {
                 />
               </svg>
               <svg
-                className="hidden lg:block w-8 text-[#FFB100] animate-arrowDown"
+                className="hidden lg:block w-8 text-primary animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -136,31 +130,24 @@ export default function ExproHeroSection() {
               </svg>
             </motion.div>
 
-            <motion.div className="flex-1 "
-             initial={{ x: -100, opacity: 0 }}
+            <motion.div
+              className="flex-1 "
+              initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
               viewport={{ once: false }}
             >
-             <p className="text-2xl text-[#FFB100]">
-              ExPro fixes this.
-            </p>
+              <p className="text-2xl text-primary">ExPro fixes this.</p>
 
               <p href="#" className="expro-right pt-8 lg:pt-4 block">
-                Built on the MERN stack with a production-ready admin panel, mobile apps,
-                 and deep integrations it gives you false ownership of your commerce platform.
+                Built on the MERN stack with a production-ready admin panel,
+                mobile apps, and deep integrations it gives you false ownership
+                of your commerce platform.
               </p>
             </motion.div>
           </div>
-          
-      
-
-      </div >  
-      
-
+        </div>
       </div>
-      
-      
     </>
   );
 }

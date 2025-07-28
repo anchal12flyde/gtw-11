@@ -59,11 +59,11 @@ export default function HeroSection() {
             Your browser does not support the video tag.
           </video>
       
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
            <Header/>
         </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white ">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white-color1-color1 ">
           <div className="hero-section">
            <h1
         className="heading-heros"
@@ -81,12 +81,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative z-10 bg-black text-white util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 ">
+        <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 ">
         <section className="philosophy-section mix-blend-difference ">
         <div className="heading-systems w-full max-w-[500px] mx-auto">
-        <span className="text-[#FFB100]">We Believe</span>{" "}
+        <span className="text-primary">We Believe</span>{" "}
         <span>Timeless Systems</span>{" "}
-        <span className="text-[#FFB100]">Aren’t Rushed.</span>
+        <span className="text-primary">Aren’t Rushed.</span>
       </div>
       
       <div className="w-full max-w-[900px] mx-auto">

@@ -73,7 +73,7 @@ export default function Next_Steps() {
       
      <section className="hidden md:block overflow-x-hidden mt-26 mb-26">
       <div className=" text-center">
-        <h2 className="heading-systems text-black mb-14">Next Steps</h2>
+        <h2 className="heading-systems text-secondary mb-14">Next Steps</h2>
 
         <motion.div
           className="flex flex-col sm:flex-row justify-center gap-4 max-w-full"

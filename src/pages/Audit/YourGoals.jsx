@@ -17,61 +17,66 @@ export default function YourGoals() {
   };
 
   return (
-<>
- <Header/>
+    <>
+      <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
-             <ArrowLeft
-          className="cursor-pointer mb-5 text-gray-400"
-          size={30}
-          onClick={() => router.push('/Audit/FocusAreas')} 
-        />
+          <ArrowLeft
+            className="cursor-pointer mb-5 text-arrow-color"
+            size={30}
+            onClick={() => router.push("/Audit/FocusAreas")}
+          />
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 4</span>
           </div>
-         <div className="custom-left-border">  
-        <h1 className="heading-systems">
-          Your Goals
-        </h1>
-      </div>    
-               <p className="form-subheading ">What’s your primary goal? </p>
+          <div className="custom-left-border">
+            <h1 className="heading-systems">Your Goals</h1>
+          </div>
+          <p className="form-subheading ">What’s your primary goal? </p>
           <div className="space-y-2 select-wrapper">
-            {["Increase signups", "Improve retention", "Boost sales", "Launch successfully","Other (text)"].map((range) => (
-              <label key={range} className="flex items-center gap-2 cursor-pointer">
+            {[
+              "Increase signups",
+              "Improve retention",
+              "Boost sales",
+              "Launch successfully",
+              "Other (text)",
+            ].map((range) => (
+              <label
+                key={range}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input
                   type="radio"
                   name="experience"
                   value={range}
                   checked={experience === range}
                   onChange={(e) => setExperience(e.target.value)}
-                   className="form-radio text-yellow-500"
+                  className="form-radio text-yellow-500"
                 />
-                 <span className="text-sm">{range}</span>
+                <span className="text-sm">{range}</span>
               </label>
             ))}
           </div>
 
-            <p className="form-subheading ">
-           Any specific challenges you’re facing? 
+          <p className="form-subheading ">
+            Any specific challenges you’re facing?
           </p>
-           <div className="select-wrapper">
-          <textarea
-            value={intentText}
-            onChange={(e) => setIntentText(e.target.value)}
-            rows={5}
-            className="custom-select"
-            placeholder="Tell us  ..."
-          />
+          <div className="select-wrapper">
+            <textarea
+              value={intentText}
+              onChange={(e) => setIntentText(e.target.value)}
+              rows={5}
+              className="custom-select"
+              placeholder="Tell us  ..."
+            />
           </div>
-        
-            <button  onClick={handleNext} className="next-button">
-                Next <ArrowRight size={16} />
-            </button>
-     
-    </div>
-    </div>
 
-</>
+          <button onClick={handleNext} className="next-button">
+            Next <ArrowRight size={16} />
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

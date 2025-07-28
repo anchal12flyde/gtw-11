@@ -23,10 +23,10 @@ export default function Roadmap() {
   };
 
   return (
-    <section className="bg-white util-flex util-flex-1 util-mx-1-5 mt-20">
+    <section className="bg-white-color1 util-flex util-flex-1 util-mx-1-5 mt-26">
       <div className="relative flex ">
         <h2 className="flex-1 heading-systems">
-          How It <span className="text-[#FFB100]">Works</span>
+          How It <span className="text-primary">Works</span>
         </h2>
       </div>
 

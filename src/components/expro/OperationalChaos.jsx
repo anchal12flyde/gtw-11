@@ -106,48 +106,61 @@ useEffect(() => {
 
 
   return (
-    <section ref={sectionRef} className="feature overflow-hidden relative mt-26">
+    <section
+      ref={sectionRef}
+      className="feature overflow-hidden relative mt-26"
+    >
       <div className="relative">
-        <div className="h-[1px] w-full bg-[#D9D9D9] z-10" />
-        
-<div className="vertical-line absolute left-[4.5%] top-full z-10 h-[800px] w-[40px]">
-  <svg
-    width="40"
-    height="800"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M20 0 C 30 50, 38 130, 35 140" stroke="#D9D9D9" strokeWidth="2" fill="none" />
-    <path d="M35 140 C 32 150, 22 270, 20 280" stroke="#D9D9D9" strokeWidth="2" fill="none" />
-    <path d="M20 280 L20 700" stroke="#D9D9D9" strokeWidth="2" />
-  </svg>
+        <div className="h-[1px] w-full bg-gray-light2 z-10" />
 
-  <p className="tagline absolute left-[50px] top-[130px]  whitespace-nowrap">
-    Lightning-Fast Storefront
-  </p>
-</div>
+        <div className="vertical-line absolute left-[4.5%] top-full z-10 h-[800px] w-[40px]">
+          <svg
+            width="40"
+            height="800"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 0 C 30 50, 38 130, 35 140"
+              stroke="gray-light2"
+              strokeWidth="2"
+              fill="none"
+            />
+            <path
+              d="M35 140 C 32 150, 22 270, 20 280"
+              stroke="gray-light2"
+              strokeWidth="2"
+              fill="none"
+            />
+            <path d="M20 280 L20 700" stroke="gray-light2" strokeWidth="2" />
+          </svg>
 
-  </div>
-
-<div className='util-flex util-flex-1 util-mx-1-5 mt-26'> 
-      <div className="grid grid-rows-1 md:grid-cols-2  " >
-        <div className="feature-text w-[300px]">
-          <h3>Customer-Facing  Features</h3>
+          <p className="tagline absolute left-[50px] top-[130px]  whitespace-nowrap">
+            Lightning-Fast Storefront
+          </p>
         </div>
-        <p className="description text-gray-600">
-          Built on the MERN stack with a production-ready admin panel,
-           mobile apps, and deep integrations—it gives you true ownership of your commerce platform.
-        </p>
       </div>
-</div>
+
+      <div className="util-flex util-flex-1 util-mx-1-5 mt-26">
+        <div className="grid grid-rows-1 md:grid-cols-2  ">
+          <div className="feature-text w-[300px]">
+            <h3>Customer-Facing Features</h3>
+          </div>
+          <p className="description text-white-gray6">
+            Built on the MERN stack with a production-ready admin panel, mobile
+            apps, and deep integrations—it gives you true ownership of your
+            commerce platform.
+          </p>
+        </div>
+      </div>
       <div className="cards-container relative util-flex util-flex-1 util-mx-1-5">
         <div ref={scrollContainerRef} className="cards ">
-          <div className="cardss"/>
-          <div className="cardss"/>
-          <div className="cardss"/>
-          <div className="cardss"/>
+          <div className="cardss" />
+          <div className="cardss" />
+          <div className="cardss" />
+          <div className="cardss" />
         </div>
       </div>
     </section>
-  )
+  );
 }

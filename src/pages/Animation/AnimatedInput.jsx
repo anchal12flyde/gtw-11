@@ -11,17 +11,17 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
   const isActive = isFocused || value.length > 0;
 
   return (
-    <div className="relative mb-4"> 
+    <div className="relative mb-4">
       <label
         style={{
           position: "absolute",
-          top: isActive ? "0.25rem" : "60%",
+          top: isActive ? "0.2rem" : "50%",
           left: "0.75rem",
-          fontSize: isActive ? "0.7rem" : "0.95rem",
-          color: isActive ? "#FFB100" : "",
+          fontSize: isActive ? "0.7rem" : "0.875rem",
+          color: isActive ? "#FFB100" : "#666",
           transform: "translateY(-50%)",
           backgroundColor: "#ffffff",
-          padding: "0 0.2rem",
+          padding: "0 0.25rem",
           transition: "all 0.2s ease",
           pointerEvents: "none",
         }}
@@ -38,8 +38,7 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
         placeholder={placeholder}
         name={name}
         autoComplete={autoComplete}
-        className="w-full border border-gray-300 rounded-md px-3 py-2 pt-5 text-sm focus:outline-none "
-       
+        className="w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none"
       />
     </div>
   );

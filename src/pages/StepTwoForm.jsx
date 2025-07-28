@@ -17,11 +17,11 @@ export default function StepTwoForm() {
     <>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
-        <div className="step-form-container" >
+        <div className="step-form-container">
           <ArrowLeft
-            className="cursor-pointer mb-5 text-gray-400"
+            className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push('/StepOneForm')}
+            onClick={() => router.push("/StepOneForm")}
           />
 
           <div className="step-indicator">
@@ -32,49 +32,67 @@ export default function StepTwoForm() {
           <div className="custom-left-border">
             <h1 className="heading-systems">Project Overview</h1>
           </div>
-         <div className="select-wrapper">
-               <AnimatedInput  placeholder="Enter your name" />
-         </div>
-        <div className="select-wrapper">
+          <div className="select-wrapper">
+            <AnimatedInput placeholder="Enter your name" />
+          </div>
+          <div className="select-wrapper">
             <AnimatedInput placeholder="Enter your email address" />
-        </div>
-          
-           <div className="select-wrapper">
-         <AnimatedInput  placeholder="Enter your company name" className="custom-select" />
-           </div>
-          <p className="form-subheading   ">What best describes your company?</p>
-                <div className="space-y-2 select-wrapper">
-                {['Startup', 'SME', 'Large Enterprise', 'Individual Founder'].map((option) => (
-                    <label key={option} className="flex items-center gap-2 cursor-pointer">
-                    <input
-                        type="radio"
-                        name="companyType"
-                        value={option}
-                        checked={companyType === option}
-                        onChange={() => setCompanyType(option)}
-                        className="form-radio text-yellow-500"
-                    />
-                    <span className="text-sm">{option}</span>
-                    </label>
-                ))}
-                </div>
+          </div>
 
-                <p className="form-subheading ">When do you want to start?</p>
-                <div className="space-y-2 select-wrapper">
-                {['Immediately', 'Within 30 days', 'In 1–3 months', 'Just exploring'].map((option) => (
-                    <label key={option} className="flex items-center gap-2 cursor-pointer">
-                    <input
-                        type="radio"
-                        name="startTime"
-                        value={option}
-                        checked={startTime === option}
-                        onChange={() => setStartTime(option)}
-                        className="form-radio text-yellow-500"
-                    />
-                    <span className="text-sm">{option}</span>
-                    </label>
-                ))}
-                </div>
+          <div className="select-wrapper">
+            <AnimatedInput
+              placeholder="Enter your company name"
+              className="custom-select"
+            />
+          </div>
+          <p className="form-subheading   ">
+            What best describes your company?
+          </p>
+          <div className="space-y-2 select-wrapper">
+            {["Startup", "SME", "Large Enterprise", "Individual Founder"].map(
+              (option) => (
+                <label
+                  key={option}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="companyType"
+                    value={option}
+                    checked={companyType === option}
+                    onChange={() => setCompanyType(option)}
+                    className="form-radio "
+                  />
+                  <span className="text-sm">{option}</span>
+                </label>
+              )
+            )}
+          </div>
+
+          <p className="form-subheading ">When do you want to start?</p>
+          <div className="space-y-2 select-wrapper">
+            {[
+              "Immediately",
+              "Within 30 days",
+              "In 1–3 months",
+              "Just exploring",
+            ].map((option) => (
+              <label
+                key={option}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="startTime"
+                  value={option}
+                  checked={startTime === option}
+                  onChange={() => setStartTime(option)}
+                  className="form-radio "
+                />
+                <span className="text-sm">{option}</span>
+              </label>
+            ))}
+          </div>
 
           <motion.button
             onClick={handleNext}

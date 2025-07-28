@@ -1,6 +1,6 @@
 export default function Testimonial() {
   return (
-    <div className="bg-[#F5F5F7] text-center mt-20  util-flex util-flex-1 util-mx-1-5 ">
+    <div className="bg-gray-light text-center mt-26  util-flex util-flex-1 util-mx-1-5 ">
       <div className="  mx-0 sm:mx-30 ">
         <img
           src="/images/assets/quote1.png"
@@ -15,12 +15,10 @@ export default function Testimonial() {
             value of delivering on Commitment and Customer Focus.
           </p>
         </div>
-         <div className="author-name mt-6 ">
-        Sheryl Sandberg
-      </div>
-      <div className="author-title">
-        Vice President &nbsp; /&nbsp; TransExpert
-      </div>
+        <div className="author-name mt-6 ">Sheryl Sandberg</div>
+        <div className="author-title">
+          Vice President &nbsp; /&nbsp; TransExpert
+        </div>
         <img
           src="/images/assets/quote2.png"
           alt="closing quote"
@@ -28,6 +26,5 @@ export default function Testimonial() {
         />
       </div>
     </div>
-
   );
 }

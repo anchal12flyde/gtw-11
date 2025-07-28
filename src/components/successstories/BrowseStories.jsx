@@ -115,7 +115,7 @@ export default function BrowseStories() {
         <div className="flex justify-center mt-15">
           <button
             href="#"
-            className="client-button bg-white text-[#FFB100] border border-[#FFB100] hover:bg-[#FFB100] hover:text-white"
+            className="client-button bg-white-color1 text-primary border border-primary hover:bg-primary hover:text-white-color1"
             onClick={handleLoadMore}
           >
             Load More

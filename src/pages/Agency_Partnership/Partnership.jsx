@@ -29,29 +29,30 @@ export default function Partnership() {
   };
 
   return (
-<>
- <Header/>
+    <>
+      <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
-             <ArrowLeft
-          className="cursor-pointer mb-5 text-gray-400"
-          size={30}
-          onClick={() => router.push('/Agency_Partnership/AgencyDetails')} 
-        />
+          <ArrowLeft
+            className="cursor-pointer mb-5 text-arrow-color"
+            size={30}
+            onClick={() => router.push("/Agency_Partnership/AgencyDetails")}
+          />
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 2</span>
           </div>
-         <div className="custom-left-border">  
-        <h1 className="heading-systems">
-          Partnership Fit
-        </h1>
-      </div> 
+          <div className="custom-left-border">
+            <h1 className="heading-systems">Partnership Fit</h1>
+          </div>
 
-      <p className="form-subheading">What do you specialize in?</p>
+          <p className="form-subheading">What do you specialize in?</p>
           <div className="space-y-2 select-wrapper">
             {skillsList.map((skill) => (
-              <label key={skill} className="flex items-center gap-2 cursor-pointer">
+              <label
+                key={skill}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input
                   type="checkbox"
                   checked={selectedSkills.includes(skill)}
@@ -61,42 +62,43 @@ export default function Partnership() {
                 {skill}
               </label>
             ))}
-          </div> 
-
-           <p className="form-subheading ">What do you usually NOT do?</p>
-          <div className="select-wrapper">
-          <textarea
-            value={intentText}
-            onChange={(e) => setIntentText(e.target.value)}
-            rows={2}
-            className="custom-select"
-            placeholder="Tell us  ..."
-          />
           </div>
 
-          <p className="form-subheading">Have you worked with dev partners before?</p>
-            <div className="select-wrapper">
-                       <AnimatedInput placeholder="Yes/No" />
-                   </div>
-            <p className="form-subheading ">What type of work would you love to collaborate on?</p>
+          <p className="form-subheading ">What do you usually NOT do?</p>
           <div className="select-wrapper">
-          <textarea
-            value={projectText}
-            onChange={(e) => setProjectText(e.target.value)}
-            rows={2}
-            className="custom-select"
-            placeholder="Tell us  ..."
-          />
+            <textarea
+              value={intentText}
+              onChange={(e) => setIntentText(e.target.value)}
+              rows={2}
+              className="custom-select"
+              placeholder="Tell us  ..."
+            />
           </div>
 
+          <p className="form-subheading">
+            Have you worked with dev partners before?
+          </p>
+          <div className="select-wrapper">
+            <AnimatedInput placeholder="Yes/No" />
+          </div>
+          <p className="form-subheading ">
+            What type of work would you love to collaborate on?
+          </p>
+          <div className="select-wrapper">
+            <textarea
+              value={projectText}
+              onChange={(e) => setProjectText(e.target.value)}
+              rows={2}
+              className="custom-select"
+              placeholder="Tell us  ..."
+            />
+          </div>
 
-        <button  onClick={handleNext} className="next-button">
-                Next <ArrowRight size={16} />
-            </button>
-     
-    </div>
-    </div>
-
-</>
+          <button onClick={handleNext} className="next-button">
+            Next <ArrowRight size={16} />
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

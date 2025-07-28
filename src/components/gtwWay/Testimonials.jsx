@@ -36,7 +36,7 @@ export default function Testimonials() {
 
   return (
     <>
-      <main className="bg-gray-100 util-flex util-flex-1 util-mx-1-5">
+      <main className="bg-gray-light util-flex util-flex-1 util-mx-1-5">
         <div className="util-grid util-grid-cols-auto util-gap-x-25 util-gap-y-15 util-py-28">
           {testimonials.map((item, index) => (
             <motion.div
@@ -44,7 +44,7 @@ export default function Testimonials() {
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.1 }} 
+              viewport={{ once: false, amount: 0.1 }}
               variants={fadeInUp}
             >
               <TestimonialCard

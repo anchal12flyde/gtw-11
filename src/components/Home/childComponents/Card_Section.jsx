@@ -6,9 +6,7 @@ import { motion } from "framer-motion";
 export default function Card_Section() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <section className="bg-white ">
-
-       
+      <section className="bg-white-color-color ">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,16 +15,13 @@ export default function Card_Section() {
           className="mb-12"
         >
           <h2 className="heading-systems flex flex-wrap">
-            <span className="text-black">We build systems,</span>
-           &nbsp; <span className="text-[#FFB100]"> not just screens.</span>
+            <span className="text-secondary">We build systems,</span>
+            &nbsp; <span className="text-primary"> not just screens.</span>
           </h2>
         </motion.div>
 
-        
         <div className="flex justify-evenly lg:justify-start ">
           <div className="usecases-grid1">
-
-           
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +35,7 @@ export default function Card_Section() {
                 alt="Modern Websites"
                 className="w-full h-full"
               />
-              <div className="absolute top-6 left-10 text-white text-3xl font-semibold select-none">
+              <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
                 <div className="flex flex-row lg:flex-col gap-x-2 lg:gap-x-0 lg:gap-y-1">
                   <p className="desktop-heading">Modern</p>
                   <p className="desktop-heading">Websites</p>
@@ -48,7 +43,6 @@ export default function Card_Section() {
               </div>
             </motion.div>
 
-            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +56,7 @@ export default function Card_Section() {
                 alt="E-Commerce Infrastructure"
                 className="w-full h-full"
               />
-              <div className="absolute top-6 left-10 text-white text-3xl font-semibold select-none">
+              <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
                 <div className="hidden lg:flex flex-col gap-y-1">
                   <p className="desktop-heading">E-Commerce</p>
                   <p className="desktop-heading">
@@ -78,7 +72,6 @@ export default function Card_Section() {
               </div>
             </motion.div>
 
-           
             <Link href="/mobile_apps">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -93,7 +86,7 @@ export default function Card_Section() {
                   alt="Mobile Apps"
                   className="w-full h-full"
                 />
-                <div className="absolute top-6 left-10 text-white text-3xl font-semibold select-none">
+                <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
                   <div className="flex flex-row lg:flex-col gap-x-2 lg:gap-x-0 lg:gap-y-1">
                     <p className="desktop-heading">Mobile</p>
                     <p className="desktop-heading">Apps</p>
@@ -101,7 +94,6 @@ export default function Card_Section() {
                 </div>
               </motion.div>
             </Link>
-
           </div>
         </div>
       </section>

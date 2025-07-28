@@ -21,35 +21,31 @@ export default function Confirmation() {
 };
 
   return (
-<>
- <Header/>
+    <>
+      <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
-             <ArrowLeft
-          className="cursor-pointer mb-5 text-gray-400"
-          size={30}
-          onClick={() => router.push('/Audit/YourGoals')} 
-        />
+          <ArrowLeft
+            className="cursor-pointer mb-5 text-arrow-color"
+            size={30}
+            onClick={() => router.push("/Audit/YourGoals")}
+          />
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 5</span>
           </div>
-         <div className="custom-left-border">  
-        <h1 className="heading-systems">
-          Confirmation + CTA
-        </h1>
-      </div>    
-            <p className="form-subheading ">
-          Summary of submitted info 
-          </p>
-           <div className="select-wrapper">
-          <textarea
-            value={intentText}
-            onChange={(e) => setIntentText(e.target.value)}
-            rows={5}
-            className="custom-select"
-            placeholder="Tell us  ..."
-          />
+          <div className="custom-left-border">
+            <h1 className="heading-systems">Confirmation + CTA</h1>
+          </div>
+          <p className="form-subheading ">Summary of submitted info</p>
+          <div className="select-wrapper">
+            <textarea
+              value={intentText}
+              onChange={(e) => setIntentText(e.target.value)}
+              rows={5}
+              className="custom-select"
+              placeholder="Tell us  ..."
+            />
           </div>
 
           <div className="mt-6">
@@ -61,18 +57,17 @@ export default function Confirmation() {
                 className="mt-1"
               />
               <span>
-                I understand that GTW is a high-performance, hands-on environment and I’m excited to contribute meaningfully.
+                I understand that GTW is a high-performance, hands-on
+                environment and I’m excited to contribute meaningfully.
               </span>
             </label>
           </div>
-        
-           <button className="next-button" onClick={handleNext}>
+
+          <button className="next-button" onClick={handleNext}>
             Submit <ArrowRight size={16} />
           </button>
-     
-    </div>
-    </div>
-
-</>
+        </div>
+      </div>
+    </>
   );
 }

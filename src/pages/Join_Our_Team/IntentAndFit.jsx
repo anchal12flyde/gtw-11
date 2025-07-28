@@ -22,9 +22,9 @@ export default function IntentAndFit() {
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container">
           <ArrowLeft
-            className="cursor-pointer mb-5 text-gray-400"
+            className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push('/Join_Our_Team/RoleAndSkills')}
+            onClick={() => router.push("/Join_Our_Team/RoleAndSkills")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
@@ -37,27 +37,27 @@ export default function IntentAndFit() {
           <p className="form-subheading ">
             Why do you want to join General Tech Works?
           </p>
-           <div className="select-wrapper">
-          <textarea
-            value={intentText}
-            onChange={(e) => setIntentText(e.target.value)}
-            rows={5}
-            className="custom-select"
-            placeholder="Tell us what excites you ..."
-          />
+          <div className="select-wrapper">
+            <textarea
+              value={intentText}
+              onChange={(e) => setIntentText(e.target.value)}
+              rows={5}
+              className="custom-select"
+              placeholder="Tell us what excites you ..."
+            />
           </div>
 
           <p className="form-subheading">
             What’s a project or product you’re proud of? (link or describe)
           </p>
           <div className="select-wrapper">
-          <textarea
-            value={projectText}
-            onChange={(e) => setProjectText(e.target.value)}
-            rows={5}
-            className="custom-select"
-            placeholder="Describe a project that makes you proud..."
-          />
+            <textarea
+              value={projectText}
+              onChange={(e) => setProjectText(e.target.value)}
+              rows={5}
+              className="custom-select"
+              placeholder="Describe a project that makes you proud..."
+            />
           </div>
           <button className="next-button" onClick={handleNext}>
             Next <ArrowRight size={16} />

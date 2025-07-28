@@ -50,9 +50,9 @@ export default function RoleAndSkills() {
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container">
           <ArrowLeft
-            className="cursor-pointer mb-5 text-gray-400"
+            className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push('/Join_Our_Team/PersonalDetails')}
+            onClick={() => router.push("/Join_Our_Team/PersonalDetails")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
@@ -83,28 +83,35 @@ export default function RoleAndSkills() {
             <ChevronDown className="chevron-icon" size={20} />
           </div>
 
-          <p className="form-subheading ">How many years of experience do you have?</p>
+          <p className="form-subheading ">
+            How many years of experience do you have?
+          </p>
           <div className="space-y-2 select-wrapper">
             {["0–1", "1–3", "3–5", "5+"].map((range) => (
-              <label key={range} className="flex items-center gap-2 cursor-pointer">
+              <label
+                key={range}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input
                   type="radio"
                   name="experience"
                   value={range}
                   checked={experience === range}
                   onChange={(e) => setExperience(e.target.value)}
-                   className="form-radio text-yellow-500"
+                  className="form-radio text-yellow-500"
                 />
-                 <span className="text-sm">{range}</span>
+                <span className="text-sm">{range}</span>
               </label>
             ))}
           </div>
 
-         
           <p className="form-subheading">Core Skills / Tech Stack</p>
           <div className="space-y-2 select-wrapper">
             {skillsList.map((skill) => (
-              <label key={skill} className="flex items-center gap-2 cursor-pointer">
+              <label
+                key={skill}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input
                   type="checkbox"
                   checked={selectedSkills.includes(skill)}
@@ -116,27 +123,21 @@ export default function RoleAndSkills() {
             ))}
           </div>
 
+          <p className="form-subheading">Upload Resume (PDF only)</p>
+          <label htmlFor="resumeUpload" className="custom-upload-btn">
+            <Upload size={18} className="mr-2" />
+            Upload
+          </label>
+          <input
+            id="resumeUpload"
+            type="file"
+            accept=".pdf"
+            onChange={handleResumeUpload}
+            className="hidden"
+          />
 
-        <p className="form-subheading">Upload Resume (PDF only)</p>
-        <label htmlFor="resumeUpload" className="custom-upload-btn">
-                <Upload size={18} className="mr-2" />
-                Upload
-                </label>
-                <input
-                id="resumeUpload"
-                type="file"
-                accept=".pdf"
-                onChange={handleResumeUpload}
-                className="hidden"
-                />
+          {resume && <p className="text-md mt-6">{resume.name} uploaded</p>}
 
-                {resume && (
-                <p className="text-md mt-6">
-                    {resume.name} uploaded
-                </p>
-                )}
-
-          
           <button className="next-button" onClick={handleNext}>
             Next <ArrowRight size={16} />
           </button>

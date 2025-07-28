@@ -25,10 +25,10 @@ export default function StoryDetails() {
                     <div className="mt-15">
 
                 <div className="flex items-center justify-between mb-6">
-               <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-[#F5F5F7] p-[12px_16px]">
+               <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-gray-light p-[12px_16px]">
                 <Link
                     href="/SuccessStories"
-                    className="flex items-center text-sm text-[#727171] hover:underline">
+                    className="flex items-center text-sm text-gray-dark2 hover:underline">
                     <img
                     src="/images/assets/backArrow.png"
                     alt="Back"
@@ -90,10 +90,7 @@ export default function StoryDetails() {
                             height={43}
                         />
                         </div>
-
-               
-               
-                </div>
+                       </div>
 
                         <h1 className="heading-systems mb-8">
                             Design Slow. Build Smart. Launch Fast.

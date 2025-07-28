@@ -17,73 +17,74 @@ export default function YourProduct() {
   };
 
   return (
-<>
- <Header/>
+    <>
+      <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
-             <ArrowLeft
-          className="cursor-pointer mb-5 text-gray-400"
-          size={30}
-          onClick={() => router.push('/Audit/AboutYou')} 
-        />
+          <ArrowLeft
+            className="cursor-pointer mb-5 text-arrow-color"
+            size={30}
+            onClick={() => router.push("/Audit/AboutYou")}
+          />
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 2</span>
           </div>
-         <div className="custom-left-border">  
-        <h1 className="heading-systems">
-          Your Product
-        </h1>
-      </div>    
-            <div className="select-wrapper">
-                  <AnimatedInput  placeholder="Enter Product name"
-                   type="text"
+          <div className="custom-left-border">
+            <h1 className="heading-systems">Your Product</h1>
+          </div>
+          <div className="select-wrapper">
+            <AnimatedInput
+              placeholder="Enter Product name"
+              type="text"
               name="productname"
-              autoComplete="name"/>
-              </div>
-            <div className="select-wrapper">
-                    <AnimatedInput placeholder="Enter  Website/App Link" 
-                     type="link"
+              autoComplete="name"
+            />
+          </div>
+          <div className="select-wrapper">
+            <AnimatedInput
+              placeholder="Enter  Website/App Link"
+              type="link"
               name="link"
-              autoComplete="link"/>
-              </div>
-               <p className="form-subheading ">Platform </p>
+              autoComplete="link"
+            />
+          </div>
+          <p className="form-subheading ">Platform </p>
           <div className="space-y-2 select-wrapper">
             {["IOS", "Android", "Web", "Other"].map((range) => (
-              <label key={range} className="flex items-center gap-2 cursor-pointer">
+              <label
+                key={range}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <input
                   type="radio"
                   name="experience"
                   value={range}
                   checked={experience === range}
                   onChange={(e) => setExperience(e.target.value)}
-                   className="form-radio text-yellow-500"
+                  className="form-radio text-yellow-500"
                 />
-                 <span className="text-sm">{range}</span>
+                <span className="text-sm">{range}</span>
               </label>
             ))}
           </div>
 
-            <p className="form-subheading ">
-           Brief Description
-          </p>
-           <div className="select-wrapper">
-          <textarea
-            value={intentText}
-            onChange={(e) => setIntentText(e.target.value)}
-            rows={5}
-            className="custom-select"
-            placeholder="Tell us what excites you ..."
-          />
+          <p className="form-subheading ">Brief Description</p>
+          <div className="select-wrapper">
+            <textarea
+              value={intentText}
+              onChange={(e) => setIntentText(e.target.value)}
+              rows={5}
+              className="custom-select"
+              placeholder="Tell us what excites you ..."
+            />
           </div>
-        
-            <button  onClick={handleNext} className="next-button">
-                Next <ArrowRight size={16} />
-            </button>
-     
-    </div>
-    </div>
 
-</>
+          <button onClick={handleNext} className="next-button">
+            Next <ArrowRight size={16} />
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

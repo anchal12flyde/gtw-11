@@ -20,16 +20,16 @@ export default function ConsultHerosection() {
           )}
       
           
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
         </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white-color1">
           <div className="hero-section">
             <h1
         className="heading-heros"
        
       >
-        Rethink. <span className="text-[#FFB100]">Rebuild.</span> Reinvent.
+        Rethink. <span className="text-primary">Rebuild.</span> Reinvent.
       </h1>
 
       <p
@@ -43,7 +43,7 @@ export default function ConsultHerosection() {
      
         <ClientButton
           href="#"
-          className="bg-[#FFB100] text-black hover:bg-white hover:text-[#FFB100] "
+          className="bg-primary text-secondary hover:bg-white-color1 hover:text-primary "
         >
           Start a Consult Sprint
         </ClientButton>

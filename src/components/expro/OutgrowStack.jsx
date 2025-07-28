@@ -48,17 +48,17 @@ export default function OutgrowStack() {
 
   return (
     <>
-      <div className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 mt-26 py-20">
+      <div className="bg-gray-light util-flex util-flex-1 util-mx-1-5 mt-26 py-20">
         <div className="timeline-wrapper">
-           <h4 className="text-[24px] font-semibold text-black  mb-8 sm:mb-[-60px]">
-           Integrations That<br/> Matter
-
-        </h4>
+          <h4 className="text-[24px] font-semibold text-secondary  mb-8 sm:mb-[-60px]">
+            Integrations That
+            <br /> Matter
+          </h4>
           <div className="timeline">
-            
             <h2 className="heading-systems ">
-        You <span className="text-[#FFB100]">Won’t Outgrow</span> this stack.
-      </h2>
+              You <span className="text-primary">Won’t Outgrow</span> this
+              stack.
+            </h2>
             {timelineItems.map((item, index) => (
               <div className="timeline-item mt-18" key={index}>
                 <div className="flex flex-col md:flex-row items-left gap-6 md:gap-70">
@@ -66,14 +66,12 @@ export default function OutgrowStack() {
                     <img src={item.image} alt="" />
                   </div>
                   <div className="timeline-content order-2 md:order-1">
-                    <h3 >{item.title}</h3>
-                    <p >{item.description}</p>
-                    
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
                   </div>
                 </div>
               </div>
             ))}
-            
           </div>
         </div>
       </div>

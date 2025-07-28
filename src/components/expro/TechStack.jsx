@@ -31,8 +31,8 @@ export default function TechStack() {
                     </div>
 
                 <div className="flex flex-col gap-4  ">
-                    <h3 className="ecom-headings text-left text-white">Frontend</h3>
-                    <p className="paragraphs-default text-white">
+                    <h3 className="ecom-headings text-left text-white-color1">Frontend</h3>
+                    <p className="paragraphs-default text-white-color1">
                     React, Next.js, Tailwind
                     </p>
                 </div>
@@ -47,8 +47,8 @@ export default function TechStack() {
                     />
                 </div>
                 <div className="flex flex-col gap-4 ">
-                    <h3 className="ecom-headings text-left text-white">Mobile</h3>
-                    <p className="paragraphs-default text-white">
+                    <h3 className="ecom-headings text-left text-white-color1">Mobile</h3>
+                    <p className="paragraphs-default text-white-color1">
                    React Native
                     </p>
                 </div>
@@ -63,8 +63,8 @@ export default function TechStack() {
                     />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <h3 className="ecom-headings text-left text-white">Backend</h3>
-                    <p className="paragraphs-default text-white">
+                    <h3 className="ecom-headings text-left text-white-color1">Backend</h3>
+                    <p className="paragraphs-default text-white-color1">
                    Node.js, Express, MongoDB
                     </p>
                 </div>
@@ -79,8 +79,8 @@ export default function TechStack() {
                     />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <h3 className="ecom-headings text-left text-white">Infra</h3>
-                    <p className="paragraphs-default text-white">
+                    <h3 className="ecom-headings text-left text-white-color1">Infra</h3>
+                    <p className="paragraphs-default text-white-color1">
                     AWS / Render / Vercel
                     </p>
                 </div>

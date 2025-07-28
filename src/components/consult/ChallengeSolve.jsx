@@ -36,7 +36,7 @@ whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <span className="heading-systems">
-        The Challenge <span className="text-[#FFB100]">We Solve</span>
+        The Challenge <span className="text-primary">We Solve</span>
       </span>
 
       <p className="challenge-subtitle">

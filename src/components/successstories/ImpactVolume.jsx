@@ -34,7 +34,7 @@ export default function ImpactVolume() {
   return (
     <>
 
-    <section className="mt-26 bg-white util-flex util-flex-1 util-mx-1-5 ">
+    <section className="mt-26 bg-white-color1 util-flex util-flex-1 util-mx-1-5 ">
      <div className="px-0 sm:px-30">
         
         <div className="mb-20 blog-reading flex flex-col gap-y-16">
