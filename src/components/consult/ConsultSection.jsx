@@ -44,7 +44,7 @@ export default function ConsultSection() {
 
             <div className="flex flex-col gap-2 ">
               <h3 className="ecom-headings text-left">Systems-first</h3>
-              <p className="paragraphs-default">
+              <p className="paragraphs-default text-gray-dark">
                 Systems-first, not software-first.
               </p>
             </div>
@@ -60,7 +60,7 @@ export default function ConsultSection() {
             </div>
             <div className="flex flex-col gap-2 ">
               <h3 className="ecom-headings text-left">Tech-aware empath</h3>
-              <p className="paragraphs-default">
+              <p className="paragraphs-default text-gray-dark">
                 Deep technical understanding + founder empathy.
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function ConsultSection() {
               <h3 className="ecom-headings text-left">
                 Execution-ready strategy
               </h3>
-              <p className="paragraphs-default">
+              <p className="paragraphs-default text-gray-dark">
                 Execution-ready thinking (unlike static strategy firms).
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function ConsultSection() {
             </div>
             <div className="flex flex-col gap-2 ">
               <h3 className="ecom-headings text-left">End-to-end continuity</h3>
-              <p className="paragraphs-default">
+              <p className="paragraphs-default text-gray-dark">
                 Seamless handoff to in-house GTW product and dev teams.
               </p>
             </div>

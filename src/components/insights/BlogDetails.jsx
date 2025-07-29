@@ -38,8 +38,8 @@ export default function BlogDetails() {
    
     return (
       <>
-        <div className="util-flex util-flex-1 util-mx-1-5">
-          <div className="px-0 lg:px-30">
+        <div className="util-flex util-flex-1 util-mx-1-5 ">
+          <div className="px-0 lg:px-30" >
             <div className="mt-15">
               <div className="flex items-center justify-between mb-6">
                 <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-gray-light p-[12px_16px]">

@@ -38,16 +38,20 @@ export default function Roadmap() {
         viewport={{ once: false, amount: 0.5 }}
       >
         <div className="flex flex-wrap lg:flex-nowrap">
-
           <motion.div
             className="work-card flex flex-col gap-10  h-[300px] sm:h-auto justify-end"
             variants={card}
           >
-            <img src="/images/assets/01.png" alt="Campus" className="number-image" />
+            <img
+              src="/images/assets/01.png"
+              alt="Campus"
+              className="number-image"
+            />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Discovery</h3>
-              <p className="paragraphs-defaul text-left">
-                We deep-dive into your workflows, tools, bottlenecks, and people.
+              <p className="text-gray-dark paragraphs-defaul text-left">
+                We deep-dive into your workflows, tools, bottlenecks, and
+                people.
               </p>
             </div>
           </motion.div>
@@ -65,21 +69,24 @@ export default function Roadmap() {
             </div>
           </motion.div>
 
-
           <motion.div
             className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
             variants={card}
           >
-            <img src="/images/assets/02.png" alt="Campus" className="number-image" />
+            <img
+              src="/images/assets/02.png"
+              alt="Campus"
+              className="number-image"
+            />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Systems Map</h3>
-              <p className="paragraphs-defaul text-left">
-                We create a visual blueprint of your current and future tech architecture.
+              <p className="text-gray-dark paragraphs-defaul text-left">
+                We create a visual blueprint of your current and future tech
+                architecture.
               </p>
             </div>
           </motion.div>
 
-          
           <motion.div
             className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
@@ -97,16 +104,19 @@ export default function Roadmap() {
             className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
             variants={card}
           >
-            <img src="/images/assets/03.png" alt="Campus" className="number-image" />
+            <img
+              src="/images/assets/03.png"
+              alt="Campus"
+              className="number-image"
+            />
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Transformation Map</h3>
-              <p className="paragraphs-defaul text-left">
-                We create a visual blueprint of your current and future tech architecture.
+              <p className="text-gray-dark paragraphs-defaul text-left">
+                We create a visual blueprint of your current and future tech
+                architecture.
               </p>
             </div>
           </motion.div>
-
-        
         </div>
       </motion.div>
     </section>

@@ -40,7 +40,7 @@ export default function StoriesHeroSection() {
 
       <div
         ref={scrollRef}
-        className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6 gap-4"
+        className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
       >
         <div className="flex snap-start ">
           <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
