@@ -7,10 +7,10 @@ export default function D2C() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const images = {
-    1: "/images/assets/img5.png",
-    2: "/images/img1.png",
-    3: "/images/img2.png",
-    4: "/images/img3.png",
+    1: "/images/assets/d2c1.png",
+    2: "/images/assets/IMG1.jpg",
+    3: "/images/assets/IMG7.jpg",
+    4: "/images/assets/IMG5.jpg",
   };
 
   const defaultImage = images[1];

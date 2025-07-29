@@ -19,17 +19,20 @@ export default function Testimonials() {
   const testimonials = [
     {
       avatar: "/images/assets/img1.png",
-      quote: "There is nothing so useless as doing efficiently that which should not be done at all.",
+      quote:
+        "Great design makes things easy, clear, and even enjoyable. It works, and that’s what truly matters.",
       author: "Steve Jobs",
     },
     {
       avatar: "/images/assets/img2.png",
-      quote: "There is nothing so useless as doing efficiently that which should not be done at all.",
+      quote:
+        "There is nothing so useless as doing efficiently that which should not be done at all.",
       author: "Peter Drucker",
     },
     {
       avatar: "/images/assets/img3.png",
-      quote: "Longevity in this business is about being able to reinvent yourself or invent the future.",
+      quote:
+        "Longevity in this business is about being able to reinvent yourself or invent the future.",
       author: "Satya Nadella",
     },
   ];

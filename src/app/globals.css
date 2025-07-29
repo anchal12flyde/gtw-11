@@ -230,7 +230,7 @@ body::-webkit-scrollbar {
   font-style: Inter;
   font-weight: 500;
   font-size: 17px;
-  color: var(--color-gray-light2);
+  color: var(--color-gray-dark);
   letter-spacing: 0em;
   line-height: 1.4em;
 
@@ -625,7 +625,7 @@ line-height: normal;
 
 @media (max-width: 640px) {
   .industry-tag {
-    font-size: 12px;
+    font-size: 10.5px;
     line-height: 0;
      padding-right: 4.2px;
   }
@@ -1742,7 +1742,7 @@ color: var(--secondary-color);
 
 
  .yellow-strip {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   text-align: center;
   padding: 2.5rem 2rem;
   
@@ -1786,24 +1786,28 @@ color: var(--secondary-color);
 .tech-card {
   display: flex;
   flex-direction: column;
-  width: 90%; 
-  flex-shrink: 0;
+  justify-content: space-between;
+  width: 90%;
   height: 400px;
+  flex-shrink: 0;
   overflow: hidden;
   border: 1px solid var(--color-gray-light2);
-  padding: 2rem;
+  padding: 2rem; 
   box-sizing: border-box;
+  background: linear-gradient(320deg, #ffb100 0%, #ffcd5d 100%);
+
 }
 
 @media (min-width: 425px) {
   .tech-card {
-    width: 70%; 
+    width: 70%;
   }
 }
-@media (max-width: 779px) and (min-width: 550px) {
+
+@media (min-width: 550px) and (max-width: 779px) {
   .tech-card {
-    width: 50%; 
-    }
+    width: 50%;
+  }
 }
 
 @media (min-width: 780px) {
@@ -2752,3 +2756,15 @@ letter-spacing: 0.7;
   will-change: transform;
 }
 
+
+.box1 {
+  width: 300px;
+  height: 200px;
+}
+
+@media (min-width: 1024px) {
+  .box1 {
+    width: 750px;
+    height: 400px;
+  }
+}
