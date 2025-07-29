@@ -12,7 +12,6 @@ export default function CountryCode({ value, onChange }) {
       inputClassName="w-full "
       style={
         {
-          // style with css variables or with ".react-international-phone-flag-emoji" class
           '--react-international-phone-flag-width': '50px',
           '--react-international-phone-flag-height': '24px',
         } 

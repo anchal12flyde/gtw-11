@@ -5,44 +5,43 @@ import AnimatedCards from "../globalcomponents/AnimatedCards";
 
 export default function HeroSection() {
    const data = [
-    {
-      title: "Design Slow → Create with Clarity",
-      description:
-        "We start with the user — not the UI. We ask questions that hurt. Explore edge cases. Challenge assumptions. Because good design isn’t decoration. It’s strategic silence, confident pacing, and intuitive flows.",
-      action: "What it looks like in action:",
-      overlayItems: [
-        "Deep discovery workshops",
-        "User journey mapping",
-        "Brand-aligned UI/UX systems",
-        "Accessibility and content hierarchy",
-      ],
-    },
-    {
-      title: "Build Smart → Engineer for Scale",
-      description:
-       "We don’t duct-tape. We build with architecture in mind. Reusable logic. Modular structure. Clean APIs. Thoughtful DB design.",
-      action: "What it looks like in action:",
-      overlayItems: [
-        "Deep discovery workshops",
-        "User journey mapping",
-        "Brand-aligned UI/UX systems",
-        "Accessibility and content hierarchy",
-      ],
-    },
-    {
-      title: "Launch Fast → Move With Confidence",
-      description:
-       "We release fast — not frantically. Our agile approach is backed by analytics, versioning, and clarity in ownership. Because a strong launch is only the start of a smart feedback loop.",
-      action: "What it looks like in action:",
-      overlayItems: [
-        "Deep discovery workshops",
-        "User journey mapping",
-        "Brand-aligned UI/UX systems",
-        "Accessibility and content hierarchy",
-      ],
-    },
-    
-  ];
+     {
+       title: "Design Slow → Create with Clarity",
+       description:
+         "We start with the user — not the UI. We ask questions that hurt. Explore edge cases. Challenge assumptions. Because good design isn’t decoration. It’s strategic silence, confident pacing, and intuitive flows.",
+       action: "What it looks like in action:",
+       overlayItems: [
+         "Deep discovery workshops",
+         "User journey mapping",
+         "Brand-aligned UI/UX systems",
+         "Accessibility and content hierarchy",
+       ],
+     },
+     {
+       title: "Build Smart → Engineer for Scale",
+       description:
+         "We don’t duct-tape. We build with architecture in mind. Reusable logic. Modular structure. Clean APIs. Thoughtful DB design.",
+       action: "What it looks like in action:",
+       overlayItems: [
+         "Component-based frontends",
+         "Multi-tenant SaaS backends",
+         "Third-party integrations with clean abstraction",
+         "DevOps-ready from day one",
+       ],
+     },
+     {
+       title: "Launch Fast → Move With Confidence",
+       description:
+         "We release fast — not frantically. Our agile approach is backed by analytics, versioning, and clarity in ownership. Because a strong launch is only the start of a smart feedback loop.",
+       action: "What it looks like in action:",
+       overlayItems: [
+         "Iterative sprints with weekly demos ",
+         "Feature flagging & staging environments",
+         "Metrics-first launch dashboards",
+         "Ongoing support with measurable outcomes",
+       ],
+     },
+   ];
 
   return (
     <>
