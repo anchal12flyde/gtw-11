@@ -1784,30 +1784,26 @@ color: var(--secondary-color);
   width: calc(94% / 3);
 }
 .tech-card {
-  display: flex;
+ 
   flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-  height: 400px;
+  width: 90%; 
   flex-shrink: 0;
+  height: 400px;
   overflow: hidden;
   border: 1px solid var(--color-gray-light2);
-  padding: 2rem; 
+  padding: 2rem;
   box-sizing: border-box;
-  background: linear-gradient(320deg, #ffb100 0%, #ffcd5d 100%);
-
 }
 
 @media (min-width: 425px) {
   .tech-card {
-    width: 70%;
+    width: 70%; 
   }
 }
-
-@media (min-width: 550px) and (max-width: 779px) {
+@media (max-width: 779px) and (min-width: 550px) {
   .tech-card {
-    width: 50%;
-  }
+    width: 50%; 
+    }
 }
 
 @media (min-width: 780px) {
