@@ -2,6 +2,7 @@
 import HoverVideo from "./VideoPlayer";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Explore_Digital() {
   const scrollRef = useRef(null);
@@ -111,7 +112,8 @@ export default function Explore_Digital() {
                 </span>{" "}
                 powered by purpose-built platforms.
               </p>
-              <a href="#" className="explore-link  block">
+              
+              <a href="/Consult" className="explore-link  block">
                 Explore Digital Transformation
               </a>
             </motion.div>

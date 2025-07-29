@@ -17,7 +17,7 @@ export default function TechStack() {
       </div>
       <div className="overflow-auto scrollbar-hide w-full flex" ref={scrollRef}>
         <div className="flex flex-nowrap gap-4  w-full">
-          <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26 ">
+          <div className="tech-cards justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26  ">
             <div className="campus-image-wrapper ">
               <img
                 src="/images/assets/expro1.png"
@@ -36,7 +36,7 @@ export default function TechStack() {
             </div>
           </div>
 
-          <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
+          <div className="tech-cards justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
             <div className="campus-image-wrapper ">
               <img
                 src="/images/assets/expro2.png"
@@ -54,7 +54,7 @@ export default function TechStack() {
             </div>
           </div>
 
-          <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
+          <div className="tech-cards justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
             <div className="campus-image-wrapper">
               <img
                 src="/images/assets/expro3.png"
@@ -72,7 +72,7 @@ export default function TechStack() {
             </div>
           </div>
 
-          <div className="tech-card justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
+          <div className="tech-cards justify-between  bg-[linear-gradient(320deg,_#ffb100_0%,_#ffcd5d_100%)] space-y-26">
             <div className="campus-image-wrapper ">
               <img
                 src="/images/assets/expro4.png"

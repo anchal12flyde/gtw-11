@@ -59,7 +59,7 @@ export default function ConsultSection() {
               />
             </div>
             <div className="flex flex-col gap-2 ">
-              <h3 className="ecom-headings text-left">Tech-aware empath</h3>
+              <h3 className="ecom-headings text-left">Tech-aware empathy</h3>
               <p className="paragraphs-default text-gray-dark">
                 Deep technical understanding + founder empathy.
               </p>

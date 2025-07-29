@@ -8,7 +8,7 @@ export default function HeroSection() {
      {
        title: "Design Slow → Create with Clarity",
        description:
-         "We start with the user — not the UI. We ask questions that hurt. Explore edge cases. Challenge assumptions. Because good design isn’t decoration. It’s strategic silence, confident pacing, and intuitive flows.",
+         "We start with the user, not the UI. We ask questions that hurt. Explore edge cases. Challenge assumptions. Because good design isn’t decoration. It’s strategic silence, confident pacing, and intuitive flows.",
        action: "What it looks like in action:",
        overlayItems: [
          "Deep discovery workshops",
@@ -32,7 +32,7 @@ export default function HeroSection() {
      {
        title: "Launch Fast → Move With Confidence",
        description:
-         "We release fast — not frantically. Our agile approach is backed by analytics, versioning, and clarity in ownership. Because a strong launch is only the start of a smart feedback loop.",
+         "We release fast, not frantically. Our agile approach is backed by analytics, versioning, and clarity in ownership. Because a strong launch is only the start of a smart feedback loop.",
        action: "What it looks like in action:",
        overlayItems: [
          "Iterative sprints with weekly demos ",

@@ -1811,6 +1811,35 @@ color: var(--secondary-color);
     width: 24%; 
     }
 }
+.tech-cards {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  width: 90%; 
+  flex-shrink: 0;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-light2);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 425px) {
+  .tech-cards {
+    width: 70%; 
+  }
+}
+@media (max-width: 779px) and (min-width: 550px) {
+  .tech-cards {
+    width: 50%; 
+    }
+}
+
+@media (min-width: 780px) {
+  .tech-cards {
+    width: 24%; 
+    }
+}
 
 @media (max-width: 767px) {
   .hide-on-mobile {

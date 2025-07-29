@@ -13,7 +13,7 @@ export default function YellowStrip() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
-             transition={{ duration: 0.6, ease: "easeOut", delay: 0.01 }}> We’re not here to write a 200-slide deck. We’re here to fix what’s slowing you down.</motion.p> 
+             transition={{ duration: 0.6, ease: "easeOut", delay: 0.01 }}> We’re not here to write a 200 pages slide deck. We’re here to fix what’s slowing you down.</motion.p> 
       </div>
        </>
   );

@@ -112,8 +112,8 @@ export default function Roadmap() {
             <div className="flex flex-col gap-4">
               <h3 className="ecom-headings text-left">Transformation Map</h3>
               <p className="text-gray-dark paragraphs-defaul text-left">
-                We create a visual blueprint of your current and future tech
-                architecture.
+                Prioritized, ROI-first plan with clear outcomes, timelines, and
+                cost.
               </p>
             </div>
           </motion.div>

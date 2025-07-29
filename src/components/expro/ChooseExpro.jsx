@@ -20,7 +20,7 @@ export default function ChooseExpro() {
             />
           </div>
         <div class="parent-div ">
-        <div class="stack-text">Full IP ownership — no licensing trap</div>
+        <div class="stack-text">Full IP ownership, no licensing trap</div>
       </div>
         </div>
   <div className="stack-item">
