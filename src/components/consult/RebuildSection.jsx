@@ -25,7 +25,7 @@ export default function RebuildSection() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             >
-              <span className="text-primary">Let's Rebuild</span>&nbsp;
+              <span className="text-light-blue">Let's Rebuild</span>&nbsp;
               <span>With Clarity</span>
             </motion.div>
 

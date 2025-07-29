@@ -19,7 +19,7 @@ export default function Expro() {
         <title>Expro</title>
       </Head>
        <ExproHeroSection/>
-       <HeadlessSection/>
+       {/* <HeadlessSection/> */}
        {/* <OperationalChaos/> */}
        <OutgrowStack/>
        <D2C/>

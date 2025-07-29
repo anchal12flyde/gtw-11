@@ -45,7 +45,7 @@ export default function Explore_Digital() {
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
               <p className="text-white">We Build. We Digitize.</p>
-              &nbsp;<p className="text-primary">We Transform.</p>
+              &nbsp;<p className="text-light-blue">We Transform.</p>
             </div>
           </motion.div>
 
@@ -126,9 +126,7 @@ export default function Explore_Digital() {
           <div className="relative flex items-left justify-between mb-12 w-full">
             <h2 className="text-left  flex-1 heading-systems ">
               <span className="text-white-color1">
-                Building scalable systems that
-              
-                solve real-world problems.
+                Building scalable systems that solve real-world problems.
               </span>
             </h2>
             {/* <div className="hidden sm:flex gap-0">
@@ -156,7 +154,7 @@ export default function Explore_Digital() {
         >
           <div className="flex flex-nowrap gap-10 ">
             <div className=" yellow-container">
-              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80  h-[510px] overflow-hidden">
+              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
                 <HoverVideo src="/videos/vd2.mp4" />
 
                 <div className="flex flex-col gap-4 px-8">
@@ -174,7 +172,7 @@ export default function Explore_Digital() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden ">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden ">
               <div className="relative rounded-2xl ">
                 <img
                   src="/images/img4.png"
@@ -194,7 +192,7 @@ export default function Explore_Digital() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
               <div className="relative rounded-2xl">
                 <img
                   src="/images/img7.png"
@@ -214,7 +212,7 @@ export default function Explore_Digital() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
               <HoverVideo src="/videos/vd1.mp4" />
 
               <div className="flex flex-col gap-4 px-8">
@@ -230,9 +228,8 @@ export default function Explore_Digital() {
                 </p>
               </div>
             </div>
-           
-         
 
+            <div className=" flex-shrink-0 w-0 "></div>
           </div>
         </div>
 

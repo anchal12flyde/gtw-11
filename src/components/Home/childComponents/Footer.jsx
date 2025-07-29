@@ -6,27 +6,27 @@ import { ChevronDown } from 'lucide-react';
 
 const categories = [
   {
-    title: 'Company',
+    title: 'Philosphy',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   },
   {
-    title: 'Verticals',
+    title: 'Mobile Apps',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   },
   {
-    title: 'Resources',
+    title: 'Digital Transformation',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   },
   {
-    title: 'Industries',
+    title: 'Expro',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   },
   {
-    title: 'Careers',
+    title: 'Insights',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   },
   {
-    title: 'Legal',
+    title: 'Success Stories',
     items: ['The GTW Vision', 'Our Team', 'The GTW Vision', 'Our Team', 'The GTW Vision']
   }
 ];
@@ -92,13 +92,13 @@ export default function Footer() {
           <div className="company-info">
             {categories.map(({ title, items }) => (
               <div key={title}>
-                <h4 className="category-heading mb-3">{title}</h4>
+                <h4 className="category-heading ">{title}</h4>
                 <br />
-                <ul className="footer-list mt-3 space-y-1 text-gray-600">
+                {/* <ul className="footer-list mt-3 space-y-1 text-gray-600">
                   {items.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             ))}
           </div>
@@ -126,11 +126,11 @@ export default function Footer() {
                     openIndex === index ? "opacity-100" : "opacity-0 hidden"
                   } pl-2 text-white-gray6`}
                 >
-                  {items.map((item, idx) => (
+                  {/* {items.map((item, idx) => (
                     <li key={idx} className="py-1">
                       {item}
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               </div>
             ))}
@@ -144,7 +144,9 @@ export default function Footer() {
           >
             <div className=" flex flex-col sm:flex-row sm:justify-between  items-center text-sm text-secondary mt-8">
               <p className="company-name">General Tech Works Private Limited</p>
-              <p className="mt-2 sm:mt-0 company-name">2025</p>
+              <p className="mt-2 sm:mt-0 company-name">
+                Privacy Policy| Terms and Conditions
+              </p>
             </div>
           </motion.div>
         </div>

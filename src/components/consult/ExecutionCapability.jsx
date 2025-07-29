@@ -6,31 +6,31 @@ export default function ExecutionCapability() {
     {
       title: "Workflow audit + tech landscape mapping",
       description:
-        "We offer clarity-first consulting backed by execution capability. Whether you're exploring modernization or ready to rebuild, we guide you from map to momentum.",
+        "We dig deep into your current operations, identifying bottlenecks and mapping your existing tools, teams, and tech — to give you a clear picture before change begins.",
       image: "/images/assets/icon1.png",
     },
     {
       title: "Modern platform recommendation (buy vs build)",
       description:
-        "We offer clarity-first consulting backed by execution capability. Whether you’re facing modernization or ready to rebuild, we guide you from map to momentum.",
+        "We help you make strategic decisions on whether to adopt off-the-shelf tools or build custom systems — based on scale, ownership, and long-term flexibility.",
       image: "/images/assets/icon2.png",
     },
     {
       title: "System map & architecture blueprint",
       description:
-        "We offer clarity-first consulting backed by execution capability. Whether you’re facing modernization or ready to rebuild, we guide you from map to momentum.",
+        "We define how your ideal digital ecosystem should look — outlining how modules connect, data flows, roles function, and systems communicate.",
       image: "/images/assets/icon3.png",
     },
     {
       title: "MVP scoping and build strategy",
       description:
-        "We offer clarity-first consulting backed by execution capability. Whether you’re facing modernization or ready to rebuild, we guide you from map to momentum.",
+        "We shape your Minimum Viable Product — balancing speed, cost, and impact — with a phased build plan, delivery milestones, and success metrics.",
       image: "/images/assets/icon4.png",
     },
     {
       title: "Tool replacement & process digitization",
       description:
-        "We offer clarity-first consulting backed by execution capability. Whether you’re facing modernization or ready to rebuild, we guide you from map to momentum.",
+        "We replace legacy spreadsheets and scattered tools with integrated platforms that streamline workflows, reduce error, and enhance accountability.",
       image: "/images/assets/icon5.png",
     },
   ];

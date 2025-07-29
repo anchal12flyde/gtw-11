@@ -19,48 +19,51 @@ export default function Usecases() {
         {[
           {
             title: "Marketplaces",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "Powering buyer-seller flows with listings, reviews, filters, and custom storefront logic.",
           },
-          { title: "SaaS Extensions", desc: "Mobile access to SaaS platforms" },
+          {
+            title: "SaaS Extensions",
+            desc: "Enabling mobile-first access, reporting dashboards, and user workflows for SaaS platforms.",
+          },
           {
             title: "E-commerce",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "Custom product catalogs, search, filters, checkout, and scalable backend order engines.",
           },
           {
             title: "Food & Beverage",
-            desc: "Direct ordering, kitchen dashboards, loyalty",
+            desc: "Direct ordering systems with kitchen dashboards, loyalty flows, and delivery integrations.",
           },
           {
             title: "Internal Ops",
-            desc: "Field checklists, geo-logging, approvals",
+            desc: "Build ops dashboards, field checklists, geo-logging tools, and approval-based workflows. ",
           },
           {
             title: "Logistics",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "Manage shipments, trip planning, fleet routing, customer notifications, and service SLAs.",
           },
           {
             title: "Healthcare",
-            desc: "Direct ordering, kitchen dashboards, loyalty",
+            desc: "Enable bookings, reports, patient dashboards, and ordering logic for medical supplies.",
           },
           {
             title: "Education & LMS",
-            desc: "Field checklists, geo-logging, approvals",
+            desc: "Student lifecycle tools — onboarding, content access, attendance, and performance tracking.",
           },
           {
             title: "Events & Communities",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "Ticketing, user profiles, reviews, filters, and host-side dashboards to manage listings.",
           },
           {
             title: "Hospitality",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "End-to-end digital menu, table/room service flows, loyalty programs, and approval logic.",
           },
           {
             title: "Fintech & Payments",
-            desc: "Mobile access to SaaS platforms",
+            desc: "Build workflows for transactions, onboarding, wallets, and access to financial dashboards.",
           },
           {
             title: "Real Estate",
-            desc: "Buyer-seller, review, filters, listings",
+            desc: "Listing portals with search, filter, inquiry, admin approval, and agent-specific dashboards.",
           },
         ].map((item, index) => (
           <motion.div

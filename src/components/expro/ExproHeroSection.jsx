@@ -41,7 +41,7 @@ export default function ExproHeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-8 pb-8 sm:items-center  ">
               <ClientButton
                 href="#"
-                className="bg-primary text-secondary hover:bg-white-color1 hover:text-primary"
+                className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
               >
                 Explore The Platform
               </ClientButton>
@@ -76,7 +76,7 @@ export default function ExproHeroSection() {
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
               <p className="text-white-color1">The Problem&nbsp;</p>
-              <p className="text-primary">We Solve</p>
+              <p className="text-light-blue">We Solve</p>
             </div>
           </motion.div>
 
@@ -102,7 +102,7 @@ export default function ExproHeroSection() {
               className="flex justify-center items-center "
             >
               <svg
-                className="w-50 text-primary animate-arrowDown md:hidden"
+                className="w-50 text-light-blue animate-arrowDown md:hidden"
                 viewBox="0 0 192 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export default function ExproHeroSection() {
                 />
               </svg>
               <svg
-                className="hidden lg:block w-8 text-primary animate-arrowDown"
+                className="hidden lg:block w-8 text-light-blue animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ export default function ExproHeroSection() {
               transition={{ delay: 1.2, duration: 1 }}
               viewport={{ once: false }}
             >
-              <p className="text-2xl text-primary">ExPro fixes this.</p>
+              <p className="text-2xl text-light-blue">ExPro fixes this.</p>
 
               <p href="#" className="expro-right pt-8 lg:pt-4 block">
                 Built on the MERN stack with a production-ready admin panel,

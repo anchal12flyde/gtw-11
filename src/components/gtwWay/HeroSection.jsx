@@ -45,8 +45,8 @@ export default function HeroSection() {
 
   return (
     <>
-     <div className="hero-wrapper relative overflow-hidden min-h-screen ">
-      <div className="absolute inset-0 h-screen">
+      <div className="hero-wrapper relative overflow-hidden min-h-screen ">
+        <div className="absolute inset-0 h-screen">
           <video
             className="w-full h-full object-cover hero-video"
             autoPlay
@@ -54,53 +54,48 @@ export default function HeroSection() {
             muted
             playsInline
           >
-            <source src="/videos/LightRays.mp4" type="video/mp4" />
+            <source src="/videos/light-rays.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-      
+
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
-           <Header/>
+          <Header />
         </div>
 
         <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white-color1-color1 ">
           <div className="hero-section">
-           <h1
-        className="heading-heros"
-      
-      >
-        Design Slow. Build Smart. <br /> Launch Fast.
-      </h1>
+            <h1 className="heading-heros">
+              Design Slow. Build Smart. <br /> Launch Fast.
+            </h1>
 
-      <p
-        className="heading-subtitles w-full sm:w-[900px] mt-4"
-        
-      >
-        Our philosophy isn’t just a tagline. It’s a deliberate discipline we bring to every product we craft.
-      </p>
+            <p className="heading-subtitles w-full sm:w-[900px] mt-4">
+              Our philosophy isn’t just a tagline. It’s a deliberate discipline
+              we bring to every product we craft.
+            </p>
           </div>
         </div>
 
         <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 ">
-        <section className="philosophy-section mix-blend-difference ">
-        <div className="heading-systems w-full max-w-[500px] mx-auto">
-        <span className="text-primary">We Believe</span>{" "}
-        <span>Timeless Systems</span>{" "}
-        <span className="text-primary">Aren’t Rushed.</span>
-      </div>
-      
-      <div className="w-full max-w-[900px] mx-auto">
-        <p className="headings mt-4 ">  
-            In a world obsessed with speed, we slow down where it matters at the drawing board.
-            Because clarity at the start unlocks velocity at launch.
-          </p>
-         </div>
-        </section>
-      </div >
-      
-      <div className="util-flex util-flex-1 util-mx-1-5">
-    <AnimatedCards cards={data} />
-      </div>
+          <section className="philosophy-section mix-blend-difference ">
+            <div className="heading-systems w-full max-w-[500px] mx-auto">
+              <span className="text-light-blue">We Believe</span>{" "}
+              <span>Timeless Systems</span>{" "}
+              <span className="text-light-blue">Aren’t Rushed.</span>
+            </div>
 
+            <div className="w-full max-w-[900px] mx-auto">
+              <p className="headings mt-4 ">
+                In a world obsessed with speed, we slow down where it matters at
+                the drawing board. Because clarity at the start unlocks velocity
+                at launch.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div className="util-flex util-flex-1 util-mx-1-5">
+          <AnimatedCards cards={data} />
+        </div>
       </div>
     </>
   );
