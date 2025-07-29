@@ -21,7 +21,7 @@ export default function FoundationSection() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
       >
         <span>We Don’t Chase Trends.&nbsp;</span>
-        <span className="text-[#FFB100]">We Build&nbsp;</span>
+        <span className="text-primary">We Build&nbsp;</span>
         <div>
           <span>Foundations.</span>
         </div>

@@ -55,7 +55,7 @@ export default function HoverVideo({ src }) {
       <video
         ref={videoRef}
         src={src}
-        className="w-full h-50 rounded-2xl object-cover"
+        className="w-full h-55 rounded-2xl object-cover"
         preload="metadata"
         muted
         playsInline

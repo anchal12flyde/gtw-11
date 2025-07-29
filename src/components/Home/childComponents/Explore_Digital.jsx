@@ -45,7 +45,7 @@ export default function Explore_Digital() {
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
               <p className="text-white">We Build. We Digitize.</p>
-              &nbsp;<p className="text-[#FFB100]">We Transform.</p>
+              &nbsp;<p className="text-primary">We Transform.</p>
             </div>
           </motion.div>
 
@@ -70,7 +70,7 @@ export default function Explore_Digital() {
               className="flex justify-center items-center"
             >
               <svg
-                className="w-50  text-[#FFB100] animate-arrowDown lg:hidden"
+                className="w-50  text-primary animate-arrowDown lg:hidden"
                 viewBox="0 0 192 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ export default function Explore_Digital() {
                 />
               </svg>
               <svg
-                className="hidden lg:block w-8  text-[#FFB100] animate-arrowDown"
+                className="hidden lg:block w-8  text-primary animate-arrowDown"
                 viewBox="0 0 24 104"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,12 +107,12 @@ export default function Explore_Digital() {
             >
               <p className="right-column-text justify-items-start">
                 We help organizations rethink the way they run, by{" "}
-                <span className="text-[#FFB100]">
+                <span className="text-primary">
                   replacing complexity with clarity –
                 </span>{" "}
                 powered by purpose-built platforms.
               </p>
-              
+
               <a href="/Consult" className="explore-link  block">
                 Explore Digital Transformation
               </a>
@@ -125,12 +125,13 @@ export default function Explore_Digital() {
         <div className="util-flex util-flex-1 util-mx-1-5 ">
           <div className="relative flex items-left justify-between mb-12 w-full">
             <h2 className="text-left  flex-1 heading-systems ">
-              <span className="text-secondary">We build systems,</span>{" "}
-              <span className="block md:inline text-white-color1">
-                not just screens.
+              <span className="text-white-color1">
+                Building scalable systems that
+              
+                solve real-world problems.
               </span>
             </h2>
-            <div className="hidden sm:flex gap-0">
+            {/* <div className="hidden sm:flex gap-0">
               <button className="arrow-button" onClick={scrollLeft}>
                 <img
                   src="/images/LeftArrow.png"
@@ -145,7 +146,7 @@ export default function Explore_Digital() {
                   className="w-10 h-10"
                 />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -155,112 +156,83 @@ export default function Explore_Digital() {
         >
           <div className="flex flex-nowrap gap-10 ">
             <div className=" yellow-container">
-              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80  h-[400px] overflow-hidden">
+              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80  h-[510px] overflow-hidden">
                 <HoverVideo src="/videos/vd2.mp4" />
 
                 <div className="flex flex-col gap-4 px-8">
                   <h3 className="ecom-heading text-left">
-                    Ecommerce for Scale
+                    Numyum – Direct Ordering Engine for Cloud Kitchens
                   </h3>
                   <p className="paragraph-default">
-                    Built a full-stack MERN platform for Itel Mobiles to support
-                    D2C sales, stock sync, and campaign-driven demand — built to
-                    scale across India.
+                    We built a custom food ordering system with OTP-based login,
+                    intuitive "Build Your Order" flow, and deep menu
+                    customizations. The platform supports multi-kitchen
+                    franchise operations, branch-specific pricing, and an
+                    integrated order approval system for seamless execution.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[400px] overflow-hidden ">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden ">
               <div className="relative rounded-2xl ">
                 <img
                   src="/images/img4.png"
                   alt="Campus"
-                  className="w-full h-50 "
+                  className="w-full h-55 "
                 />
               </div>
               <div className="flex flex-col gap-4 px-8">
                 <h3 className="ecom-heading text-left">
-                  A Campus Goes Digital
+                  EzStays – A Complete OS for Student Housing
                 </h3>
                 <p className="paragraph-default ">
-                  Built a full-stack MERN platform for Itel Mobiles to support
-                  D2C sales, stock sync, and campaign-driven demand — built to
-                  scale across India.
+                  From admissions to mess management, EzStays is an end-to-end
+                  hostel management solution. We designed and developed a
+                  unified system covering room allocation, student onboarding,
+                  transport, payments, kitchen inventory, and more.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[400px] overflow-hidden">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden">
               <div className="relative rounded-2xl">
                 <img
                   src="/images/img7.png"
                   alt="Campus"
-                  className="w-full h-50 "
+                  className="w-full h-55 "
                 />
               </div>
               <div className="flex flex-col gap-4 px-8">
                 <h3 className="ecom-heading text-left">
-                  Landing That Converts
+                  Itel – Scalable Ecommerce for D2C Sales
                 </h3>
                 <p className="paragraph-default">
-                  Built a full-stack MERN platform for Itel Mobiles to support
-                  D2C sales, stock sync, and campaign-driven demand — built to
-                  scale across India.
+                  We developed a full-stack MERN-based ecommerce platform for
+                  Itel Mobiles, complete with live search recommendations, smart
+                  filtering, store locator, and Unicommerce integration —
+                  optimized for speed, reliability, and scale across India.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[400px] overflow-hidden">
+            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[510px] overflow-hidden">
               <HoverVideo src="/videos/vd1.mp4" />
 
               <div className="flex flex-col gap-4 px-8">
-                <h3 className="ecom-heading text-left">Ecommerce for Scale</h3>
-                <p className="paragraph-default">
-                  Built a full-stack MERN platform for Itel Mobiles to support
-                  D2C sales, stock sync, and campaign-driven demand — built to
-                  scale across India.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[400px] overflow-hidden ">
-              <div className="relative rounded-2xl">
-                <img
-                  src="/images/img7.png"
-                  alt="Campus"
-                  className="w-full h-50"
-                />
-              </div>
-              <div className="flex flex-col gap-4 px-8">
                 <h3 className="ecom-heading text-left">
-                  A Campus Goes Digital
+                  TransExpert – A Digital Overhaul for a Logistics Group
                 </h3>
                 <p className="paragraph-default">
-                  Built a full-stack MERN platform for Itel Mobiles to support
-                  D2C sales, stock sync, and campaign-driven demand — built to
-                  scale across India.
+                  For TransExpert’s three-brand group, we led a full corporate
+                  transformation — including brand identity design, corporate
+                  stationery, investor decks, and website UI/UX. We then
+                  developed all three brand websites to reflect a consistent,
+                  professional digital presence.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-80 flex-shrink-0 h-[400px] overflow-hidden">
-              <div className="relative rounded-2xl">
-                <img
-                  src="/images/img4.png"
-                  alt="Campus"
-                  className="w-full h-50 "
-                />
-              </div>
-              <div className="flex flex-col gap-4 px-8">
-                <h3 className="ecom-heading text-left">
-                  A Campus Goes Digital
-                </h3>
-                <p className="paragraph-default ">
-                  Built a full-stack MERN platform for Itel Mobiles to support
-                  D2C sales, stock sync, and campaign-driven demand — built to
-                  scale across India.
-                </p>
-              </div>
-            </div>
+           
+         
 
-            <div className=" flex-shrink-0  w-[10px] sm:w-[50px]"></div>
           </div>
         </div>
 

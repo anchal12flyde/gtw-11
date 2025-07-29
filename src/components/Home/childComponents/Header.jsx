@@ -13,7 +13,7 @@ export default function Header() {
 
   const [scrolled, setScrolled] = useState(true);
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("/images/GTW_Logo.png");
+  const [logoSrc, setLogoSrc] = useState("/images/gtw_new.png");
 
 useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +39,13 @@ useEffect(() => {
       pathname === "/GTW_Way"
     ) {
       header.classList.add("transparent-header");
-      setLogoSrc("/images/whitelogo.png");
+      setLogoSrc("/images/gtw_new1.png");
     } else if (pathname === "/Expro") {
       header.classList.remove("transparent-header");
       setLogoSrc("/images/exproLogo.png");
     } else {
       header.classList.remove("transparent-header");
-      setLogoSrc("/images/GTW_Logo.png");
+      setLogoSrc("/images/gtw_new.png");
     }
   }
 }, [pathname]);
@@ -126,7 +126,7 @@ useEffect(() => {
               pathname === "/GTW_Way" ||
               pathname === "/Expro"
                 ? "bg-primary text-white-color1 hover:bg-primary"
-                : "bg-secondary text-white-color1 hover:bg-primary hover:text-secondary"
+                : "bg-secondary text-white-color1 hover:bg-primary hover:text-white-color1"
             }`}
           >
             Get Started

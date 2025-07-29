@@ -32,9 +32,10 @@
   --color-icon: #888888;
 
   /* Main Brand Colors */
-  --color-primary: #FFB100;
+  --color-primary: #0647ff;
   --color-secondary: #000000;
-  --color-light-yellow: #ffcd5d;
+  --color-light-yellow: #0040CE;
+ 
 
   /* Utility */
   --space-1-5: 0.375rem;
@@ -59,9 +60,9 @@
   --border-gray-white: #cccccc;
   --border-gray-white2: #eeeeee;
   --icon-color:#888888;
-  --primary-color: #FFB100;
+  --primary-color: #0647ff;
   --secondary-color:#000000;
-  --light-yellow:#ffcd5d;
+  --light-yellow:#437CF9;
   --space-1-5: 0.375rem; 
   --flex-default: flex;
 }

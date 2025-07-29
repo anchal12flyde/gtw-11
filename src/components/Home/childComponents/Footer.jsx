@@ -50,7 +50,7 @@ export default function Footer() {
           className="sm:hidden w-full flex justify-center mb-4 py-2"
         >
           <img
-            src="/images/GTW_Logo.png"
+            src="/images/gtw_new.png"
             alt="GTW Logo"
             className="h-10 w-auto"
           />
@@ -66,7 +66,7 @@ export default function Footer() {
         >
           <div className="hidden sm:flex sm:w-1/2 justify-start">
             <img
-              src="/images/GTW_Logo.png"
+              src="/images/gtw_new.png"
               alt="GTW Logo"
               className="h-10 w-auto"
             />

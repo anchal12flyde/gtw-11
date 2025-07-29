@@ -17,7 +17,7 @@ export default function ConsultSection() {
     <section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26 ">
       <div className="relative flex items-left justify-between mb-12 w-full">
         <h2 className=" flex-1 heading-systems ">
-          <span className="text-[#FFB100]">Why GTW</span> Consult
+          <span className="text-primary">Why GTW</span> Consult
         </h2>
       </div>
 
