@@ -120,7 +120,7 @@ export default function BlogDetails() {
                   <span className="category">Category:</span>
                   <p
                     className="insight-tags"
-                    style={{ display: "flex", gap: "46px", margin: 0 }}
+                   
                   >
                     <span>Mobile App</span>
                     <span>Mobile App</span>
