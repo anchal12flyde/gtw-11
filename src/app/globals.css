@@ -2301,7 +2301,6 @@ text-transform: capitalize;
   }
 }
 
-
 .insight-tags {
   font-size: 1rem; 
   color: var(--icon-color);
@@ -2322,6 +2321,7 @@ text-transform: capitalize;
   font-size: 1.125rem; 
   color:  var(--icon-color);
   text-decoration: none;
+   
 }
 
 .insight-link::after {
@@ -2331,13 +2331,14 @@ text-transform: capitalize;
   left: 0;
   width: 40%;
   height: 2px;
-background-color: var(--primary-color);
+  background-color: var(--primary-color);
   transition: width 0.3s ease;
 }
 
 .insight-link:hover::after {
   width: 100%;
 }
+
 
 .insight-card h2 {
   color: var(--secondary-color);
@@ -2454,6 +2455,7 @@ line-height: 1.2;
    margin-top: 1.5rem;   
   padding-right: 0.5rem;   
   padding-left: 2rem; 
+  
 }
 .blog-div p{
   color: var(--white-gray2);

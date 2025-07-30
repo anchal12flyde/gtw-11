@@ -1,4 +1,4 @@
-
+'use client'
 import { useState, useEffect } from 'react';
 import "@/app/globals.css"
 import Loader from '@/components/Home/Loader/Loader';

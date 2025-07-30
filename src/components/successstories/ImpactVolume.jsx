@@ -15,29 +15,33 @@ const items = [
   { number: "02", text: "Ready in weeks, not months" },
 ];
   const blogData = [
-   {
-    imageSrc: "/images/assets/blog_img1.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/story_Details",
-  },
-  {
-    imageSrc: "/images/assets/blog_img2.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/story_Details",
-  },
-  {
-    imageSrc: "/images/assets/blog_img3.png",
-    title: "Design Slow. Build Smart. Launch Fast.",
-    link: "/story_Details",
-  },]
+   
+    {
+      imageSrc: "/images/assets/story_img2.png",
+      details: "Operating System for Student Housing. ",
+      title: "EzStays",
+      slug: "Ezstays",
+    },
+    {
+      imageSrc: "/images/assets/story_img3.png",
+      details:
+        " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
+      title: "Itel",
+      slug: "Itel",
+    },
+    {
+      imageSrc: "/images/assets/story_img4.png",
+      details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
+      title: "TransExpert ",
+      slug: "Transexpert",
+    },
+  ];
 export default function ImpactVolume() {
   return (
     <>
-
-    <section className="mt-26 bg-white-color1 util-flex util-flex-1 util-mx-1-5 ">
-     <div className="px-0 sm:px-30">
-        
-        <div className="mb-20 blog-reading flex flex-col gap-y-16">
+      <section className="mt-26 bg-white-color1 util-flex util-flex-1 util-mx-1-5 ">
+        <div className="px-0 sm:px-30">
+          {/* <div className="mb-20 blog-reading flex flex-col gap-y-16">
                       <motion.div className="flex flex-col gap-y-6"  initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
@@ -68,48 +72,40 @@ export default function ImpactVolume() {
                                 creates a machine for efficiency – dramatically reducing the manual effort needed while delivering measurably lower CAC and higher returns.</p>
                         </div>
                     </motion.div>
-                    </div>
-      <h2 className="heading-systems text-center  mb-8">
-        Impact That Speaks Volumes
-      </h2>
-      <div className="stack-grid ">
-        {items.map((item, index) => (
-          <div
-            key={index}
-             
-            className="stack-volume hover:scale-[1.02] transition-transform">
-            <span className="impact-number">{item.number}</span>
-            <span className="impact-text">{item.text}</span>
+                    </div> */}
+          <h2 className="heading-systems text-center  mb-8">
+            Impact That Speaks Volumes
+          </h2>
+          <div className="stack-grid ">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="stack-volume hover:scale-[1.02] transition-transform"
+              >
+                <span className="impact-number">{item.number}</span>
+                <span className="impact-text">{item.text}</span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-       <div className="mt-26 mb-26">
-                       <h1 className="heading-systems text-center">
-                           Related Articles
-                        </h1>
+          <div className="mt-26 mb-26">
+            <h1 className="heading-systems text-center">Related Articles</h1>
 
-                         <div className="grid-cols-blog mt-10">
-                                  {blogData.map((blog, index) => (
-                                <BlogCard
-                                key={index}
-                                imageSrc={blog.imageSrc}
-                                title={blog.title}
-                                 link={blog.link}
-                                category="CATEGORY"
-                                 linkText="Read More"
-                                />
-                            ))}
-                                  </div>
-                     </div>
-     </div>
-      
-    </section>
-
-
-  
-  
-
-</>
+            <div className="grid-cols-blog mt-10">
+              {blogData.map((blog, index) => (
+                <BlogCard
+                  key={index}
+                  imageSrc={blog.imageSrc}
+                  title={blog.title}
+                  link={`/Successstories/${blog.slug}`}
+                  category="CATEGORY"
+                  linkText="Read More"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
