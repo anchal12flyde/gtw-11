@@ -89,7 +89,7 @@ export default function Footer() {
         </motion.div>
 
         <div className="company-information">
-          <div className="company-info">
+          <div className="company-info gap-28">
             {categories.map(({ title, items }) => (
               <div key={title}>
                 <h4 className="category-heading ">{title}</h4>
@@ -145,7 +145,7 @@ export default function Footer() {
             <div className=" flex flex-col sm:flex-row sm:justify-between  items-center text-sm text-secondary mt-8">
               <p className="company-name">General Tech Works Private Limited</p>
               <p className="mt-2 sm:mt-0 company-name">
-                Privacy Policy| Terms and Conditions
+                Privacy Policy | Terms and Conditions
               </p>
             </div>
           </motion.div>

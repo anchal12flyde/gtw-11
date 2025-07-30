@@ -46,7 +46,7 @@ export default function StepThreeSaas() {
                   onChange={() => setCompanyType(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function StepThreeSaas() {
                   onChange={() => setStartTime(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -92,7 +92,7 @@ export default function StepThreeSaas() {
                   onChange={() => setAdminPanel(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

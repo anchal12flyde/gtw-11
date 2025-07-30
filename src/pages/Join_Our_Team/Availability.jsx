@@ -49,7 +49,7 @@ export default function Availability() {
                   onChange={() => setStartTime(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

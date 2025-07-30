@@ -100,7 +100,7 @@ export default function RoleAndSkills() {
                   onChange={(e) => setExperience(e.target.value)}
                   className="form-radio text-yellow-500"
                 />
-                <span className="text-sm">{range}</span>
+                <span className="text-md">{range}</span>
               </label>
             ))}
           </div>

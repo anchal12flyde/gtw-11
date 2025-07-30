@@ -68,22 +68,24 @@
                     ease: "easeOut",
                     delay: index * 0.1,
                   }}
-                  className="consumer-product pb-0 md:pb-6 md:flex md:justify-between sm:border-b sm:border-primary"
+                  className="consumer-product"
                 >
                   <div className="product-left">
                     <h3 className="ecom-heading">{title}</h3>
                     <p className="industry-description mt-4">{description}</p>
                   </div>
+
                   <div className="block sm:hidden border-b border-primary w-full mt-2"></div>
 
-                  <div className="">
-                    <div className="product-right">
-                      {tags.map((tag, i) => (
-                        <span key={i} className="industry-tag">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="product-right ">
+                    {tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="industry-tag  "
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </motion.div>
               );

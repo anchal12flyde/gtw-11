@@ -11,6 +11,7 @@ export default function YourGoals() {
    const router = useRouter();
    const [intentText, setIntentText] = useState('');
    const [experience, setExperience] = useState("");
+   const [otherText, setOtherText] = useState("");
 
   const handleNext = () => {
     router.push('/Audit/Confirmation'); 
@@ -54,9 +55,19 @@ export default function YourGoals() {
                   onChange={(e) => setExperience(e.target.value)}
                   className="form-radio text-yellow-500"
                 />
-                <span className="text-sm">{range}</span>
+                <span className="text-md">{range}</span>
               </label>
             ))}
+
+            {experience === "Other (text)" && (
+              <AnimatedInput
+                type="text"
+                value={otherText}
+                onChange={(e) => setOtherText(e.target.value)}
+                placeholder="Please specify"
+                className="custom-select"
+              />
+            )}
           </div>
 
           <p className="form-subheading ">

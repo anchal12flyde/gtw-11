@@ -59,7 +59,7 @@ export default function AgencyDetails() {
                   onChange={() => setStartTime(option)}
                   className="form-radio text-yellow-500"
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

@@ -45,7 +45,7 @@ export default function StepThreeInfra() {
                   onChange={() => setCompanyType(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -67,7 +67,7 @@ export default function StepThreeInfra() {
                   onChange={() => setStartTime(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function StepThreeInfra() {
                   onChange={() => setAdminPanel(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function StepThreeInfra() {
                   onChange={() => setD2cMobileApp(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

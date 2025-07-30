@@ -63,7 +63,7 @@ export default function StepTwoForm() {
                     onChange={() => setCompanyType(option)}
                     className="form-radio "
                   />
-                  <span className="text-sm">{option}</span>
+                  <span className="text-md">{option}</span>
                 </label>
               )
             )}
@@ -89,7 +89,7 @@ export default function StepTwoForm() {
                   onChange={() => setStartTime(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

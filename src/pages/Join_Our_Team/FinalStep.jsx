@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
+import { toast } from "react-hot-toast";
 
 
 
@@ -13,7 +14,7 @@ const [agreed, setAgreed] = useState(false);
 
   const handleNext = () => {
     if (!agreed) {
-      alert("Please confirm your understanding to proceed.");
+      toast.error("Please confirm your understanding to proceed.");
       return;
     }
     router.push('/ThankYouPage/ThankYou');

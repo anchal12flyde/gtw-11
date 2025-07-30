@@ -49,7 +49,7 @@ export default function StepThreeConsult() {
                   onChange={() => setCompanyType(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -72,7 +72,7 @@ export default function StepThreeConsult() {
                     onChange={() => setStartTime(option)}
                     className="form-radio "
                   />
-                  <span className="text-sm">{option}</span>
+                  <span className="text-md">{option}</span>
                 </label>
               )
             )}
@@ -94,7 +94,7 @@ export default function StepThreeConsult() {
                   onChange={() => setAdminPanel(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>

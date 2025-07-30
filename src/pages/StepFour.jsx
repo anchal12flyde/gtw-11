@@ -51,7 +51,7 @@ export default function StepFour() {
                   onChange={() => setCompanyType(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
@@ -73,7 +73,7 @@ export default function StepFour() {
                   onChange={() => setStartTime(option)}
                   className="form-radio "
                 />
-                <span className="text-sm">{option}</span>
+                <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
