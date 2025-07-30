@@ -401,11 +401,13 @@ body::-webkit-scrollbar {
   }
 }
 .gradient-yellow-section {
-  background: linear-gradient(320deg, var(--primary-color) 0%, var(--light-yellow) 100%);
+  background-image: url('/images/bg-blue.png');
+  background-size: cover;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   height: auto;
- 
- 
 }
+
 @media (min-width: 640px) {
   .gradient-yellow-section {
     height: auto;
@@ -470,17 +472,10 @@ body::-webkit-scrollbar {
     min-height: auto; 
   }
 }
-.yellow-container {
-   font-family: "Inter", sans-serif;
-  padding-left: 12vh;  
- 
-}
+
 
 @media (max-width: 768px) {
-  .yellow-container {
-    padding-left: 3vh;
-  
-  }
+ 
   .grid-title{
     font-size: 14px;
     line-height:1.5;
@@ -488,11 +483,7 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 1600px) {
-  .yellow-container {
-     font-family: "Inter", sans-serif;
-    padding-left: 17vh;
   
-  }
 }
 .section-heading {
   font-family: 'Inter', sans-serif;
@@ -747,7 +738,7 @@ line-height: normal;
 
 .become-client:hover {
   background-color: var(--primary-color);
-  color: var(--secondary-color); 
+  color: var(--white); 
 }
 
 @media (max-width: 640px) {
