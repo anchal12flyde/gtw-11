@@ -38,7 +38,7 @@ export default function ExecutionCapability() {
 
   return (
     <>
-      <div className="bg-gray-light util-flex util-flex-1 util-mx-1-5 mt-26 usecases-section">
+      <div className="bg-gray-light util-flex util-flex-1 util-mx-1-5 mt-14 usecases-section">
         <div className="timeline-wrapper">
           <h4 className="text-[24px] font-semibold text-secondary  mb-8 sm:mb-[-30px]">
             What We Do
