@@ -638,8 +638,8 @@ line-height: normal;
 @media (max-width: 640px) {
   .industry-tag {
     font-size: 10.5px;
-    line-height: 0;width: 7.5rem; 
-  width: 10.5rem;
+    line-height: 1.2; 
+  width: 7.5rem;
 
   }
 }
