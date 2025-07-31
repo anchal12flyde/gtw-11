@@ -19,30 +19,30 @@ export default function ChallengeSection() {
   return (
     <section className="challenge-section ">
       <div className="challenge-container util-flex util-flex-1 util-mx-1-5 mt-26">
-        <div className="challenge-image relative w-full h-full lg:h-[700px] lg:w-[600px] ">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={hoveredItem || "default"} 
-              src={hoveredItem ? images[hoveredItem] : defaultImage}
-              alt="People abstract image"
-              className="w-full h-full object-cover relative"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            />
-          </AnimatePresence>
+        <div className="relative w-[600px] h-[700px] overflow-hidden challenge-image">
+          {Object.entries(images).map(([key, src]) => {
+            const isVisible = String(hoveredItem ?? 1) === key;
+            return (
+              <motion.div
+                key={key}
+                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isVisible ? 1 : 0 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                style={{ pointerEvents: "none" }} // disables accidental hover interference
+              >
+                <Image
+                  src={src}
+                  alt="People abstract image"
+                  layout="fill"
+                  objectFit="cover"
+                  priority
+                />
+              </motion.div>
+            );
+          })}
         </div>
-        
-        {/* <div className="challenge-image">
-          <Image
-  src={hoveredItem ? images[hoveredItem] : defaultImage}
-  alt="People abstract image"
-  width={500}
-  height={300} 
-  priority={hoveredItem !== null} 
-/>
-        </div> */}
+
         <motion.div
           className="challenge-content"
           initial={{ opacity: 0, x: -50 }}
@@ -65,10 +65,11 @@ export default function ChallengeSection() {
               "Teams stuck between apps and spreadsheets",
               "No central system of record or clarity",
             ].map((text, index) => (
-              <motion.li
+              <motion.div
+                className="challenge-detail"
                 key={index}
                 onMouseEnter={() => setHoveredItem(index + 1)}
-                onMouseLeave={() => setHoveredItem(null)}
+            
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
@@ -78,7 +79,7 @@ export default function ChallengeSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>{" "}
                 {text}
-              </motion.li>
+              </motion.div>
             ))}
           </ul>
 

@@ -1725,12 +1725,12 @@ input[type="checkbox"] {
   
 }
 
-.challenge-list li {
+.challenge-detail{
    color:var(--color-gray-dark2);
   display: flex;
   font-size: 1.3rem;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-top: 1px solid var(--border-gray-white2);
   padding-top: 2.2rem;
 }
@@ -1741,8 +1741,8 @@ input[type="checkbox"] {
   font-size: 0.7rem;
   margin-right: 0.75rem;
 }
-.challenge-list li:hover,
-.challenge-list li:hover .number {
+.challenge-detail:hover,
+.challenge-detail:hover .number {
 color: var(--secondary-color);
 }
 
