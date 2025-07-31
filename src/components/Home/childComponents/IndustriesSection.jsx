@@ -16,29 +16,37 @@
         description:
           "Digitizing internal workflows and complex multi-unit ops.",
         tags: [
-          "Ops Dashboards",
-          "Approval Flows",
-          "Branch Logic",
           "Admin Tools",
+          "Branch Logic",
+          "Approval Flows",
+           "Ops Dashboards",
         ],
       },
       {
         title: "Education & Knowledge",
         description: "Streamlining student services, housing, and campus ops. ",
-        tags: ["Student Portals", "Hostel Ops", "Transport", "Admissions CRM"],
+        tags: [
+           "Transport",
+            "Hostel Ops", 
+          "Student Portals", 
+           "Admissions CRM",
+          ],
       },
       {
         title: "Services & Professional Firms",
         description: "Building credibility and client acquisition engines.",
-        tags: ["Websites", "Branding", "Sales Decks", "Lead Capture"],
+        tags: ["Websites",
+           "Branding", 
+           "Sales Decks", 
+           "Lead Capture"],
       },
       {
         title: "Hospitality & Experience",
         description: "Ordering, logistics, and customization at scale. ",
         tags: [
+            "Menu Logic",
           "Custom Orders",
           "Multi-Kitchen",
-          "Menu Logic",
           "Franchise Tools",
         ],
       },

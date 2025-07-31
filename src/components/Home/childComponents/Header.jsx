@@ -15,20 +15,20 @@ export default function Header() {
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState("/images/gtw_new.png");
 
-useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY);
-      if (window.scrollY > 50) {
-        console.log("hello");
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+// useEffect(() => {
+//     const handleScroll = () => {
+//       console.log(window.scrollY);
+//       if (window.scrollY > 50) {
+//         console.log("hello");
+//         setScrolled(true);
+//       } else {
+//         setScrolled(false);
+//       }
+//     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, []);
 
 
  useEffect(() => {

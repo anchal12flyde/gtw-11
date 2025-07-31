@@ -40,7 +40,7 @@ export default function Testimonials() {
   return (
     <>
       <main className="bg-gray-light util-flex util-flex-1 util-mx-1-5">
-        <div className="util-grid util-grid-cols-auto util-gap-x-25 util-gap-y-15 util-py-28">
+        <div className="util-grid util-grid-cols-auto util-gap-x-25 util-gap-y-15 util-py-28 ">
           {testimonials.map((item, index) => (
             <motion.div
               key={index}

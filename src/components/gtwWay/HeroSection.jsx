@@ -46,7 +46,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="hero-wrapper relative overflow-hidden min-h-screen ">
-        <div className="absolute inset-0 h-screen">
+        <div className="absolute inset-0 h-screen ">
           <video
             className="w-full h-full object-cover hero-video"
             autoPlay
@@ -58,7 +58,7 @@ export default function HeroSection() {
             Your browser does not support the video tag.
           </video>
 
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div> */}
           <Header />
         </div>
 
@@ -75,8 +75,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 ">
-          <section className="philosophy-section mix-blend-difference ">
+        <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 blended-top">
+          <section className="philosophy-section  ">
             <div className="heading-systems w-full max-w-[500px] mx-auto">
               <span className="text-light-blue">We Believe</span>{" "}
               <span>Timeless Systems</span>{" "}

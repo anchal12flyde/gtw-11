@@ -7,56 +7,57 @@ export default function ExproHeroSection() {
 
   return (
     <>
-      <div className="hero-wrapper relative overflow-hidden min-h-screen ">
-        <div className="absolute inset-0 min-h-screen bg-secondary">
-          <video
-            className=" hero-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-          >
-            <source src="/videos/expro.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      <div className="bg-secondary">
+        <div className="hero-wrapper ">
+          <div className="absolute inset-0 min-h-screen bg-secondary">
+            <video
+              className=" hero-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            >
+              <source src="/videos/expro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-          <div className="absolute inset-0 bg-gradient-to-b from-secondary/70 to-secondary"></div>
-          <Header />
-        </div>
+            <Header />
+          </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white-color1">
-          <div className="hero-section ">
-            <h1 className="heading-heros w-full lg:w-[900px]">
-              Beyond Storefronts.
-              <br className="block sm:hidden" /> We Build Commerce
-              Infrastructure.
-            </h1>
+          <div className="util-flex util-flex-1 util-mx-1-5 relative  text-center text-white-color1">
+            <div className="hero-section ">
+              <h1 className="heading-heros w-full lg:w-[900px]">
+                Beyond Storefronts.
+                <br className="block sm:hidden" /> We Build Commerce
+                Infrastructure.
+              </h1>
 
-            <p className="heading-subtitles w-full sm:w-[900px] mt-4">
-              ExPro is our full-stack eCommerce engine built for high-growth
-              brands that need control, speed, and scale, not subscription
-              bloat.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 pb-8 sm:items-center  ">
-              <ClientButton
-                href="#"
-                className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
-              >
-                Explore The Platform
-              </ClientButton>
-              <a
-                href="/transformation-framework.pdf"
-                className="custom-mobile-button"
-                download
-              >
-                Book A Technical Demo
-              </a>
+              <p className="heading-subtitles w-full sm:w-[900px] mt-4">
+                ExPro is our full-stack eCommerce engine built for high-growth
+                brands that need control, speed, and scale, not subscription
+                bloat.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 pb-8 sm:items-center  ">
+                <ClientButton
+                  href="#"
+                  className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
+                >
+                  Explore The Platform
+                </ClientButton>
+                <a
+                  href="/transformation-framework.pdf"
+                  className="custom-mobile-button"
+                  download
+                >
+                  Book A Technical Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="relative z-10 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 py-30 ">
+        <div className="relative  bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 py-20 blended-top1 mt-5">
           <div className="lg:hidden absolute inset-0 flex items-center justify-center">
             <div className="flex flex-col items-center space-y-42 ">
               <h2 className="text-[25vw] text-white/10 font-600 leading-none tracking-wider">
