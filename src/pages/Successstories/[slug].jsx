@@ -23,7 +23,7 @@ export default function BlogDetailPage() {
   }, [slug]);
 
   if (!slug || !blog) {
-    return <div className="p-10 text-center">Loading...</div>; // or a skeleton
+    return <div className="p-10 text-center"></div>; // or a skeleton
   }
 
   return (
