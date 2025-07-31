@@ -19,13 +19,13 @@ export default function ChallengeSection() {
   return (
     <section className="challenge-section ">
       <div className="challenge-container util-flex util-flex-1 util-mx-1-5 mt-26">
-        <div className="relative w-[600px] h-[700px] overflow-hidden challenge-image">
+        <div className="relative  w-full h-[350px] lg:w-[600px] lg:h-[630px] overflow-hidden challenge-image">
           {Object.entries(images).map(([key, src]) => {
             const isVisible = String(hoveredItem ?? 1) === key;
             return (
               <motion.div
                 key={key}
-                className="absolute inset-0"
+                className="absolute inset-0 img"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isVisible ? 1 : 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -69,7 +69,6 @@ export default function ChallengeSection() {
                 className="challenge-detail"
                 key={index}
                 onMouseEnter={() => setHoveredItem(index + 1)}
-            
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
