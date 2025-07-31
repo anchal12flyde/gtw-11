@@ -3,7 +3,7 @@
   import { useInView } from 'framer-motion'
   import { motion } from 'framer-motion'
 
-  export default function Next_Steps() {
+  export default function IndustriesSection() {
     const industryList = [
       {
         title: "Commerce & Consumer Products",
@@ -19,39 +19,31 @@
           "Admin Tools",
           "Branch Logic",
           "Approval Flows",
-           "Ops Dashboards",
+          "Ops Dashboards",
         ],
       },
       {
         title: "Education & Knowledge",
         description: "Streamlining student services, housing, and campus ops. ",
-        tags: [
-           "Transport",
-            "Hostel Ops", 
-          "Student Portals", 
-           "Admissions CRM",
-          ],
+        tags: ["Transport", "Hostel Ops", "Student Portals", "Admissions CRM"],
       },
       {
         title: "Services & Professional Firms",
         description: "Building credibility and client acquisition engines.",
-        tags: ["Websites",
-           "Branding", 
-           "Sales Decks", 
-           "Lead Capture"],
+        tags: ["Websites", "Branding", "Sales Decks", "Lead Capture"],
       },
       {
         title: "Hospitality & Experience",
         description: "Ordering, logistics, and customization at scale. ",
         tags: [
-            "Menu Logic",
+          "Menu Logic",
           "Custom Orders",
           "Multi-Kitchen",
           "Franchise Tools",
         ],
       },
     ];
-    
+
     return (
       <div className="util-flex util-flex-1 util-mx-1-5">
         <section className="mt-26 mb-26 md:mb-0">
@@ -87,10 +79,7 @@
 
                   <div className="product-right ">
                     {tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="industry-tag  "
-                      >
+                      <span key={i} className="industry-tag  ">
                         {tag}
                       </span>
                     ))}

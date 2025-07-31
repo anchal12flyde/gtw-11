@@ -15,7 +15,7 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
       <label
         style={{
           position: "absolute",
-          top: isActive ? "0.2rem" : "50%",
+          top: isActive ? "0rem" : "50%",
           left: "0.75rem",
           fontSize: isActive ? "0.7rem" : "0.875rem",
           color: isActive ? "#FFB100" : "#666",

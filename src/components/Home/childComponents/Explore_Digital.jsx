@@ -184,8 +184,7 @@ export default function Explore_Digital() {
                     EzStays – A Complete OS for Student Housing
                   </h3>
                   <p className="paragraph-default ">
-                    From admissions to mess management, EzStays is an end-to-end
-                    hostel management solution. We designed and developed a
+                    From admissions to mess management, EzStays is an end-to-end hostel management solution. We designed and developed a
                     unified system covering room allocation, student onboarding,
                     transport, payments, kitchen inventory, and more.
                   </p>
@@ -204,10 +203,7 @@ export default function Explore_Digital() {
                     Itel – Scalable Ecommerce for D2C Sales
                   </h3>
                   <p className="paragraph-default">
-                    We developed a full-stack MERN-based ecommerce platform for
-                    Itel Mobiles, complete with live search recommendations,
-                    smart filtering, store locator, and Unicommerce integration
-                    — optimized for speed, reliability, and scale across India.
+                    We developed a full-stack MERN-based ecommerce platform for  Itel Mobiles, complete with live search recommendations, smart filtering, store locator, and Unicommerce integration optimized for speed, reliability, and scale across India.
                   </p>
                 </div>
               </div>
@@ -220,10 +216,7 @@ export default function Explore_Digital() {
                   </h3>
                   <p className="paragraph-default">
                     For TransExpert’s three-brand group, we led a full corporate
-                    transformation — including brand identity design, corporate
-                    stationery, investor decks, and website UI/UX. We then
-                    developed all three brand websites to reflect a consistent,
-                    professional digital presence.
+                    transformation including brand identity design, corporate stationery, investor decks, and website UI/UX. We thendeveloped all three brand websites to reflect a consistent,professional digital presence.
                   </p>
                 </div>
               </div>
