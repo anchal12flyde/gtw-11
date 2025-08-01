@@ -47,7 +47,7 @@ export default function Usecases() {
           },
           {
             title: "Education & LMS",
-            desc: "Student lifecycle tools — onboarding, content access, attendance, and performance tracking.",
+            desc: "Student lifecycle tools, onboarding, content access, attendance, and performance tracking.",
           },
           {
             title: "Events & Communities",

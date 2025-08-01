@@ -44,7 +44,7 @@ export default function Explore_Digital() {
             className="mb-12"
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
-              <p className="text-white">We Build. We Digitize.</p>
+              <p className="text-white">We Build. We Digitilize.</p>
               &nbsp;<p className="text-light-blue">We Transform.</p>
             </div>
           </motion.div>

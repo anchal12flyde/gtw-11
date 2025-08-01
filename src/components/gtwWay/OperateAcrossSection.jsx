@@ -14,7 +14,7 @@ export default function OperateAcrossSection() {
     },
     {
       title: "Stay sharp",
-      desc: "User journeys are crafted for precision — from search and filters to reviews and conversions.",
+      desc: "User journeys are crafted for precision, from search and filters to reviews and conversions.",
     },
     {
       title: "Code like an owner",
@@ -22,11 +22,11 @@ export default function OperateAcrossSection() {
     },
     {
       title: "Deploy like a partner",
-      desc: "Our rollouts are tested in real scenarios — field use, geo-logging, checklists, and approvals.",
+      desc: "Our rollouts are tested in real scenarios, field use, geo-logging, checklists, and approvals.",
     },
     {
       title: "Support like a stakeholder",
-      desc: "We actively monitor, iterate, and resolve issues — owning uptime and user experience end to end.",
+      desc: "We actively monitor, iterate, and resolve issues, owning uptime and user experience end to end.",
     },
   ];
 

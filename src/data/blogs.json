@@ -54,11 +54,11 @@
           },
           {
             "listing": "Student App",
-            "sub-listing": "Students can apply, pay, track mess menus, log complaints, and renew stay — all from a mobile-first interface."
+            "sub-listing": "Students can apply, pay, track mess menus, log complaints, and renew stay, all from a mobile-first interface."
           },
           {
             "listing": "Warden Dashboard",
-            "sub-listing": "Room allocations, student check-ins, incident logs, and violation tracking — simplified in a secure portal."
+            "sub-listing": "Room allocations, student check-ins, incident logs, and violation tracking, simplified in a secure portal."
           },
           {
             "listing": "Room & Bed Management",
@@ -109,7 +109,7 @@
     },
     {
             "type": "testimonial",
-            "quote": "EzStays wouldn't be where it is today without this system. We went from being operationally overwhelmed to completely in control. Every stakeholder — student, parent, warden, kitchen team, finance — now works in sync. The Flyde team didn’t just build a product, they built a foundation for our scale.",
+            "quote": "EzStays wouldn't be where it is today without this system. We went from being operationally overwhelmed to completely in control. Every stakeholder, student, parent, warden, kitchen team, finance, now works in sync. The Flyde team didn’t just build a product, they built a foundation for our scale.",
             "author": "Rishabh A.",
             "position": "CEO & Co-founder, EzStays"
     }
@@ -234,7 +234,7 @@
     {
       
             "type": "testimonial",
-            "quote": "We always knew our operations were strong — but Flyde helped us look the part. They didn’t just design logos and websites — they gave our group a global face and a scalable foundation. We’ve never been prouder to present ourselves to clients.",
+            "quote": "We always knew our operations were strong, but Flyde helped us look the part. They didn’t just design logos and websites, they gave our group a global face and a scalable foundation. We’ve never been prouder to present ourselves to clients.",
             "author": "Amit T.,",
             "position": " Managing Director, TransExpert Group"
     }
@@ -286,7 +286,7 @@
     {
       "type": "text",
       "head": "Our  Solution",
-      "content": "We built a robust, fully custom ordering system tailored specifically to Numyum’s business model. The solution was designed to grow with them — not just for now, but for the next 10x of scale."
+      "content": "We built a robust, fully custom ordering system tailored specifically to Numyum’s business model. The solution was designed to grow with them, not just for now, but for the next 10x of scale."
     },
     {
       "type": "text",
@@ -318,7 +318,7 @@
           },
           {
             "listing": "Real-Time Status Updates",
-            "sub-listing": "Customers get live updates for order received, preparation, and dispatch,    synced directly from the kitchen dashboard."
+            "sub-listing": "Customers get live updates for order received, preparation, and dispatch,  synced directly from the kitchen dashboard."
           }
         ]
      
@@ -341,7 +341,7 @@
     },
     {
             "type": "testimonial",
-            "quote": "Working with the Flyde team has completely changed how we operate. Their deep understanding of our challenges and their ability to build a system — not just a website — was a game-changer. Our customers love the new experience, and our operatio",
+            "quote": "Working with the Flyde team has completely changed how we operate. Their deep understanding of our challenges and their ability to build a system, not just a website, was a game-changer. Our customers love the new experience, and our operatio",
             "author": " Siddharth K.,",
             "position": " Co-founder, Numyum"
     }
@@ -448,7 +448,7 @@
       {
        
         "type": "testimonial",
-            "quote": "This wasn’t just a website — it was our digital foundation. The Flyde team delivered a fast, beautiful, and powerful system that mirrors our brand. Their approach was strategic, execution-focused, and completely aligned with our goals",
+            "quote": "This wasn’t just a website, it was our digital foundation. The Flyde team delivered a fast, beautiful, and powerful system that mirrors our brand. Their approach was strategic, execution-focused, and completely aligned with our goals",
             "author": "Arjun M.,",
             "position": "Head of E-commerce, Itel India"
       }

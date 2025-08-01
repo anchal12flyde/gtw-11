@@ -102,7 +102,7 @@ export default function SuccessStories() {
                       We developed a full-stack MERN-based ecommerce platform for
                       Itel Mobiles, complete with live search recommendations,
                       smart filtering, store locator, and Unicommerce integration
-                      — optimized for speed, reliability, and scale across India.
+                      , optimized for speed, reliability, and scale across India.
                     </p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function SuccessStories() {
                     </h3>
                     <p className="paragraph-default">
                       For TransExpert’s three-brand group, we led a full corporate
-                      transformation — including brand identity design, corporate
+                      transformation, including brand identity design, corporate
                       stationery, investor decks, and website UI/UX. We then
                       developed all three brand websites to reflect a consistent,
                       professional digital presence.

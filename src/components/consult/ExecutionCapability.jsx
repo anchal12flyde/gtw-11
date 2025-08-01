@@ -6,25 +6,25 @@ export default function ExecutionCapability() {
     {
       title: "Workflow audit + tech landscape mapping",
       description:
-        "We dig deep into your current operations, identifying bottlenecks and mapping your existing tools, teams, and tech — to give you a clear picture before change begins.",
+        "We dig deep into your current operations, identifying bottlenecks and mapping your existing tools, teams, and tech, to give you a clear picture before change begins.",
       image: "/images/assets/icon1.png",
     },
     {
       title: "Modern platform recommendation (buy vs build)",
       description:
-        "We help you make strategic decisions on whether to adopt off-the-shelf tools or build custom systems — based on scale, ownership, and long-term flexibility.",
+        "We help you make strategic decisions on whether to adopt off-the-shelf tools or build custom systems, based on scale, ownership, and long-term flexibility.",
       image: "/images/assets/icon2.png",
     },
     {
       title: "System map & architecture blueprint",
       description:
-        "We define how your ideal digital ecosystem should look — outlining how modules connect, data flows, roles function, and systems communicate.",
+        "We define how your ideal digital ecosystem should look, outlining how modules connect, data flows, roles function, and systems communicate.",
       image: "/images/assets/icon3.png",
     },
     {
       title: "MVP scoping and build strategy",
       description:
-        "We shape your Minimum Viable Product — balancing speed, cost, and impact — with a phased build plan, delivery milestones, and success metrics.",
+        "We shape your Minimum Viable Product, balancing speed, cost, and impact, with a phased build plan, delivery milestones, and success metrics.",
       image: "/images/assets/icon4.png",
     },
     {
