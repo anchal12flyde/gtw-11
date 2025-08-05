@@ -1,5 +1,5 @@
 [{
-  "slug": "Ezstays",
+  "slug": "ezstays",
   "title": "EzStays – Operating System for Student Housing",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -117,7 +117,7 @@
 },
 
 {
-  "slug": "Transexpert",
+  "slug": "transexpert",
   "title": "TransExpert – A Complete Corporate Rebuild for a Logistics Powerhouse",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -242,7 +242,7 @@
 },
 
 {
-  "slug": "Numyum",
+  "slug": "numyum",
   "title": " Numyum – Reinventing the Cloud Kitchen Ordering Experience",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -350,7 +350,7 @@
 ,
 
   {
-    "slug": "Itel",
+    "slug": "itel",
     "title": "Itel – A Custom-Built E-commerce Platform for a D2C Electronics Brand",
     "date": "July 30, 2025",
     "category": "Mobile App",

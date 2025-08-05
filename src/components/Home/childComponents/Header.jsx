@@ -35,12 +35,12 @@ export default function Header() {
   const header = document.querySelector(".site-header");
   if (header) {
     if (
-      pathname === "/Consult" ||
-      pathname === "/GTW_Way"
+      pathname === "/digital-transformatio-service" ||
+      pathname === "/philosophy"
     ) {
       header.classList.add("transparent-header");
       setLogoSrc("/images/gtw_new1.png");
-    } else if (pathname === "/Expro") {
+    } else if (pathname === "/expro") {
       header.classList.remove("transparent-header");
       setLogoSrc("/images/exproLogo.png");
     } else {
@@ -51,17 +51,20 @@ export default function Header() {
 }, [pathname]);
 
  const isActive = (href) => {
-    return pathname === href || 
-           (href === "/GTW_Way" && pathname.startsWith("/GTW_Way")) ||
-           (href === "/Consult" && pathname.startsWith("/Consult"));
+    return (
+      pathname === href ||
+      (href === "/philosophy" && pathname.startsWith("/philosophy")) ||
+      (href === "/digital-transformatio-service" &&
+        pathname.startsWith("/digital-transformatio-service"))
+    );
   };
 
   return (
     <header
       className={`site-header ${
         scrolled ? "" : "slide-down"
-      } util-flex util-flex-1 util-mx-1-5 mt-4 
-    ${["/Consult", "/GTW_Way", "/Expro"].includes(pathname) ? "" : ""}
+      } util-flex util-flex-1 util-mx-1-5 pt-4 
+    ${pathname === "/" ? "home-header" : ""}
   `}
     >
       <div className="container flex items-center justify-between h-12">
@@ -74,44 +77,48 @@ export default function Header() {
           />
         </Link>
 
-        {pathname !== "/Expro" && (
+        {pathname !== "/expro" && (
           <nav className="hidden xl:flex gap-6 ">
             <Link
-              className={`nav-link ${isActive("/GTW_Way") ? "active" : ""}`}
-              href="/GTW_Way"
+              className={`nav-link ${isActive("/philosophy") ? "active" : ""}`}
+              href="/philosophy"
             >
               Philosophy
             </Link>
             <Link
-              className={`nav-link ${isActive("/mobile_apps") ? "active" : ""}`}
-              href="/mobile_apps"
+              className={`nav-link ${
+                isActive("/mobile-apps-development") ? "active" : ""
+              }`}
+              href="/mobile-apps-development"
             >
               Mobile Apps
             </Link>
             {/* <Link className={`nav-link ${isActive("/StyleGuide") ? 'active' : ''}`} href="/StyleGuide">GTW SaaS Cloud</Link> */}
             <Link
-              className={`nav-link ${isActive("/Consult") ? "active" : ""}`}
-              href="/Consult"
+              className={`nav-link ${
+                isActive("/digital-transformatio-service") ? "active" : ""
+              }`}
+              href="/digital-transformatio-service"
             >
               Digital Transformation
             </Link>
             <Link
-              className={`nav-link ${isActive("/Expro") ? "active" : ""}`}
-              href="/Expro"
+              className={`nav-link ${isActive("/expro") ? "active" : ""}`}
+              href="/expro"
             >
               ExPro
             </Link>
             <Link
-              className={`nav-link ${isActive("/Insights") ? "active" : ""}`}
-              href="/Insights"
+              className={`nav-link ${isActive("/blog") ? "active" : ""}`}
+              href="/blog"
             >
               Insights
             </Link>
             <Link
               className={`nav-link ${
-                isActive("/SuccessStories") ? "active" : ""
+                isActive("/success-stories") ? "active" : ""
               }`}
-              href="/SuccessStories"
+              href="/success-stories"
             >
               Success Stories
             </Link>
@@ -122,9 +129,9 @@ export default function Header() {
           <ClientButton
             href="/StepOneForm"
             className={`${
-              pathname === "/Consult" ||
-              pathname === "/GTW_Way" ||
-              pathname === "/Expro"
+              pathname === "/digital-transformatio-service" ||
+              pathname === "/philosophy" ||
+              pathname === "/expro"
                 ? "bg-primary text-white-color1 hover:bg-primary"
                 : "bg-secondary text-white-color1 hover:bg-primary hover:text-white-color1"
             }`}
@@ -139,77 +146,90 @@ export default function Header() {
         >
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
-              ["/Consult", "/GTW_Way", "/Expro"].includes(pathname)
+              [
+                "/digital-transformatio-service",
+                "/philosophy",
+                "/expro",
+              ].includes(pathname)
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
           ></span>
           <span
             className={`block h-[2px] w-[30px] rounded-sm ${
-              ["/Consult", "/GTW_Way", "/Expro"].includes(pathname)
+              [
+                "/digital-transformatio-service",
+                "/philosophy",
+                "/expro",
+              ].includes(pathname)
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
           ></span>
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
-              ["/Consult", "/GTW_Way", "/Expro"].includes(pathname)
+              [
+                "/digital-transformatio-service",
+                "/philosophy",
+                "/expro",
+              ].includes(pathname)
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
           ></span>
         </button>
       </div>
-      {isOpen && (
+
+      <div
+        className={`fixed inset-0 z-40 bg-secondary/40 backdrop-saturate-150 xl:hidden mobile-drawer ${
+          isOpen ? "backdrop-visible" : "backdrop-hidden"
+        }`}
+        onClick={toggleMenu}
+      >
         <div
-          className="fixed inset-0 z-40 bg-secondary/40  backdrop-saturate-150 xl:hidden mobile-drawer"
-          onClick={toggleMenu}
+          className={`mobile-drawer-panel ${
+            isOpen ? "mobile-drawer-open" : "mobile-drawer-closed"
+          }`}
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className={`absolute top-0 right-0 w-64 h-full bg-white-color1 shadow-lg p-6 transform transition-all duration-500 ease-out
-                  ${
-                    isOpen
-                      ? "translate-x-0 opacity-100"
-                      : "translate-x-full opacity-0"
-                  }`}
-            onClick={(e) => e.stopPropagation()}
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-white-gray text-2xl focus:outline-none"
+            aria-label="Close menu"
           >
-            <button
-              onClick={toggleMenu}
-              className="absolute top-4 right-4 text-white-gray text-2xl focus:outline-none"
-              aria-label="Close menu"
-            >
-              &times;
-            </button>
-            {pathname !== "/Expro" && (
-              <div className="space-y-10">
-                <Link href="/GTW_Way" className="block nav-link mt-12 ">
-                  Philosophy
-                </Link>
-                <Link href="/mobile_apps" className="block nav-link">
-                  Mobile Apps
-                </Link>
-                {/* <Link href="/StyleGuide" className="block nav-link ">GTW SaaS Cloud</Link> */}
-                <Link href="/Consult" className="block nav-link ">
-                  Digital Transformation
-                </Link>
-                <Link href="/Expro" className="block nav-link">
-                  ExPro
-                </Link>
-                <Link href="/Insights" className="block nav-link ">
-                  Insights
-                </Link>
-                <Link href="/SuccessStories" className="block nav-link ">
-                  Success Stories
-                </Link>
-                <Link href="/StepOneForm" className="mobile-login-btn  block">
-                  Get Started
-                </Link>
-              </div>
-            )}
-          </div>
+            &times;
+          </button>
+          {pathname !== "/expro" && (
+            <div className="space-y-10">
+              <Link href="/philosophy" className="block nav-link mt-12 ">
+                Philosophy
+              </Link>
+              <Link href="/mobile-apps-development" className="block nav-link">
+                Mobile Apps
+              </Link>
+              {/* <Link href="/StyleGuide" className="block nav-link ">GTW SaaS Cloud</Link> */}
+              <Link
+                href="/digital-transformatio-service"
+                className="block nav-link "
+              >
+                Digital Transformation
+              </Link>
+              <Link href="/expro" className="block nav-link">
+                ExPro
+              </Link>
+              <Link href="/blog" className="block nav-link ">
+                Insights
+              </Link>
+              <Link href="/success-stories" className="block nav-link ">
+                Success Stories
+              </Link>
+              <Link href="/StepOneForm" className="mobile-login-btn  block">
+                Get Started
+              </Link>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </header>
   );
 }

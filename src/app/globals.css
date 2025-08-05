@@ -345,6 +345,8 @@ body::-webkit-scrollbar {
   transform: scale(1.15);
   transform-origin: top; 
   opacity: 0.8; 
+  top: 0;
+  
 }
 
 .hero-banner-wrapper::after {
@@ -901,6 +903,59 @@ margin-bottom: 3rem;
   
 }
 
+.email-name {
+  flex-grow: 1;
+  padding-left: 1rem;  
+  padding-right: 1rem;
+  padding-top: 0.5rem;  
+  padding-bottom: 0.5rem;
+  border-radius: 9999px; 
+  border: 1px solid var(--border-gray-white); 
+  width: 65%;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .email-name {
+    width: 24rem;
+    font-size: 1rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .email-name {
+    width: 500px; 
+  }
+}
+.subscribe-name {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  width: 35%;
+  font-size: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subscribe-name:hover {
+  background-color: var(--primary-color); 
+  color: var(--white);
+}
+
+@media (min-width: 640px) {
+  .subscribe-name {
+    width: 10rem;            
+  }
+}
+
+@media (min-width: 1024px) {
+  .subscribe-name {
+    width: 12rem;   
+    font-size: 1rem;        
+  }
+}
+
+
 /* Mobile Apps */
 
 .mobile-header-title {
@@ -1441,11 +1496,17 @@ input[type="checkbox"] {
     rgba(0, 0, 0, 1) 70%    
   );
   color: var(--white);
-  margin-bottom: 16rem;
+  margin-bottom: 10rem;
+  margin-top: 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   
+}
+@media screen and (min-width: 1000px) {
+  .philosophy-section  {
+    margin-bottom: 14rem;
+  }
 }
 .blended-top::before {
   content: "";
@@ -1487,25 +1548,7 @@ input[type="checkbox"] {
 
 
 
-.card-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  position: relative;
-  z-index: 20; 
-  background-color: transparent;
-  margin-top: -150px; 
-}
 
-@media (min-width: 768px) {
-  .card-section {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: -180px; 
-  }
-}
 .site-header .nav-link {
   color: var(--secondary-color);
 }
@@ -1519,28 +1562,36 @@ input[type="checkbox"] {
   color: var(--white);
 }
 .transparent-header {
-   background-color: transparent;
+   background:transparent;
 }
 .site-header {
    position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background: transparent;
   color: var(--secondary-color);
   z-index: 9999;
   transition: all 0.3s ease;
 }
-
-/* This class is added on scroll */
-.header-section.slide-down {
- background-color: var(--white) !important;
-  animation: scrollAnim 0.4s ease-out forwards;
+.home-header {
+  background: transparent !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
-/* .header-section.scrollHeader {
-  background-color: white !important;
-  animation: scrollAnim 0.4s ease-out forwards;
-} */
+
+.home-header .nav-link,
+.home-header .gtw-logo,
+.home-header .ClientButton {
+  color: var(--secondary-color) !important;
+  border-color: var(--white) !important;
+}
+.home-header.home-header-scrolled {
+  background: white !important;
+}
 
 @keyframes scrollAnim {
   0% {
@@ -1562,7 +1613,7 @@ input[type="checkbox"] {
 
 
 .mobile-drawer .nav-link {
-  color: var(--secondary-color) !important;
+  color: var(--secondary-color) ;
 }
 
 .mobile-drawer .mobile-login-btn {
@@ -1570,8 +1621,63 @@ input[type="checkbox"] {
   background-color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
 }
+.mobile-drawer {
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
 
+.backdrop-visible {
+  opacity: 1;
+  visibility: visible;
+}
 
+.backdrop-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 100%;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 1.5rem; /* p-6 */
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.5s ease-out;
+  z-index: 9999;
+}
+
+.mobile-drawer-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mobile-drawer-closed {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 20; 
+  background: transparent;
+  margin-top: -150px; 
+}
+
+@media (min-width: 768px) {
+  .card-section {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: -180px; 
+  }
+}
 .card {
   position: relative;
   overflow: hidden;
@@ -1830,6 +1936,7 @@ color: var(--secondary-color);
 
 
  .yellow-strip {
+    font-family: 'Inter', sans-serif;
   background-color: var(--primary-color);
   text-align: center;
   padding: 2.5rem 2rem;

@@ -13,17 +13,22 @@ export default function mobile_apps() {
 
   return (
     <>
-    <Head>
-        <title>Mobile Apps </title>
+      <Head>
+        <title>Mobile App Development Company | General Tech Works</title>
+        <meta
+          name="description"
+          content="Build powerful Android & iOS apps with General Tech Works. We deliver scalable, secure, and user-centric mobile app solutions tailored to your business goals."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
       </Head>
-            <Header/>
-              <MobileAppDesign/>
-            <MobileCards/>
-            <UseCases/>
-          <ProductThinking/>
-          <Next_Steps/>
-          <Footer/>
-  
-       </>
-     )
+      <Header />
+      <MobileAppDesign />
+      <MobileCards />
+      <UseCases />
+      <ProductThinking />
+      <Next_Steps />
+      <Footer />
+    </>
+  );
    }

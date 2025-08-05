@@ -30,7 +30,7 @@ export default function StoryDetaling({
             <div className="flex items-center justify-between mb-6">
               <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-gray-light p-[12px_16px]">
                 <Link
-                  href="/SuccessStories"
+                  href="/success-stories"
                   className="flex items-center text-sm text-gray-dark2 hover:underline"
                 >
                   <img

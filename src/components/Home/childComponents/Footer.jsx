@@ -42,28 +42,16 @@ export default function Footer() {
     <footer className="bg-gray-light text-secondary font-inter">
       <div className="py-10">
         {/* Mobile Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="sm:hidden w-full flex justify-center mb-4 py-2"
-        >
+        <div className="sm:hidden w-full flex justify-center mb-4 py-2">
           <img
             src="/images/gtw_new.png"
             alt="GTW Logo"
             className="h-10 w-auto"
           />
-        </motion.div>
+        </div>
 
         {/* Subscribe capsule */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: false }}
-          className="capsule-container"
-        >
+        <div className="capsule-container">
           <div className="hidden sm:flex sm:w-1/2 justify-start">
             <img
               src="/images/gtw_new.png"
@@ -72,21 +60,18 @@ export default function Footer() {
             />
           </div>
           <div className="w-full sm:w-1/2">
-            <form className="flex justify-center sm:justify-start items-center gap-2 w-full">
+            <form className="flex justify-center sm:justify-start gap-2 w-full">
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="flex-grow px-4 py-2 rounded-full border border-border-gray-white 0 w-[50%] sm:w-96 lg:w-[500px] placeholder:text-sm sm:placeholder:text-base"
+                className="email-name"
               />
-              <button
-                type="submit"
-                className="bg-secondary text-white-color1 px-4 py-2 rounded-full w-[50%] sm:w-40 lg:w-48 text-sm lg:text-base"
-              >
+              <button type="submit" className="subscribe-name">
                 Subscribe
               </button>
             </form>
           </div>
-        </motion.div>
+        </div>
 
         <div className="company-information">
           <div className="company-info gap-28">

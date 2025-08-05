@@ -9,26 +9,26 @@ export default function BrowseStories() {
       imageSrc: "/images/assets/story_img1.png",
       details: "Reinventing the Cloud Kitchen Ordering Experience. ",
       title: "Numyum",
-      slug: "Numyum",
+      slug: "numyum",
     },
     {
       imageSrc: "/images/assets/story_img2.png",
       details: "Operating System for Student Housing. ",
       title: "EzStays",
-      slug: "Ezstays",
+      slug: "ezstays",
     },
     {
       imageSrc: "/images/assets/story_img3.png",
       details:
         " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
       title: "Itel",
-      slug: "Itel",
+      slug: "itel",
     },
     {
       imageSrc: "/images/assets/story_img4.png",
       details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
       title: "TransExpert ",
-      slug: "Transexpert",
+      slug: "transexpert",
     },
     // {
     //   imageSrc: "/images/assets/story_img1.png",
@@ -93,9 +93,6 @@ export default function BrowseStories() {
 
   return (
     <>
-      <Head>
-        <title>Success Stories</title>
-      </Head>
       <div className="mb-26">
         <main className="util-flex util-flex-1 util-mx-1-5 mt-26">
           <h1 className="heading-systems mb-6">
@@ -107,7 +104,7 @@ export default function BrowseStories() {
                 key={index}
                 imageSrc={blog.imageSrc}
                 title={blog.title}
-                link={`/Successstories/${blog.slug}`}
+                link={`/success-stories/${blog.slug}`}
                 details={blog.details}
                 linkText="View Story"
               />

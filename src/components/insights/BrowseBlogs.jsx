@@ -78,9 +78,7 @@ export default function BrowseBlogs() {
 
   return (
     <>
-      <Head>
-        <title>Insights</title>
-      </Head>
+      
       <div className="mt-26 mb-26">
         <main className="util-flex util-flex-1 util-mx-1-5 ">
           <div className="blog-title">

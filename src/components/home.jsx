@@ -13,23 +13,30 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-            <title>Home Page</title>
-          </Head>
-    <Header/>
-        <Hero_Section />
-        
-        <Card_Section />
+      <Head>
+        <title>
+          Digital Transformation & Tech Solutions | General Tech Works
+        </title>
+        <meta
+          name="description"
+          content="Empowering businesses with scalable web, mobile, and software solutions. General Tech Works builds secure, user-first digital infrastructure for growth."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <link rel="canonical" href="https://generaltechworks.com/" />
+      </Head>
+      <Header />
+      <Hero_Section />
 
-        <Explore />
+      <Card_Section />
 
-        <Industries />
+      <Explore />
 
-        <Next_Steps />
+      <Industries />
 
-      <Footer/>
-   
+      <Next_Steps />
 
+      <Footer />
     </>
-  )
+  );
 }
