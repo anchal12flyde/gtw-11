@@ -1,7 +1,4 @@
-"use client";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import blogs from "@/data/blogs.json";
 import Header from "@/components/Home/childComponents/Header";
 import Footer from "@/components/Home/childComponents/Footer";
@@ -9,21 +6,30 @@ import ImpactVolume from "@/components/successstories/ImpactVolume";
 import RebuildSection from "@/components/consult/RebuildSection";
 import StoryDetaling from "@/components/globalcomponents/StoryDetailing";
 
-export default function BlogDetailPage() {
-  const router = useRouter();
-  const { slug } = router.query;
+export async function getStaticPaths() {
+  const paths = blogs.map((blog) => ({
+    params: { slug: blog.slug },
+  }));
 
-  const [blog, setBlog] = useState(null);
+  return {
+    paths,
+    fallback: false, // false = 404 for unknown slug
+  };
+}
 
-  useEffect(() => {
-    if (slug) {
-      const found = blogs.find((item) => item.slug === slug);
-      setBlog(found || null);
-    }
-  }, [slug]);
+export async function getStaticProps({ params }) {
+  const blog = blogs.find((item) => item.slug === params.slug);
 
-  if (!slug || !blog) {
-    return <div className="p-10 text-center"></div>; 
+  return {
+    props: {
+      blog: blog || null,
+    },
+  };
+}
+
+export default function BlogDetailPage({ blog }) {
+  if (!blog) {
+    return <div className="p-10 text-center">Blog not found.</div>;
   }
 
   return (

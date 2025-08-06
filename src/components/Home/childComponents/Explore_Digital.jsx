@@ -125,7 +125,10 @@ export default function Explore_Digital() {
                 powered by purpose-built platforms.
               </p>
 
-              <a href="/Consult" className="explore-link  block">
+              <a
+                href="/digital-transformatio-service"
+                className="explore-link  block"
+              >
                 Explore Digital Transformation
               </a>
             </motion.div>
@@ -210,7 +213,10 @@ export default function Explore_Digital() {
                 powered by purpose-built platforms.
               </p>
 
-              <a href="/Consult" className="explore-link  block">
+              <a
+                href="/digital-transformatio-service"
+                className="explore-link  block"
+              >
                 Explore Digital Transformation
               </a>
             </motion.div>

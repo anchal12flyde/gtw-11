@@ -121,7 +121,7 @@ export default function Header() {
               className={`nav-link ${
                 isActive("/success-stories") ? "active" : ""
               }`}
-              href="/blog"
+              href="/success-stories"
             >
               Success Stories
             </Link>
