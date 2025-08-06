@@ -102,12 +102,15 @@ export default function Header() {
             >
               Digital Transformation
             </Link>
-            <Link
-              className={`nav-link ${isActive("/expro") ? "active" : ""}`}
-              href="/expro"
+            <a
+              className="nav-link"
+              href="https://expro.store"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               ExPro
-            </Link>
+            </a>
+
             <Link
               className={`nav-link ${isActive("/blog") ? "active" : ""}`}
               href="/blog"
