@@ -1,5 +1,7 @@
 [{
   "slug": "ezstays",
+  "meta_title": "EzStays Case Study | Scalable Operating System for Student Housing | General Tech Works",
+  "meta_description":"Discover how General Tech Works built EzStays - a high-performing operating system for student housing with intuitive UX, real-time availability, and seamless integrations.",
   "title": "EzStays – Operating System for Student Housing",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -118,6 +120,8 @@
 
 {
   "slug": "transexpert",
+  "meta_title": "TransExpert Case Study | Logistics Software Solution | General Tech Works",
+  "meta_description": "See how General Tech Works helped TransExpert digitize logistics operations with a robust software solution - improving efficiency, tracking, and scalability.",
   "title": "TransExpert – A Complete Corporate Rebuild for a Logistics Powerhouse",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -135,32 +139,32 @@
     },
     {
       "type": "text",
-      "head":"The Challenge",
+      "head": "The Challenge",
       "content": "With three sub-brands operating under one group, TransExpert faced major strategic and operational roadblocks:"
     },
     {
-        "type": "list",
-        "head": "The Challenges",
-        "content": [
-          {
-            "listing": "Fragmented Brand Identity",
-            "sub-listing": "Each vertical had its own ad-hoc branding, leading to confusion among customers, partners, and even internal teams."
-          },
-          {
-            "listing": "Outdated Corporate Materials",
-            "sub-listing": "Investor decks, letterheads, and sales brochures lacked consistency, polish, and alignment with the company’s scale and credibility."
-          },
-          {
-            "listing": "No Unified Digital Experience",
-            "sub-listing": "The group lacked a clear web presence. There were no individual websites or portals to explain service offerings or attract enterprise leads."
-          },
-          {
-            "listing": "No Internal CMS or Process Automation",
-            "sub-listing": "All inquiries, shipment tracking, and lead capture processes were manual and varied across branches."
-          }
-        ]
-      },
-      
+      "type": "list",
+      "head": "The Challenges",
+      "content": [
+        {
+          "listing": "Fragmented Brand Identity",
+          "sub-listing": "Each vertical had its own ad-hoc branding, leading to confusion among customers, partners, and even internal teams."
+        },
+        {
+          "listing": "Outdated Corporate Materials",
+          "sub-listing": "Investor decks, letterheads, and sales brochures lacked consistency, polish, and alignment with the company’s scale and credibility."
+        },
+        {
+          "listing": "No Unified Digital Experience",
+          "sub-listing": "The group lacked a clear web presence. There were no individual websites or portals to explain service offerings or attract enterprise leads."
+        },
+        {
+          "listing": "No Internal CMS or Process Automation",
+          "sub-listing": "All inquiries, shipment tracking, and lead capture processes were manual and varied across branches."
+        }
+      ]
+    },
+
     {
       "type": "text",
       "head": " Our Solution          ",
@@ -169,80 +173,77 @@
     {
       "type": "list",
       "head": " Key Deliverables",
-    
-       
-        "content": [
-          {
-            "listing": "Brand Architecture Strategy",
-            "sub-listing": "Defined a clear brand hierarchy for the three verticals",
-            "listing1": [
-              "TransExpert India (Customs & Freight)",
-              "Prestige Freight (Canada)",
-              "Skylark Express (GCC & Land Transport)"
-            ]
-          },
-          
-          {
-            "listing": "Logo & Visual Identity Systems",
-            "sub-listing": "Designed distinctive but related logos for each brand"
-          },
-          {
-            "listing": "Corporate Communication Toolkit",
-            "sub-listing": "Rebuilt all external-facing documents",
-            "listing1": [
-              "Business overview decks",
-              "Client proposal templates",
-              "Letterheads, email signatures",
-              "Capability one-pagers per vertical"
-            ]
-          },
-          {
-            "listing": "Website Design & Development",
-            "sub-listing": "Created three lightweight, high-speed, SEO-optimized websites",
-            "listing1": [
-              "Service breakdowns",
-              "Leadership profiles",
-              "Industry expertise highlights",
-              "Lead capture forms with analytics integration"
-            ]
-          },
-          {
-            "listing": "Admin Portal Blueprint (Phase 2 Ready)",
-            "sub-listing": "Designed backend wireframes"
-           
-          }
-        ]
-      }
-,      
-{
-  "type": "list2",
-  "head": "The Outcome",
-  "content": [
-    {
-      "listing": "100% Brand Alignment across 3 countries and 3 business verticals"
-    },
-    { "listing": "Enterprise-grade Web Presence launched within 6 weeks" },
-    {
-      "listing": "Improved Sales Collateral resulted in better conversion rates in B2B presentations"
+
+      "content": [
+        {
+          "listing": "Brand Architecture Strategy",
+          "sub-listing": "Defined a clear brand hierarchy for the three verticals",
+          "listing1": [
+            "TransExpert India (Customs & Freight)",
+            "Prestige Freight (Canada)",
+            "Skylark Express (GCC & Land Transport)"
+          ]
+        },
+
+        {
+          "listing": "Logo & Visual Identity Systems",
+          "sub-listing": "Designed distinctive but related logos for each brand"
+        },
+        {
+          "listing": "Corporate Communication Toolkit",
+          "sub-listing": "Rebuilt all external-facing documents",
+          "listing1": [
+            "Business overview decks",
+            "Client proposal templates",
+            "Letterheads, email signatures",
+            "Capability one-pagers per vertical"
+          ]
+        },
+        {
+          "listing": "Website Design & Development",
+          "sub-listing": "Created three lightweight, high-speed, SEO-optimized websites",
+          "listing1": [
+            "Service breakdowns",
+            "Leadership profiles",
+            "Industry expertise highlights",
+            "Lead capture forms with analytics integration"
+          ]
+        },
+        {
+          "listing": "Admin Portal Blueprint (Phase 2 Ready)",
+          "sub-listing": "Designed backend wireframes"
+        }
+      ]
     },
     {
-      "listing": "Established Foundation for future operational digitization and client portal rollout"
-    }
-  ]
-}
-  ,
+      "type": "list2",
+      "head": "The Outcome",
+      "content": [
+        {
+          "listing": "100% Brand Alignment across 3 countries and 3 business verticals"
+        },
+        { "listing": "Enterprise-grade Web Presence launched within 6 weeks" },
+        {
+          "listing": "Improved Sales Collateral resulted in better conversion rates in B2B presentations"
+        },
+        {
+          "listing": "Established Foundation for future operational digitization and client portal rollout"
+        }
+      ]
+    },
     {
-      
-            "type": "testimonial",
-            "quote": "We always knew our operations were strong, but Flyde helped us look the part. They didn’t just design logos and websites, they gave our group a global face and a scalable foundation. We’ve never been prouder to present ourselves to clients.",
-            "author": "Amit T.,",
-            "position": " Managing Director, TransExpert Group"
+      "type": "testimonial",
+      "quote": "We always knew our operations were strong, but Flyde helped us look the part. They didn’t just design logos and websites, they gave our group a global face and a scalable foundation. We’ve never been prouder to present ourselves to clients.",
+      "author": "Amit T.,",
+      "position": " Managing Director, TransExpert Group"
     }
   ]
 },
 
 {
   "slug": "numyum",
+  "meta_title": "NumYum Case Study | Food Delivery App Success | General Tech Works",
+  "meta_description": "See how General Tech Works helped NumYum launch a scalable food delivery app with seamless UX, fast performance, and rapid market adoption.",
   "title": " Numyum – Reinventing the Cloud Kitchen Ordering Experience",
   "date": "July 30, 2025",
   "category": "Mobile App",
@@ -256,32 +257,30 @@
     },
     {
       "type": "text",
-      "head":"The Challenge",
+      "head": "The Challenge",
       "content": " Despite having a loyal customer base, Numyum faced several business hurdles that hindered growth:"
     },
     {
       "type": "list",
-      
-        "content": [
-          {
-            "listing": "Limited Control Over Third-Party Platforms",
-            "sub-listing": "Relying on food delivery aggregators meant high commissions, inconsistent brand experience, and limited visibility into customer data."
-          },
-          {
-            "listing": "High Customization Needs",
-            "sub-listing": "Party platters required customers to make multiple selections with variants, notes, and preferences,something that typical e-commerce or food ordering systems could not handle natively."
-          },
-          {
-            "listing": "Franchise Management Complexity",
-            "sub-listing": "With multiple kitchens operating in different zones, ensuring accurate routing, approvals, and branch-level pricing was a major bottleneck."
-          },
-          {
-            "listing": "Order Approval Workflow",
-            "sub-listing": "Numyum needed a way to approve high-value or custom orders manually while maintaining a frictionless experience for regular orders."
-          }
-        ]
-      
-      
+
+      "content": [
+        {
+          "listing": "Limited Control Over Third-Party Platforms",
+          "sub-listing": "Relying on food delivery aggregators meant high commissions, inconsistent brand experience, and limited visibility into customer data."
+        },
+        {
+          "listing": "High Customization Needs",
+          "sub-listing": "Party platters required customers to make multiple selections with variants, notes, and preferences,something that typical e-commerce or food ordering systems could not handle natively."
+        },
+        {
+          "listing": "Franchise Management Complexity",
+          "sub-listing": "With multiple kitchens operating in different zones, ensuring accurate routing, approvals, and branch-level pricing was a major bottleneck."
+        },
+        {
+          "listing": "Order Approval Workflow",
+          "sub-listing": "Numyum needed a way to approve high-value or custom orders manually while maintaining a frictionless experience for regular orders."
+        }
+      ]
     },
     {
       "type": "text",
@@ -294,56 +293,58 @@
     },
     {
       "type": "list",
-      
+
       "content": [
-          {
-            "listing": "OTP-Based Login",
-            "sub-listing": "Frictionless, secure customer onboarding using phone numbers, no passwords, no app installs."
-          },
-          {
-            "listing": "Build Your Order Flow",
-            "sub-listing": "A highly visual menu experience that lets customers customize every item, from base selection to sides, add-ons, notes, and quantity, all validated in real-time."
-          },
-          {
-            "listing": "Multi-Kitchen Routing Engine",
-            "sub-listing": "Orders are automatically routed to the nearest franchise kitchen based on pin code, with fallback logic for unavailable zones."
-          },
-          {
-            "listing": "Branch-Specific Pricing & Inventory",
-            "sub-listing": "Each kitchen can configure its own pricing, available products, and delivery zones, all controlled via an internal admin panel."
-          },
-          {
-            "listing": "Approval Workflow for Complex Orders",
-            "sub-listing": "Orders above a certain value or with extensive customization trigger an internal approval system for operational confirmation."
-          },
-          {
-            "listing": "Real-Time Status Updates",
-            "sub-listing": "Customers get live updates for order received, preparation, and dispatch,  synced directly from the kitchen dashboard."
-          }
-        ]
-     
-      
+        {
+          "listing": "OTP-Based Login",
+          "sub-listing": "Frictionless, secure customer onboarding using phone numbers, no passwords, no app installs."
+        },
+        {
+          "listing": "Build Your Order Flow",
+          "sub-listing": "A highly visual menu experience that lets customers customize every item, from base selection to sides, add-ons, notes, and quantity, all validated in real-time."
+        },
+        {
+          "listing": "Multi-Kitchen Routing Engine",
+          "sub-listing": "Orders are automatically routed to the nearest franchise kitchen based on pin code, with fallback logic for unavailable zones."
+        },
+        {
+          "listing": "Branch-Specific Pricing & Inventory",
+          "sub-listing": "Each kitchen can configure its own pricing, available products, and delivery zones, all controlled via an internal admin panel."
+        },
+        {
+          "listing": "Approval Workflow for Complex Orders",
+          "sub-listing": "Orders above a certain value or with extensive customization trigger an internal approval system for operational confirmation."
+        },
+        {
+          "listing": "Real-Time Status Updates",
+          "sub-listing": "Customers get live updates for order received, preparation, and dispatch,  synced directly from the kitchen dashboard."
+        }
+      ]
     },
     {
       "type": "list2",
       "head": " The Outcome",
-   
-   
-      
-        "content": [
-          { "listing": "Increased Direct Orders by 4x within the first quarter post-launch" },
-          { "listing": "Reduced dependency on food aggregators, saving over 22% in commission costs" },
-          { "listing": "Improved kitchen efficiency with clear routing and inventory control" },
-          { "listing": "Higher customer satisfaction due to seamless ordering and customization flexibility" }
-        ]
-      
-      
+
+      "content": [
+        {
+          "listing": "Increased Direct Orders by 4x within the first quarter post-launch"
+        },
+        {
+          "listing": "Reduced dependency on food aggregators, saving over 22% in commission costs"
+        },
+        {
+          "listing": "Improved kitchen efficiency with clear routing and inventory control"
+        },
+        {
+          "listing": "Higher customer satisfaction due to seamless ordering and customization flexibility"
+        }
+      ]
     },
     {
-            "type": "testimonial",
-            "quote": "Working with the Flyde team has completely changed how we operate. Their deep understanding of our challenges and their ability to build a system, not just a website, was a game-changer. Our customers love the new experience, and our operatio",
-            "author": " Siddharth K.,",
-            "position": " Co-founder, Numyum"
+      "type": "testimonial",
+      "quote": "Working with the Flyde team has completely changed how we operate. Their deep understanding of our challenges and their ability to build a system, not just a website, was a game-changer. Our customers love the new experience, and our operatio",
+      "author": " Siddharth K.,",
+      "position": " Co-founder, Numyum"
     }
   ]
 }
@@ -351,6 +352,8 @@
 
   {
     "slug": "itel",
+    "meta_title": "Itel Case Study | Scalable eCommerce Success | General Tech Works",
+    "meta_description": "Learn how General Tech Works scaled Itel’s eCommerce platform with optimized UX, advanced backend integration, and improved performance across devices.",
     "title": "Itel – A Custom-Built E-commerce Platform for a D2C Electronics Brand",
     "date": "July 30, 2025",
     "category": "Mobile App",
@@ -369,28 +372,25 @@
       {
         "type": "list",
         "head": "The Challenge",
-        "subheading":" Itel needed more than just a basic e-commerce website. Key challenges included:",
-        "content": 
-            [
-                {
-                  "listing": "No Suitable Off-the-Shelf Platform",
-                  "sub-listing": "Shopify and WooCommerce couldn’t accommodate their dynamic pricing logic, performance expectations, and region-specific requirements."
-                },
-                {
-                  "listing": "Complex SKU Structure",
-                  "sub-listing": "Electronics products had multiple variants, warranty conditions, accessories, and bundles,all needing to be managed flexibly."
-                },
-                {
-                  "listing": "Pan-India Retail Distribution Layer",
-                  "sub-listing": "The site needed to bridge the gap between online orders and fulfillment from local inventory or stores, with location-aware logic."
-                },
-                {
-                  "listing": "Integration with Existing Ops",
-                  "sub-listing": "The e-commerce backend had to sync with Unicommerce (their inventory and fulfillment partner) and future-proof for CRM, SMS, and marketing workflows."
-                }
-              ]
-                     
-        
+        "subheading": " Itel needed more than just a basic e-commerce website. Key challenges included:",
+        "content": [
+          {
+            "listing": "No Suitable Off-the-Shelf Platform",
+            "sub-listing": "Shopify and WooCommerce couldn’t accommodate their dynamic pricing logic, performance expectations, and region-specific requirements."
+          },
+          {
+            "listing": "Complex SKU Structure",
+            "sub-listing": "Electronics products had multiple variants, warranty conditions, accessories, and bundles,all needing to be managed flexibly."
+          },
+          {
+            "listing": "Pan-India Retail Distribution Layer",
+            "sub-listing": "The site needed to bridge the gap between online orders and fulfillment from local inventory or stores, with location-aware logic."
+          },
+          {
+            "listing": "Integration with Existing Ops",
+            "sub-listing": "The e-commerce backend had to sync with Unicommerce (their inventory and fulfillment partner) and future-proof for CRM, SMS, and marketing workflows."
+          }
+        ]
       },
       {
         "type": "text",
@@ -400,57 +400,54 @@
       {
         "type": "list",
         "head": " Key Features Built        ",
-        "content": 
-          [
-            {
-              "listing": "Custom Frontend (Next.js + React)",
-              "sub-listing": "A lightning-fast storefront with smart filtering, instant page transitions, and performance tuning for mobile-heavy traffic."
-            },
-            {
-              "listing": "Live Search Recommendations",
-              "sub-listing": "Built a fuzzy logic–based search experience with real-time suggestions, trending queries, and product preview on hover."
-            },
-            {
-              "listing": "Store Locator Engine",
-              "sub-listing": "Location-based discovery of authorized Itel stores near the customer,integrated with Google Maps API and pincode logic."
-            },
-            {
-              "listing": "Product Variants & Add-ons Engine",
-              "sub-listing": "Modular architecture supporting bundles, color variants, EMI eligibility, and promo codes , all configurable via admin panel."
-            },
-            {
-              "listing": "Unicommerce Integration",
-              "sub-listing": "Seamless order flow, inventory sync, and dispatch tracking via Unicommerce APIs,enabling real-time coordination with warehouses and partners."
-            },
-            {
-              "listing": "Backend Admin Panel",
-              "sub-listing": "Role-based access for operations, marketing, and support teams, including product uploads, banners, pricing overrides, and flash deals."
-            }
-          ]
-        
+        "content": [
+          {
+            "listing": "Custom Frontend (Next.js + React)",
+            "sub-listing": "A lightning-fast storefront with smart filtering, instant page transitions, and performance tuning for mobile-heavy traffic."
+          },
+          {
+            "listing": "Live Search Recommendations",
+            "sub-listing": "Built a fuzzy logic–based search experience with real-time suggestions, trending queries, and product preview on hover."
+          },
+          {
+            "listing": "Store Locator Engine",
+            "sub-listing": "Location-based discovery of authorized Itel stores near the customer,integrated with Google Maps API and pincode logic."
+          },
+          {
+            "listing": "Product Variants & Add-ons Engine",
+            "sub-listing": "Modular architecture supporting bundles, color variants, EMI eligibility, and promo codes , all configurable via admin panel."
+          },
+          {
+            "listing": "Unicommerce Integration",
+            "sub-listing": "Seamless order flow, inventory sync, and dispatch tracking via Unicommerce APIs,enabling real-time coordination with warehouses and partners."
+          },
+          {
+            "listing": "Backend Admin Panel",
+            "sub-listing": "Role-based access for operations, marketing, and support teams, including product uploads, banners, pricing overrides, and flash deals."
+          }
+        ]
       },
       {
         "type": "list2",
-        "head":"The Outcome",
-        
-            "content": [
-              { "listing": "Custom Platform Ownership with zero SaaS dependency" },
-              { "listing": "3x Faster Page Loads vs. templated platforms" },
-              { "listing": "Better Conversions via live search and optimized checkout" },
-              { "listing": "Scalable Infrastructure with complete roadmap control" },
-              { "listing": "Ready for Omni-Channel retail sync in the future" }
-            ]
-          
-          
-          
-        
+        "head": "The Outcome",
+
+        "content": [
+          { "listing": "Custom Platform Ownership with zero SaaS dependency" },
+          { "listing": "3x Faster Page Loads vs. templated platforms" },
+          {
+            "listing": "Better Conversions via live search and optimized checkout"
+          },
+          {
+            "listing": "Scalable Infrastructure with complete roadmap control"
+          },
+          { "listing": "Ready for Omni-Channel retail sync in the future" }
+        ]
       },
       {
-       
         "type": "testimonial",
-            "quote": "This wasn’t just a website, it was our digital foundation. The Flyde team delivered a fast, beautiful, and powerful system that mirrors our brand. Their approach was strategic, execution-focused, and completely aligned with our goals",
-            "author": "Arjun M.,",
-            "position": "Head of E-commerce, Itel India"
+        "quote": "This wasn’t just a website, it was our digital foundation. The Flyde team delivered a fast, beautiful, and powerful system that mirrors our brand. Their approach was strategic, execution-focused, and completely aligned with our goals",
+        "author": "Arjun M.,",
+        "position": "Head of E-commerce, Itel India"
       }
     ]
   }

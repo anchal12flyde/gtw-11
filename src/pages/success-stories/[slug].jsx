@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import blogs from "@/data/blogs.json";
@@ -28,6 +28,10 @@ export default function BlogDetailPage() {
 
   return (
     <>
+      <Head>
+        <title>{blog.meta_title}</title>
+        <meta name="description" content={blog.meta_description} />
+      </Head>
       <Header />
       <StoryDetaling
         title={blog.title || ""}

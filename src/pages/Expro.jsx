@@ -11,7 +11,7 @@ import ChooseExpro from "@/components/expro/ChooseExpro"
 import OperationalChaos from "@/components/expro/OperationalChaos"
 import HeadlessSection from "@/components/expro/HeadlessSection"
 
-export default function Expro() {
+export default function expro() {
 
      return (
        <>
