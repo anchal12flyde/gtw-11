@@ -1,6 +1,13 @@
+# *
 User-agent: *
-Disallow: /private/
-Disallow: /temp/
 Allow: /
 
-Sitemap: https://www.generaltechworks.com/sitemap.xml
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Host
+Host: https://generaltechworks.com/
+
+# Sitemaps
+Sitemap: https://generaltechworks.com/sitemap.xml
