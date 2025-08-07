@@ -1,6 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function AnimatedInput({ label, placeholder, type = "text", name, autoComplete 
   
@@ -11,6 +12,10 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
   const isActive = isFocused || value.length > 0;
 
   return (
+    <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"/>
+    </Head>
     <div className="relative mb-4">
       <label
         style={{
@@ -41,5 +46,6 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
         className="w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none"
       />
     </div>
+    </>
   );
 }

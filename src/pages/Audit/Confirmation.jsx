@@ -5,6 +5,7 @@ import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
+import Head from 'next/head';
 
 
 export default function Confirmation() {
@@ -22,13 +23,16 @@ export default function Confirmation() {
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Audit/YourGoals")}
+            onClick={() => router.push("/audit/your-goals")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

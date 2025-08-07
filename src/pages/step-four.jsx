@@ -5,38 +5,44 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
-export default function StepThreeMobile() {
+
+export default function StepFour() {
    const router = useRouter();
-   const [companyType, setCompanyType] = useState('');
-   const [startTime, setStartTime] = useState('');
-   const [adminPanel,setAdminPanel] = useState('');
+    const [companyType, setCompanyType] = useState('');
+  const [startTime, setStartTime] = useState('');
+
+  const handleNext = () => {
+    router.push('/step-five'); 
+  };
+
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5 ">
+      <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/StepTwoForm")}
+            onClick={() => router.push("/step-three-web")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
-            <span className="step-label">Step 3</span>
+            <span className="step-label">Step 4</span>
           </div>
           <div className="custom-left-border">
-            <h1 className="heading-systems">Track-Specific Questions</h1>
+            <h1 className="heading-systems">Budget & Scope Alignment</h1>
           </div>
-          <p className="form-subheading   ">What’s the core use of your app?</p>
+          <p className="form-subheading   ">
+            What’s your approximate budget range?
+          </p>
           <div className="space-y-2 select-wrapper">
-            {[
-              "Ordering or commerce",
-              "Internal operations",
-              "Booking or scheduling",
-              "Learning or training",
-            ].map((option) => (
+            {["Under ₹50k", "₹50k – ₹1L", "₹1L – ₹5L"].map((option) => (
               <label
                 key={option}
                 className="flex items-center gap-2 cursor-pointer"
@@ -55,10 +61,10 @@ export default function StepThreeMobile() {
           </div>
 
           <p className="form-subheading   ">
-            What platforms do you want to target?
+            Do you need support after launch?
           </p>
           <div className="space-y-2 select-wrapper">
-            {["iOS", "Android", "Both"].map((option) => (
+            {["Yes, ongoing retainer", "Only initial build"].map((option) => (
               <label
                 key={option}
                 className="flex items-center gap-2 cursor-pointer"
@@ -76,30 +82,11 @@ export default function StepThreeMobile() {
             ))}
           </div>
           <p className="form-subheading">
-            Do you need admin panel/back-office functionality?
+            Upload any relevant documents or briefs (optional)
           </p>
-          <div className="space-y-2 select-wrapper">
-            {["Yes", "No"].map((option) => (
-              <label
-                key={option}
-                className="flex items-center gap-2 cursor-pointer"
-              >
-                <input
-                  type="radio"
-                  name="adminPanel"
-                  value={option}
-                  checked={adminPanel === option}
-                  onChange={() => setAdminPanel(option)}
-                  className="form-radio "
-                />
-                <span className="text-md">{option}</span>
-              </label>
-            ))}
-          </div>
-          <p className="form-subheading ">Any similar apps or references?</p>
           <input type="text" name="admiredSites" className="input-box" />
 
-          <button className="next-button">
+          <button onClick={handleNext} className="next-button">
             Next <ArrowRight size={16} />
           </button>
         </div>

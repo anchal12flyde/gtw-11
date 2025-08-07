@@ -4,7 +4,8 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import AnimatedInput from '../Animation/AnimatedInput';
+import AnimatedInput from '../animation/animated-input';
+import Head from 'next/head';
 
 
 export default function AgencyDetails() {
@@ -12,11 +13,14 @@ export default function AgencyDetails() {
    const [startTime, setStartTime] = useState('');
 
   const handleNext = () => {
-    router.push('/Agency_Partnership/Partnership'); 
+    router.push('/agency-partnership/partnership'); 
   };
 
   return (
     <>
+    <Head>
+    <meta name="robots" content="noindex,nofollow"/>
+    </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container ">

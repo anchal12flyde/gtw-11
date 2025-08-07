@@ -5,26 +5,26 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
-export default function StepThreeWeb() {
+export default function StepThreeConsult() {
    const router = useRouter();
-  const [companyType, setCompanyType] = useState('');
-  const [startTime, setStartTime] = useState('');
-
- const handleNext = () => {
-    router.push('/StepFour'); 
-  };
-
+   const [companyType, setCompanyType] = useState('');
+   const [startTime, setStartTime] = useState('');
+   const [adminPanel,setAdminPanel] = useState('');
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/StepTwoForm")}
+            onClick={() => router.push("/step-two-form")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
@@ -33,15 +33,13 @@ export default function StepThreeWeb() {
           <div className="custom-left-border">
             <h1 className="heading-systems">Track-Specific Questions</h1>
           </div>
-          <p className="form-subheading   ">
-            What kind of site you are looking for?
-          </p>
+          <p className="form-subheading">What area needs transformation? </p>
           <div className="space-y-2 select-wrapper">
             {[
-              "Marketing site",
-              "Portfolio",
-              "Startup launch",
-              "Brand storytelling",
+              "Ops / workflow",
+              "ERP / internal tools",
+              "Customer experience",
+              "Legacy system modernization",
             ].map((option) => (
               <label
                 key={option}
@@ -59,33 +57,53 @@ export default function StepThreeWeb() {
               </label>
             ))}
           </div>
+
           <p className="form-subheading   ">
-            Do you already have brand design or copy in place?
+            Is there a current system in place?
           </p>
           <div className="space-y-2 select-wrapper">
-            {["Yes", "Partial", "No"].map((option) => (
+            {["Manual process", "Legacy digital tool", "No system"].map(
+              (option) => (
+                <label
+                  key={option}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="startTime"
+                    value={option}
+                    checked={startTime === option}
+                    onChange={() => setStartTime(option)}
+                    className="form-radio "
+                  />
+                  <span className="text-md">{option}</span>
+                </label>
+              )
+            )}
+          </div>
+          <p className="form-subheading">
+            Do you want us to only advise or also execute?
+          </p>
+          <div className="space-y-2 select-wrapper">
+            {["Advisory only", "Advisory + Build"].map((option) => (
               <label
                 key={option}
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <input
                   type="radio"
-                  name="startTime"
+                  name="adminPanel"
                   value={option}
-                  checked={startTime === option}
-                  onChange={() => setStartTime(option)}
+                  checked={adminPanel === option}
+                  onChange={() => setAdminPanel(option)}
                   className="form-radio "
                 />
                 <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
-          <p className="form-subheading   ">
-            Any sites you admire or benchmarks?
-          </p>
-          <input type="text" name="admiredSites" className="input-box" />
 
-          <button onClick={handleNext} className="next-button">
+          <button className="next-button">
             Next <ArrowRight size={16} />
           </button>
         </div>

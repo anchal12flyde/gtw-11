@@ -3,25 +3,29 @@ import { useState } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
-import AnimatedInput from "./Animation/AnimatedInput";
+import AnimatedInput from "./animation/animated-input";
 import { motion } from "framer-motion";
+import Head from 'next/head';
 
 export default function StepTwoForm() {
   const router = useRouter();
   const [companyType, setCompanyType] = useState('');
   const [startTime, setStartTime] = useState('');
 
-  const handleNext = () => router.push('/StepThreeWeb');
+  const handleNext = () => router.push('/step-three-web');
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/StepOneForm")}
+            onClick={() => router.push("/step-one-form")}
           />
 
           <div className="step-indicator">

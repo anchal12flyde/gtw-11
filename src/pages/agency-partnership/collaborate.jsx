@@ -4,7 +4,8 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import AnimatedInput from '../Animation/AnimatedInput';
+import AnimatedInput from '../animation/animated-input';
+import Head from 'next/head';
 
 const skillsList = [
   "White label", "Co-branded", "Referral-based", " On-demand support", "Retainers"
@@ -23,18 +24,21 @@ export default function Collaborate() {
 
 
   const handleNext = () => {
-    router.push('/Agency_Partnership/FinalStep'); 
+    router.push('/agency-partnership/final-step'); 
   };
 
     return (
       <>
+        <Head>
+          <meta name="robots" content="noindex,nofollow" />
+        </Head>
         <Header />
         <div className="util-flex util-flex-1 util-mx-1-5 ">
           <div className="step-form-container ">
             <ArrowLeft
               className="cursor-pointer mb-5 text-arrow-color"
               size={30}
-              onClick={() => router.push("/Agency_Partnership/AgencyDetails")}
+              onClick={() => router.push("/agency-partnership/agency-details")}
             />
             <div className="step-indicator">
               <span className="dot"></span>

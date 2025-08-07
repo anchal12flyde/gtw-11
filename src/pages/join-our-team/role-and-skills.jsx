@@ -5,6 +5,7 @@ import { ChevronDown, ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import { Upload } from 'lucide-react';
+import Head from 'next/head';
 
 const skillsList = [
   "React", "Node.js", "Figma", "MongoDB", "TypeScript", "Webflow",
@@ -41,18 +42,21 @@ export default function RoleAndSkills() {
       resume
     });
 
-    router.push('/Join_Our_Team/IntentAndFit');
+    router.push("/join-our-team/intent-and-fit");
   };
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Join_Our_Team/PersonalDetails")}
+            onClick={() => router.push("/join-our-team/personal-details")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

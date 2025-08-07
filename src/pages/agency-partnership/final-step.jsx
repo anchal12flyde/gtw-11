@@ -4,24 +4,27 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
-
-export default function PeronalDetails() {
+export default function final_step() {
    const router = useRouter();
 
     const handleNext = () => {
-       router.push('/ThankYouPage/ThankYou'); 
+       router.push("/thankyou-page/thank-you"); 
      };
    
      return (
        <>
+         <Head>
+           <meta name="robots" content="noindex,nofollow" />
+         </Head>
          <Header />
          <div className="util-flex util-flex-1 util-mx-1-5">
            <div className="step-form-container ">
              <ArrowLeft
                className="cursor-pointer mb-5 text-arrow-color"
                size={30}
-               onClick={() => router.push("/Agency_Partnership/Collaborate")}
+               onClick={() => router.push("/agency-partnership/collaborate")}
              />
              <div className="step-indicator">
                <span className="dot"></span>

@@ -4,49 +4,49 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import AnimatedInput from '../Animation/AnimatedInput';
+import AnimatedInput from '../animation/animated-input';
+import Head from 'next/head';
 
 const skillsList = [
-  "Brand Identity", "UI/UX Design", "Web Design", "Motion Graphics", "Illustration", "Strategy",
-  "Copywriting", "Other"
+  "UI/UX", "Performance", "Conversion Optimization", "Accessibility", "Tech Stack / Code Review", "Competitor Comparison",
 ];
 
-export default function Partnership() {
+export default function FocusAreas() {
    const router = useRouter();
    const [intentText, setIntentText] = useState('');
-  const [projectText, setProjectText] = useState('');
    const [selectedSkills, setSelectedSkills] = useState([]);
 
-    const handleSkillToggle = (skill) => {
+  const handleNext = () => {
+    router.push('/audit/your-goals'); 
+  };
+  const handleSkillToggle = (skill) => {
     setSelectedSkills(prev =>
       prev.includes(skill) ? prev.filter(s => s !== skill) : [...prev, skill]
     );
   };
 
-
-  const handleNext = () => {
-    router.push('/Agency_Partnership/ProjectExamples'); 
-  };
-
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Agency_Partnership/AgencyDetails")}
+            onClick={() => router.push("/audit/your-product")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
-            <span className="step-label">Step 2</span>
+            <span className="step-label">Step 3</span>
           </div>
           <div className="custom-left-border">
-            <h1 className="heading-systems">Partnership Fit</h1>
+            <h1 className="heading-systems">Focus Areas</h1>
           </div>
+          <p className="form-subheading ">What kind of audit do you need?</p>
 
-          <p className="form-subheading">What do you specialize in?</p>
           <div className="space-y-2 select-wrapper">
             {skillsList.map((skill) => (
               <label
@@ -64,33 +64,14 @@ export default function Partnership() {
             ))}
           </div>
 
-          <p className="form-subheading ">What do you usually NOT do?</p>
+          <p className="form-subheading ">Optionally</p>
           <div className="select-wrapper">
             <textarea
               value={intentText}
               onChange={(e) => setIntentText(e.target.value)}
-              rows={2}
+              rows={5}
               className="custom-select"
-              placeholder="Tell us  ..."
-            />
-          </div>
-
-          <p className="form-subheading">
-            Have you worked with dev partners before?
-          </p>
-          <div className="select-wrapper">
-            <AnimatedInput placeholder="Yes/No" />
-          </div>
-          <p className="form-subheading ">
-            What type of work would you love to collaborate on?
-          </p>
-          <div className="select-wrapper">
-            <textarea
-              value={projectText}
-              onChange={(e) => setProjectText(e.target.value)}
-              rows={2}
-              className="custom-select"
-              placeholder="Tell us  ..."
+              placeholder="Other – please specify"
             />
           </div>
 

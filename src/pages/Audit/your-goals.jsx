@@ -4,7 +4,8 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import AnimatedInput from '../Animation/AnimatedInput';
+import AnimatedInput from '../animation/animated-input';
+import Head from 'next/head';
 
 
 export default function YourGoals() {
@@ -14,18 +15,21 @@ export default function YourGoals() {
    const [otherText, setOtherText] = useState("");
 
   const handleNext = () => {
-    router.push('/Audit/Confirmation'); 
+    router.push('/audit/confirmation'); 
   };
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Audit/FocusAreas")}
+            onClick={() => router.push("/audit/focus-areas")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

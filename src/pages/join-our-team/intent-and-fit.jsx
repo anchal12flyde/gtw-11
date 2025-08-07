@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
 
 
@@ -13,18 +14,21 @@ export default function IntentAndFit() {
   const [projectText, setProjectText] = useState('');
 
   const handleNext = () => {
-    router.push('/Join_Our_Team/Availability');
+    router.push("/join-our-team/availability");
   };
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Join_Our_Team/RoleAndSkills")}
+            onClick={() => router.push("/join-our-team/role-and-skills")}
           />
           <div className="step-indicator">
             <span className="dot"></span>
