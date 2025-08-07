@@ -35,7 +35,7 @@ export default function Header() {
   const header = document.querySelector(".site-header");
   if (header) {
     if (
-      pathname === "/digital-transformatio-service" ||
+      pathname === "/digital-transformation-service" ||
       pathname === "/philosophy"
     ) {
       header.classList.add("transparent-header");
@@ -54,8 +54,8 @@ export default function Header() {
     return (
       pathname === href ||
       (href === "/philosophy" && pathname.startsWith("/philosophy")) ||
-      (href === "/digital-transformatio-service" &&
-        pathname.startsWith("/digital-transformatio-service"))
+      (href === "/digital-transformation-service" &&
+        pathname.startsWith("/digital-transformation-service"))
     );
   };
 
@@ -96,9 +96,9 @@ export default function Header() {
             {/* <Link className={`nav-link ${isActive("/StyleGuide") ? 'active' : ''}`} href="/StyleGuide">GTW SaaS Cloud</Link> */}
             <Link
               className={`nav-link ${
-                isActive("/digital-transformatio-service") ? "active" : ""
+                isActive("/digital-transformation-service") ? "active" : ""
               }`}
-              href="/digital-transformatio-service"
+              href="/digital-transformation-service"
             >
               Digital Transformation
             </Link>
@@ -132,7 +132,7 @@ export default function Header() {
           <ClientButton
             href="/step-one-form"
             className={`${
-              pathname === "/digital-transformatio-service" ||
+              pathname === "/digital-transformation-service" ||
               pathname === "/philosophy" ||
               pathname === "/expro"
                 ? "bg-primary text-white-color1 hover:bg-primary"
@@ -150,7 +150,7 @@ export default function Header() {
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
               [
-                "/digital-transformatio-service",
+                "/digital-transformation-service",
                 "/philosophy",
                 "/expro",
               ].includes(pathname)
@@ -161,7 +161,7 @@ export default function Header() {
           <span
             className={`block h-[2px] w-[30px] rounded-sm ${
               [
-                "/digital-transformatio-service",
+                "/digital-transformation-service",
                 "/philosophy",
                 "/expro",
               ].includes(pathname)
@@ -172,7 +172,7 @@ export default function Header() {
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
               [
-                "/digital-transformatio-service",
+                "/digital-transformation-service",
                 "/philosophy",
                 "/expro",
               ].includes(pathname)
@@ -212,7 +212,7 @@ export default function Header() {
               </Link>
               {/* <Link href="/StyleGuide" className="block nav-link ">GTW SaaS Cloud</Link> */}
               <Link
-                href="/digital-transformatio-service"
+                href="/digital-transformation-service"
                 className="block nav-link "
               >
                 Digital Transformation
