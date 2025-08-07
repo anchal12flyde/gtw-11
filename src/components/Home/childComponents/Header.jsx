@@ -226,7 +226,7 @@ export default function Header() {
               <Link href="/success-stories" className="block nav-link ">
                 Success Stories
               </Link>
-              <Link href="/StepOneForm" className="mobile-login-btn  block">
+              <Link href="/step-one-form" className="mobile-login-btn  block">
                 Get Started
               </Link>
             </div>
