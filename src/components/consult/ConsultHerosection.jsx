@@ -1,12 +1,10 @@
+"use client";
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
-import { useInView } from 'react-intersection-observer';
-
-
-
+import { useInView } from "react-intersection-observer";
 
 export default function ConsultHerosection() {
-    const { ref, inView } = useInView({ triggerOnce: false });
+  const { ref, inView } = useInView({ triggerOnce: false });
   return (
     <>
       <div className="hero-wrapper relative overflow-hidden min-h-screen">

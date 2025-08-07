@@ -29,7 +29,7 @@ const categories = [
   },
   {
     title: "Digital Transformation",
-    path: "/digital-transformatio-service",
+    path: "/digital-transformation-service",
     items: [
       "The GTW Vision",
       "Our Team",

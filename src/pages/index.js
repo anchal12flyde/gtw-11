@@ -1,16 +1,10 @@
-import Home from "../components/home"
+"use client";
+import Home from "../components/home";
 
-
-
-
-export default function myHome (){
-    return(
-        <>
-        
-        <Home />
-    
-        </>
-       
-       
-    )
+export default function myHome() {
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
