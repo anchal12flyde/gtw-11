@@ -103,14 +103,14 @@ export default function ConsultSection() {
       <div className="flex justify-center mt-6 lg:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img
-            src="/images/Leftarrow2.png"
+            src="/images/Leftarrow.png"
             alt="Left Arrow"
             className="w-10 h-10"
           />
         </button>
         <button className="arrow-button" onClick={scrollRight}>
           <img
-            src="/images/Rightarrow1.png"
+            src="/images/Rightarrow.png"
             alt="Right Arrow"
             className="w-10 h-10"
           />
