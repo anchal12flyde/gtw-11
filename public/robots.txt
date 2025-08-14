@@ -1,13 +1,41 @@
 # *
 User-agent: *
+Disallow: /private/
+Disallow: /temp/
+Disallow: /agency-partnership/
+Disallow: /animation/
+Disallow: /audit/
+Disallow: /join-our-team/
+Disallow: /thankyou-page/
+Disallow: /step-one-form/
+Disallow: /step-five/
+Disallow: /step-four/
+Disallow: /step-three-consult/
+Disallow: /step-three-infra/
+Disallow: /step-three-mobile/
+Disallow: /step-three-saas/
+Disallow: /step-three-web/
+Disallow: /step-two-form/
+Disallow: /style-guide/
+
+# *
+User-agent: *
 Allow: /
 
 # Googlebot
 User-agent: Googlebot
 Allow: /
 
+# *
+User-agent: *
+Disallow: /Audit/
+
+# *
+User-agent: *
+Allow: /audit/
+
 # Host
-Host: https://generaltechworks.com/
+Host: https://generaltechworks.com
 
 # Sitemaps
 Sitemap: https://generaltechworks.com/sitemap.xml
