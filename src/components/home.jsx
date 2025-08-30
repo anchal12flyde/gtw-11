@@ -1,6 +1,5 @@
 'use client'
 import Head from 'next/head'
-import  Header from './Home/childComponents/Header'
 import Next_Steps from './Home/childComponents/Next_Steps'
 import Footer from './Home/childComponents/Footer'
 import Hero_Section from './Home/childComponents/Hero_Section'
