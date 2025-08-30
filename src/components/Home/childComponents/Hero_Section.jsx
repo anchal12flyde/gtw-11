@@ -10,11 +10,14 @@ export default function Hero_Section() {
     <>
       <div className="">
         <section className="relative bg-transparent font-inter overflow-hidden min-h-screen">
-          <div className="hidden md:block relative w-full h-[700px]">
-            <img
-              src="/images/hero2.png"
-              alt="Digital Transformation Banner"
-              className="absolute object-cover object-left"
+          <div className="hidden md:block relative w-full h-[700px] object-cover">
+            <video
+              src="https://ik.imagekit.io/p1zreiw3z/4k-resolution-abstract-background-and-line-dot-ba-2025-08-29-11-23-20-utc.mov/ik-video.mp4?updatedAt=1756542635640"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute object-cover  w-full h-full"
             />
           </div>
 
