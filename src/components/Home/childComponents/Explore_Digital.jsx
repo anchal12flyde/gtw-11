@@ -315,7 +315,13 @@ export default function Explore_Digital() {
                 </div>
               </div>
               <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
-                <HoverVideo src="/videos/vd1.mp4" />
+                <div className="relative rounded-2xl">
+                  <img
+                    src="/images/assets/transexpert mockup.jpg"
+                    alt="Campus"
+                    className="w-full h-55 "
+                  />
+                </div>
 
                 <div className="flex flex-col gap-4 px-6">
                   <h3 className="ecom-heading text-left">
