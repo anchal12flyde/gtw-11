@@ -25,7 +25,7 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <link rel="canonical" href="https://generaltechworks.com/" />
       </Head>
-      <Header />
+      {/* <Header /> */}
       <Hero_Section />
 
       <Card_Section />

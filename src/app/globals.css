@@ -1562,25 +1562,25 @@ input[type="checkbox"] {
   color: var(--white);
 }
 .transparent-header {
-   background:transparent;
+  background: transparent !important;
 }
 .site-header {
    position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: transparent !important;
   color: var(--secondary-color);
-  z-index: 9999;
+  z-index: 9;
   transition: all 0.3s ease;
 }
 .home-header {
   background: transparent !important;
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+ 
 }
 
 .home-header .nav-link,

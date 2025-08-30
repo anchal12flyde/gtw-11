@@ -61,13 +61,11 @@ export default function Header() {
 
   return (
     <header
-      className={`site-header ${
-        scrolled ? "" : "slide-down"
-      } util-flex util-flex-1 util-mx-1-5 pt-4 
+      className={`site-header  util-flex util-flex-1 util-mx-1-5 pt-4 
     ${pathname === "/" ? "home-header" : ""}
   `}
     >
-      <div className="container flex items-center justify-between h-12">
+      <div className="  flex items-center justify-between h-12">
         <Link href="/">
           <img
             key={pathname}
