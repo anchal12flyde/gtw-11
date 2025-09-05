@@ -126,7 +126,7 @@ export default function Explore_Digital() {
               </p>
 
               <a
-                href="/digital-transformatio-service"
+                href="/digital-transformation-service"
                 className="explore-link  block"
               >
                 Explore Digital Transformation
@@ -257,7 +257,13 @@ export default function Explore_Digital() {
             <div className="flex flex-nowrap gap-8 ">
               <div className="">
                 <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
-                  <HoverVideo src="/videos/vd2.mp4" />
+                  <div className="relative rounded-2xl">
+                    <img
+                      src="/images/Numyum.png"
+                      alt="Campus"
+                      className="w-full h-55 "
+                    />
+                  </div>
 
                   <div className="flex flex-col gap-4 px-6">
                     <h3 className="ecom-heading text-left">
@@ -277,7 +283,7 @@ export default function Explore_Digital() {
               <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden ">
                 <div className="relative rounded-2xl ">
                   <img
-                    src="/images/img4.png"
+                    src="/images/Ezstays.png"
                     alt="Campus"
                     className="w-full h-55 "
                   />
@@ -297,7 +303,7 @@ export default function Explore_Digital() {
               <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
                 <div className="relative rounded-2xl">
                   <img
-                    src="/images/img7.png"
+                    src="/images/Itel - Mobiles.png"
                     alt="Campus"
                     className="w-full h-55 "
                   />

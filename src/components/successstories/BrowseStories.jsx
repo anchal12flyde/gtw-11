@@ -6,26 +6,26 @@ import BlogCard from "@/components/globalcomponents/BlogCards";
 export default function BrowseStories() {
   const blogData = [
     {
-      imageSrc: "/images/assets/story_img1.png",
+      imageSrc: "/images/Numyum.png",
       details: "Reinventing the Cloud Kitchen Ordering Experience. ",
       title: "Numyum",
       slug: "numyum",
     },
     {
-      imageSrc: "/images/assets/story_img2.png",
+      imageSrc: "/images/Ezstays.png",
       details: "Operating System for Student Housing. ",
       title: "EzStays",
       slug: "ezstays",
     },
     {
-      imageSrc: "/images/assets/story_img3.png",
+      imageSrc: "/images/Itel - Mobiles.png",
       details:
         " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
       title: "Itel",
       slug: "itel",
     },
     {
-      imageSrc: "/images/assets/story_img4.png",
+      imageSrc: "/images/assets/transexpert mockup.jpg",
       details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
       title: "TransExpert ",
       slug: "transexpert",

@@ -23,14 +23,14 @@ export default function StoriesHeroSection() {
         <div className="hidden sm:flex gap-0 justify-end">
           <button className="arrow-button" onClick={scrollLeft}>
             <img
-              src="/images/Leftarrow.png"
+              src="/images/LeftArrow.png"
               alt="Left Arrow"
               className="w-10 h-10"
             />
           </button>
           <button className="arrow-button" onClick={scrollRight}>
             <img
-              src="/images/Rightarrow.png"
+              src="/images/RightArrow.png"
               alt="Right Arrow"
               className="w-10 h-10"
             />
@@ -42,6 +42,108 @@ export default function StoriesHeroSection() {
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
       >
+        <div className="flex snap-start">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
+          <div className="responsive-snap-container ">
+            <div className="grid-container ">
+              <div className="column1">
+                <div className="row1">
+                  <div className="row1-col">
+                    <Image
+                      src="/images/assets/Itel - Founder.png"
+                      alt=""
+                      width={500}
+                      height={300}
+                      className="w-full h-auto object-cover rounded-[20px]"
+                    />
+                  </div>
+                  <div className="row1-col">
+                    <Image
+                      src="/images/assets/Itel - Logo.png"
+                      alt=""
+                      width={500}
+                      height={300}
+                      className="w-full h-auto object-cover rounded-[20px]"
+                    />
+                  </div>
+                </div>
+                <div className="row2">
+                  <p className="author-name">Manoj Verma</p>
+                  <p className="author-title ">
+                    Marketing Head &nbsp; /&nbsp; iTel Mobiles
+                  </p>
+                </div>
+              </div>
+              <div className="column2">
+                <p className="grid-title">
+                  TransExpert has been an exceptional partner to work with. Not
+                  only have they brought forward strategic solutions, but have
+                  allowed us to manage our business with peace-of-mind and
+                  strive towards our value of delivering on Commitment and
+                  Customer Focus. As a partner, if a solution does not exist
+                  they are willing to work with you to assist in developing one
+                  or offering alternative approaches.
+                </p>
+                <img src="/images/assets/Vector.png" className="vector" />
+                <Link href="#" className="insight-link">
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex snap-start">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
+          <div className="responsive-snap-container ">
+            <div className="grid-container ">
+              <div className="column1">
+                <div className="row1">
+                  <div className="row1-col">
+                    <Image
+                      src="/images/assets/ezstays - Founder.png"
+                      alt=""
+                      width={500}
+                      height={300}
+                      className="w-full h-auto object-cover rounded-[20px]"
+                    />
+                  </div>
+                  <div className="row1-col">
+                    <Image
+                      src="/images/assets/ezstays Logo.png"
+                      alt=""
+                      width={500}
+                      height={300}
+                      className="w-full h-auto object-cover rounded-[20px]"
+                    />
+                  </div>
+                </div>
+                <div className="row2">
+                  <p className="author-name">Vaibhav Khanna</p>
+                  <p className="author-title ">
+                    Founder & CEO &nbsp; /&nbsp; Ezstays
+                  </p>
+                </div>
+              </div>
+              <div className="column2">
+                <p className="grid-title">
+                  TransExpert has been an exceptional partner to work with. Not
+                  only have they brought forward strategic solutions, but have
+                  allowed us to manage our business with peace-of-mind and
+                  strive towards our value of delivering on Commitment and
+                  Customer Focus. As a partner, if a solution does not exist
+                  they are willing to work with you to assist in developing one
+                  or offering alternative approaches.
+                </p>
+                <img src="/images/assets/Vector.png" className="vector" />
+                <Link href="#" className="insight-link">
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="flex snap-start ">
           <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
           <div className="responsive-snap-container ">
@@ -50,27 +152,27 @@ export default function StoriesHeroSection() {
                 <div className="row1">
                   <div className="row1-col">
                     <Image
-                      src="/images/assets/grid1.png"
+                      src="/images/assets/Transexpert - Founder.png"
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto"
+                      className="w-full h-auto object-cover rounded-[20px]"
                     />
                   </div>
                   <div className="row1-col">
                     <Image
-                      src="/images/assets/grid2.png"
+                      src="/images/assets/Transexpert - Logo.png"
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto"
+                      className="w-full h-auto object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
                 <div className="row2">
-                  <p className="author-name">Sheryl Sandberg</p>
+                  <p className="author-name">Cassandra Chumber</p>
                   <p className="author-title ">
-                    Vice President &nbsp; /&nbsp; TransExpert
+                    Head of Sales &nbsp; /&nbsp; TransExpert Inc.
                   </p>
                 </div>
               </div>
@@ -92,7 +194,6 @@ export default function StoriesHeroSection() {
             </div>
           </div>
         </div>
-
         <div className="flex snap-start">
           <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
           <div className="responsive-snap-container ">
@@ -101,78 +202,27 @@ export default function StoriesHeroSection() {
                 <div className="row1">
                   <div className="row1-col">
                     <Image
-                      src="/images/assets/grid1.png"
+                      src="/images/assets/Numyum - Founder.png"
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto"
+                      className="w-full h-auto object-cover rounded-[20px]"
                     />
                   </div>
-                  <div className="row1-col">
+                  <div className="row1-col ">
                     <Image
-                      src="/images/assets/grid2.png"
+                      src="/images/assets/Numyum - Logo.png"
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto"
+                      className="w-full h-auto object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
                 <div className="row2">
-                  <p className="author-name">Sheryl Sandberg</p>
+                  <p className="author-name">Savar Mahlotra</p>
                   <p className="author-title ">
-                    Vice President &nbsp; /&nbsp; TransExpert
-                  </p>
-                </div>
-              </div>
-              <div className="column2">
-                <p className="grid-title">
-                  TransExpert has been an exceptional partner to work with. Not
-                  only have they brought forward strategic solutions, but have
-                  allowed us to manage our business with peace-of-mind and
-                  strive towards our value of delivering on Commitment and
-                  Customer Focus. As a partner, if a solution does not exist
-                  they are willing to work with you to assist in developing one
-                  or offering alternative approaches.
-                </p>
-                <img src="/images/assets/Vector.png" className="vector" />
-                <Link href="#" className="insight-link">
-                  Read More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex snap-start">
-          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
-          <div className="responsive-snap-container ">
-            <div className="grid-container ">
-              <div className="column1">
-                <div className="row1">
-                  <div className="row1-col">
-                    <Image
-                      src="/images/assets/grid1.png"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="row1-col">
-                    <Image
-                      src="/images/assets/grid2.png"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="row2">
-                  <p className="author-name">Sheryl Sandberg</p>
-                  <p className="author-title ">
-                    Vice President &nbsp; /&nbsp; TransExpert
+                    Managing Director Ksm group &nbsp; /&nbsp; Numyum
                   </p>
                 </div>
               </div>
