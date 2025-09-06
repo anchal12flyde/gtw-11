@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 export default function Card_Section() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <section className="bg-white-color-color ">
+      <section className="mt-70 sm:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="mb-12"
         >
           <h2 className="heading-systems flex flex-wrap">
@@ -26,7 +26,7 @@ export default function Card_Section() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden  h-[480px] w-full"
             >
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
@@ -47,7 +47,7 @@ export default function Card_Section() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden  h-[480px] w-full"
             >
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
@@ -77,7 +77,7 @@ export default function Card_Section() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="relative rounded-2xl overflow-hidden h-[480px] w-full cursor-pointer"
               >
                 <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>

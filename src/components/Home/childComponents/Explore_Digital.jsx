@@ -31,7 +31,7 @@ export default function Explore_Digital() {
               initial={{ y: -50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               From
             </motion.h2>
@@ -40,7 +40,7 @@ export default function Explore_Digital() {
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               To
             </motion.h2>
@@ -52,7 +52,7 @@ export default function Explore_Digital() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="mb-12"
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
@@ -66,7 +66,7 @@ export default function Explore_Digital() {
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="space-y-5"
             >
               <p className="left-column-text">Legacy systems</p>
@@ -114,7 +114,7 @@ export default function Explore_Digital() {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex-1 space-y-16"
             >
               <p className="right-column-text justify-items-start">
@@ -140,7 +140,7 @@ export default function Explore_Digital() {
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="mb-12"
           >
             <div className="heading-systems flex flex-wrap justify-center text-center w-full lg:justify-start lg:text-left">
@@ -154,7 +154,7 @@ export default function Explore_Digital() {
               initial={{ y: -50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="space-y-5"
             >
               <p className="left-column-text">Legacy systems</p>
@@ -202,7 +202,7 @@ export default function Explore_Digital() {
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="flex-1 space-y-16"
             >
               <p className="right-column-text justify-items-start">

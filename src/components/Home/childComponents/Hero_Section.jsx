@@ -11,7 +11,7 @@ export default function Hero_Section() {
     <>
       <div className="">
         <section className="relative bg-transparent font-inter overflow-visible min-h-screen top-0 left-0 z-50">
-          <div className="hidden md:block relative w-full h-[100vh] object-cover">
+          <div className=" relative w-full h-[100vh] object-cover">
             <Header />
             <video
               src="https://ik.imagekit.io/p1zreiw3z/4k-resolution-abstract-background-and-line-dot-ba-2025-08-29-11-23-20-utc.mov/ik-video.mp4?updatedAt=1756542635640"
@@ -19,15 +19,15 @@ export default function Hero_Section() {
               loop
               muted
               playsInline
-              className="absolute object-cover  w-full h-full opacity-50"
+              className="relative object-cover  w-full h-[900px] sm:h-full opacity-50"
             />
           </div>
-
+{/* 
           <div className="block md:hidden relative w-full h-full">
             <div className="hero-banner-wrapper bg-mobile-hero"></div>
-          </div>
+          </div> */}
 
-          <div className="util-flex util-flex-1 util-mx-1-5">
+          {/* <div className="util-flex util-flex-1 util-mx-1-5">
             <div className="block md:hidden relative">
               <div className="">
                 <h1 className="heading-hero-mobile">
@@ -46,9 +46,9 @@ export default function Hero_Section() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="hidden md:block absolute  bottom-24 util-mx-1-5 ">
+          <div className=" absolute mt-[-170px]  sm:mt-[-250px] util-mx-1-5 ">
             <h1
               className="heading-hero"
               style={{ color: "var(--text-color-dark)" }}

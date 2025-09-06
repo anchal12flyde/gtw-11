@@ -34,8 +34,8 @@ export default function Next_Steps() {
       <div className="block md:hidden ">
         <div className="next-steps-section ">
           <div className="util-flex util-flex-1 util-mx-1-5">
-            <div className="icon">
-              <img src="/images/Next_Icon.png" alt="Icon" />
+            <div className="icon bg-white">
+              <img src="/images/Next_Steps_mobile.svg" alt="Icon" className='object-cover'/>
             </div>
             <h2 className="heading-systems">Next Steps</h2>
             <p>Pick how you'd like to work with us.</p>
