@@ -182,7 +182,7 @@ export default function Header() {
       </div>
 
       <div
-        className={`fixed inset-0 z-40 bg-secondary/40 backdrop-saturate-150 xl:hidden mobile-drawer ${
+        className={`fixed inset-0 z-99999 bg-secondary/40 backdrop-saturate-150 xl:hidden mobile-drawer ${
           isOpen ? "backdrop-visible" : "backdrop-hidden"
         }`}
         onClick={toggleMenu}

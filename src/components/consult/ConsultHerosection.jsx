@@ -25,7 +25,7 @@ export default function ConsultHerosection() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
         </div>
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white-color1">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative z-1 text-center text-white-color1">
           <div className="hero-section">
             <h1 className="heading-heros">
               Rethink. <span className="text-light-blue">Rebuild.</span>{" "}
