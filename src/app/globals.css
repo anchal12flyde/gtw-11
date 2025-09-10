@@ -872,35 +872,10 @@ line-height: normal;
 }
 .company-info {
   display: none;
-
+  display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
 font-size: 14px; 
 margin-bottom: 3rem;  
-}
-@media (min-width: 640px) {
-  .company-info {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-  }
-}
-
-@media (min-width: 768px) {
-  .company-info {
-    grid-template-columns: repeat(4, minmax(0, 1fr)); 
-  }
-}
-
-@media (min-width: 1024px) {
-  .company-info {
-    grid-template-columns: repeat(6, minmax(0, 1fr)); 
-  }
-}
-
-/* Default grid (before sm breakpoint) */
-@media (max-width: 639px) {
-  .company-info {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
-  }
-  
 }
 
 .email-name {
@@ -955,6 +930,56 @@ margin-bottom: 3rem;
   }
 }
 
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem; /* 40px */
+
+}
+
+.footer-left {
+  flex: 0.4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.footer-left .footer-image {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem; /* 32px */
+}
+
+.footer-links h4 {
+  font-size: 1.125rem; /* ~18px */
+  font-weight: 600;
+  margin-bottom: 0.75rem; /* 12px */
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  color: #4b5563; /* Tailwind gray-600 */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 /* Mobile Apps */
 

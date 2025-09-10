@@ -27,13 +27,13 @@ export default function Card_Section() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden  h-[480px] w-full"
+              className="relative rounded-2xl overflow-hidden h-[380px] sm:h-[500px] w-full"
             >
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
                 src="/images/img2.png"
                 alt="Modern Websites"
-                className="w-full h-full"
+                className="w-full h-full object-cover"
               />
               <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
                 <div className="flex flex-row lg:flex-col gap-x-2 lg:gap-x-0 lg:gap-y-1">
@@ -48,7 +48,7 @@ export default function Card_Section() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden  h-[480px] w-full"
+              className="relative rounded-2xl overflow-hidden  h-[380px] sm:h-[500px] w-full"
             >
               <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
@@ -72,13 +72,13 @@ export default function Card_Section() {
               </div>
             </motion.div>
 
-            <Link href="/mobile_apps">
+            <Link href="/mobile-apps-development">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="relative rounded-2xl overflow-hidden h-[480px] w-full cursor-pointer"
+                className="relative rounded-2xl overflow-hidden h-[380px] sm:h-[500px] w-full cursor-pointer"
               >
                 <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
                 <img

@@ -6,71 +6,49 @@ import Link from 'next/link';
 
 const categories = [
   {
-    title: "Philosphy",
+    title: "Verticals",
     path: "/philosophy",
     items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
+      "Mobile Apps",
+      "Digital Transformation",
+      "Website Development",
+      "Software Development",
+      
     ],
   },
   {
-    title: "Mobile Apps",
+    title: "Saas Solutions",
     path: "/mobile-apps-development",
     items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
+      "Expro",
+      "Difooch",
+      "Auditchef",
+      "Startup Launcher",
+      
     ],
   },
   {
-    title: "Digital Transformation",
+    title: "Company",
     path: "/digital-transformation-service",
     items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
+      "GTW Home",
+      "Our Philosophy",
+      "Become a Client",
+      "Join Our Team",
     ],
   },
   {
-    title: "Expro",
+    title: "Quick Links",
     path: "https://expro.store",
     items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
+      "Insights",
+      "Success Stories",
+      "Pay Online",
+      "Raise a Ticket",
     ],
   },
-  {
-    title: "Insights",
-    path: "/blog",
-    items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-    ],
-  },
-  {
-    title: "Success Stories",
-    path: "/success-stories",
-    items: [
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-      "Our Team",
-      "The GTW Vision",
-    ],
-  },
+
+
 ];
 
 export default function Footer() {
@@ -115,18 +93,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="company-information">
-          <div className="company-info gap-28">
-            {categories.map(({ title, path }) => (
-              <div key={title}>
-                <Link href={path}>
-                  <h4 className="category-heading cursor-pointer hover:underline">
-                    {title}
-                  </h4>
-                </Link>
-                <br />
-              </div>
-            ))}
+        <div className="footer-bottom">
+          {/* Left side image */}
+          <div className="footer-left">
+            <img
+              src="/images/footer-image.png"
+              alt="Footer Illustration"
+              className="footer-image"
+            />
+          </div>
+
+          {/* Right side footer links */}
+          <div className="footer-right">
+            <div className="footer-links">
+              {categories.map(({ title, items }) => (
+                <div key={title}>
+                  <h4 className="category-heading mb-3">{title}</h4>
+                  <ul className="footer-list space-y-1 text-gray-600">
+                    {items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -162,11 +152,11 @@ export default function Footer() {
                   } pl-2 text-white-gray6`}
                 >
                   {/* Optional sub-items */}
-                  {/* {items.map((item, idx) => (
-          <li key={idx} className="py-1">
-            {item}
-          </li>
-        ))} */}
+                  {items.map((item, idx) => (
+                    <li key={idx} className="py-1">
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             ))}
