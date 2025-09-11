@@ -60,7 +60,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-light text-secondary font-inter">
-      <div className="pt-[94px] pb-[55px]">
+      <div className=" pt-[48px] lg:pt-[94px] pb-[55px]">
         {/* Mobile Logo */}
         <div className="sm:hidden w-full flex justify-center mb-4 py-2">
           <img
