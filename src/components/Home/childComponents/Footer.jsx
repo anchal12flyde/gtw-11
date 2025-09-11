@@ -60,7 +60,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-light text-secondary font-inter">
-      <div className="py-10">
+      <div className="pt-[94px] pb-[55px]">
         {/* Mobile Logo */}
         <div className="sm:hidden w-full flex justify-center mb-4 py-2">
           <img
@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <div className="footer-bottom ">
           {/* Left side image */}
           <div className="footer-left">
             <img
@@ -108,8 +108,8 @@ export default function Footer() {
             <div className="footer-links">
               {categories.map(({ title, items }) => (
                 <div key={title}>
-                  <h4 className="category-heading mb-3">{title}</h4>
-                  <ul className="footer-list space-y-1 text-gray-600">
+                  <h4 className="category-heading ">{title}</h4>
+                  <ul className="footer-list ">
                     {items.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         <div className="util-flex util-flex-1 util-mx-1-5">
-          <div className="block sm:hidden">
+          <div className="block lg:hidden">
             {categories.map(({ title, items, path }, index) => (
               <div key={title} className="border-b border-white-gray4">
                 <div className="w-full text-left py-4 flex justify-between items-center font-semibold text-base">
@@ -161,22 +161,25 @@ export default function Footer() {
               </div>
             ))}
           </div>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            viewport={{ once: false }}
-            className="util-flex"
-          >
-            <div className=" flex flex-col sm:flex-row sm:justify-between  items-center text-sm text-secondary mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className=""
+        >
+          <div className="grey-divider hidden lg:block"></div>
+          <div className="util-flex util-mx-1-5">
+            <div className=" flex flex-col sm:flex-row sm:justify-between  items-center text-sm text-secondary mt-8 ">
               <p className="company-name">General Tech Works Private Limited</p>
               <p className="mt-2 sm:mt-0 company-name">
                 Privacy Policy | Terms and Conditions
               </p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );
