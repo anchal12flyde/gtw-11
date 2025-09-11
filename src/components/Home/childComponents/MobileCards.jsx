@@ -5,8 +5,9 @@ const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.16,
-      delayChildren: 0.06,
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+      staggerDirection: 1,
     },
   },
 };
@@ -31,7 +32,7 @@ export default function MobileCards() {
 
   return (
     <motion.section
-      className="card-container-wrapper util-flex util-flex-1 util-mx-1-5 mt-26"
+      className=" util-flex util-flex-1 util-mx-1-5 mt-26"
       variants={container}
       initial="hidden"
       whileInView="visible"

@@ -8,6 +8,7 @@ import { FormProvider } from "@/context/FormContext";
 import { Toaster } from "react-hot-toast";
 import "@/app/globals.css";
 
+
 export default function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const pathname = usePathname();
