@@ -20,6 +20,36 @@ export default function Explore_Digital() {
       scrollRef.current.scrollBy({ left: CARD_WIDTH, behavior: 'smooth' });
     }
   };
+  
+  const isDown = useRef(false);
+  const startX = useRef(0);
+  
+
+  const handleMouseDown = (e) => {
+    isDown.current = true;
+    scrollRef.current.classList.add("cursor-grabbing");
+    startX.current = e.pageX - scrollRef.current.offsetLeft;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+  };
+
+  const handleMouseLeave = () => {
+    isDown.current = false;
+    scrollRef.current.classList.remove("cursor-grabbing");
+  };
+
+  const handleMouseUp = () => {
+    isDown.current = false;
+    scrollRef.current.classList.remove("cursor-grabbing");
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDown.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 2; // speed adjust
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
 
   return (
     <>
@@ -232,55 +262,41 @@ export default function Explore_Digital() {
                 Building scalable systems that solve real-world problems.
               </span>
             </h2>
-            {/* <div className="hidden sm:flex gap-0">
-              <button className="arrow-button" onClick={scrollLeft}>
-                <img
-                  src="/images/LeftArrow.png"
-                  alt="Left Arrow"
-                  className="w-10 h-10"
-                />
-              </button>
-              <button className="arrow-button" onClick={scrollRight}>
-                <img
-                  src="/images/RightArrow.png"
-                  alt="Right Arrow"
-                  className="w-10 h-10"
-                />
-              </button>
-            </div> */}
           </div>
 
           <div
-            className="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide w-full flex "
             ref={scrollRef}
+            className="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide w-full flex cursor-grab"
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
           >
-            <div className="flex flex-nowrap gap-8 ">
-              <div className="">
-                <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
-                  <div className="relative rounded-2xl">
-                    <img
-                      src="/images/Numyum.png"
-                      alt="Campus"
-                      className="w-full h-55 "
-                    />
-                  </div>
+            <div className="flex flex-nowrap gap-8 items-stretch ">
+              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
+                <div className="relative rounded-2xl">
+                  <img
+                    src="/images/Numyum.png"
+                    alt="Campus"
+                    className="w-full h-55 "
+                  />
+                </div>
 
-                  <div className="flex flex-col gap-4 px-6">
-                    <h3 className="ecom-heading text-left">
-                      Numyum – Direct Ordering Engine for Cloud Kitchens
-                    </h3>
-                    <p className="paragraph-default">
-                      We built a custom food ordering system with OTP-based
-                      login, intuitive "Build Your Order" flow, and deep menu
-                      customizations. The platform supports multi-kitchen
-                      franchise operations, branch-specific pricing, and an
-                      integrated order approval system for seamless execution.
-                    </p>
-                  </div>
+                <div className="flex flex-col gap-3 px-6">
+                  <h3 className="ecom-heading text-left">
+                    Numyum – Direct Ordering Engine for Cloud Kitchens
+                  </h3>
+                  <p className="paragraph-default">
+                    We built a custom food ordering system with OTP-based login,
+                    intuitive "Build Your Order" flow, and deep menu
+                    customizations. The platform supports multi-kitchen
+                    franchise operations, branch-specific pricing, and an
+                    integrated order approval system for seamless execution.
+                  </p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden ">
+              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77 h-auto overflow-hidden ">
                 <div className="relative rounded-2xl ">
                   <img
                     src="/images/Ezstays.png"
@@ -288,7 +304,7 @@ export default function Explore_Digital() {
                     className="w-full h-55 "
                   />
                 </div>
-                <div className="flex flex-col gap-4 px-6">
+                <div className="flex flex-col gap-3 px-6">
                   <h3 className="ecom-heading text-left">
                     EzStays – A Complete OS for Student Housing
                   </h3>
@@ -300,7 +316,7 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
+              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
                 <div className="relative rounded-2xl">
                   <img
                     src="/images/Itel - Mobiles.png"
@@ -308,7 +324,7 @@ export default function Explore_Digital() {
                     className="w-full h-55 "
                   />
                 </div>
-                <div className="flex flex-col gap-4 px-6">
+                <div className="flex flex-col gap-3 px-6">
                   <h3 className="ecom-heading text-left">
                     Itel – Scalable Ecommerce for D2C Sales
                   </h3>
@@ -320,7 +336,7 @@ export default function Explore_Digital() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77  h-[510px] overflow-hidden">
+              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
                 <div className="relative rounded-2xl">
                   <img
                     src="/images/assets/transexpert mockup.jpg"
@@ -329,7 +345,7 @@ export default function Explore_Digital() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-4 px-6">
+                <div className="flex flex-col gap-3 px-6">
                   <h3 className="ecom-heading text-left">
                     TransExpert – A Digital Overhaul for a Logistics Group
                   </h3>
