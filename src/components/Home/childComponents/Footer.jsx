@@ -124,18 +124,16 @@ export default function Footer() {
           <div className="block lg:hidden">
             {categories.map(({ title, items, path }, index) => (
               <div key={title} className="border-b border-white-gray4">
-                <div className="w-full text-left pt-4 pb-2 flex justify-between items-center font-semibold text-base">
-                  {/* Title Click - Redirect to Path */}
-                  <Link href={path} className="w-full">
-                    {title}
-                  </Link>
-
-                  {/* Chevron Click - Toggle Accordion */}
+                <div className="w-full text-left pt-5 pb-2 flex justify-between items-center font-semibold text-base">
+                
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="ml-2"
-                    aria-label="Toggle Submenu"
+                    className="w-full flex justify-between items-center text-left"
                   >
+                    <Link href="#" className="flex-1">
+                      {title}
+                    </Link>
+
                     <span
                       className={`transition-transform duration-300 ${
                         openIndex === index ? "rotate-180" : ""
@@ -145,19 +143,21 @@ export default function Footer() {
                     </span>
                   </button>
                 </div>
-
-                <ul
-                  className={`transition-opacity duration-300 pb-5 ease-in-out ${
-                    openIndex === index ? "opacity-100" : "opacity-0 hidden"
-                  } pl-2 text-white-gray6`}
+                <div
+                  className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
+                    openIndex === index
+                      ? "max-h-40 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
                 >
-                  {/* Optional sub-items */}
-                  {items.map((item, idx) => (
-                    <li key={idx} className="py-1">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                  <ul className="pl-2 pb-5 text-white-gray6">
+                    {items.map((item, idx) => (
+                      <li key={idx} className="py-1">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
