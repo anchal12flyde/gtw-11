@@ -124,7 +124,7 @@ export default function Footer() {
           <div className="block lg:hidden">
             {categories.map(({ title, items, path }, index) => (
               <div key={title} className="border-b border-white-gray4">
-                <div className="w-full text-left py-4 flex justify-between items-center font-semibold text-base">
+                <div className="w-full text-left pt-4 pb-2 flex justify-between items-center font-semibold text-base">
                   {/* Title Click - Redirect to Path */}
                   <Link href={path} className="w-full">
                     {title}
@@ -147,7 +147,7 @@ export default function Footer() {
                 </div>
 
                 <ul
-                  className={`transition-opacity duration-300 ease-in-out ${
+                  className={`transition-opacity duration-300 pb-5 ease-in-out ${
                     openIndex === index ? "opacity-100" : "opacity-0 hidden"
                   } pl-2 text-white-gray6`}
                 >
