@@ -59,18 +59,29 @@ export default function Explore_Digital() {
             <motion.h2
               className="text-[25vw] text-white-color1/10 font-600 leading-none tracking-wider"
               initial={{ y: -50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              whileInView="visible"
               viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              variants={{
+                hidden: { y: -50, opacity: 0 },
+                visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+              }}
             >
               From
             </motion.h2>
             <motion.h2
               className="text-[25vw] text-white-color1/10 font-600 leading-none tracking-wider"
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
+              variants={{
+                hidden: { y: -100, opacity: 0 },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1, delay: 0.8 },
+                },
+              }}
             >
               To
             </motion.h2>
@@ -181,15 +192,38 @@ export default function Explore_Digital() {
 
           <div className="flex flex-col lg:flex-row items-center justify-evenly text-center lg:text-left gap-14 lg:gap-35">
             <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    delayChildren: 1, // From ke baad thoda sa delay
+                    staggerChildren: 0.3, // ek ek karke aaye
+                  },
+                },
+              }}
               className="space-y-5"
             >
-              <p className="left-column-text">Legacy systems</p>
-              <p className="left-column-text">Manual operations</p>
-              <p className="left-column-text">Scattered tech</p>
+              {["Legacy systems", "Manual operations", "Scattered tech"].map(
+                (item, i) => (
+                  <motion.p
+                    key={i}
+                    className="left-column-text"
+                    variants={{
+                      hidden: { y: 20, opacity: 0 },
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        transition: { duration: 0.8 },
+                      },
+                    }}
+                  >
+                    {item}
+                  </motion.p>
+                )
+              )}
             </motion.div>
 
             <motion.div
@@ -229,26 +263,44 @@ export default function Explore_Digital() {
             </motion.div>
 
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              className="flex-1 space-y-16"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    delayChildren: 1.8, // TO ke thoda baad hi start
+                    staggerChildren: 0.4, // ek ek krke aaye
+                  },
+                },
+              }}
+              className="flex-1 space-y-10"
             >
-              <p className="right-column-text justify-items-start">
+              <motion.p
+                className="right-column-text justify-items-start"
+                variants={{
+                  hidden: { y: -30, opacity: 0 },
+                  visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+                }}
+              >
                 We help organizations rethink the way they run, by{" "}
                 <span className="text-light-blue">
                   replacing complexity with clarity –
                 </span>{" "}
                 powered by purpose-built platforms.
-              </p>
+              </motion.p>
 
-              <a
+              <motion.a
                 href="/digital-transformatio-service"
-                className="explore-link  block"
+                className="explore-link block"
+                variants={{
+                  hidden: { y: -30, opacity: 0 },
+                  visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+                }}
               >
                 Explore Digital Transformation
-              </a>
+              </motion.a>
             </motion.div>
           </div>
         </div>
