@@ -172,7 +172,7 @@ export default function Footer() {
         >
           <div className="grey-divider hidden lg:block"></div>
           <div className="util-flex util-mx-1-5">
-            <div className=" flex flex-col sm:flex-row sm:justify-between  items-center text-sm text-secondary mt-8 ">
+            <div className=" flex flex-col sm:flex-row sm:justify-between  items-center company-name mt-8 ">
               <p className="company-name">General Tech Works Private Limited</p>
               <p className="mt-2 sm:mt-0 company-name">
                 Privacy Policy | Terms and Conditions
