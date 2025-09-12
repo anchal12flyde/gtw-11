@@ -42,7 +42,7 @@ export default function WorkWithSection() {
         <div className="space-y-12">
           {industryList.map(({ title, description, tags }, index) => {
             const ref = useRef(null);
-            const isInView = useInView(ref, { once: false, margin: "-50px" });
+            const isInView = useInView(ref, { once: true, margin: "-50px" });
 
             return (
               <motion.div

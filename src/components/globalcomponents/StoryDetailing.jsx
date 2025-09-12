@@ -61,7 +61,7 @@ export default function StoryDetaling({
                     height={43}
                   />
                   <Image
-                    src="/images/assets/threadIcon.png"
+                    src="/images/assets/eclipse1 (5).png"
                     alt="Threads"
                     width={43}
                     height={43}

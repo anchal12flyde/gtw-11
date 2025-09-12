@@ -38,7 +38,7 @@ export default function ConsultHerosection() {
             </p>
 
             <ClientButton
-              href="/StepOneForm"
+              href="/step-one-form"
               className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary "
             >
               Start a Consult Sprint

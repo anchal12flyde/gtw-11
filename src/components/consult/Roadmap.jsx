@@ -35,7 +35,7 @@ export default function Roadmap() {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className="flex flex-wrap lg:flex-nowrap">
           <motion.div

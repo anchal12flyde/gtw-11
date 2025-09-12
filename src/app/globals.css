@@ -646,7 +646,19 @@ line-height: normal;
   }
 }
 .product-right {
-  display: grid;
+  margin-top: 2rem;
+  width: 100%;
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  column-gap:0;
+  row-gap: 8px;    
+}
+
+
+@media (max-width: 768px) {
+  .product-right {
+   
+      display: grid;
   grid-template-columns: repeat(2, 1fr); 
   column-gap: 40px;
   row-gap: 8px;
@@ -654,13 +666,6 @@ line-height: normal;
   
   
   margin: 8px 0px auto 0px;
-}
-
-@media (min-width: 968px) {
-  .product-right {
-   
-    margin-top: 2rem; 
-    width: 100%;
   }
 }
 /* global.css */
@@ -673,7 +678,7 @@ line-height: normal;
 @media (min-width: 768px) {
   .consumer-product {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) minmax(250px, 1.1fr);
+    grid-template-columns: minmax(200px, .8fr) minmax(250px, 1.3fr);
     gap: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -944,7 +949,7 @@ margin-bottom: 3rem;
 }
 
 .footer-left {
-  flex: 0.35;
+  flex: 0.3;
   position: relative;
   overflow: visible;
   display: flex;
@@ -954,7 +959,7 @@ margin-bottom: 3rem;
 
 .footer-left .footer-image {
   position: relative;
-  bottom: -92px;
+  bottom: -99px;
   left: 0;
   width: 100%;
   height: auto;
@@ -1802,10 +1807,11 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  transition: top 0.6s ease;
+  transition: top 1.2s cubic-bezier(0.23, 1, 0.32, 1); /* slow + smooth */
   z-index: 3;
   padding: 2rem;
 }
+
 .card-overlay .overlay-content {
   width: 100%;
 }
@@ -1820,38 +1826,37 @@ input[type="checkbox"] {
 .card:hover .card-overlay {
   top: 0;
 }
-
 .card-overlay h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  transform: translateY(100%); 
+  transform: translateY(40px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 1s ease;
 }
+
 .card:hover .card-overlay h3 {
-  transform: translateY(0); 
+  transform: translateY(0);
   opacity: 1;
 }
 
-
 .card-overlay ul {
   opacity: 0;
-  transform: translateY(20px);
-  transition: transform 0.5s ease 0.3s, opacity 0.5s ease 0.3s;
+  transform: translateY(30px);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1) 0.3s,
+              opacity 1s ease 0.3s;
 }
 
 .card:hover .card-overlay ul {
   transform: translateY(0);
   opacity: 1;
-
 }
 
 .card-overlay ul li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   line-height: 1.4;
   color: var(--white);
 }
-
 .challenge-section {
   background-color: var(--white);
 }
@@ -2258,9 +2263,9 @@ line-height: 34px;
     width: 100%; 
   }
 }
-.timeline-image img {
-  width: 110px;
-  height: 120px;
+.timeline-image  {
+  width: 170px;
+  height: 170px;
 }
 @media (max-width: 640px) {
   .timeline {

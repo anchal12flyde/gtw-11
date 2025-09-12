@@ -39,7 +39,7 @@ export default function OperateAcrossSection() {
               className="heading-systems text-white-color1 text-2xl font-semibold leading-snug"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <span>How</span>
@@ -58,7 +58,7 @@ export default function OperateAcrossSection() {
                 className="across-card flex w-full sm:w-[48%] lg:w-[24%] max-w-sm"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-1 bg-light-blue mr-3"></div>

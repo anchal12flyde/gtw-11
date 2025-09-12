@@ -55,7 +55,7 @@ export default function StoryDetails() {
                       height={43}
                     />
                     <Image
-                      src="/images/assets/threadIcon.png"
+                      src="/images/assets/eclipse1 (5).png"
                       alt="Threads"
                       width={43}
                       height={43}
@@ -95,10 +95,7 @@ export default function StoryDetails() {
                   style={{ display: "flex", alignItems: "center", gap: "26px" }}
                 >
                   <span className="category">Category:</span>
-                  <p
-                    className="insight-tags"
-                   
-                  >
+                  <p className="insight-tags">
                     <span>Mobile App</span>
                     <span>Mobile App</span>
                   </p>

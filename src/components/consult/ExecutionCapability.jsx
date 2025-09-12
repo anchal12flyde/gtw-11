@@ -25,7 +25,7 @@ export default function ExecutionCapability() {
       title: "MVP scoping and build strategy",
       description:
         "We shape your Minimum Viable Product, balancing speed, cost, and impact, with a phased build plan, delivery milestones, and success metrics.",
-      image: "/images/assets/icon4.png",
+      image: "/images/assets/17.png",
     },
     {
       title: "Tool replacement & process digitization",
@@ -53,7 +53,7 @@ export default function ExecutionCapability() {
               <div className="timeline-item mt-18" key={index}>
                 <div className="flex flex-col md:flex-row items-left gap-6 md:gap-70">
                   <div className="timeline-image order-1 md:order-2">
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="" className="object-cover w-full h-full "/>
                   </div>
                   <div className="timeline-content order-2 md:order-1">
                     <h3>{item.title}</h3>

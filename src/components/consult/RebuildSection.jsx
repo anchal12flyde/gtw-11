@@ -22,7 +22,7 @@ export default function RebuildSection() {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             >
               <span className="text-light-blue">Let's Rebuild</span>&nbsp;
@@ -34,7 +34,7 @@ export default function RebuildSection() {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             >
               We take on select transformation clients each quarter. Book a
@@ -46,7 +46,7 @@ export default function RebuildSection() {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             >
               <ClientButton

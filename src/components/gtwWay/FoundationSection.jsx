@@ -20,7 +20,7 @@ export default function FoundationSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           >
             <span>We Don’t Chase Trends.&nbsp;</span>
@@ -35,7 +35,7 @@ export default function FoundationSection() {
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           >
             That’s the GTW Way, slow when it matters, smart where it counts, and

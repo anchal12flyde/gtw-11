@@ -39,12 +39,12 @@ export default function BlogDetails() {
     return (
       <>
         <div className="util-flex util-flex-1 util-mx-1-5 ">
-          <div className="px-0 lg:px-30" >
+          <div className="px-0 lg:px-30">
             <div className="mt-15">
               <div className="flex items-center justify-between mb-6">
                 <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-gray-light p-[12px_16px]">
                   <Link
-                    href="/Insights"
+                    href="/blog"
                     className="flex items-center text-sm text-gray-dark2 hover:underline"
                   >
                     <img
@@ -77,7 +77,7 @@ export default function BlogDetails() {
                       className="hover:scale-110 transition-transform duration-300"
                     />
                     <Image
-                      src="/images/assets/threadIcon.png"
+                      src="/images/assets/eclipse1 (5).png"
                       alt="Threads"
                       width={43}
                       height={43}
@@ -118,10 +118,7 @@ export default function BlogDetails() {
                   style={{ display: "flex", alignItems: "center", gap: "26px" }}
                 >
                   <span className="category">Category:</span>
-                  <p
-                    className="insight-tags"
-                   
-                  >
+                  <p className="insight-tags">
                     <span>Mobile App</span>
                     <span>Mobile App</span>
                   </p>

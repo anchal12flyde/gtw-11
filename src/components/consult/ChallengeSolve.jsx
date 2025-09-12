@@ -48,7 +48,7 @@ export default function ChallengeSection() {
           className="challenge-content"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="heading-systems">
@@ -72,7 +72,7 @@ export default function ChallengeSection() {
                 onMouseEnter={() => setHoveredItem(index + 1)}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
                 <span className="number">
@@ -88,7 +88,7 @@ export default function ChallengeSection() {
               className="cta-box cursor-pointer"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <strong>Already Have an app?</strong>
