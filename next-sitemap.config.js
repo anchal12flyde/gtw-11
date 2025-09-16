@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: "https://generaltechworks.com/", // Replace with your domain
-  generateRobotsTxt: true, // (optional)
+  generateRobotsTxt: false, // (optional)
   sitemapSize: 7000, // (optional) split sitemaps if too large
   changefreq: "daily",
   priority: 0.7,

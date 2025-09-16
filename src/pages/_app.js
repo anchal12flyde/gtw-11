@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
                 y: 0,
                 transition: {
                   duration: 0.8,
-                  ease: [0.16, 0.77, 0.47, 0.97], // Smooth bounce effect
+                  ease: [0.16, 0.77, 0.47, 0.97],
                 },
               }}
               exit={{
