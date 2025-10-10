@@ -13,7 +13,7 @@ export default function FoundationSection() {
       className="operate-section flex flex-col items-center md:items-start text-center md:text-left"
       variants={fadeInUp}
     >
-      <div className="util-flex util-flex-1 util-mx-1-5 mt-22 sm:mt-0  ">
+      <div className="util-flex util-flex-1 util-mx-1-5 justify-center">
         <div className="w-full md:w-[700px] flex flex-col items-center md:items-start">
           <motion.div
             className="heading-systems flex flex-wrap w-full md:w-[500px] justify-center md:justify-start text-center md:text-left"

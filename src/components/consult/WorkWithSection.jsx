@@ -35,7 +35,7 @@ export default function WorkWithSection() {
 
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <section className="mt-26 mb-26 md:mb-0">
+      <section className="mt-26 ">
         <h2 className="heading-systems text-secondary mb-12">
           Who <span className="text-primary">We Work</span> With{" "}
         </h2>
