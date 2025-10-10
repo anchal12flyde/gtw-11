@@ -16,7 +16,7 @@ export default function Card_Section() {
         >
           <h2 className="heading-systems flex flex-wrap">
             <span className="text-secondary">We build systems,</span>
-            &nbsp; <span className="text-primary"> not just screens.</span>
+            &nbsp; <span className="text-primary"> not just screens</span>
           </h2>
         </motion.div>
 
