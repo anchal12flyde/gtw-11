@@ -7,49 +7,46 @@ import Link from 'next/link';
 const categories = [
   {
     title: "Verticals",
-    path: "/philosophy",
     items: [
-      "Mobile Apps",
-      "Digital Transformation",
-      "Website Development",
-      "Software Development",
-      
+      { label: "Mobile Apps", path: "/mobile-apps-development" },
+      {
+        label: "Digital Transformation",
+        path: "/digital-transformation-service",
+      },
+      { label: "Website Development", path: "#" },
+      { label: "Software Development", path: "#" },
     ],
   },
   {
     title: "Saas Solutions",
-    path: "/mobile-apps-development",
     items: [
-      "Expro",
-      "Difooch",
-      "Auditchef",
-      "Startup Launcher",
-      
+      { label: "Expro", path: "https://expro.store" },
+      { label: "Difooch", path: "https://difooch.com" },
+      { label: "Auditchef", path: "#" },
+      { label: "Startup Launcher", path: "#" },
     ],
   },
   {
     title: "Company",
-    path: "/digital-transformation-service",
     items: [
-      "GTW Home",
-      "Our Philosophy",
-      "Become a Client",
-      "Join Our Team",
+      { label: "GTW Home", path: "/" },
+      { label: "Our Philosophy", path: "/philosophy" },
+      { label: "Become a Client", path: "/step-one-form" },
+      { label: "Join Our Team", path: "/join-our-team/personal-details" },
     ],
   },
   {
     title: "Quick Links",
-    path: "https://expro.store",
     items: [
-      "Insights",
-      "Success Stories",
-      "Pay Online",
-      "Raise a Ticket",
+      { label: "Insights", path: "/blog" },
+      { label: "Success Stories", path: "/success-stories" },
+      { label: "Pay Online", path: "#" },
+      { label: "Raise a Ticket", path: "#" },
     ],
   },
-
-
 ];
+
+
 
 export default function Footer() {
   const [openIndex, setOpenIndex] = useState(null)
@@ -102,16 +99,29 @@ export default function Footer() {
               className="footer-image"
             />
           </div>
-
           {/* Right side footer links */}
+
           <div className="footer-right">
             <div className="footer-links">
               {categories.map(({ title, items }) => (
                 <div key={title}>
-                  <h4 className="category-heading ">{title}</h4>
-                  <ul className="footer-list ">
-                    {items.map((item, idx) => (
-                      <li key={idx}>{item}</li>
+                  <h4 className="category-heading">{title}</h4>
+                  <ul className="footer-list">
+                    {items.map(({ label, path }, idx) => (
+                      <li key={idx}>
+                        {/* Agar external link hai to target="_blank" */}
+                        {path.startsWith("http") ? (
+                          <a
+                            href={path}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {label}
+                          </a>
+                        ) : (
+                          <Link href={path}>{label}</Link>
+                        )}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -125,7 +135,6 @@ export default function Footer() {
             {categories.map(({ title, items, path }, index) => (
               <div key={title} className="border-b border-white-gray4">
                 <div className="w-full text-left pt-5 pb-2 flex justify-between items-center font-semibold text-base">
-                
                   <button
                     onClick={() => toggleAccordion(index)}
                     className="w-full flex justify-between items-center text-left"
@@ -151,9 +160,11 @@ export default function Footer() {
                   }`}
                 >
                   <ul className="pl-2 pb-5 text-white-gray6">
-                    {items.map((item, idx) => (
+                    {items.map(({ label, path }, idx) => (
                       <li key={idx} className="py-1">
-                        {item}
+                        <Link href={path} className="block">
+                          {label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
