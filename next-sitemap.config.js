@@ -7,9 +7,6 @@ module.exports = {
   priority: 0.7,
   exclude: [""], // (optional) paths to exclude
   robotsTxtOptions: {
-    policies: [
-      { userAgent: "*", allow: "/" },
-      { userAgent: "Googlebot", allow: "/" },
-    ],
+    policies: [{ userAgent: "*", allow: "/" }],
   },
 };
