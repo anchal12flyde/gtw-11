@@ -325,30 +325,35 @@ export default function Explore_Digital() {
             onMouseMove={handleMouseMove}
           >
             <div className="flex flex-nowrap gap-8 items-stretch ">
-              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
-                <div className="relative rounded-2xl">
-                  <img
-                    src="/images/Numyum.png"
-                    alt="Campus"
-                    className="w-full h-55 "
-                  />
-                </div>
+              <Link href="/success-stories/numyum">
+                <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
+                  <div className="relative rounded-2xl">
+                    <img
+                      src="/images/Numyum.png"
+                      alt="Campus"
+                      className="w-full h-55 "
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-3 px-6">
-                  <h3 className="ecom-heading text-left">
-                    Numyum – Direct Ordering Engine for Cloud Kitchens
-                  </h3>
-                  <p className="paragraph-default">
-                    We built a custom food ordering system with OTP-based login,
-                    intuitive "Build Your Order" flow, and deep menu
-                    customizations. The platform supports multi-kitchen
-                    franchise operations, branch-specific pricing, and an
-                    integrated order approval system for seamless execution.
-                  </p>
+                  <div className="flex flex-col gap-3 px-6">
+                    <h3 className="ecom-heading text-left">
+                      Numyum – Direct Ordering Engine for Cloud Kitchens
+                    </h3>
+                    <p className="paragraph-default">
+                      We built a custom food ordering system with OTP-based
+                      login, intuitive "Build Your Order" flow, and deep menu
+                      customizations. The platform supports multi-kitchen
+                      franchise operations, branch-specific pricing, and an
+                      integrated order approval system for seamless execution.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77 h-auto overflow-hidden ">
+              <Link
+                className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77 h-auto overflow-hidden "
+                href="/success-stories/ezstays"
+              >
                 <div className="relative rounded-2xl ">
                   <img
                     src="/images/Ezstays.png"
@@ -367,8 +372,12 @@ export default function Explore_Digital() {
                     transport, payments, kitchen inventory, and more.
                   </p>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
+              </Link>
+
+              <Link
+                className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden"
+                href="/success-stories/itel"
+              >
                 <div className="relative rounded-2xl">
                   <img
                     src="/images/Itel - Mobiles.png"
@@ -387,29 +396,32 @@ export default function Explore_Digital() {
                     optimized for speed, reliability, and scale across India.
                   </p>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
-                <div className="relative rounded-2xl">
-                  <img
-                    src="/images/assets/transexpert mockup.jpg"
-                    alt="Campus"
-                    className="w-full h-55 "
-                  />
-                </div>
+              </Link>
 
-                <div className="flex flex-col gap-3 px-6">
-                  <h3 className="ecom-heading text-left">
-                    TransExpert – A Digital Overhaul for a Logistics Group
-                  </h3>
-                  <p className="paragraph-default">
-                    For TransExpert’s three-brand group, we led a full corporate
-                    transformation including brand identity design, corporate
-                    stationery, investor decks, and website UI/UX. We
-                    thendeveloped all three brand websites to reflect a
-                    consistent,professional digital presence.
-                  </p>
+              <Link href="/success-stories/transexpert">
+                <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
+                  <div className="relative rounded-2xl">
+                    <img
+                      src="/images/assets/transexpert mockup.jpg"
+                      alt="Campus"
+                      className="w-full h-55 "
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-3 px-6">
+                    <h3 className="ecom-heading text-left">
+                      TransExpert – A Digital Overhaul for a Logistics Group
+                    </h3>
+                    <p className="paragraph-default">
+                      For TransExpert’s three-brand group, we led a full
+                      corporate transformation including brand identity design,
+                      corporate stationery, investor decks, and website UI/UX.
+                      We thendeveloped all three brand websites to reflect a
+                      consistent,professional digital presence.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
