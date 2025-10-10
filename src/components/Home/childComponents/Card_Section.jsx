@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Card_Section() {
   return (
     <div className="util-flex util-flex-1 util-mx-1-5">
-      <section className="mt-70 sm:mt-0">
+      <section className="mt-70 sm:mt-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

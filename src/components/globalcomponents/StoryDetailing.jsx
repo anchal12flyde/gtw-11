@@ -21,6 +21,19 @@ export default function StoryDetaling({
   position = "",
 }) {
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    // Copy current page URL
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset after 2s
+      })
+      .catch((err) => console.error("Failed to copy: ", err));
+  };
+  const currentURL = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <>
@@ -48,24 +61,52 @@ export default function StoryDetaling({
                     open ? "rotate-y-0" : "rotate-y-90"
                   }`}
                 >
-                  <Image
-                    src="/images/assets/facebookIcon.png"
-                    alt="Facebook"
-                    width={43}
-                    height={43}
-                  />
-                  <Image
-                    src="/images/assets/linkedinIcon.png"
-                    alt="LinkedIn"
-                    width={43}
-                    height={43}
-                  />
-                  <Image
-                    src="/images/assets/eclipse1 (5).png"
-                    alt="Threads"
-                    width={43}
-                    height={43}
-                  />
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                      currentURL
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/assets/facebookIcon.png"
+                      alt="Facebook"
+                      width={43}
+                      height={43}
+                    />
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                      currentURL
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/assets/linkedinIcon.png"
+                      alt="LinkedIn"
+                      width={43}
+                      height={43}
+                    />
+                  </a>
+
+                  {/* Threads / X / Twitter */}
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                      currentURL
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/assets/eclipse1 (5).png"
+                      alt="Threads"
+                      width={43}
+                      height={43}
+                    />
+                  </a>
                 </div>
 
                 <button
@@ -84,12 +125,19 @@ export default function StoryDetaling({
                   />
                 </button>
 
-                <Image
-                  src="/images/assets/shareLink.png"
-                  alt="Link"
-                  width={43}
-                  height={43}
-                />
+                <button onClick={handleCopy} className="relative">
+                  <Image
+                    src="/images/assets/shareLink.png"
+                    alt="Share Link"
+                    width={43}
+                    height={43}
+                  />
+                  {copied && (
+                    <span className="absolute top-0 left-full ml-2 bg-black text-white px-2 py-1 rounded text-xs">
+                      Copied!
+                    </span>
+                  )}
+                </button>
               </div>
             </div>
 
