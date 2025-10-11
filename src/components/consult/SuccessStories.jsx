@@ -1,6 +1,7 @@
 "use client";
 import HoverVideo from "../Home/childComponents/VideoPlayer";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function SuccessStories() {
   const scrollRef = useRef(null);
@@ -63,8 +64,17 @@ export default function SuccessStories() {
         >
           <div className="flex flex-nowrap gap-8">
             {/* Card 1 */}
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden">
-              <HoverVideo src="/videos/vd2.mp4" />
+            <Link
+              href="/success-stories/numyum"
+              className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden"
+            >
+              <div className="relative rounded-2xl">
+                <img
+                  src="/images/Numyum.png"
+                  alt="Campus"
+                  className="w-full h-55 "
+                />
+              </div>
               <div className="flex flex-col gap-4 px-6">
                 <h3 className="ecom-heading text-left">
                   Numyum – Direct Ordering Engine for Cloud Kitchens
@@ -77,15 +87,18 @@ export default function SuccessStories() {
                   approval system for seamless execution.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2 */}
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden">
+            <Link
+              href="/success-stories/ezstays"
+              className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden"
+            >
               <div className="relative rounded-2xl ">
                 <img
-                  src="/images/img4.png"
+                  src="/images/Ezstays.png"
                   alt="Campus"
-                  className="w-full h-55"
+                  className="w-full h-55 "
                 />
               </div>
               <div className="flex flex-col gap-4 px-6">
@@ -99,15 +112,18 @@ export default function SuccessStories() {
                   transport, payments, kitchen inventory, and more.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden">
+            <Link
+              className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden"
+              href="/success-stories/itel"
+            >
               <div className="relative rounded-2xl">
                 <img
-                  src="/images/img7.png"
+                  src="/images/Itel - Mobiles.png"
                   alt="Campus"
-                  className="w-full h-55"
+                  className="w-full h-55 "
                 />
               </div>
               <div className="flex flex-col gap-4 px-6">
@@ -121,11 +137,20 @@ export default function SuccessStories() {
                   optimized for speed, reliability, and scale across India.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Card 4 */}
-            <div className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden">
-              <HoverVideo src="/videos/vd1.mp4" />
+            <Link
+              href="/success-stories/transexpert"
+              className="flex flex-col gap-8 bg-white-color1 rounded-3xl w-70 lg:w-77 h-[510px] overflow-hidden"
+            >
+              <div className="relative rounded-2xl">
+                <img
+                  src="/images/assets/transexpert mockup.jpg"
+                  alt="Campus"
+                  className="w-full h-55 "
+                />
+              </div>
               <div className="flex flex-col gap-4 px-6">
                 <h3 className="ecom-heading text-left">
                   TransExpert – A Digital Overhaul for a Logistics Group
@@ -138,7 +163,7 @@ export default function SuccessStories() {
                   professional digital presence.
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
