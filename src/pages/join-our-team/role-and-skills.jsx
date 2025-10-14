@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import { Upload } from 'lucide-react';
 import Head from 'next/head';
+import { useJoinTeam } from '@/context/JoinTeamContext';
+import { toast } from 'react-hot-toast';
 
 const skillsList = [
   "React", "Node.js", "Figma", "MongoDB", "TypeScript", "Webflow",
@@ -14,10 +16,20 @@ const skillsList = [
 
 export default function RoleAndSkills() {
   const router = useRouter();
+  const { formData, updateStep2, loading } = useJoinTeam();
+
   const [selectedOption, setSelectedOption] = useState("");
   const [experience, setExperience] = useState("");
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [resume, setResume] = useState(null);
+
+  useEffect(() => {
+    if (formData) {
+      setSelectedOption(formData.role || "");
+      setExperience(formData.experience || "");
+      setSelectedSkills(formData.skills || []);
+    }
+  }, [formData]);
 
   const handleSkillToggle = (skill) => {
     setSelectedSkills(prev =>
@@ -28,21 +40,41 @@ export default function RoleAndSkills() {
   const handleResumeUpload = (e) => {
     const file = e.target.files[0];
     if (file && file.type !== "application/pdf") {
-      alert("Only PDF files are allowed");
+      toast.error("Only PDF files are allowed");
       return;
     }
     setResume(file);
   };
 
-  const handleNext = () => {
-    console.log({
+  const validateForm = () => {
+    if (!selectedOption) {
+      toast.error('Please select a role');
+      return false;
+    }
+    if (!experience) {
+      toast.error('Please select your experience level');
+      return false;
+    }
+    if (selectedSkills.length === 0) {
+      toast.error('Please select at least one skill');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
       role: selectedOption,
       experience,
-      selectedSkills,
-      resume
-    });
+      skills: selectedSkills,
+    };
 
-    router.push("/join-our-team/intent-and-fit");
+    const success = await updateStep2(data, resume);
+    if (success) {
+      router.push("/join-our-team/intent-and-fit");
+    }
   };
 
   return (
@@ -142,8 +174,12 @@ export default function RoleAndSkills() {
 
           {resume && <p className="text-md mt-6">{resume.name} uploaded</p>}
 
-          <button className="next-button" onClick={handleNext}>
-            Next <ArrowRight size={16} />
+          <button 
+            className="next-button" 
+            onClick={handleNext}
+            disabled={loading}
+          >
+            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
           </button>
         </div>
       </div>

@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "@/components/Home/Loader/Loader";
 import { FormProvider } from "@/context/FormContext";
+import { JoinTeamProvider } from "@/context/JoinTeamContext";
+import { AgencyPartnershipProvider } from "@/context/AgencyPartnershipContext";
 import { Toaster } from "react-hot-toast";
 import "@/app/globals.css";
 
@@ -24,29 +26,33 @@ export default function MyApp({ Component, pageProps }) {
         <Loader />
       ) : (
         <FormProvider>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={pathname}
-              initial={{ opacity: 0, y: -100 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.8,
-                  ease: [0.16, 0.77, 0.47, 0.97],
-                },
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.3,
-                  ease: "easeIn",
-                },
-              }}
-            >
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
+          <JoinTeamProvider>
+            <AgencyPartnershipProvider>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={pathname}
+                  initial={{ opacity: 0, y: -100 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.8,
+                      ease: [0.16, 0.77, 0.47, 0.97],
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: {
+                      duration: 0.3,
+                      ease: "easeIn",
+                    },
+                  }}
+                >
+                  <Component {...pageProps} />
+                </motion.div>
+              </AnimatePresence>
+            </AgencyPartnershipProvider>
+          </JoinTeamProvider>
         </FormProvider>
       )}
 

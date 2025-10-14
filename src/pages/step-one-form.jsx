@@ -4,16 +4,56 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
-import Link from 'next/link'
+import Link from 'next/link';
 import Head from "next/head";
+import { useFormContext } from "@/context/FormContext";
+import { updateStep1 } from "@/services/formApi";
 
 export default function StepOneForm() {
   const [selectedOption, setSelectedOption] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
+  const { formData, updateFormData } = useFormContext();
 
-  const handleNext = () => {
-//     if (!selectedOption) return;
-//   router.push("/StepTwoForm");
+  const handleNext = async () => {
+    if (!selectedOption) {
+      setError("Please select a project type");
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      // Create form in backend with step 1 data
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+      const response = await fetch(`${API_BASE_URL}/form/start`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ projectType: selectedOption }),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to start form');
+      }
+
+      // Store formId and project type in context
+      updateFormData({ 
+        formId: data.data._id,
+        projectType: selectedOption,
+        currentStep: 1 
+      });
+      
+      router.push("/step-two-form");
+    } catch (err) {
+      setError(err.message || "Failed to save. Please try again.");
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -61,15 +101,15 @@ export default function StepOneForm() {
             <ChevronDown className="chevron-icon" size={20} />
           </div>
 
-          <Link href="/step-two-form">
-            <button
-              className="next-button"
-              onClick={handleNext}
-              disabled={!selectedOption}
-            >
-              Next <ArrowRight size={16} />
-            </button>
-          </Link>
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          
+          <button
+            className="next-button"
+            onClick={handleNext}
+            disabled={!selectedOption || isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
+          </button>
         </div>
       </div>
     </>

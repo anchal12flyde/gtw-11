@@ -3,13 +3,30 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Head from "next/head";
 
-export default function AnimatedInput({ label, placeholder, type = "text", name, autoComplete 
-  
+export default function AnimatedInput({ 
+  label, 
+  placeholder, 
+  type = "text", 
+  name, 
+  autoComplete,
+  value: externalValue,
+  onChange: externalOnChange,
+  className
 }) {
   const [isFocused, setIsFocused] = useState(false);
-  const [value, setValue] = useState("");
+  const [internalValue, setInternalValue] = useState("");
 
+  // Use external value if provided, otherwise use internal state
+  const value = externalValue !== undefined ? externalValue : internalValue;
   const isActive = isFocused || value.length > 0;
+
+  const handleChange = (e) => {
+    if (externalOnChange) {
+      externalOnChange(e);
+    } else {
+      setInternalValue(e.target.value);
+    }
+  };
 
   return (
     <>
@@ -37,13 +54,13 @@ export default function AnimatedInput({ label, placeholder, type = "text", name,
       <motion.input
         type={type}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={handleChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         placeholder={placeholder}
         name={name}
         autoComplete={autoComplete}
-        className="w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none"
+        className={`w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none ${className || ''}`}
       />
     </div>
     </>

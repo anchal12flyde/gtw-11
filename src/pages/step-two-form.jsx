@@ -6,13 +6,71 @@ import { useRouter } from 'next/navigation';
 import AnimatedInput from "./animation/animated-input";
 import { motion } from "framer-motion";
 import Head from 'next/head';
+import { useFormContext } from "@/context/FormContext";
+import { startForm, updateStep2 } from "@/services/formApi";
 
 export default function StepTwoForm() {
   const router = useRouter();
+  const { formData, updateFormData } = useFormContext();
+  
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [companyName, setCompanyName] = useState('');
   const [companyType, setCompanyType] = useState('');
   const [startTime, setStartTime] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleNext = () => router.push('/step-three-web');
+  const handleNext = async () => {
+    if (!name || !email || !companyType || !startTime) {
+      setError("Please fill in all required fields");
+      return;
+    }
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const currentFormId = formData.formId;
+
+      if (!currentFormId) {
+        throw new Error('Form not initialized. Please start from Step 1.');
+      }
+
+      // Update step 2 with all details
+      await updateStep2(currentFormId, {
+        name,
+        email,
+        companyName,
+        companyType,
+        startTime,
+      });
+
+      updateFormData({
+        name,
+        email,
+        companyName,
+        companyType,
+        startTime,
+        currentStep: 3,
+      });
+
+      // Navigate based on project type
+      const projectType = formData.projectType || 'Web';
+      const routeMap = {
+        'Web': '/step-three-web',
+        'Mobile': '/step-three-mobile',
+        'SaaS': '/step-three-saas',
+        'Infra': '/step-three-infra',
+        'Consult': '/step-three-consult',
+      };
+      
+      router.push(routeMap[projectType] || '/step-three-web');
+    } catch (err) {
+      setError(err.message || "Failed to save. Please try again.");
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -37,16 +95,26 @@ export default function StepTwoForm() {
             <h1 className="heading-systems">Project Overview</h1>
           </div>
           <div className="select-wrapper">
-            <AnimatedInput placeholder="Enter your name" />
+            <AnimatedInput 
+              placeholder="Enter your name" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className="select-wrapper">
-            <AnimatedInput placeholder="Enter your email address" />
+            <AnimatedInput 
+              placeholder="Enter your email address" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="select-wrapper">
             <AnimatedInput
               placeholder="Enter your company name"
               className="custom-select"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
             />
           </div>
           <p className="form-subheading   ">
@@ -98,14 +166,17 @@ export default function StepTwoForm() {
             ))}
           </div>
 
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
           <motion.button
             onClick={handleNext}
             className="next-button mt-4"
+            disabled={isLoading}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Next <ArrowRight size={16} />
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </motion.button>
         </div>
       </div>

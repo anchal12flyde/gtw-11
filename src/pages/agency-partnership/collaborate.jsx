@@ -1,30 +1,69 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import AnimatedInput from '../animation/animated-input';
 import Head from 'next/head';
+import { useAgencyPartnership } from '@/context/AgencyPartnershipContext';
+import { toast } from 'react-hot-toast';
 
 const skillsList = [
-  "White label", "Co-branded", "Referral-based", " On-demand support", "Retainers"
+  "White label", "Co-branded", "Referral-based", "On-demand support", "Retainers"
 ];
 
 export default function Collaborate() {
-   const router = useRouter();
-   const [selectedSkills, setSelectedSkills] = useState([]);    
-     const [selectedOption, setSelectedOption] = useState("");
+  const router = useRouter();
+  const { formData, updateStep4, loading } = useAgencyPartnership();
 
-    const handleSkillToggle = (skill) => {
+  const [selectedSkills, setSelectedSkills] = useState([]);    
+  const [selectedOption, setSelectedOption] = useState("");
+  const [timeZone, setTimeZone] = useState("");
+
+  useEffect(() => {
+    if (formData) {
+      setSelectedSkills(formData.engagementModels || []);
+      setTimeZone(formData.timeZone || '');
+      setSelectedOption(formData.howFoundUs || '');
+    }
+  }, [formData]);
+
+  const handleSkillToggle = (skill) => {
     setSelectedSkills(prev =>
       prev.includes(skill) ? prev.filter(s => s !== skill) : [...prev, skill]
     );
   };
 
+  const validateForm = () => {
+    if (selectedSkills.length === 0) {
+      toast.error('Please select at least one engagement model');
+      return false;
+    }
+    if (!timeZone.trim()) {
+      toast.error('Please enter your time zone');
+      return false;
+    }
+    if (!selectedOption) {
+      toast.error('Please tell us how you found us');
+      return false;
+    }
+    return true;
+  };
 
-  const handleNext = () => {
-    router.push('/agency-partnership/final-step'); 
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
+      engagementModels: selectedSkills,
+      timeZone,
+      howFoundUs: selectedOption,
+    };
+
+    const success = await updateStep4(data);
+    if (success) {
+      router.push('/agency-partnership/final-step');
+    }
   };
 
     return (
@@ -68,7 +107,13 @@ export default function Collaborate() {
 
             <p className="form-subheading ">Time zone / availability</p>
             <div className="select-wrapper">
-              <AnimatedInput placeholder="Enter Time Zone" />
+              <input
+                type="text"
+                placeholder="Enter Time Zone"
+                className="custom-select"
+                value={timeZone}
+                onChange={(e) => setTimeZone(e.target.value)}
+              />
             </div>
 
             <p className="form-subheading">How did you find us?</p>
@@ -88,8 +133,12 @@ export default function Collaborate() {
               <ChevronDown className="chevron-icon" size={20} />
             </div>
 
-            <button onClick={handleNext} className="next-button">
-              Next <ArrowRight size={16} />
+            <button 
+              onClick={handleNext} 
+              className="next-button"
+              disabled={loading}
+            >
+              {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
             </button>
           </div>
         </div>

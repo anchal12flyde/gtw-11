@@ -1,11 +1,13 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import AnimatedInput from '../animation/animated-input';
 import Head from 'next/head';
+import { useAgencyPartnership } from '@/context/AgencyPartnershipContext';
+import { toast } from 'react-hot-toast';
 
 const skillsList = [
   "Brand Identity", "UI/UX Design", "Web Design", "Motion Graphics", "Illustration", "Strategy",
@@ -13,20 +15,63 @@ const skillsList = [
 ];
 
 export default function Partnership() {
-   const router = useRouter();
-   const [intentText, setIntentText] = useState('');
-  const [projectText, setProjectText] = useState('');
-   const [selectedSkills, setSelectedSkills] = useState([]);
+  const router = useRouter();
+  const { formData, updateStep2, loading } = useAgencyPartnership();
 
-    const handleSkillToggle = (skill) => {
+  const [whatNotDo, setWhatNotDo] = useState('');
+  const [collaborationType, setCollaborationType] = useState('');
+  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [workedWithDevPartners, setWorkedWithDevPartners] = useState('');
+
+  useEffect(() => {
+    if (formData) {
+      setSelectedSkills(formData.specializations || []);
+      setWhatNotDo(formData.whatNotDo || '');
+      setWorkedWithDevPartners(formData.workedWithDevPartners || '');
+      setCollaborationType(formData.collaborationType || '');
+    }
+  }, [formData]);
+
+  const handleSkillToggle = (skill) => {
     setSelectedSkills(prev =>
       prev.includes(skill) ? prev.filter(s => s !== skill) : [...prev, skill]
     );
   };
 
+  const validateForm = () => {
+    if (selectedSkills.length === 0) {
+      toast.error('Please select at least one specialization');
+      return false;
+    }
+    if (!whatNotDo.trim()) {
+      toast.error('Please tell us what you usually do not do');
+      return false;
+    }
+    if (!workedWithDevPartners.trim()) {
+      toast.error('Please specify if you have worked with dev partners');
+      return false;
+    }
+    if (!collaborationType.trim()) {
+      toast.error('Please tell us what type of work you would love to collaborate on');
+      return false;
+    }
+    return true;
+  };
 
-  const handleNext = () => {
-    router.push('/agency-partnership/project-examples'); 
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
+      specializations: selectedSkills,
+      whatNotDo,
+      workedWithDevPartners,
+      collaborationType,
+    };
+
+    const success = await updateStep2(data);
+    if (success) {
+      router.push('/agency-partnership/project-examples');
+    }
   };
 
   return (
@@ -71,8 +116,8 @@ export default function Partnership() {
           <p className="form-subheading ">What do you usually NOT do?</p>
           <div className="select-wrapper">
             <textarea
-              value={intentText}
-              onChange={(e) => setIntentText(e.target.value)}
+              value={whatNotDo}
+              onChange={(e) => setWhatNotDo(e.target.value)}
               rows={2}
               className="custom-select"
               placeholder="Tell us  ..."
@@ -83,23 +128,33 @@ export default function Partnership() {
             Have you worked with dev partners before?
           </p>
           <div className="select-wrapper">
-            <AnimatedInput placeholder="Yes/No" />
+            <input
+              type="text"
+              placeholder="Yes/No"
+              className="custom-select"
+              value={workedWithDevPartners}
+              onChange={(e) => setWorkedWithDevPartners(e.target.value)}
+            />
           </div>
           <p className="form-subheading ">
             What type of work would you love to collaborate on?
           </p>
           <div className="select-wrapper">
             <textarea
-              value={projectText}
-              onChange={(e) => setProjectText(e.target.value)}
+              value={collaborationType}
+              onChange={(e) => setCollaborationType(e.target.value)}
               rows={2}
               className="custom-select"
               placeholder="Tell us  ..."
             />
           </div>
 
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          <button 
+            onClick={handleNext} 
+            className="next-button"
+            disabled={loading}
+          >
+            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
           </button>
         </div>
       </div>

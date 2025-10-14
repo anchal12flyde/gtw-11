@@ -1,17 +1,36 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
+import { useAgencyPartnership } from '@/context/AgencyPartnershipContext';
+import { toast } from 'react-hot-toast';
 
 export default function final_step() {
-   const router = useRouter();
+  const router = useRouter();
+  const { formData, submitApplication, loading } = useAgencyPartnership();
 
-    const handleNext = () => {
-       router.push("/thankyou-page/thank-you"); 
-     };
+  const [agreed, setAgreed] = useState(false);
+
+  useEffect(() => {
+    if (formData) {
+      setAgreed(formData.agreedToTerms || false);
+    }
+  }, [formData]);
+
+  const handleNext = async () => {
+    if (!agreed) {
+      toast.error("Please confirm your understanding to proceed.");
+      return;
+    }
+
+    const success = await submitApplication(true);
+    if (success) {
+      router.push("/thankyou-page/thank-you");
+    }
+  };
    
      return (
        <>
@@ -39,8 +58,26 @@ export default function final_step() {
                that sounds like your vibe, let’s talk.
              </p>
 
-             <button onClick={handleNext} className="next-button">
-               Submit <ArrowRight size={16} />
+             <div className="mt-6">
+               <label className="flex items-start gap-3 text-base">
+                 <input
+                   type="checkbox"
+                   checked={agreed}
+                   onChange={(e) => setAgreed(e.target.checked)}
+                   className="mt-1"
+                 />
+                 <span>
+                   I understand and agree to the partnership terms.
+                 </span>
+               </label>
+             </div>
+
+             <button 
+               onClick={handleNext} 
+               className="next-button"
+               disabled={loading}
+             >
+               {loading ? 'Submitting...' : 'Submit'} <ArrowRight size={16} />
              </button>
            </div>
          </div>

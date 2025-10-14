@@ -1,29 +1,55 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Upload } from 'lucide-react';
 import Head from 'next/head';
+import { useAgencyPartnership } from '@/context/AgencyPartnershipContext';
+import { toast } from 'react-hot-toast';
 
 export default function ProjectExamples() {
-   const router = useRouter();
-   const [intentText, setIntentText] = useState('');
-    const [resume, setResume] = useState(null);
+  const router = useRouter();
+  const { formData, updateStep3, loading } = useAgencyPartnership();
 
+  const [recentProjects, setRecentProjects] = useState('');
+  const [portfolio, setPortfolio] = useState(null);
 
-   const handleNext = () => {
-    router.push('agency-partnership/collaborate'); 
-  };
+  useEffect(() => {
+    if (formData) {
+      setRecentProjects(formData.recentProjects || '');
+    }
+  }, [formData]);
 
-   const handleResumeUpload = (e) => {
+  const handlePortfolioUpload = (e) => {
     const file = e.target.files[0];
     if (file && file.type !== "application/pdf") {
-      alert("Only PDF files are allowed");
+      toast.error("Only PDF files are allowed");
       return;
     }
-    setResume(file);
+    setPortfolio(file);
+  };
+
+  const validateForm = () => {
+    if (!recentProjects.trim()) {
+      toast.error('Please share your recent projects');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
+      recentProjects,
+    };
+
+    const success = await updateStep3(data, portfolio);
+    if (success) {
+      router.push('/agency-partnership/collaborate');
+    }
   };
 
    return (
@@ -52,31 +78,35 @@ export default function ProjectExamples() {
            </p>
            <div className="select-wrapper">
              <textarea
-               value={intentText}
-               onChange={(e) => setIntentText(e.target.value)}
+               value={recentProjects}
+               onChange={(e) => setRecentProjects(e.target.value)}
                rows={2}
                className="custom-select"
                placeholder=" links or description ..."
              />
            </div>
 
-           <p className="form-subheading">Upload Resume (PDF only)</p>
-           <label htmlFor="resumeUpload" className="custom-upload-btn">
+           <p className="form-subheading">Upload Portfolio (PDF only)</p>
+           <label htmlFor="portfolioUpload" className="custom-upload-btn">
              <Upload size={18} className="mr-2" />
              Upload
            </label>
            <input
-             id="resumeUpload"
+             id="portfolioUpload"
              type="file"
              accept=".pdf"
-             onChange={handleResumeUpload}
+             onChange={handlePortfolioUpload}
              className="hidden"
            />
 
-           {resume && <p className="text-md mt-6">{resume.name} uploaded</p>}
+           {portfolio && <p className="text-md mt-6">{portfolio.name} uploaded</p>}
 
-           <button onClick={handleNext} className="next-button">
-             Next <ArrowRight size={16} />
+           <button 
+             onClick={handleNext} 
+             className="next-button"
+             disabled={loading}
+           >
+             {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
            </button>
          </div>
        </div>

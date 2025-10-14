@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from 'react';
 import { ChevronDown, ArrowRight } from "lucide-react";
@@ -7,12 +6,32 @@ import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useFormContext } from "@/context/FormContext";
+import { updateStep5 } from "@/services/formApi";
 
 export default function StepFive() {
-   const router = useRouter();
+  const router = useRouter();
+  const { formData, clearFormData } = useFormContext();
+  
+  const [additionalNotes, setAdditionalNotes] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-   const handleNext = () => {
-    router.push('/thankyou-page/thank-you'); 
+  const handleNext = async () => {
+    setIsLoading(true);
+    setError('');
+
+    try {
+      await updateStep5(formData.formId, additionalNotes);
+      
+      // Clear form data after successful submission
+      clearFormData();
+      
+      router.push('/thankyou-page/thank-you');
+    } catch (err) {
+      setError(err.message || "Failed to submit. Please try again.");
+      setIsLoading(false);
+    }
   };
 
 
@@ -40,10 +59,22 @@ export default function StepFive() {
           <p className="form-subheading   ">
             Any additional notes or context we should know?
           </p>
-          <input type="text" name="admiredSites" className="input-box" />
+          <input 
+            type="text" 
+            name="additionalNotes" 
+            className="input-box" 
+            value={additionalNotes}
+            onChange={(e) => setAdditionalNotes(e.target.value)}
+          />
 
-          <button onClick={handleNext} className="next-button">
-            Submit <ArrowRight size={16} />
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
+          <button 
+            onClick={handleNext} 
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Submitting..." : "Submit"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

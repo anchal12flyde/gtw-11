@@ -1,20 +1,51 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
-
-
+import { useJoinTeam } from '@/context/JoinTeamContext';
+import { toast } from 'react-hot-toast';
 
 export default function IntentAndFit() {
- const router = useRouter();
+  const router = useRouter();
+  const { formData, updateStep3, loading } = useJoinTeam();
+
   const [intentText, setIntentText] = useState('');
   const [projectText, setProjectText] = useState('');
 
-  const handleNext = () => {
-    router.push("/join-our-team/availability");
+  useEffect(() => {
+    if (formData) {
+      setIntentText(formData.whyJoinGTW || '');
+      setProjectText(formData.proudProject || '');
+    }
+  }, [formData]);
+
+  const validateForm = () => {
+    if (!intentText.trim()) {
+      toast.error('Please tell us why you want to join GTW');
+      return false;
+    }
+    if (!projectText.trim()) {
+      toast.error('Please describe a project you are proud of');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
+      whyJoinGTW: intentText,
+      proudProject: projectText,
+    };
+
+    const success = await updateStep3(data);
+    if (success) {
+      router.push("/join-our-team/availability");
+    }
   };
 
   return (
@@ -63,8 +94,12 @@ export default function IntentAndFit() {
               placeholder="Describe a project that makes you proud..."
             />
           </div>
-          <button className="next-button" onClick={handleNext}>
-            Next <ArrowRight size={16} />
+          <button 
+            className="next-button" 
+            onClick={handleNext}
+            disabled={loading}
+          >
+            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
           </button>
         </div>
       </div>

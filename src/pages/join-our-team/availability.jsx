@@ -1,20 +1,52 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import AnimatedInput from '../animation/animated-input';
 import Head from 'next/head';
-
-
+import { useJoinTeam } from '@/context/JoinTeamContext';
+import { toast } from 'react-hot-toast';
 
 export default function Availability() {
- const router = useRouter();
-  const [startTime, setStartTime] = useState('');
+  const router = useRouter();
+  const { formData, updateStep4, loading } = useJoinTeam();
 
-  const handleNext = () => {
-    router.push("/join-our-team/final-step");
+  const [startTime, setStartTime] = useState('');
+  const [openToFreelance, setOpenToFreelance] = useState('');
+
+  useEffect(() => {
+    if (formData) {
+      setStartTime(formData.startTime || '');
+      setOpenToFreelance(formData.openToFreelance || '');
+    }
+  }, [formData]);
+
+  const validateForm = () => {
+    if (!startTime) {
+      toast.error('Please select when you can start');
+      return false;
+    }
+    if (!openToFreelance.trim()) {
+      toast.error('Please specify if you are open to freelance assignments');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = async () => {
+    if (!validateForm()) return;
+
+    const data = {
+      startTime,
+      openToFreelance,
+    };
+
+    const success = await updateStep4(data);
+    if (success) {
+      router.push("/join-our-team/final-step");
+    }
   };
 
   return (
@@ -62,11 +94,21 @@ export default function Availability() {
             Are you open to freelance / trial assignments?
           </p>
           <div className="select-wrapper">
-            <AnimatedInput placeholder="Yes/No" />
+            <input
+              type="text"
+              placeholder="Yes/No"
+              className="custom-select"
+              value={openToFreelance}
+              onChange={(e) => setOpenToFreelance(e.target.value)}
+            />
           </div>
 
-          <button className="next-button" onClick={handleNext}>
-            Next <ArrowRight size={16} />
+          <button 
+            className="next-button" 
+            onClick={handleNext}
+            disabled={loading}
+          >
+            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
           </button>
         </div>
       </div>

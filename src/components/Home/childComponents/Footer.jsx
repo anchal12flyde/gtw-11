@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { toast } from 'react-hot-toast';
 
 const categories = [
   {
@@ -50,9 +51,52 @@ const categories = [
 
 export default function Footer() {
   const [openIndex, setOpenIndex] = useState(null)
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index)
+  }
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
+    
+    if (!email.trim()) {
+      toast.error('Please enter your email address')
+      return
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      toast.error('Please enter a valid email address')
+      return
+    }
+
+    setLoading(true)
+
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'
+      const response = await fetch(`${API_BASE_URL}/subscriptions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        toast.success(result.message || 'Successfully subscribed to our newsletter!')
+        setEmail('')
+      } else {
+        toast.error(result.message || 'Failed to subscribe')
+      }
+    } catch (error) {
+      console.error('Subscription error:', error)
+      toast.error('Failed to subscribe. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -77,14 +121,17 @@ export default function Footer() {
             />
           </div>
           <div className="w-full sm:w-1/2">
-            <form className="flex justify-center sm:justify-start gap-2 w-full">
+            <form onSubmit={handleSubscribe} className="flex justify-center sm:justify-start gap-2 w-full">
               <input
                 type="email"
                 placeholder="Your Email Address"
                 className="email-name"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
               />
-              <button type="submit" className="subscribe-name">
-                Subscribe
+              <button type="submit" className="subscribe-name" disabled={loading}>
+                {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
           </div>

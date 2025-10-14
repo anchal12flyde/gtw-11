@@ -1,24 +1,35 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from 'next/navigation';
 import { toast } from "react-hot-toast";
 import Head from 'next/head';
-
-
+import { useJoinTeam } from '@/context/JoinTeamContext';
 
 export default function FinalStep() {
- const router = useRouter();
-const [agreed, setAgreed] = useState(false);
+  const router = useRouter();
+  const { formData, submitApplication, loading } = useJoinTeam();
 
-  const handleNext = () => {
+  const [agreed, setAgreed] = useState(false);
+
+  useEffect(() => {
+    if (formData) {
+      setAgreed(formData.agreedToTerms || false);
+    }
+  }, [formData]);
+
+  const handleNext = async () => {
     if (!agreed) {
       toast.error("Please confirm your understanding to proceed.");
       return;
     }
-    router.push('/thankyou-page/thank-you');
+
+    const success = await submitApplication(agreed);
+    if (success) {
+      router.push('/thankyou-page/thank-you');
+    }
   };
 
   return (
@@ -57,8 +68,12 @@ const [agreed, setAgreed] = useState(false);
             </label>
           </div>
 
-          <button className="next-button" onClick={handleNext}>
-            Submit <ArrowRight size={16} />
+          <button 
+            className="next-button" 
+            onClick={handleNext}
+            disabled={loading}
+          >
+            {loading ? 'Submitting...' : 'Submit'} <ArrowRight size={16} />
           </button>
         </div>
       </div>

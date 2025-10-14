@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from 'react';
 import { ChevronDown, ArrowRight } from "lucide-react";
@@ -6,17 +5,41 @@ import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
-
+import { useFormContext } from "@/context/FormContext";
+import { updateStep4 } from "@/services/formApi";
 
 export default function StepFour() {
-   const router = useRouter();
-    const [companyType, setCompanyType] = useState('');
-  const [startTime, setStartTime] = useState('');
+  const router = useRouter();
+  const { formData } = useFormContext();
+  
+  const [budgetRange, setBudgetRange] = useState('');
+  const [postLaunchSupport, setPostLaunchSupport] = useState('');
+  const [documents, setDocuments] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleNext = () => {
-    router.push('/step-five'); 
+  const handleNext = async () => {
+    if (!budgetRange || !postLaunchSupport) {
+      setError("Please answer all required questions");
+      return;
+    }
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      await updateStep4(formData.formId, {
+        budgetRange,
+        postLaunchSupport,
+        documents,
+      });
+
+      router.push('/step-five');
+    } catch (err) {
+      setError(err.message || "Failed to save. Please try again.");
+      setIsLoading(false);
+    }
   };
-
 
   return (
     <>
@@ -49,10 +72,10 @@ export default function StepFour() {
               >
                 <input
                   type="radio"
-                  name="companyType"
+                  name="budgetRange"
                   value={option}
-                  checked={companyType === option}
-                  onChange={() => setCompanyType(option)}
+                  checked={budgetRange === option}
+                  onChange={() => setBudgetRange(option)}
                   className="form-radio "
                 />
                 <span className="text-md">{option}</span>
@@ -71,10 +94,10 @@ export default function StepFour() {
               >
                 <input
                   type="radio"
-                  name="startTime"
+                  name="postLaunchSupport"
                   value={option}
-                  checked={startTime === option}
-                  onChange={() => setStartTime(option)}
+                  checked={postLaunchSupport === option}
+                  onChange={() => setPostLaunchSupport(option)}
                   className="form-radio "
                 />
                 <span className="text-md">{option}</span>
@@ -84,10 +107,22 @@ export default function StepFour() {
           <p className="form-subheading">
             Upload any relevant documents or briefs (optional)
           </p>
-          <input type="text" name="admiredSites" className="input-box" />
+          <input 
+            type="text" 
+            name="documents" 
+            className="input-box" 
+            value={documents}
+            onChange={(e) => setDocuments(e.target.value)}
+          />
 
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
+          <button 
+            onClick={handleNext} 
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>
