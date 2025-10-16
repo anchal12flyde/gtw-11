@@ -251,7 +251,7 @@ export default function StoriesHeroSection() {
       <div className="flex justify-center mt-6 sm:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img
-            src="/images/LeftaArrow.png"
+            src="/images/LeftArrow.png"
             alt="Left Arrow"
             className="w-10 h-10"
           />
