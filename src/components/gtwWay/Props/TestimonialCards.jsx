@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const TestimonialCard = ({ avatar, quote, author }) => {
   return (
-    <div className="relative bg-white-color1 rounded-2xl shadow-lg p-6 w-full max-w-lg min-h-[320px]">
+    <div className="relative bg-white-color1 rounded-2xl shadow-lg p-6 w-full max-w-lg min-h-[320px] h-full">
       <div className="absolute top-[-20px] right-[-10px] opacity-0s">
         <Image
           src="/images/assets/Vector.png"

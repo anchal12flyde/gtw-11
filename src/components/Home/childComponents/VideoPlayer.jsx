@@ -8,7 +8,6 @@ export default function HoverVideo({ src }) {
   const [showModal, setShowModal] = useState(false);
   const modalVideoRef = useRef(null);
 
- 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
