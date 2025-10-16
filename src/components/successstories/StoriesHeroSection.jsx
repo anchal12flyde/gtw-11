@@ -42,6 +42,7 @@ export default function StoriesHeroSection() {
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
       >
+        
         <div className="flex snap-start">
           <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
           <div className="responsive-snap-container ">
@@ -54,7 +55,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                   <div className="row1-col">
@@ -63,7 +64,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
@@ -105,7 +106,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                   <div className="row1-col">
@@ -114,7 +115,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
@@ -156,7 +157,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                   <div className="row1-col">
@@ -165,7 +166,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
@@ -206,7 +207,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                   <div className="row1-col ">
@@ -215,7 +216,7 @@ export default function StoriesHeroSection() {
                       alt=""
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover rounded-[20px]"
+                      className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
                 </div>
