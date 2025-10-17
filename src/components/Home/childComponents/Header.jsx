@@ -215,7 +215,7 @@ export default function Header() {
               >
                 Digital Transformation
               </Link>
-              <Link href="/expro" className="block nav-link">
+              <Link href="https://expro.store/" className="block nav-link">
                 ExPro
               </Link>
               <Link href="/blog" className="block nav-link ">
