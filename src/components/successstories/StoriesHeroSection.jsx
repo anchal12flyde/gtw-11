@@ -1,18 +1,35 @@
-'use client'
-import { useRef } from "react";
+"use client";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Loader from "../Home/Loader/Loader";
 
 export default function StoriesHeroSection() {
-    const scrollRef = useRef(null);
-    
-      const scrollLeft = () => {
-        scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
-      };
-    
-      const scrollRight = () => {
-        scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
-      };
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
+  // Track first card images load
+  const firstCardImages = [
+    "/images/assets/Itel - Founder.png",
+    "/images/assets/Itel - Logo.png",
+  ];
+  const [loadedCount, setLoadedCount] = useState(0);
+  const [firstCardLoaded, setFirstCardLoaded] = useState(false);
+
+  const handleFirstCardImageLoad = () => {
+    setLoadedCount((prev) => {
+      const newCount = prev + 1;
+      if (newCount === firstCardImages.length) setFirstCardLoaded(true);
+      return newCount;
+    });
+  };
 
   return (
     <>
@@ -42,36 +59,35 @@ export default function StoriesHeroSection() {
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
       >
+        {/* First Card with Loader */}
         <div className="flex snap-start">
-          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
-          <div className="responsive-snap-container ">
-            <div className="grid-container ">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1" />
+          <div className="responsive-snap-container relative">
+            {!firstCardLoaded && (
+              <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30">
+                <Loader />
+              </div>
+            )}
+
+            <div className="grid-container">
               <div className="column1">
                 <div className="row1">
-                  <div className="row1-col">
-                    <Image
-                      src="/images/assets/Itel - Founder.png"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="w-full h-full object-cover rounded-[20px]"
-                    />
-                  </div>
-                  <div className="row1-col">
-                    <Image
-                      src="/images/assets/Itel - Logo.png"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="w-full h-full object-cover rounded-[20px]"
-                    />
-                  </div>
+                  {firstCardImages.map((src, i) => (
+                    <div className="row1-col" key={i}>
+                      <Image
+                        src={src}
+                        alt=""
+                        width={500}
+                        height={300}
+                        className="w-full h-full object-cover rounded-[20px]"
+                        onLoadingComplete={handleFirstCardImageLoad}
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="row2">
                   <p className="author-name">Manoj Verma</p>
-                  <p className="author-title ">
-                    Marketing Head &nbsp; /&nbsp; iTel Mobiles
-                  </p>
+                  <p className="author-title">Marketing Head / iTel Mobiles</p>
                 </div>
               </div>
               <div className="column2">
@@ -93,10 +109,11 @@ export default function StoriesHeroSection() {
           </div>
         </div>
 
+        {/* Second Card */}
         <div className="flex snap-start">
-          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
-          <div className="responsive-snap-container ">
-            <div className="grid-container ">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1" />
+          <div className="responsive-snap-container">
+            <div className="grid-container">
               <div className="column1">
                 <div className="row1">
                   <div className="row1-col">
@@ -120,9 +137,7 @@ export default function StoriesHeroSection() {
                 </div>
                 <div className="row2">
                   <p className="author-name">Vaibhav Khanna</p>
-                  <p className="author-title ">
-                    Founder & CEO &nbsp; /&nbsp; Ezstays
-                  </p>
+                  <p className="author-title">Founder & CEO / Ezstays</p>
                 </div>
               </div>
               <div className="column2">
@@ -144,10 +159,11 @@ export default function StoriesHeroSection() {
           </div>
         </div>
 
-        <div className="flex snap-start ">
-          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
-          <div className="responsive-snap-container ">
-            <div className="grid-container ">
+        {/* Third Card */}
+        <div className="flex snap-start">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1" />
+          <div className="responsive-snap-container">
+            <div className="grid-container">
               <div className="column1">
                 <div className="row1">
                   <div className="row1-col">
@@ -171,8 +187,8 @@ export default function StoriesHeroSection() {
                 </div>
                 <div className="row2">
                   <p className="author-name">Cassandra Chumber</p>
-                  <p className="author-title ">
-                    Head of Sales &nbsp; /&nbsp; TransExpert Inc.
+                  <p className="author-title">
+                    Head of Sales / TransExpert Inc.
                   </p>
                 </div>
               </div>
@@ -197,10 +213,12 @@ export default function StoriesHeroSection() {
             </div>
           </div>
         </div>
+
+        {/* Fourth Card */}
         <div className="flex snap-start">
-          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
-          <div className="responsive-snap-container ">
-            <div className="grid-container ">
+          <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1" />
+          <div className="responsive-snap-container">
+            <div className="grid-container">
               <div className="column1">
                 <div className="row1">
                   <div className="row1-col">
@@ -212,7 +230,7 @@ export default function StoriesHeroSection() {
                       className="w-full h-full object-cover rounded-[20px]"
                     />
                   </div>
-                  <div className="row1-col ">
+                  <div className="row1-col">
                     <Image
                       src="/images/assets/Numyum - Logo.png"
                       alt=""
@@ -224,8 +242,8 @@ export default function StoriesHeroSection() {
                 </div>
                 <div className="row2">
                   <p className="author-name">Savar Mahlotra</p>
-                  <p className="author-title ">
-                    Managing Director Ksm group &nbsp; /&nbsp; Numyum
+                  <p className="author-title">
+                    Managing Director Ksm group / Numyum
                   </p>
                 </div>
               </div>
@@ -248,7 +266,8 @@ export default function StoriesHeroSection() {
           </div>
         </div>
 
-        <div className=" flex-shrink-0  w-[20px] sm:w-[400px] lg:w-[800px]" />
+        {/* End spacer */}
+        <div className="flex-shrink-0 w-[20px] sm:w-[400px] lg:w-[800px]" />
       </div>
 
       <div className="flex justify-center mt-6 sm:hidden">
