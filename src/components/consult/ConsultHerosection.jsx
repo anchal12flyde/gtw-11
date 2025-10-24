@@ -48,7 +48,7 @@ export default function ConsultHerosection() {
 
       {/* Hero content only shows when video is loaded */}
       {isLoaded && (
-        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white-color1">
+        <div className="util-flex util-flex-1 util-mx-1-5 relative z-8 text-center text-white-color1">
           <div className="hero-section">
             <h1 className="heading-heros">
               Rethink. <span className="text-light-blue">Rebuild.</span>{" "}
