@@ -1988,7 +1988,7 @@ background-color: var(--primary-color);
 
 .custom-mobile-button:hover {
   background-color: var(--white);
-color: var(--secondary-color);
+color: var(--primary-color);
 }
 
 @media (min-width: 700px) {

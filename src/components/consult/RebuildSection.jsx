@@ -50,7 +50,7 @@ export default function RebuildSection() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
             >
               <ClientButton
-                href="#"
+                href="https://calendly.com/samarthahuja/expro-discovery-call"
                 className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
               >
                 Schedule a Call

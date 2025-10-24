@@ -53,7 +53,7 @@ export default function ExecutionCapability() {
               <div className="timeline-item mt-18" key={index}>
                 <div className="flex flex-col md:flex-row items-left gap-6 md:gap-70">
                   <div className="timeline-image order-1 md:order-2">
-                    <img src={item.image} alt="" className="object-cover w-full h-full "/>
+                    <img src={item.image} alt="" className="object-contain w-full h-auto "/>
                   </div>
                   <div className="timeline-content order-2 md:order-1">
                     <h3>{item.title}</h3>
