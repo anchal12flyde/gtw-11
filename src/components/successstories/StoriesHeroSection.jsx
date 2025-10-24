@@ -42,7 +42,6 @@ export default function StoriesHeroSection() {
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
       >
-        
         <div className="flex snap-start">
           <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1 " />
           <div className="responsive-snap-container ">
@@ -86,7 +85,7 @@ export default function StoriesHeroSection() {
                   or offering alternative approaches.
                 </p>
                 <img src="/images/assets/Vector.png" className="vector" />
-                <Link href="#" className="insight-link">
+                <Link href="/success-stories/itel" className="insight-link">
                   Read More
                 </Link>
               </div>
@@ -137,7 +136,7 @@ export default function StoriesHeroSection() {
                   or offering alternative approaches.
                 </p>
                 <img src="/images/assets/Vector.png" className="vector" />
-                <Link href="#" className="insight-link">
+                <Link href="/success-stories/ezstays" className="insight-link">
                   Read More
                 </Link>
               </div>
@@ -188,7 +187,10 @@ export default function StoriesHeroSection() {
                   or offering alternative approaches.
                 </p>
                 <img src="/images/assets/Vector.png" className="vector" />
-                <Link href="#" className="insight-link">
+                <Link
+                  href="/success-stories/transexpert"
+                  className="insight-link"
+                >
                   Read More
                 </Link>
               </div>
@@ -238,7 +240,7 @@ export default function StoriesHeroSection() {
                   or offering alternative approaches.
                 </p>
                 <img src="/images/assets/Vector.png" className="vector" />
-                <Link href="#" className="insight-link">
+                <Link href="/success-stories/numyum" className="insight-link">
                   Read More
                 </Link>
               </div>

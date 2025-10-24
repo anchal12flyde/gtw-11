@@ -18,7 +18,7 @@ export default function ConsultHerosection() {
               playsInline
               className="w-full h-full object-cover"
             >
-              <source src="/videos/consult.mp4" type="video/mp4" />
+              <source src="https://ik.imagekit.io/a9uxeuyhx/consult.mp4?updatedAt=1761286282321" type="video/mp4" />
             </video>
           )}
 
