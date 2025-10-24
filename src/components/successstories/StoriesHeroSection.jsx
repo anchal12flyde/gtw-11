@@ -96,7 +96,7 @@ export default function StoriesHeroSection() {
           Success Stories – How GTW Transforms Businesses
         </h1>
         <div className="hidden sm:flex gap-0 justify-end">
-          <button className="arrow-button" onClick={scrollLeft}>
+          <button className="arrow-button cursor-pointer" onClick={scrollLeft}>
             <img
               src={
                 currentIndex === 0
@@ -107,7 +107,7 @@ export default function StoriesHeroSection() {
               className="w-10 h-10"
             />
           </button>
-          <button className="arrow-button" onClick={scrollRight}>
+          <button className="arrow-button cursor-pointer" onClick={scrollRight}>
             <img
               src={
                 currentIndex === cards.length - 1
