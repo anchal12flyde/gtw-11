@@ -428,7 +428,7 @@ export default function Explore_Digital() {
           <div className="flex justify-center  mt-6 sm:hidden">
             <button className="arrow-button" onClick={scrollLeft}>
               <img
-                src="/images/LeftArrow.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/white%20outline%20arrow%201.png?updatedAt=1761296509366"
                 alt="Left Arrow"
                 className="w-10 h-10"
               />
