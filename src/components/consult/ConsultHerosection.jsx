@@ -7,7 +7,7 @@ import Loader from "../Home/Loader/Loader";
 
 export default function ConsultHerosection() {
   const { ref, inView } = useInView({ triggerOnce: false });
-  const [isLoaded, setIsLoaded] = useState(false); // track if video loaded
+  const [isLoaded, setIsLoaded] = useState(false); // track video load
 
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
@@ -46,26 +46,29 @@ export default function ConsultHerosection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
       </div>
 
-      {/* Hero content */}
-      <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white-color1">
-        <div className="hero-section">
-          <h1 className="heading-heros">
-            Rethink. <span className="text-light-blue">Rebuild.</span> Reinvent.
-          </h1>
+      {/* Hero content only shows when video is loaded */}
+      {isLoaded && (
+        <div className="util-flex util-flex-1 util-mx-1-5 relative z-10 text-center text-white-color1">
+          <div className="hero-section">
+            <h1 className="heading-heros">
+              Rethink. <span className="text-light-blue">Rebuild.</span>{" "}
+              Reinvent.
+            </h1>
 
-          <p className="heading-subtitles w-full sm:w-[900px] mt-6 mb-8">
-            We help organizations modernize how they operate with custom
-            systems, smarter workflows, and tech that scales with clarity.
-          </p>
+            <p className="heading-subtitles w-full sm:w-[900px] mt-6 mb-8">
+              We help organizations modernize how they operate with custom
+              systems, smarter workflows, and tech that scales with clarity.
+            </p>
 
-          <ClientButton
-            href="/step-one-form"
-            className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
-          >
-            Start a Consult Sprint
-          </ClientButton>
+            <ClientButton
+              href="/step-one-form"
+              className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
+            >
+              Start a Consult Sprint
+            </ClientButton>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
