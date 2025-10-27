@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Loader from "../Loader/Loader";
 
 const container = {
@@ -41,13 +41,20 @@ export default function MobileCards() {
     { src: "/images/assets/Warden Dashboard.png", alt: "Card 2" },
   ];
 
-  // Loader state
   const [loadedCount, setLoadedCount] = useState(0);
   const allLoaded = loadedCount === cards.length;
 
   const handleImageLoad = () => {
     setLoadedCount((prev) => prev + 1);
   };
+
+  // Fallback in case some images never trigger onLoad
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoadedCount(cards.length);
+    }, 3000); // 3 seconds fallback
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <motion.section
@@ -57,14 +64,12 @@ export default function MobileCards() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Loader overlay */}
       {!allLoaded && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30">
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 transition-opacity duration-500">
           <Loader />
         </div>
       )}
 
-      {/* Scrollable Cards */}
       <div
         ref={scrollRef}
         className="card-container scrollable-mobile flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory sm:overflow-visible"
@@ -87,7 +92,6 @@ export default function MobileCards() {
         ))}
       </div>
 
-      {/* Arrows only on mobile */}
       <div className="flex justify-center mt-6 sm:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img

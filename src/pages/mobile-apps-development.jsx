@@ -7,14 +7,13 @@ import MobileCards from '@/components/Home/childComponents/MobileCards'
 import MobileAppDesign from '@/components/Home/childComponents/MobileAppsDesign'
 import UseCases from '@/components/Home/childComponents/UseCases'
 import ProductThinking from '@/components/Home/childComponents/ProductThinking'
-import GoToTop from '@/components/GoToTop'
+
 
 export default function mobile_apps() {
 
 
   return (
     <>
-    <GoToTop/>
       <Head>
         <title>Mobile App Development Company | General Tech Works</title>
         <meta
@@ -24,6 +23,7 @@ export default function mobile_apps() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </Head>
+ 
       <Header />
       <MobileAppDesign />
       <MobileCards />

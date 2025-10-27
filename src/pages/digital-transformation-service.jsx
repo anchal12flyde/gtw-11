@@ -11,13 +11,13 @@ import Roadmap from "@/components/consult/Roadmap"
 import Next_Steps from '@/components/Home/childComponents/Next_Steps'
 import ExecutionCapability from "@/components/consult/ExecutionCapability"
 import YellowStrip from "@/components/consult/YellowStrip"
-import GoToTop from "@/components/GoToTop"
+
 
 export default function Consult() {
 
      return (
        <>
-       <GoToTop/>
+     
          <Head>
            <title>Digital Transformation Services | General Tech Works</title>
            <meta
