@@ -23,6 +23,7 @@ const AnimatedCards = ({ cards }) => {
               }}
             />
           </div>
+          
           <div className="card-overlay">
             <div className="overlay-content">
               <h3 className="card-action">{card.action}</h3>

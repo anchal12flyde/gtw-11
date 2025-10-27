@@ -3,7 +3,7 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /agency-partnership/
 Disallow: /animation/
-Disallow: /audit/
+Disallow: /Audit/
 Disallow: /join-our-team/
 Disallow: /thankyou-page/
 Disallow: /step-one-form/
@@ -16,6 +16,6 @@ Disallow: /step-three-saas/
 Disallow: /step-three-web/
 Disallow: /step-two-form/
 Disallow: /style-guide/
-Allow: /
+Allow: /audit/
 
 Sitemap: https://www.generaltechworks.com/sitemap.xml
