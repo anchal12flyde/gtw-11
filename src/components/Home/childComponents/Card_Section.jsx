@@ -43,35 +43,36 @@ export default function Card_Section() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden  h-[380px] sm:h-[500px] w-full"
-            >
-              <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
-              <img
-                src="/images/img3.png"
-                alt="E-Commerce Infrastructure"
-                className="w-full h-full"
-              />
-              <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
-                <div className="hidden lg:flex flex-col gap-y-1">
-                  <p className="desktop-heading">E-Commerce</p>
-                  <p className="desktop-heading">
-                    Digital <br />
-                    Infrastructure
-                  </p>
+            <Link href="https://expro.store">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="relative rounded-2xl overflow-hidden  h-[380px] sm:h-[500px] w-full"
+              >
+                <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
+                <img
+                  src="/images/img3.png"
+                  alt="E-Commerce Infrastructure"
+                  className="w-full h-full"
+                />
+                <div className="absolute top-6 left-10 text-white-color text-3xl font-semibold select-none">
+                  <div className="hidden lg:flex flex-col gap-y-1">
+                    <p className="desktop-heading">E-Commerce</p>
+                    <p className="desktop-heading">
+                      Digital <br />
+                      Infrastructure
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-x-2 lg:hidden">
+                    <p className="desktop-heading">E-Commerce</p>
+                    <p className="desktop-heading">Digital</p>
+                    <p className="desktop-heading w-full">Infrastructure</p>
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-x-2 lg:hidden">
-                  <p className="desktop-heading">E-Commerce</p>
-                  <p className="desktop-heading">Digital</p>
-                  <p className="desktop-heading w-full">Infrastructure</p>
-                </div>
-              </div>
-            </motion.div>
-
+              </motion.div>
+            </Link>
             <Link href="/mobile-apps-development">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
