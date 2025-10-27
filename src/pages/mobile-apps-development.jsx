@@ -8,6 +8,7 @@ import MobileAppDesign from '@/components/Home/childComponents/MobileAppsDesign'
 import UseCases from '@/components/Home/childComponents/UseCases'
 import ProductThinking from '@/components/Home/childComponents/ProductThinking'
 
+
 export default function mobile_apps() {
 
 
@@ -22,6 +23,7 @@ export default function mobile_apps() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </Head>
+ 
       <Header />
       <MobileAppDesign />
       <MobileCards />

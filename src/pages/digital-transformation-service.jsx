@@ -12,10 +12,12 @@ import Next_Steps from '@/components/Home/childComponents/Next_Steps'
 import ExecutionCapability from "@/components/consult/ExecutionCapability"
 import YellowStrip from "@/components/consult/YellowStrip"
 
+
 export default function Consult() {
 
      return (
        <>
+     
          <Head>
            <title>Digital Transformation Services | General Tech Works</title>
            <meta

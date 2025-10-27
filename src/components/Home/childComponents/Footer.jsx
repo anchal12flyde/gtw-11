@@ -121,7 +121,10 @@ export default function Footer() {
             />
           </div>
           <div className="w-full sm:w-1/2">
-            <form onSubmit={handleSubscribe} className="flex justify-center sm:justify-start gap-2 w-full">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex justify-center sm:justify-start gap-2 w-full"
+            >
               <input
                 type="email"
                 placeholder="Your Email Address"
@@ -130,8 +133,12 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
               />
-              <button type="submit" className="subscribe-name" disabled={loading}>
-                {loading ? 'Subscribing...' : 'Subscribe'}
+              <button
+                type="submit"
+                className="subscribe-name"
+                disabled={loading}
+              >
+                {loading ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           </div>
@@ -158,13 +165,13 @@ export default function Footer() {
                       <li key={idx}>
                         {/* Agar external link hai to target="_blank" */}
                         {path.startsWith("http") ? (
-                          <a
+                          <Link
                             href={path}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             {label}
-                          </a>
+                          </Link>
                         ) : (
                           <Link href={path}>{label}</Link>
                         )}
@@ -233,7 +240,19 @@ export default function Footer() {
             <div className=" flex flex-col sm:flex-row sm:justify-between  items-center company-name mt-8 ">
               <p className="company-name">General Tech Works Private Limited</p>
               <p className="mt-2 sm:mt-0 company-name">
-                Privacy Policy | Terms and Conditions
+                <Link
+                  href="/privacy-policy"
+                  className="hover:underline hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>{" "}
+                |{" "}
+                <Link
+                  href="/terms-and-condition"
+                  className="hover:underline hover:text-primary transition-colors"
+                >
+                  Terms and Conditions
+                </Link>
               </p>
             </div>
           </div>

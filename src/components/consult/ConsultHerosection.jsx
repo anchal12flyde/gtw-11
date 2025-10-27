@@ -1,31 +1,54 @@
 "use client";
+import { useState } from "react";
 import Header from "../Home/childComponents/Header";
 import ClientButton from "../globalcomponents/Button";
 import { useInView } from "react-intersection-observer";
+import Loader from "../Home/Loader/Loader";
 
 export default function ConsultHerosection() {
   const { ref, inView } = useInView({ triggerOnce: false });
+  const [isLoaded, setIsLoaded] = useState(false); // track video load
+
   return (
-    <>
-      <div className="hero-wrapper relative overflow-hidden min-h-screen">
-        <Header />
-        <div className="absolute inset-0 h-screen " ref={ref}>
-          {inView && (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src="https://ik.imagekit.io/a9uxeuyhx/consult.mp4?updatedAt=1761286282321" type="video/mp4" />
-            </video>
-          )}
+    <div className="hero-wrapper relative overflow-hidden min-h-screen">
+      <Header />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
-        </div>
+      {/* Video container with loader */}
+      <div className="absolute inset-0 h-screen" ref={ref}>
+        {/* Loader overlay */}
+        {!isLoaded && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60">
+            <Loader />
+          </div>
+        )}
 
-        <div className="util-flex util-flex-1 util-mx-1-5 relative z-1 text-center text-white-color1">
+        {/* Video lazy load */}
+        {inView && (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            onLoadedData={() => setIsLoaded(true)}
+            className={`w-full h-full object-cover transition-opacity duration-500 ${
+              isLoaded ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <source
+              src="https://ik.imagekit.io/a9uxeuyhx/consult.mp4?updatedAt=1761286282321"
+              type="video/mp4"
+            />
+          </video>
+        )}
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div>
+      </div>
+
+      {/* Hero content only shows when video is loaded */}
+      {isLoaded && (
+        <div className="util-flex util-flex-1 util-mx-1-5 relative z-8 text-center text-white-color1">
           <div className="hero-section">
             <h1 className="heading-heros">
               Rethink. <span className="text-light-blue">Rebuild.</span>{" "}
@@ -39,15 +62,13 @@ export default function ConsultHerosection() {
 
             <ClientButton
               href="/step-one-form"
-              className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary "
+              className="bg-primary text-white-color1 hover:bg-white-color1 hover:text-primary"
             >
               Start a Consult Sprint
             </ClientButton>
           </div>
         </div>
-
-        <div className="util-flex util-flex-1 util-mx-1-5"></div>
-      </div>
-    </>
+      )}
+    </div>
   );
 }

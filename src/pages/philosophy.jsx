@@ -7,6 +7,7 @@ import FoundationSection from '@/components/gtwWay/FoundationSection'
 import Testimonials from '@/components/gtwWay/Testimonials'
 import Next_Steps from '@/components/Home/childComponents/Next_Steps'
 
+
 export default function GTW_Way() {
 
      return (
@@ -29,6 +30,7 @@ export default function GTW_Way() {
              href="https://generaltechworks.com/philosophy/"
            />
          </Head>
+       
          <HeroSection />
          <OperateAcrossSection />
          <Testimonials />

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import Loader from "../Loader/Loader";
 
 const container = {
   hidden: {},
@@ -23,18 +24,14 @@ const fadeIn = {
 
 export default function MobileCards() {
   const scrollRef = useRef(null);
-  const CARD_WIDTH = 320; 
+  const CARD_WIDTH = 320;
 
   const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -CARD_WIDTH, behavior: "smooth" });
-    }
+    scrollRef.current?.scrollBy({ left: -CARD_WIDTH, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: CARD_WIDTH, behavior: "smooth" });
-    }
+    scrollRef.current?.scrollBy({ left: CARD_WIDTH, behavior: "smooth" });
   };
 
   const cards = [
@@ -44,15 +41,35 @@ export default function MobileCards() {
     { src: "/images/assets/Warden Dashboard.png", alt: "Card 2" },
   ];
 
+  const [loadedCount, setLoadedCount] = useState(0);
+  const allLoaded = loadedCount === cards.length;
+
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
+
+  // Fallback in case some images never trigger onLoad
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoadedCount(cards.length);
+    }, 3000); // 3 seconds fallback
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <motion.section
-      className="util-flex util-flex-1 util-mx-1-5 mt-26"
+      className="util-flex util-flex-1 util-mx-1-5 mt-26 relative"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Scrollable Cards */}
+      {!allLoaded && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 transition-opacity duration-500">
+          <Loader />
+        </div>
+      )}
+
       <div
         ref={scrollRef}
         className="card-container scrollable-mobile flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory sm:overflow-visible"
@@ -68,28 +85,22 @@ export default function MobileCards() {
               src={c.src}
               alt={c.alt}
               loading="lazy"
-              className="w-[320px] h-auto "
+              className="w-[320px] h-auto"
+              onLoad={handleImageLoad}
             />
           </motion.div>
         ))}
       </div>
 
-      {/* Arrows only on mobile */}
-      <div className="flex justify-center mt-6 sm:hidden ">
-        <button
-          className="arrow-button "
-          onClick={scrollLeft}
-        >
+      <div className="flex justify-center mt-6 sm:hidden">
+        <button className="arrow-button" onClick={scrollLeft}>
           <img
             src="/images/LeftArrow.png"
             alt="Left Arrow"
             className="w-8 h-8"
           />
         </button>
-        <button
-          className="arrow-button "
-          onClick={scrollRight}
-        >
+        <button className="arrow-button" onClick={scrollRight}>
           <img
             src="/images/RightArrow.png"
             alt="Right Arrow"

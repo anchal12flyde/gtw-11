@@ -9,6 +9,7 @@ import { JoinTeamProvider } from "@/context/JoinTeamContext";
 import { AgencyPartnershipProvider } from "@/context/AgencyPartnershipContext";
 import { Toaster } from "react-hot-toast";
 import "@/app/globals.css";
+import GoToTop from "@/components/GoToTop";
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -22,12 +23,14 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
+  
       {loading ? (
         <Loader />
       ) : (
         <FormProvider>
           <JoinTeamProvider>
             <AgencyPartnershipProvider>
+              <GoToTop/>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={pathname}
