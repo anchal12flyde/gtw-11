@@ -1735,7 +1735,19 @@ input[type="checkbox"] {
   background: transparent;
   margin-top: -150px; 
 }
+.card-content,
+.card-footer {
+  opacity: 1;
+  transition: opacity 0.8s ease; /* added base transition */
+}
 
+/* Fade out on hover */
+.card:hover .card-content,
+.card:hover .card-footer {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease; /* smooth fade out */
+}
 @media (min-width: 768px) {
   .card-section {
     flex-direction: row;
