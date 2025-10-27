@@ -3,61 +3,49 @@ import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Loader from "../Home/Loader/Loader";
+import api from "@/utils/api";
+
 
 export default function StoriesHeroSection() {
   const scrollRef = useRef(null);
+  const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [firstCardLoaded, setFirstCardLoaded] = useState(false);
   const [loadedCount, setLoadedCount] = useState(0);
 
-  const cards = [
-    {
-      images: [
-        "/images/assets/Itel - Founder.png",
-        "/images/assets/Itel - Logo.png",
-      ],
-      name: "Manoj Verma",
-      title: "Marketing Head / iTel Mobiles",
-      text: "TransExpert has been an exceptional partner to work with. Not only have they brought forward strategic solutions, but have allowed us to manage our business with peace-of-mind and strive towards our value of delivering on Commitment and Customer Focus. As a partner, if a solution does not exist they are willing to work with you to assist in developing one or offering alternative approaches.",
-      link: "/success-stories/itel",
-    },
-    {
-      images: [
-        "/images/assets/ezstays - Founder.png",
-        "/images/assets/ezstays Logo.png",
-      ],
-      name: "Vaibhav Khanna",
-      title: "Founder & CEO / Ezstays",
-      text: "TransExpert has been an exceptional partner to work with. Not only have they brought forward strategic solutions, but have allowed us to manage our business with peace-of-mind and strive towards our value of delivering on Commitment and Customer Focus. As a partner, if a solution does not exist they are willing to work with you to assist in developing one or offering alternative approaches.",
-      link: "/success-stories/ezstays",
-    },
-    {
-      images: [
-        "/images/assets/Transexpert - Founder.png",
-        "/images/assets/Transexpert - Logo.png",
-      ],
-      name: "Cassandra Chumber",
-      title: "Head of Sales / TransExpert Inc.",
-      text: "TransExpert has been an exceptional partner to work with. Not only have they brought forward strategic solutions, but have allowed us to manage our business with peace-of-mind and strive towards our value of delivering on Commitment and Customer Focus. As a partner, if a solution does not exist they are willing to work with you to assist in developing one or offering alternative approaches.",
-      link: "/success-stories/transexpert",
-    },
-    {
-      images: [
-        "/images/assets/Numyum - Founder.png",
-        "/images/assets/Numyum - Logo.png",
-      ],
-      name: "Savar Mahlotra",
-      title: "Managing Director Ksm group / Numyum",
-      text: "TransExpert has been an exceptional partner to work with. Not only have they brought forward strategic solutions, but have allowed us to manage our business with peace-of-mind and strive towards our value of delivering on Commitment and Customer Focus. As a partner, if a solution does not exist they are willing to work with you to assist in developing one or offering alternative approaches.",
-      link: "/success-stories/numyum",
-    },
-  ];
+  // ✅ Fetch success stories dynamically
+  useEffect(() => {
+    const fetchStories = async () => {
+      try {
+        const res = await api.get("/success-stories");
+        const stories = res.data || [];
 
-  // Track first card images load
+        // Transform to match your old "cards" structure
+        const mapped = stories.map((story) => ({
+          images: [story.photo, story.logo],
+          name: story.founderName,
+          title: story.founderPost,
+          text: story.description,
+          link: `/success-stories/${story._id}`,
+        }));
+
+        setCards(mapped);
+      } catch (err) {
+        console.error("Error fetching success stories:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchStories();
+  }, []);
+
+  // Track first card image load
   const handleFirstCardImageLoad = () => {
     setLoadedCount((prev) => {
       const newCount = prev + 1;
-      if (newCount === cards[0].images.length) setFirstCardLoaded(true);
+      if (cards.length && newCount === cards[0].images.length)
+        setFirstCardLoaded(true);
       return newCount;
     });
   };
@@ -74,7 +62,6 @@ export default function StoriesHeroSection() {
     }
   };
 
-  // Track which card is currently visible
   const updateCurrentIndex = () => {
     if (!scrollRef.current) return;
     const scrollLeftPos = scrollRef.current.scrollLeft;
@@ -88,6 +75,14 @@ export default function StoriesHeroSection() {
     refCurrent?.addEventListener("scroll", updateCurrentIndex);
     return () => refCurrent?.removeEventListener("scroll", updateCurrentIndex);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-16">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -142,7 +137,7 @@ export default function StoriesHeroSection() {
                       <div className="row1-col" key={idx}>
                         <Image
                           src={src}
-                          alt=""
+                          alt={`${card.name}-${idx}`}
                           width={500}
                           height={300}
                           className="w-full h-full object-cover rounded-[20px]"
@@ -170,7 +165,6 @@ export default function StoriesHeroSection() {
           </div>
         ))}
 
-        {/* End spacer */}
         <div className="flex-shrink-0 w-[20px] sm:w-[400px] lg:w-[800px]" />
       </div>
 
