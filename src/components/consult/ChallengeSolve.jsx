@@ -83,6 +83,7 @@ export default function ChallengeSection() {
             ))}
           </ul>
 
+
           <Link href="/audit/about-you" passHref>
             <motion.div
               className="cta-box cursor-pointer"
