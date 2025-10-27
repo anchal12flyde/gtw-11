@@ -14,7 +14,7 @@ export default function YourProduct() {
    const [experience, setExperience] = useState("");
 
   const handleNext = () => {
-    router.push('/audit/focus-areas'); 
+    router.push('/Audit/focus-areas'); 
   };
 
   return (
@@ -28,7 +28,7 @@ export default function YourProduct() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/audit/about-you")}
+            onClick={() => router.push("/Audit/about-you")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

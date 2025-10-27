@@ -17,7 +17,7 @@ export default function FocusAreas() {
    const [selectedSkills, setSelectedSkills] = useState([]);
 
   const handleNext = () => {
-    router.push('/audit/your-goals'); 
+    router.push('/Audit/your-goals'); 
   };
   const handleSkillToggle = (skill) => {
     setSelectedSkills(prev =>
@@ -36,7 +36,7 @@ export default function FocusAreas() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/audit/your-product")}
+            onClick={() => router.push("/Audit/your-product")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

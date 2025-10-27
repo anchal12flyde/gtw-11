@@ -15,7 +15,7 @@ export default function YourGoals() {
    const [otherText, setOtherText] = useState("");
 
   const handleNext = () => {
-    router.push('/audit/confirmation'); 
+    router.push('/Audit/confirmation'); 
   };
 
   return (
@@ -29,7 +29,7 @@ export default function YourGoals() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/audit/focus-areas")}
+            onClick={() => router.push("/Audit/focus-areas")}
           />
           <div className="step-indicator">
             <span className="dot"></span>

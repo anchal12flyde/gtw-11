@@ -15,7 +15,7 @@ export default function AboutYou() {
 
    
   const handleNext = () => {
-    router.push('/audit/your-product'); 
+    router.push('/Audit/your-product'); 
   };
 
   return (
