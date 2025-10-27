@@ -4,12 +4,14 @@ import Footer from "@/components/Home/childComponents/Footer"
 import Header from "@/components/Home/childComponents/Header"
 import InsightHeroSection from "@/components/insights/InsightHeroSection"
 import BrowseBlogs from "@/components/insights/BrowseBlogs"
+import GoToTop from "@/components/GoToTop";
 
 
 export default function Insights() {
 
      return (
        <>
+       <GoToTop/>
          <Head>
            <title>Insights & Industry Trends Blog | General Tech Works</title>
            <meta

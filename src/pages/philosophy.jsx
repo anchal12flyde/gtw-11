@@ -6,11 +6,13 @@ import OperateAcrossSection from '@/components/gtwWay/OperateAcrossSection'
 import FoundationSection from '@/components/gtwWay/FoundationSection'
 import Testimonials from '@/components/gtwWay/Testimonials'
 import Next_Steps from '@/components/Home/childComponents/Next_Steps'
+import GoToTop from '@/components/GoToTop'
 
 export default function GTW_Way() {
 
      return (
        <>
+       <GoToTop/>
          <Head>
            <title>
              Our Philosophy | Vision-Driven Innovation | General Tech Works

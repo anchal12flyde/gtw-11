@@ -5,6 +5,7 @@ import Footer from "@/components/Home/childComponents/Footer";
 import ImpactVolume from "@/components/successstories/ImpactVolume";
 import RebuildSection from "@/components/consult/RebuildSection";
 import StoryDetaling from "@/components/globalcomponents/StoryDetailing";
+import GoToTop from "@/components/GoToTop";
 
 export async function getStaticPaths() {
   const paths = blogs.map((blog) => ({
@@ -34,6 +35,7 @@ export default function BlogDetailPage({ blog }) {
 
   return (
     <>
+    <GoToTop/>
       <Head>
         <title>{blog.meta_title}</title>
         <meta name="description" content={blog.meta_description} />
