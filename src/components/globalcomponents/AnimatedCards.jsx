@@ -1,4 +1,4 @@
-"use client"; // if you intend to use client-side interactivity
+"use client"; 
 
 import React from "react";
 
