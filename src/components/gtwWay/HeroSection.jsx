@@ -1,11 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Home/childComponents/Header";
 import AnimatedCards from "../globalcomponents/AnimatedCards";
 import Loader from "../Home/Loader/Loader";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false); // track video load
+
+  useEffect(() => {
+    // ✅ Check if video was already loaded in this session
+    const hasLoadedBefore = sessionStorage.getItem("videoLoaded");
+    if (hasLoadedBefore) {
+      setIsLoaded(true);
+    }
+  }, []);
+
+  const handleVideoLoad = () => {
+    setIsLoaded(true);
+    sessionStorage.setItem("videoLoaded", "true");
+  };
 
   const data = [
     {
@@ -48,75 +61,76 @@ export default function HeroSection() {
 
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
-      {/* Video container */}
+      {/* ✅ Video container */}
       <div className="absolute inset-0 h-screen">
-        {/* Loader overlay */}
+        {/* ✅ Loader overlay (shows only first time in session) */}
         {!isLoaded && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60">
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 transition-opacity duration-500">
             <Loader />
           </div>
         )}
 
+        {/* ✅ Background Video */}
         <video
-          className={`w-full h-full object-cover hero-video transition-opacity duration-500 ${
+          className={`w-full h-full object-cover hero-video transition-opacity duration-700 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
           autoPlay
           loop
           muted
           playsInline
-          preload="none"
-          onLoadedData={() => setIsLoaded(true)}
+          preload="auto"
+          onLoadedData={handleVideoLoad}
         >
           <source src="/videos/light-rays.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Optional gradient overlay */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary"></div> */}
-
         <Header />
       </div>
 
-      {/* Hero content: show only after video is loaded */}
-      {isLoaded && (
-        <>
-          <div className="util-flex util-flex-1 util-mx-1-5 relative text-center text-white-color1-color1">
-            <div className="hero-section">
-              <h1 className="heading-heros">
-                Design Slow. Build Smart. <br /> Launch Fast.
-              </h1>
+      {/* ✅ Hero Content (fades in once video is ready) */}
+      <div
+        className={`transition-opacity duration-700 ease-in-out ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="util-flex util-flex-1 util-mx-1-5 relative text-center text-white-color1-color1">
+          <div className="hero-section">
+            <h1 className="heading-heros">
+              Design Slow. Build Smart. <br /> Launch Fast.
+            </h1>
+            <p className="heading-subtitles w-full sm:w-[900px] mt-4">
+              Our philosophy isn’t just a tagline. It’s a deliberate discipline
+              we bring to every product we craft.
+            </p>
+          </div>
+        </div>
 
-              <p className="heading-subtitles w-full sm:w-[900px] mt-4">
-                Our philosophy isn’t just a tagline. It’s a deliberate
-                discipline we bring to every product we craft.
+        {/* ✅ Philosophy Section */}
+        <div className="relative z-1 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 blended-top">
+          <section className="philosophy-section">
+            <div className="heading-systems w-full max-w-[500px] mx-auto">
+              <span className="text-light-blue">We Believe</span>{" "}
+              <span>Timeless Systems</span>{" "}
+              <span className="text-light-blue">Aren’t Rushed.</span>
+            </div>
+
+            <div className="w-full max-w-[900px] mx-auto">
+              <p className="headings mt-4">
+                In a world obsessed with speed, we slow down where it matters at
+                the drawing board. Because clarity at the start unlocks velocity
+                at launch.
               </p>
             </div>
-          </div>
+          </section>
+        </div>
 
-          <div className="relative z-1 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 blended-top">
-            <section className="philosophy-section">
-              <div className="heading-systems w-full max-w-[500px] mx-auto">
-                <span className="text-light-blue">We Believe</span>{" "}
-                <span>Timeless Systems</span>{" "}
-                <span className="text-light-blue">Aren’t Rushed.</span>
-              </div>
-
-              <div className="w-full max-w-[900px] mx-auto">
-                <p className="headings mt-4">
-                  In a world obsessed with speed, we slow down where it matters
-                  at the drawing board. Because clarity at the start unlocks
-                  velocity at launch.
-                </p>
-              </div>
-            </section>
-          </div>
-
-          <div className="util-flex util-flex-1 util-mx-1-5">
-            <AnimatedCards cards={data} />
-          </div>
-        </>
-      )}
+        {/* ✅ Animated Cards */}
+        <div className="util-flex util-flex-1 util-mx-1-5">
+          <AnimatedCards cards={data} />
+        </div>
+      </div>
     </div>
   );
 }
