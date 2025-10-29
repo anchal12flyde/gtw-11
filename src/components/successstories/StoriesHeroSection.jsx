@@ -83,8 +83,8 @@ export default function StoriesHeroSection() {
             <img
               src={
                 currentIndex === 0
-                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow.png?updatedAt=1761741728074" // disabled
-                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761741673713" // active
+                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow.png?updatedAt=1761741728074" 
+                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761741673713" 
               }
               alt="Left Arrow"
               className="w-10 h-10"
@@ -95,8 +95,8 @@ export default function StoriesHeroSection() {
             <img
               src={
                 currentIndex === cards.length - 1
-                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159" // disabled
-                  : "/images/RightArrow.png" // active
+                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159"
+                  : "/images/RightArrow.png"
               }
               alt="Right Arrow"
               className="w-10 h-10"

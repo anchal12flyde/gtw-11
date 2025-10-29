@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import Loader from "../Loader/Loader";
+import { useRef } from "react";
 
 const container = {
   hidden: {},
@@ -26,6 +25,13 @@ export default function MobileCards() {
   const scrollRef = useRef(null);
   const CARD_WIDTH = 320;
 
+  const cards = [
+    { src: "/images/assets/Ezstays Login.png", alt: "Card 4" },
+    { src: "/images/assets/Meal Booking.png", alt: "Card 1" },
+    { src: "/images/assets/Show my QR.png", alt: "Card 3" },
+    { src: "/images/assets/Warden Dashboard.png", alt: "Card 2" },
+  ];
+
   const scrollLeft = () => {
     scrollRef.current?.scrollBy({ left: -CARD_WIDTH, behavior: "smooth" });
   };
@@ -34,45 +40,18 @@ export default function MobileCards() {
     scrollRef.current?.scrollBy({ left: CARD_WIDTH, behavior: "smooth" });
   };
 
-  const cards = [
-    { src: "/images/assets/Ezstays Login.png", alt: "Card 4" },
-    { src: "/images/assets/Meal Booking.png", alt: "Card 1" },
-    { src: "/images/assets/Show my QR.png", alt: "Card 3" },
-    { src: "/images/assets/Warden Dashboard.png", alt: "Card 2" },
-  ];
-
-  const [loadedCount, setLoadedCount] = useState(0);
-  const allLoaded = loadedCount === cards.length;
-
-  const handleImageLoad = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
-
-  // Fallback in case some images never trigger onLoad
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoadedCount(cards.length);
-    }, 3000); // 3 seconds fallback
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <motion.section
-      className="util-flex util-flex-1 util-mx-1-5 mt-26 relative"
+      className="relative mt-26 util-flex util-flex-1 util-mx-1-5"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {!allLoaded && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30 transition-opacity duration-500">
-          <Loader />
-        </div>
-      )}
-
-      <div
+      {/* ✅ Cards container with fade-in */}
+      <motion.div
         ref={scrollRef}
-        className="card-container scrollable-mobile flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory sm:overflow-visible"
+        className="card-container flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory sm:overflow-visible"
       >
         {cards.map((c, i) => (
           <motion.div
@@ -86,12 +65,12 @@ export default function MobileCards() {
               alt={c.alt}
               loading="lazy"
               className="w-[320px] h-auto"
-              onLoad={handleImageLoad}
             />
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
+      {/* ✅ Arrow buttons (for mobile) */}
       <div className="flex justify-center mt-6 sm:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img
