@@ -2,17 +2,13 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Loader from "../Home/Loader/Loader";
 import api from "@/utils/api";
-
 
 export default function StoriesHeroSection() {
   const scrollRef = useRef(null);
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [firstCardLoaded, setFirstCardLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
   // ✅ Fetch success stories dynamically
   useEffect(() => {
@@ -39,16 +35,6 @@ export default function StoriesHeroSection() {
     };
     fetchStories();
   }, []);
-
-  // Track first card image load
-  const handleFirstCardImageLoad = () => {
-    setLoadedCount((prev) => {
-      const newCount = prev + 1;
-      if (cards.length && newCount === cards[0].images.length)
-        setFirstCardLoaded(true);
-      return newCount;
-    });
-  };
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -79,7 +65,7 @@ export default function StoriesHeroSection() {
   if (loading) {
     return (
       <div className="flex justify-center items-center py-16">
-        <Loader />
+        <p>Loading...</p>
       </div>
     );
   }
@@ -90,24 +76,27 @@ export default function StoriesHeroSection() {
         <h1 className="heading-systems mb-6">
           Success Stories – How GTW Transforms Businesses
         </h1>
+
+        {/* Desktop arrows */}
         <div className="hidden sm:flex gap-0 justify-end">
           <button className="arrow-button cursor-pointer" onClick={scrollLeft}>
             <img
               src={
                 currentIndex === 0
-                  ? "/images/LeftArrow.png"
-                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761297095162"
+                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow.png?updatedAt=1761741728074" // disabled
+                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761741673713" // active
               }
               alt="Left Arrow"
               className="w-10 h-10"
             />
           </button>
+
           <button className="arrow-button cursor-pointer" onClick={scrollRight}>
             <img
               src={
                 currentIndex === cards.length - 1
-                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159"
-                  : "/images/RightArrow.png"
+                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159" // disabled
+                  : "/images/RightArrow.png" // active
               }
               alt="Right Arrow"
               className="w-10 h-10"
@@ -116,6 +105,7 @@ export default function StoriesHeroSection() {
         </div>
       </div>
 
+      {/* Scrollable cards */}
       <div
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
@@ -124,12 +114,6 @@ export default function StoriesHeroSection() {
           <div className="flex snap-start" key={i}>
             <div className="flex-shrink-0 w-[21px] md:w-[90px] bg-white-color1" />
             <div className="responsive-snap-container relative">
-              {i === 0 && !firstCardLoaded && (
-                <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/30">
-                  <Loader />
-                </div>
-              )}
-
               <div className="grid-container">
                 <div className="column1">
                   <div className="row1">
@@ -141,9 +125,6 @@ export default function StoriesHeroSection() {
                           width={500}
                           height={300}
                           className="w-full h-full object-cover rounded-[20px]"
-                          onLoadingComplete={
-                            i === 0 ? handleFirstCardImageLoad : undefined
-                          }
                         />
                       </div>
                     ))}
@@ -153,6 +134,7 @@ export default function StoriesHeroSection() {
                     <p className="author-title">{card.title}</p>
                   </div>
                 </div>
+
                 <div className="column2">
                   <p className="grid-title">{card.text}</p>
                   <img src="/images/assets/Vector.png" className="vector" />
@@ -181,7 +163,7 @@ export default function StoriesHeroSection() {
             className="w-10 h-10"
           />
         </button>
-        <button className="a rrow-button" onClick={scrollRight}>
+        <button className="arrow-button" onClick={scrollRight}>
           <img
             src={
               currentIndex === cards.length - 1
