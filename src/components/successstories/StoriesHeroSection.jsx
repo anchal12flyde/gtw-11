@@ -87,7 +87,7 @@ export default function StoriesHeroSection() {
   return (
     <>
       <div className="util-flex util-flex-1 util-mx-1-5 mt-15 relative">
-        <h1 className="heading-systems mb-6">
+        <h1 cla ssName="heading-systems mb-6">
           Success Stories – How GTW Transforms Businesses
         </h1>
         <div className="hidden sm:flex gap-0 justify-end">
