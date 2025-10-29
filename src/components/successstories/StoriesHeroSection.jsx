@@ -87,7 +87,7 @@ export default function StoriesHeroSection() {
   return (
     <>
       <div className="util-flex util-flex-1 util-mx-1-5 mt-15 relative">
-        <h1 cla ssName="heading-systems mb-6">
+        <h1 className="heading-systems mb-6">
           Success Stories – How GTW Transforms Businesses
         </h1>
         <div className="hidden sm:flex gap-0 justify-end">
@@ -175,17 +175,17 @@ export default function StoriesHeroSection() {
             src={
               currentIndex === 0
                 ? "/images/LeftArrow.png"
-                : "/images/RightArrow1.png"
+                : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761297095162"
             }
             alt="Left Arrow"
             className="w-10 h-10"
           />
         </button>
-        <button className="arrow-button" onClick={scrollRight}>
+        <button className="a rrow-button" onClick={scrollRight}>
           <img
             src={
               currentIndex === cards.length - 1
-                ? "/images/white-outline-arrow.png"
+                ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159"
                 : "/images/RightArrow.png"
             }
             alt="Right Arrow"
