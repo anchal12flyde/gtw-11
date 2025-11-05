@@ -26,10 +26,19 @@ export default function MobileCards() {
   const CARD_WIDTH = 320;
 
   const cards = [
-    { src: "/images/assets/Ezstays Login.png", alt: "Card 4" },
-    { src: "/images/assets/Meal Booking.png", alt: "Card 1" },
-    { src: "/images/assets/Show my QR.png", alt: "Card 3" },
-    { src: "/images/assets/Warden Dashboard.png", alt: "Card 2" },
+    {
+      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%201.png?updatedAt=1762336517813",
+      alt: "Card 4",
+    },
+    {
+      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%202.png?updatedAt=1762336550195",
+      alt: "Card 1",
+    },
+    {
+      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%203.png?updatedAt=1762336580495",
+      alt: "Card 3",
+    },
+    { src: "https://ik.imagekit.io/a9uxeuyhx/Mobile%20apps%204.png?updatedAt=1762336612211", alt: "Card 2" },
   ];
 
   const scrollLeft = () => {

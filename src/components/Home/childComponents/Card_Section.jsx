@@ -29,9 +29,8 @@ export default function Card_Section() {
               viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden h-[380px] sm:h-[500px] w-full"
             >
-              <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
               <img
-                src="/images/img2.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/Modern%20websites.png?updatedAt=1762335948683"
                 alt="Modern Websites"
                 className="w-full h-full object-cover"
               />
@@ -51,9 +50,9 @@ export default function Card_Section() {
                 viewport={{ once: true }}
                 className="relative rounded-2xl overflow-hidden  h-[380px] sm:h-[500px] w-full"
               >
-                <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
+               
                 <img
-                  src="/images/img3.png"
+                  src="https://ik.imagekit.io/a9uxeuyhx/E-commerce%20Digital%20Infrastructure.png?updatedAt=1762336177634"
                   alt="E-Commerce Infrastructure"
                   className="w-full h-full"
                 />
@@ -81,9 +80,8 @@ export default function Card_Section() {
                 viewport={{ once: true }}
                 className="relative rounded-2xl overflow-hidden h-[380px] sm:h-[500px] w-full cursor-pointer"
               >
-                <div className="absolute inset-0 rounded-xl bg-[linear-gradient(140deg,_black_15%,_transparent_40%)]"></div>
                 <img
-                  src="/images/img1.png"
+                  src="https://ik.imagekit.io/a9uxeuyhx/Mobile%20Apps.png?updatedAt=1762335880837"
                   alt="Mobile Apps"
                   className="w-full h-full"
                 />
