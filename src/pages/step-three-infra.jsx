@@ -6,13 +6,43 @@ import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
+import { useFormContext } from "@/context/FormContext";
+import { updateStep3 } from "@/services/formApi";
 
 export default function StepThreeInfra() {
    const router = useRouter();
+   const { formData } = useFormContext();
+   
    const [companyType, setCompanyType] = useState('');
    const [startTime, setStartTime] = useState('');
    const [adminPanel,setAdminPanel] = useState('');
    const [d2cMobileApp,setD2cMobileApp] = useState('');
+   const [isLoading, setIsLoading] = useState(false);
+   const [error, setError] = useState('');
+
+   const handleNext = async () => {
+     if (!companyType || !startTime || !adminPanel || !d2cMobileApp) {
+       setError("Please answer all required questions");
+       return;
+     }
+
+     setIsLoading(true);
+     setError('');
+
+     try {
+       await updateStep3(formData.formId, {
+         commerceType: companyType,
+         skuVolume: startTime,
+         integrations: adminPanel,
+         needsD2CMobileApp: d2cMobileApp,
+       });
+
+       router.push('/step-four');
+     } catch (err) {
+       setError(err.message || "Failed to save. Please try again.");
+       setIsLoading(false);
+     }
+   };
 
   return (
     <>
@@ -119,8 +149,14 @@ export default function StepThreeInfra() {
             ))}
           </div>
 
-          <button className="next-button">
-            Next <ArrowRight size={16} />
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
+          <button 
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

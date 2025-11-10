@@ -6,12 +6,43 @@ import Header from "@/components/Home/childComponents/Header";
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
+import { useFormContext } from "@/context/FormContext";
+import { updateStep3 } from "@/services/formApi";
 
 export default function StepThreeSaas() {
    const router = useRouter();
+   const { formData } = useFormContext();
+   
    const [companyType, setCompanyType] = useState('');
    const [startTime, setStartTime] = useState('');
    const [adminPanel,setAdminPanel] = useState('');
+   const [admiredSites, setAdmiredSites] = useState('');
+   const [isLoading, setIsLoading] = useState(false);
+   const [error, setError] = useState('');
+
+   const handleNext = async () => {
+     if (!companyType || !startTime || !adminPanel) {
+       setError("Please answer all required questions");
+       return;
+     }
+
+     setIsLoading(true);
+     setError('');
+
+     try {
+       await updateStep3(formData.formId, {
+         mvpType: companyType,
+         coreFunctionality: startTime,
+         multiTenancy: adminPanel,
+         references: admiredSites,
+       });
+
+       router.push('/step-four');
+     } catch (err) {
+       setError(err.message || "Failed to save. Please try again.");
+       setIsLoading(false);
+     }
+   };
 
   return (
     <>
@@ -103,10 +134,22 @@ export default function StepThreeSaas() {
           <p className="form-subheading ">
             Any examples of what you're trying to build?
           </p>
-          <input type="text" name="admiredSites" className="input-box" />
+          <input 
+            type="text" 
+            name="admiredSites" 
+            className="input-box" 
+            value={admiredSites}
+            onChange={(e) => setAdmiredSites(e.target.value)}
+          />
 
-          <button className="next-button">
-            Next <ArrowRight size={16} />
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+
+          <button 
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>
