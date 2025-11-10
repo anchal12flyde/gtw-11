@@ -3,7 +3,7 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /agency-partnership/
 Disallow: /animation/
-Disallow: /audit/
+Disallow: /Audit/
 Disallow: /join-our-team/
 Disallow: /thankyou-page/
 Disallow: /step-one-form/
