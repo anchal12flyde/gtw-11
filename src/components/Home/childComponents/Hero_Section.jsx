@@ -12,14 +12,14 @@ export default function Hero_Section() {
         <div className="relative w-full h-[100vh] object-cover">
           <Header />
 
-          {/* Loader overlay */}
+         
           {!isLoaded && (
             <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60">
               <Loader />
             </div>
           )}
-
-          {/* Video */}
+        
+        
           <video
             src="https://ik.imagekit.io/p1zreiw3z/4k-resolution-abstract-background-and-line-dot-ba-2025-08-29-11-23-20-utc.mov/ik-video.mp4?updatedAt=1756542635640"
             autoPlay

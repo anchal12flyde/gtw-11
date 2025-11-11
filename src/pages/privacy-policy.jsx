@@ -5,161 +5,195 @@ import Footer from '@/components/Home/childComponents/Footer';
 export default function PrivacyPolicy() {
   return (
     <>
-     
-      <Header/>
+      <Header />
       <section className="terms-section util-mx-1-5">
         <div className="terms-container">
           {/* Title */}
           <h1 className="terms-title">Privacy Policy</h1>
 
           {/* Overview */}
-          <h2 className="terms-heading">
-            WHAT DO WE DO WITH YOUR INFORMATION?
-          </h2>
+
           <p>
-            When you purchase something from our store, as part of the buying
-            and selling process, we collect the personal information you give us
-            such as your name, address and email address.
+            The terms “We” / “Us” / “Our”/”Company” individually and
+            collectively refer to General Tech Works pvt. ltd. and the terms “You”
+            /”Your” / “Yourself” refer to the users.
           </p>
           <p>
-            Email marketing (if applicable): With your permission, we may send
-            you emails about our store, new products and other updates.
+            This Privacy Policy is an electronic record in the form of an
+            electronic contract formed under the information Technology Act,
+            2000 and the rules made thereunder and the amended provisions
+            pertaining to electronic documents / records in various statutes as
+            amended by the information Technology Act, 2000. This Privacy Policy
+            does not require any physical, electronic or digital signature.
+          </p>
+          <p>
+            This Privacy Policy is a legally binding document between you and
+            General Tech Works pvt. ltd. (both terms defined below). The terms of
+            this Privacy Policy will be effective upon your acceptance of the
+            same (directly or indirectly in electronic form, by clicking on the
+            I accept tab or by use of the website or by other means) and will
+            govern the relationship between you and us for your use of the
+            website “Website” (defined below).
+          </p>
+          <p>
+            This document is published and shall be construed in accordance with
+            the provisions of the Information Technology (reasonable security
+            practices and procedures and sensitive personal data of information)
+            rules, 2011 under Information Technology Act, 2000; that require
+            publishing of the Privacy Policy for collection, use, storage and
+            transfer of sensitive personal data or information.
+          </p>
+          <p>
+            Please read this Privacy Policy carefully by using the Website, you
+            indicate that you understand, agree and consent to this Privacy
+            Policy. If you do not agree with the terms of this Privacy Policy,
+            please do not use this Website.
+          </p>
+          <p>
+            By providing us your Information or by making use of the facilities
+            provided by the Website, You hereby consent to the collection,
+            storage, processing and transfer of any or all of Your Personal
+            Information and Non-Personal Information by us as specified under
+            this Privacy Policy. You further agree that such collection, use,
+            storage and transfer of Your Information shall not cause any loss or
+            wrongful gain to you or any other person.
           </p>
 
           {/* Online Store Terms */}
-          <h2 className="terms-heading">CONSENT</h2>
-          <p>How do you get my consent?</p>
-          <p>
-            When you provide us with personal information to complete a
-            transaction, verify your credit card, place an order, arrange for a
-            delivery or return a purchase, we imply that you consent to our
-            collecting it and using it for that specific reason only.
-          </p>
-          <p>
-            If we ask for your personal information for a secondary reason, like
-            marketing, we will either ask you directly for your expressed
-            consent, or provide you with an opportunity to say no.
-          </p>
-          <p>How do I withdraw my consent?</p>
-          <p>
-            If after you opt-in, you change your mind, you may withdraw your
-            consent for us to contact you, for the continued collection, use or
-            disclosure of your information, at anytime, by contacting us at
-            contact@Chemictionary.com.
-          </p>
+          <h2 className="terms-heading">USER INFORMATION </h2>
 
-          <h2 className="terms-heading">DISCLOSURE</h2>
           <p>
-            We may disclose your personal information if we are required by law
-            to do so or if you violate our Terms of Service.
-          </p>
-
-          <h2 className="terms-heading">PAYMENT</h2>
-          <p>
-            We use Razorpay for processing payments. We/Razorpay do not store
-            your card data on their servers. The data is encrypted through the
-            Payment Card Industry Data Security Standard (PCI-DSS) when
-            processing payment. Your purchase transaction data is only used as
-            long as is necessary to complete your purchase transaction. After
-            that is complete, your purchase transaction information is not
-            saved.
+            To avail certain services on our Websites, users are required to
+            provide certain information for the registration process namely: –
+            a) your name, b) email address, c) sex, d) age, e) PIN code, f)
+            credit card or debit card details g) medical records and history h)
+            sexual orientation, i) biometric information, j) password etc., and
+            / or your occupation, interests, and the like. The Information as
+            supplied by the users enables us to improve our sites and provide
+            you the most user-friendly experience.
           </p>
           <p>
-            Our payment gateway adheres to the standards set by PCI-DSS as
-            managed by the PCI Security Standards Council, which is a joint
-            effort of brands like Visa, MasterCard, American Express and
-            Discover.
-          </p>
-          <p>
-            PCI-DSS requirements help ensure the secure handling of credit card
-            information by our store and its service providers.
+            All required information is service dependent and we may use the
+            above said user information to, maintain, protect, and improve its
+            services (including advertising services) and for developing new
+            services
           </p>
 
           <p>
-            For more insight, you may also want to read terms and conditions of
-            razorpay on https://razorpay.com
+            Such information will not be considered as sensitive if it is freely
+            available and accessible in the public domain or is furnished under
+            the Right to Information Act, 2005 or any other law for the time
+            being in force.
           </p>
 
-          <h2 className="terms-heading">THIRD-PARTY SERVICES</h2>
+          <h2 className="terms-heading">COOKIES</h2>
           <p>
-            In general, the third-party providers used by us will only collect,
-            use and disclose your information to the extent necessary to allow
-            them to perform the services they provide to us.
+            To improve the responsiveness of the sites for our users, we may use
+            “cookies”, or similar electronic tools to collect information to
+            assign each visitor a unique, random number as a User Identification
+            (User ID) to understand the user’s individual interests using the
+            Identified Computer. Unless you voluntarily identify yourself
+            (through registration, for example), we will have no way of knowing
+            who you are, even if we assign a cookie to your computer. The only
+            personal information a cookie can contain is information you supply
+            (an example of this is when you ask for our Personalised Horoscope).
+            A cookie cannot read data off your hard drive. Our advertisers may
+            also assign their own cookies to your browser (if you click on their
+            ads), a process that we do not control.
           </p>
           <p>
-            However, certain third-party service providers, such as payment
-            gateways and other payment transaction processors, have their own
-            privacy policies in respect to the information we are required to
-            provide to them for your purchase-related transactions.
-          </p>
-          <p>
-            For these providers, we recommend that you read their privacy
-            policies so you can understand the manner in which your personal
-            information will be handled by these providers.
-          </p>
-          <p>
-            In particular, remember that certain providers may be located in or
-            have facilities that are located a different jurisdiction than
-            either you or us. So if you elect to proceed with a transaction that
-            involves the services of a third-party service provider, then your
-            information may become subject to the laws of the jurisdiction(s) in
-            which that service provider or its facilities are located.
-          </p>
-          <p>
-            Once you leave our store’s website or are redirected to a
-            third-party website or application, you are no longer governed by
-            this Privacy Policy or our website’s Terms of Service.
-          </p>
-          <p>Links</p>
-          <p>
-            When you click on links on our store, they may direct you away from
-            our site. We are not responsible for the privacy practices of other
-            sites and encourage you to read their privacy statements.
+            Our web servers automatically collect limited information about your
+            computer’s connection to the Internet, including your IP address,
+            when you visit our site. (Your IP address is a number that lets
+            computers attached to the Internet know where to send you data —
+            such as the web pages you view.) Your IP address does not identify
+            you personally. We use this information to deliver our web pages to
+            you upon request, to tailor our site to the interests of our users,
+            to measure traffic within our site and let advertisers know the
+            geographic locations from where our visitors come.
           </p>
 
-          <h2 className="terms-heading">SECURITY</h2>
+          <h2 className="terms-heading">LINKS TO THE OTHER SITES</h2>
           <p>
-            To protect your personal information, we take reasonable precautions
-            and follow industry best practices to make sure it is not
-            inappropriately lost, misused, accessed, disclosed, altered or
-            destroyed.
+            Our policy discloses the privacy practices for our own web site
+            only. Our site provides links to other websites also that are beyond
+            our control. We shall in no way be responsible in way for your use
+            of such sites.5.
           </p>
 
-          <h2 className="terms-heading">AGE OF CONSENT</h2>
+          <h2 className="terms-heading">INFORMATION SHARING</h2>
           <p>
-            By using this site, you represent that you are at least the age of
-            majority in your state or province of residence, or that you are the
-            age of majority in your state or province of residence and you have
-            given us your consent to allow any of your minor dependents to use
-            this site.
-          </p>
-
-          <h2 className="terms-heading">CHANGES TO THIS PRIVACY POLICY</h2>
-          <p>
-            We reserve the right to modify this privacy policy at any time, so
-            please review it frequently. Changes and clarifications will take
-            effect immediately upon their posting on the website. If we make
-            material changes to this policy, we will notify you here that it has
-            been updated, so that you are aware of what information we collect,
-            how we use it, and under what circumstances, if any, we use and/or
-            disclose it.
+            We shares the sensitive personal information to any third party
+            without obtaining the prior consent of the user in the following
+            limited circumstances:
           </p>
 
           <p>
-            If our store is acquired or merged with another company, your
-            information may be transferred to the new owners so that we may
-            continue to sell products to you..
+            (a) When it is requested or required by law or by any court or
+            governmental agency or authority to disclose, for the purpose of
+            verification of identity, or for the prevention, detection,
+            investigation including cyber incidents, or for prosecution and
+            punishment of offences. These disclosures are made in good faith and
+            belief that such disclosure is reasonably necessary for enforcing
+            these Terms; for complying with the applicable laws and regulations.
           </p>
 
-          <h2 className="terms-heading">QUESTIONS AND CONTACT INFORMATION</h2>
           <p>
-            if you would like to: access, correct, amend or delete any personal
-            information we have about you, contact our Privacy Compliance
-            Officer
+            (b) We proposes to share such information within its group companies
+            and officers and employees of such group companies for the purpose
+            of processing personal information on its behalf. We also ensure
+            that these recipients of such information agree to process such
+            information based on our instructions and in compliance with this
+            Privacy Policy and any other appropriate confidentiality and
+            security measures.
           </p>
+
+          <h2 className="terms-heading">INFORMATION SECURITY</h2>
+          <p>
+            We take appropriate security measures to protect against
+            unauthorized access to or unauthorized alteration, disclosure or
+            destruction of data. These include internal reviews of our data
+            collection, storage and processing practices and security measures,
+            including appropriate encryption and physical security measures to
+            guard against unauthorized access to systems where we store personal
+            data.
+          </p>
+          <p>
+            All information gathered on our Website is securely stored within
+            our controlled database. The database is stored on servers secured
+            behind a firewall; access to the servers is password-protected and
+            is strictly limited. However, as effective as our security measures
+            are, no security system is impenetrable. We cannot guarantee the
+            security of our database, nor can we guarantee that information you
+            supply will not be intercepted while being transmitted to us over
+            the Internet. And, of course, any information you include in a
+            posting to the discussion areas is available to anyone with Internet
+            access.{" "}
+          </p>
+          <p>
+            However the internet is an ever evolving medium. We may change our
+            Privacy Policy from time to time to incorporate necessary future
+            changes. Of course, our use of any information we gather will always
+            be consistent with the policy under which the information was
+            collected, regardless of what the new policy may be.{" "}
+          </p>
+
+          <h2 className="terms-heading">Grievance Redressal</h2>
+          <p>
+            Redressal Mechanism: Any complaints, abuse or concerns with regards
+            to content and or comment or breach of these terms shall be
+            immediately informed to the designated Grievance Officer as
+            mentioned below via in writing or through email signed with the
+            electronic signature to Samarth Ahuja (“Grievance Officer”).{" "}
+          </p>
+          <p>Mr. Samarth Ahuja</p>
+          <p>www.flyde.in</p>
+          <p>General Tech Works pvt. ltd.</p>
+          <p>Email: samarth@flyde.in</p>
+          <p>Ph: +91-8010788892</p>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

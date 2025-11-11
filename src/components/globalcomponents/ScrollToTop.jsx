@@ -1,10 +1,19 @@
-"use client";
 import { useEffect } from "react";
-import React from "react";
+import { useRouter } from "next/router";
 
 export default function ScrollToTop() {
+  const router = useRouter();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const handleRouteChange = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
+
   return null;
 }
