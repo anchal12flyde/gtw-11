@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast';
 import Head from 'next/head';
 
 
-export default function Confirmation() {
+export default function confirmation() {
    const router = useRouter();
    const [intentText, setIntentText] = useState('');
    const [agreed, setAgreed] = useState(false);

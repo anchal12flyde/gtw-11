@@ -15,7 +15,7 @@ export default function YourGoals() {
    const [otherText, setOtherText] = useState("");
 
   const handleNext = () => {
-    router.push('/Audit/confirmation'); 
+    router.push('/Audit/Confirmation'); 
   };
 
   return (
