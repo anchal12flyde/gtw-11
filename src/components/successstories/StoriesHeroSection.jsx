@@ -79,14 +79,14 @@ export default function StoriesHeroSection() {
         animate={{ y: 0, opacity:1  }}
         transition={{
           duration: 1.2,
-          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+          ease: [0.25, 0.1, 0.25, 1], 
         }}
       >
         <h1 className="heading-systems mb-6">
           Success Stories – How GTW Transforms Businesses
         </h1>
 
-        {/* Desktop arrows */}
+        
         <div className="hidden sm:flex gap-0 justify-end">
           <button className="arrow-button cursor-pointer" onClick={scrollLeft}>
             <img
@@ -114,7 +114,7 @@ export default function StoriesHeroSection() {
         </div>
       </motion.div>
 
-      {/* Scrollable cards */}
+    
       <motion.div
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
@@ -122,7 +122,7 @@ export default function StoriesHeroSection() {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 1.2,
-          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+          ease: [0.25, 0.1, 0.25, 1],
         }}
       >
         {cards.map((card, i) => (
@@ -165,7 +165,7 @@ export default function StoriesHeroSection() {
         <div className="flex-shrink-0 w-[20px] sm:w-[400px] lg:w-[800px]" />
       </motion.div>
 
-      {/* Mobile arrows */}
+     
       <div className="flex justify-center mt-6 sm:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img

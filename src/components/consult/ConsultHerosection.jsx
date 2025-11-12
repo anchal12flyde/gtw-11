@@ -28,17 +28,17 @@ export default function ConsultHerosection() {
 
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
-      {/* ✅ Header stays static, no animation */}
+     
       <Header />
 
-      {/* ✅ Video container with loader */}
+    
       <motion.div
         className="absolute inset-0 h-screen"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
         transition={{
           duration: 1.2,
-          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+          ease: [0.25, 0.1, 0.25, 1],
         }}
       >
         {!isLoaded && (

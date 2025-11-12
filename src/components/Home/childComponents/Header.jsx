@@ -36,7 +36,7 @@ export default function Header() {
   if (header) {
     if (
       pathname === "/digital-transformation-service" ||
-      pathname === "/philosophy"
+      pathname === "/"
     ) {
       header.classList.add("transparent-header");
       setLogoSrc("/images/gtw_new1.png");
@@ -53,7 +53,7 @@ export default function Header() {
  const isActive = (href) => {
     return (
       pathname === href ||
-      (href === "/philosophy" && pathname.startsWith("/philosophy")) ||
+      (href === "/" && pathname.startsWith("/")) ||
       (href === "/digital-transformation-service" &&
         pathname.startsWith("/digital-transformation-service"))
     );
@@ -131,7 +131,7 @@ export default function Header() {
             href="/step-one-form"
             className={`${
               pathname === "/digital-transformation-service" ||
-              pathname === "/philosophy" ||
+              pathname === "/" ||
               pathname === "/expro"
                 ? "bg-primary text-white-color1 hover:bg-primary"
                 : "bg-secondary text-white-color1 hover:bg-primary hover:text-white-color1"
@@ -149,7 +149,7 @@ export default function Header() {
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
               [
                 "/digital-transformation-service",
-                "/philosophy",
+                "/",
                 "/expro",
               ].includes(pathname)
                 ? "bg-white-color1"
@@ -160,7 +160,7 @@ export default function Header() {
             className={`block h-[2px] w-[30px] rounded-sm ${
               [
                 "/digital-transformation-service",
-                "/philosophy",
+                "/",
                 "/expro",
               ].includes(pathname)
                 ? "bg-white-color1"
@@ -171,7 +171,7 @@ export default function Header() {
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
               [
                 "/digital-transformation-service",
-                "/philosophy",
+                "/",
                 "/expro",
               ].includes(pathname)
                 ? "bg-white-color1"
@@ -202,7 +202,7 @@ export default function Header() {
           </button>
           {pathname !== "/expro" && (
             <div className="space-y-10">
-              <Link href="/philosophy" className="block nav-link mt-12 ">
+              <Link href="/" className="block nav-link mt-12 ">
                 Philosophy
               </Link>
               <Link href="/mobile-apps-development" className="block nav-link">

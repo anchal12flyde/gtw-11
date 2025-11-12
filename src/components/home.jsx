@@ -2,10 +2,11 @@
 import Head from 'next/head'
 import Next_Steps from './Home/childComponents/Next_Steps'
 import Footer from './Home/childComponents/Footer'
-import Hero_Section from './Home/childComponents/Hero_Section'
-import Card_Section from './Home/childComponents/Card_Section'
-import Explore from './Home/childComponents/Explore_Digital'
-import Industries from './Home/childComponents/IndustriesSection'
+
+import HeroSection from './gtwWay/HeroSection';
+import OperateAcrossSection from './gtwWay/OperateAcrossSection';
+import FoundationSection from './gtwWay/FoundationSection';
+import Testimonials from './gtwWay/Testimonials';
 
 
 export default function Home() {
@@ -13,7 +14,6 @@ export default function Home() {
 
   return (
     <>
-   
       <Head>
         <title>
           Digital Transformation & Tech Solutions | General Tech Works
@@ -27,14 +27,10 @@ export default function Home() {
         <link rel="canonical" href="https://generaltechworks.com/" />
       </Head>
       {/* <Header /> */}
-      <Hero_Section />
-
-      <Card_Section />
-
-      <Explore />
-
-      <Industries />
-
+      <HeroSection />
+      <OperateAcrossSection />
+      <Testimonials />
+      <FoundationSection />
       <Next_Steps />
 
       <Footer />
