@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BlogCard from "@/components/globalcomponents/BlogCards";
+import Header from "@/components/Home/childComponents/Header";
+import Footer from "@/components/Home/childComponents/Footer";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -86,6 +88,8 @@ export default function BlogDetails() {
   });
 
   return (
+    <>
+    <Header/>
     <div className="util-flex util-flex-1 util-mx-1-5">
       <div className="px-0 lg:px-30">
         {/* Back + Share */}
@@ -94,7 +98,7 @@ export default function BlogDetails() {
             {/* Back button */}
             <div className="inline-flex items-center gap-[10px] rounded-[6px] bg-gray-light p-[12px_16px]">
               <Link
-                href="/blogs"
+                href="/blog"
                 className="flex items-center text-sm text-gray-dark2 hover:underline"
               >
                 <img
@@ -232,5 +236,7 @@ export default function BlogDetails() {
         )}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

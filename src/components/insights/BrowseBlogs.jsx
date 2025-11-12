@@ -61,7 +61,7 @@ export default function BrowseBlogs() {
             {!loading ? (
               posts &&
               posts.slice(0, visibleCount).map((b) => (
-                <Link href={`/blogs/${b.slug}`} key={b.id}>
+                <Link href={`/blog/${b.slug}`} key={b.id}>
                   <BlogCard
                     imageSrc={
                       b._embedded?.["wp:featuredmedia"]?.[0]?.source_url
