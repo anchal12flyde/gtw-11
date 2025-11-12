@@ -1,60 +1,10 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import BlogCard from "@/components/globalcomponents/BlogCards";
+import Link from "next/link";
 
 export default function BrowseBlogs() {
-  const blogData = [
-    {
-      imageSrc: "/images/assets/blog_img1.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img2.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img3.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img4.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img1.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img2.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img3.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img4.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img1.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-    {
-      imageSrc: "/images/assets/blog_img2.png",
-      title: "Design Slow. Build Smart. Launch Fast.",
-      link: "/Blog_Details",
-    },
-  ];
+  
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -106,35 +56,38 @@ export default function BrowseBlogs() {
           <div className="blog-title">
             <h1>Browse All Blogs</h1>
           </div>
+         
           <div className="grid-cols-fixed-4">
             {!loading ? (
               posts &&
-              posts.map((b, index) => (
-                <BlogCard
-                  key={index}
-                  imageSrc={b.imageSrc}
-                  title={b.title?.rendered}
-                  link={b.link}
-                  category="CATEGORY"
-                  linkText="Read More"
-                />
+              posts.slice(0, visibleCount).map((b) => (
+                <Link href={`/blogs/${b.slug}`} key={b.id}>
+                  <BlogCard
+                    imageSrc={
+                      b._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+                    }
+                    title={b.title?.rendered}
+                    link={`/blogs/${b.slug}`}
+                    category={
+                      b._embedded?.["wp:term"]?.[0]?.[0]?.name || "CATEGORY"
+                    }
+                    linkText="Read More"
+                  />
+                </Link>
               ))
             ) : (
-              <p>Loading....</p>
+              <p>Loading...</p>
             )}
           </div>
-
-          {visibleCount < blogData.length && (
-            <div className="flex justify-center mt-15">
-              <button
-                href="#"
-                className="client-button bg-white-color1 text-primary border border-primary hover:bg-primary hover:text-white-color1"
-                onClick={handleLoadMore}
-              >
-                Load More
-              </button>
-            </div>
-          )}
+          <div className="flex justify-center mt-15">
+            <button
+              href="#"
+              className="client-button bg-white-color1 text-primary border border-primary hover:bg-primary hover:text-white-color1"
+              onClick={handleLoadMore}
+            >
+              Load More
+            </button>
+          </div>
         </main>
       </div>
     </>
