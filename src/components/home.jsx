@@ -6,14 +6,14 @@ import Hero_Section from './Home/childComponents/Hero_Section'
 import Card_Section from './Home/childComponents/Card_Section'
 import Explore from './Home/childComponents/Explore_Digital'
 import Industries from './Home/childComponents/IndustriesSection'
-import GoToTop from './GoToTop'
+
 
 export default function Home() {
 
 
   return (
     <>
-    <GoToTop/>
+   
       <Head>
         <title>
           Digital Transformation & Tech Solutions | General Tech Works

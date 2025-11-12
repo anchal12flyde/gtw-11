@@ -41,29 +41,9 @@ export default function MyApp({ Component, pageProps }) {
         <FormProvider>
           <JoinTeamProvider>
             <AgencyPartnershipProvider>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={router.asPath}
-                  initial={{ opacity: 0, y: -100 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.8,
-                      ease: [0.16, 0.77, 0.47, 0.97],
-                    },
-                  }}
-                  exit={{
-                    opacity: 0,
-                    transition: {
-                      duration: 0.3,
-                      ease: "easeIn",
-                    },
-                  }}
-                >
+             
                   <Component {...pageProps} />
-                </motion.div>
-              </AnimatePresence>
+               
             </AgencyPartnershipProvider>
           </JoinTeamProvider>
         </FormProvider>

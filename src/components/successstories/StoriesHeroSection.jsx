@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import api from "@/utils/api";
 
@@ -72,7 +73,15 @@ export default function StoriesHeroSection() {
 
   return (
     <>
-      <div className="util-flex util-flex-1 util-mx-1-5 mt-15 relative">
+      <motion.div
+        className="util-flex util-flex-1 util-mx-1-5 mt-15 relative"
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity:1  }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+        }}
+      >
         <h1 className="heading-systems mb-6">
           Success Stories – How GTW Transforms Businesses
         </h1>
@@ -83,8 +92,8 @@ export default function StoriesHeroSection() {
             <img
               src={
                 currentIndex === 0
-                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow.png?updatedAt=1761741728074" 
-                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761741673713" 
+                  ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow.png?updatedAt=1761741728074"
+                  : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761741673713"
               }
               alt="Left Arrow"
               className="w-10 h-10"
@@ -103,12 +112,18 @@ export default function StoriesHeroSection() {
             />
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scrollable cards */}
-      <div
+      <motion.div
         ref={scrollRef}
         className="w-full flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide mt-6"
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+        }}
       >
         {cards.map((card, i) => (
           <div className="flex snap-start" key={i}>
@@ -148,7 +163,7 @@ export default function StoriesHeroSection() {
         ))}
 
         <div className="flex-shrink-0 w-[20px] sm:w-[400px] lg:w-[800px]" />
-      </div>
+      </motion.div>
 
       {/* Mobile arrows */}
       <div className="flex justify-center mt-6 sm:hidden">

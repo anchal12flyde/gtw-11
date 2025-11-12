@@ -1,13 +1,22 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Loader from "../Home/Loader/Loader";
 export default function InsightHeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="util-flex util-flex-1 util-mx-1-5 mt-15 relative">
+    <motion.div
+      className="util-flex util-flex-1 util-mx-1-5 mt-15 relative"
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
+      transition={{
+        duration: 1.2,
+        ease: [0.25, 0.1, 0.25, 1], 
+      }}
+    >
       <div className="background-hero relative">
         {/* Loader overlay */}
         {!isLoaded && (
@@ -44,6 +53,6 @@ export default function InsightHeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

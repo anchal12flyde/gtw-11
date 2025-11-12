@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Header from "../Home/childComponents/Header";
 import AnimatedCards from "../globalcomponents/AnimatedCards";
 import Loader from "../Home/Loader/Loader";
@@ -61,8 +62,17 @@ export default function HeroSection() {
 
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
+      <Header />
       {/* ✅ Video container */}
-      <div className="absolute inset-0 h-screen">
+      <motion.div
+        className="absolute inset-0 h-screen"
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+        }}
+      >
         {/* ✅ Loader overlay (shows only first time in session) */}
         {!isLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 transition-opacity duration-500">
@@ -85,15 +95,19 @@ export default function HeroSection() {
           <source src="/videos/light-rays.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        <Header />
-      </div>
+      </motion.div>
 
       {/* ✅ Hero Content (fades in once video is ready) */}
-      <div
+      <motion.div
         className={`transition-opacity duration-700 ease-in-out ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1], // smooth curve
+        }}
       >
         <div className="util-flex util-flex-1 util-mx-1-5 relative text-center text-white-color1-color1">
           <div className="hero-section">
@@ -126,11 +140,11 @@ export default function HeroSection() {
           </section>
         </div>
 
-        {/* ✅ Animated Cards */}
+     
         <div className="util-flex util-flex-1 util-mx-1-5">
           <AnimatedCards cards={data} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
