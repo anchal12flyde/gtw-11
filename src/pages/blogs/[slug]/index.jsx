@@ -24,6 +24,7 @@ export default function BlogDetails() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!slug) return;
@@ -86,6 +87,19 @@ export default function BlogDetails() {
     month: "long",
     day: "numeric",
   });
+  
+
+  const handleCopy = () => {
+    // Copy current page URL
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset after 2s
+      })
+      .catch((err) => console.error("Failed to copy: ", err));
+  };
+  const currentURL = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <>
@@ -117,27 +131,50 @@ export default function BlogDetails() {
                   open ? "rotate-y-0" : "rotate-y-90"
                 }`}
               >
-                <Image
-                  src="/images/assets/facebookIcon.png"
-                  alt="Facebook"
-                  width={43}
-                  height={43}
-                  className="hover:scale-110 transition-transform duration-300"
-                />
+              <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                currentURL
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/assets/facebookIcon.png"
+                alt="Facebook"
+                width={43}
+                height={43}
+              />
+            </a>
+                {/* LinkedIn */}
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                  currentURL
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/images/assets/linkedinIcon.png"
                   alt="LinkedIn"
                   width={43}
                   height={43}
-                  className="hover:scale-110 transition-transform duration-300"
-                />
-                <Image
-                  src="/images/assets/eclipse1 (5).png"
-                  alt="Threads"
-                  width={43}
-                  height={43}
-                  className="hover:scale-110 transition-transform duration-300"
-                />
+                  />
+                  </a>
+                  {/* Threads / X / Twitter */}
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                      currentURL
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/assets/eclipse1 (5).png"
+                      alt="Threads"
+                      width={43}
+                      height={43}
+                    />
+                  </a>
               </div>
 
               <button
@@ -156,12 +193,19 @@ export default function BlogDetails() {
                 />
               </button>
 
-              <Image
-                src="/images/assets/shareLink.png"
-                alt="Link"
-                width={43}
-                height={43}
-              />
+              <button onClick={handleCopy} className="relative">
+          <Image
+            src="/images/assets/shareLink.png"
+            alt="Share Link"
+            width={43}
+            height={43}
+          />
+          {copied && (
+            <span className="absolute top-0 left-full ml-2 bg-black text-white px-2 py-1 rounded text-xs">
+              Copied!
+            </span>
+          )}
+        </button>
             </div>
           </div>
 
