@@ -10,28 +10,48 @@ import "../app/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
+  const [showTopBtn, setShowTopBtn] = useState(false); // 👈 NEW
   const router = useRouter();
 
-  // 🧭 Loader setup
+  // Loader
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  // 🧭 Scroll to top on route change (hard reset)
+  // Route change scroll
   useEffect(() => {
     const handleRouteChange = () => {
-      // force next frame to scroll top
       requestAnimationFrame(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     };
 
-    router.events.on("routeChangeStart", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off("routeChangeStart", handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router]);
+  }, []);
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 300) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -41,12 +61,33 @@ export default function MyApp({ Component, pageProps }) {
         <FormProvider>
           <JoinTeamProvider>
             <AgencyPartnershipProvider>
-             
-                  <Component {...pageProps} />
-               
+              <Component {...pageProps} />
             </AgencyPartnershipProvider>
           </JoinTeamProvider>
         </FormProvider>
+      )}
+
+      {/* ⭐ Go To Top Floating Button */}
+      {showTopBtn && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "30px",
+            right: "30px",
+            background: "#000",
+            color: "#fff",
+            padding: "12px 18px",
+            borderRadius: "50%",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "18px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
+            zIndex: 9999,
+          }}
+        >
+          ↑
+        </button>
       )}
 
       <Toaster

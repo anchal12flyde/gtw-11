@@ -77,14 +77,14 @@
 
 body {
   color: var(--foreground);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
    font-family: 'Inter';
    scrollbar-width: none; 
   -ms-overflow-style: none; 
 }
 
 html, body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: 100%;
 }
 
@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #fff; 
   transition: all 0.6s ease-out;
   width: 100%;
@@ -336,7 +336,7 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   height: 60.5vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-image: url('/images/hero1.png');
   background-size: cover;
   background-position: center;
@@ -1411,8 +1411,7 @@ input[type="checkbox"] {
 .hero-wrapper {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
-  
+  /* overflow: hidden; */
 }
 
 .hero-video {

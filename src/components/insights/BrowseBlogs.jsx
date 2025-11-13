@@ -57,6 +57,7 @@ export default function BrowseBlogs() {
             <h1>Browse All Blogs</h1>
           </div>
          
+         
           <div className="grid-cols-fixed-4">
             {!loading ? (
               posts &&
