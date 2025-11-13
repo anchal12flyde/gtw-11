@@ -6,10 +6,9 @@ import AnimatedCards from "../globalcomponents/AnimatedCards";
 import Loader from "../Home/Loader/Loader";
 
 export default function HeroSection() {
-  const [isLoaded, setIsLoaded] = useState(false); // track video load
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // ✅ Check if video was already loaded in this session
     const hasLoadedBefore = sessionStorage.getItem("videoLoaded");
     if (hasLoadedBefore) {
       setIsLoaded(true);
@@ -17,8 +16,11 @@ export default function HeroSection() {
   }, []);
 
   const handleVideoLoad = () => {
-    setIsLoaded(true);
-    sessionStorage.setItem("videoLoaded", "true");
+    // small delay for smoother fade
+    setTimeout(() => {
+      setIsLoaded(true);
+      sessionStorage.setItem("videoLoaded", "true");
+    }, 400);
   };
 
   const data = [
@@ -63,24 +65,21 @@ export default function HeroSection() {
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
       <Header />
-      {/* ✅ Video container */}
+
+      {/* ✅ Background video */}
       <motion.div
         className="absolute inset-0 h-screen"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
-        transition={{
-          duration: 1.2,
-          ease: [0.25, 0.1, 0.25, 1], // smooth curve
-        }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        {/* ✅ Loader overlay (shows only first time in session) */}
+        {/* ✅ Loader shown dynamically until video fully loads */}
         {!isLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 transition-opacity duration-500">
             <Loader />
           </div>
         )}
 
-        {/* ✅ Background Video */}
         <video
           className={`w-full h-full object-cover hero-video transition-opacity duration-700 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
@@ -90,24 +89,21 @@ export default function HeroSection() {
           muted
           playsInline
           preload="auto"
-          onLoadedData={handleVideoLoad}
+          onLoadedData={handleVideoLoad} // <- key part
         >
           <source src="/videos/light-rays.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
 
-      {/* ✅ Hero Content (fades in once video is ready) */}
+      {/* ✅ Hero text + sections (fade in after loader ends) */}
       <motion.div
         className={`transition-opacity duration-700 ease-in-out ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
-        transition={{
-          duration: 1.2,
-          ease: [0.25, 0.1, 0.25, 1], // smooth curve
-        }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <div className="util-flex util-flex-1 util-mx-1-5 relative text-center text-white-color1-color1">
           <div className="hero-section">
@@ -121,7 +117,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* ✅ Philosophy Section */}
         <div className="relative z-1 bg-secondary text-white-color1 util-flex util-flex-1 util-mx-1-5 mb-10 mt-45 blended-top">
           <section className="philosophy-section">
             <div className="heading-systems w-full max-w-[500px] mx-auto">
@@ -140,7 +135,6 @@ export default function HeroSection() {
           </section>
         </div>
 
-     
         <div className="util-flex util-flex-1 util-mx-1-5">
           <AnimatedCards cards={data} />
         </div>
