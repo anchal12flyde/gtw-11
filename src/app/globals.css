@@ -1412,6 +1412,7 @@ input[type="checkbox"] {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #000;
 }
 
 .hero-video {
