@@ -6,26 +6,30 @@ import BlogCard from "@/components/globalcomponents/BlogCards";
 export default function BrowseStories() {
   const blogData = [
     {
-      imageSrc: "/images/Numyum.png",
+      imageSrc:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Numyum.png?updatedAt=1763033714108",
       details: "Reinventing the Cloud Kitchen Ordering Experience. ",
       title: "Numyum",
       slug: "numyum",
     },
     {
-      imageSrc: "/images/Ezstays.png",
+      imageSrc:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Ezstays.png?updatedAt=1763033744937",
       details: "Operating System for Student Housing. ",
       title: "EzStays",
       slug: "ezstays",
     },
     {
-      imageSrc: "/images/Itel - Mobiles.png",
+      imageSrc:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Itel%20-%20Mobiles.png?updatedAt=1763033783590",
       details:
         " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
       title: "Itel",
       slug: "itel",
     },
     {
-      imageSrc: "/images/assets/transexpert mockup.jpg",
+      imageSrc:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/transexpert%20mockup.jpg?updatedAt=1763033819180",
       details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
       title: "TransExpert ",
       slug: "transexpert",
