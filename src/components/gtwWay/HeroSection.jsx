@@ -67,14 +67,13 @@ export default function HeroSection() {
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
       <Header />
 
-      {/* ✅ Background video */}
       <motion.div
         className="absolute inset-0 h-screen bg-black"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
         transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        {/* ✅ Loader shown dynamically until video fully loads */}
+     
         {!isLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 transition-opacity duration-500">
             <Loader />
