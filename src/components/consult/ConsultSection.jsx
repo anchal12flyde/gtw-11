@@ -36,7 +36,7 @@ export default function ConsultSection() {
           <div className="tech-card justify-between rounded-3xl space-y-26">
             <div className="campus-image-wrapper ">
               <img
-                src="/images/assets/eclipse.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse.png?updatedAt=1763033972331"
                 alt="Campus"
                 className="image"
               />
@@ -53,7 +53,7 @@ export default function ConsultSection() {
           <div className="tech-card justify-between  rounded-3xl space-y-26">
             <div className="campus-image-wrapper ">
               <img
-                src="/images/assets/eclipse1.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse1.png?updatedAt=1763034014005"
                 alt="Campus"
                 className="image"
               />
@@ -68,7 +68,7 @@ export default function ConsultSection() {
           <div className="tech-card justify-between rounded-3xl space-y-26">
             <div className="campus-image-wrapper">
               <img
-                src="/images/assets/eclipse2.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse2.png?updatedAt=1763034038141"
                 alt="Campus"
                 className="image"
               />
@@ -85,7 +85,7 @@ export default function ConsultSection() {
           <div className="tech-card justify-between rounded-3xl space-y-26">
             <div className="campus-image-wrapper ">
               <img
-                src="/images/assets/eclipse3.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse3.png?updatedAt=1763034088003"
                 alt="Campus"
                 className="image"
               />

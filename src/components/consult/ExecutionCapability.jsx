@@ -7,31 +7,36 @@ export default function ExecutionCapability() {
       title: "Workflow audit + tech landscape mapping",
       description:
         "We dig deep into your current operations, identifying bottlenecks and mapping your existing tools, teams, and tech, to give you a clear picture before change begins.",
-      image: "/images/assets/icon1.png",
+      image:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/icon1.png?updatedAt=1763032950995",
     },
     {
       title: "Modern platform recommendation (buy vs build)",
       description:
         "We help you make strategic decisions on whether to adopt off-the-shelf tools or build custom systems, based on scale, ownership, and long-term flexibility.",
-      image: "/images/assets/icon2.png",
+      image:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/icon2.png?updatedAt=1763033062379",
     },
     {
       title: "System map & architecture blueprint",
       description:
         "We define how your ideal digital ecosystem should look, outlining how modules connect, data flows, roles function, and systems communicate.",
-      image: "/images/assets/icon3.png",
+      image:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/icon3.png?updatedAt=1763033084634",
     },
     {
       title: "MVP scoping and build strategy",
       description:
         "We shape your Minimum Viable Product, balancing speed, cost, and impact, with a phased build plan, delivery milestones, and success metrics.",
-      image: "/images/assets/17.png",
+      image:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/17.png?updatedAt=1763033122176",
     },
     {
       title: "Tool replacement & process digitization",
       description:
         "We replace legacy spreadsheets and scattered tools with integrated platforms that streamline workflows, reduce error, and enhance accountability.",
-      image: "/images/assets/icon5.png",
+      image:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/icon5.png?updatedAt=1763033301779",
     },
   ];
   
@@ -53,7 +58,7 @@ export default function ExecutionCapability() {
               <div className="timeline-item mt-18" key={index}>
                 <div className="flex flex-col md:flex-row items-left gap-6 md:gap-70">
                   <div className="timeline-image order-1 md:order-2">
-                    <img src={item.image} alt="" className="object-contain w-full h-auto "/>
+                    <img src={item.image} alt="" className="object-contain w-full h-full "/>
                   </div>
                   <div className="timeline-content order-2 md:order-1">
                     <h3>{item.title}</h3>

@@ -18,19 +18,22 @@ const fadeInUp = {
 export default function Testimonials() {
   const testimonials = [
     {
-      avatar: "/images/assets/img1.png",
+      avatar:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img1.png?updatedAt=1763034259574",
       quote:
         "Great design makes things easy, clear, and even enjoyable. It works, and that’s what truly matters.",
       author: "Steve Jobs",
     },
     {
-      avatar: "/images/assets/img2.png",
+      avatar:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img2.png?updatedAt=1763036539476",
       quote:
         "There is nothing so useless as doing efficiently that which should not be done at all.",
       author: "Peter Drucker",
     },
     {
-      avatar: "/images/assets/img3.png",
+      avatar:
+        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img3.png?updatedAt=1763036561409",
       quote:
         "Longevity in this business is about being able to reinvent yourself or invent the future.",
       author: "Satya Nadella",

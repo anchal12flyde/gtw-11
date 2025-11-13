@@ -89,14 +89,14 @@ export default function HeroSection() {
           muted
           playsInline
           preload="auto"
-          onLoadedData={handleVideoLoad} // <- key part
+          onLoadedData={handleVideoLoad} 
         >
-          <source src="/videos/light-rays.mp4" type="video/mp4" />
+          <source src="https://ik.imagekit.io/a9uxeuyhx/light-rays.mp4?updatedAt=1763031980392" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
 
-      {/* ✅ Hero text + sections (fade in after loader ends) */}
+      
       <motion.div
         className={`transition-opacity duration-700 ease-in-out ${
           isLoaded ? "opacity-100" : "opacity-0"

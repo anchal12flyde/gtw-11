@@ -329,7 +329,7 @@ export default function Explore_Digital() {
                 <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
                   <div className="relative rounded-2xl">
                     <img
-                      src="/images/Numyum.png"
+                      src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Numyum.png?updatedAt=1763033714108"
                       alt="Campus"
                       className="w-full h-55 "
                     />
@@ -356,7 +356,7 @@ export default function Explore_Digital() {
               >
                 <div className="relative rounded-2xl ">
                   <img
-                    src="/images/Ezstays.png"
+                    src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Ezstays.png?updatedAt=1763033744937"
                     alt="Campus"
                     className="w-full h-55 "
                   />
@@ -380,7 +380,7 @@ export default function Explore_Digital() {
               >
                 <div className="relative rounded-2xl">
                   <img
-                    src="/images/Itel - Mobiles.png"
+                    src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Itel%20-%20Mobiles.png?updatedAt=1763033783590"
                     alt="Campus"
                     className="w-full h-55 "
                   />
@@ -402,7 +402,7 @@ export default function Explore_Digital() {
                 <div className="flex flex-col gap-4 bg-white-color1 rounded-3xl w-70 lg:w-77  h-auto overflow-hidden">
                   <div className="relative rounded-2xl">
                     <img
-                      src="/images/assets/transexpert mockup.jpg"
+                      src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/transexpert%20mockup.jpg?updatedAt=1763033819180"
                       alt="Campus"
                       className="w-full h-55 "
                     />

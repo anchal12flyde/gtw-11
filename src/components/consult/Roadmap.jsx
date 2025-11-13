@@ -43,7 +43,7 @@ export default function Roadmap() {
             variants={card}
           >
             <img
-              src="/images/assets/01.png"
+              src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/01.png?updatedAt=1763033568388"
               alt="Campus"
               className="number-image"
             />
@@ -74,7 +74,7 @@ export default function Roadmap() {
             variants={card}
           >
             <img
-              src="/images/assets/02.png"
+              src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/02.png?updatedAt=1763033592021"
               alt="Campus"
               className="number-image"
             />
@@ -105,7 +105,7 @@ export default function Roadmap() {
             variants={card}
           >
             <img
-              src="/images/assets/03.png"
+              src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/03.png?updatedAt=1763033656545"
               alt="Campus"
               className="number-image"
             />

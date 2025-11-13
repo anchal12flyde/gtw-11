@@ -19,7 +19,7 @@ export default function ProductThinking() {
       >
         <div>
           <img
-            src="/images/assets/mobileIcon1.png"
+            src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/mobileIcon1.png?updatedAt=1763037041451"
             className="w-25 h-25 lg:w-30 lg:h-30"
             alt="Icon"
           />
@@ -42,7 +42,7 @@ export default function ProductThinking() {
       >
         <div>
           <img
-            src="/images/assets/mobileIcon2.png"
+            src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/mobileIcon2.png?updatedAt=1763037066357"
             className="w-25 h-25 lg:w-30 lg:h-30"
             alt="Icon"
           />
@@ -65,7 +65,7 @@ export default function ProductThinking() {
       >
         <div>
           <img
-            src="/images/assets/mobileIcon3.png"
+            src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/mobileIcon3.png?updatedAt=1763037095391"
             className="w-25 h-25 md:w-30 md:h-30"
             alt="Icon"
           />
