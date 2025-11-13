@@ -78,10 +78,10 @@ export default function Header() {
         {pathname !== "/expro" && (
           <nav className="hidden xl:flex gap-6 ">
             <Link
-              className={`nav-link ${isActive("/philosophy") ? "active" : ""}`}
-              href="/philosophy"
+              className={`nav-link ${isActive("/what-we-do") ? "active" : ""}`}
+              href="/what-we-do"
             >
-              Philosophy
+             What We Do
             </Link>
             <Link
               className={`nav-link ${
@@ -202,8 +202,8 @@ export default function Header() {
           </button>
           {pathname !== "/expro" && (
             <div className="space-y-10">
-              <Link href="/" className="block nav-link mt-12 ">
-                Philosophy
+              <Link href="/what-we-do" className="block nav-link mt-12 ">
+                What We Do
               </Link>
               <Link href="/mobile-apps-development" className="block nav-link">
                 Mobile Apps

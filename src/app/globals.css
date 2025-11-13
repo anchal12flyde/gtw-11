@@ -1651,7 +1651,7 @@ input[type="checkbox"] {
 .home-header .nav-link,
 .home-header .gtw-logo,
 .home-header .ClientButton {
-  color: var(--secondary-color) !important;
+  color: var(--white) ;
   border-color: var(--white) !important;
 }
 .home-header.home-header-scrolled {
@@ -1678,17 +1678,21 @@ input[type="checkbox"] {
 
 
 .mobile-drawer .nav-link {
-  color: var(--secondary-color) ;
+  color: var(--secondary-color) !important ;
 }
 
 .mobile-drawer .mobile-login-btn {
   color: var(--white) !important;
   background-color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
+
+  
 }
 .mobile-drawer {
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
+
+
 
 .backdrop-visible {
   opacity: 1;
