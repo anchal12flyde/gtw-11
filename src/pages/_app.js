@@ -5,6 +5,7 @@ import Loader from "@/components/Home/Loader/Loader";
 import { FormProvider } from "@/context/FormContext";
 import { JoinTeamProvider } from "@/context/JoinTeamContext";
 import { AgencyPartnershipProvider } from "@/context/AgencyPartnershipContext";
+import { AuditFormProvider } from "@/context";
 import { Toaster } from "react-hot-toast";
 import "../app/globals.css";
 
@@ -59,11 +60,13 @@ export default function MyApp({ Component, pageProps }) {
         <Loader />
       ) : (
         <FormProvider>
-          <JoinTeamProvider>
-            <AgencyPartnershipProvider>
-              <Component {...pageProps} />
-            </AgencyPartnershipProvider>
-          </JoinTeamProvider>
+          <AuditFormProvider>
+            <JoinTeamProvider>
+              <AgencyPartnershipProvider>
+                <Component {...pageProps} />
+              </AgencyPartnershipProvider>
+            </JoinTeamProvider>
+          </AuditFormProvider>
         </FormProvider>
       )}
 

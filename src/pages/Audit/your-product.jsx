@@ -1,20 +1,63 @@
 "use client";
-import { useState } from 'react';
-import { ChevronDown, ArrowRight } from "lucide-react";
-import Header from "@/components/Home/childComponents/Header";
-import { ArrowLeft } from 'lucide-react';
-import { useRouter } from 'next/navigation';
-import AnimatedInput from '../animation/animated-input';
-import Head from 'next/head';
 
+import { useState } from "react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import Header from "@/components/Home/childComponents/Header";
+import AnimatedInput from "../animation/animated-input";
+import Head from "next/head";
+import { useRouter } from "next/navigation";
+import { useAuditForm } from "@/context"; // CONTEXT API
 
 export default function YourProduct() {
-   const router = useRouter();
-   const [intentText, setIntentText] = useState('');
-   const [experience, setExperience] = useState("");
+  const router = useRouter();
 
-  const handleNext = () => {
-    router.push('/Audit/focus-areas'); 
+  // ---------------- Local States ----------------
+  const [productName, setProductName] = useState("");
+  const [websiteLink, setWebsiteLink] = useState("");
+  const [platform, setPlatform] = useState("");
+  const [description, setDescription] = useState("");
+
+  const [errors, setErrors] = useState({});
+
+  // ---------------- Context ----------------
+  const { updateStep, formId } = useAuditForm();
+
+  // ---------------- Validation ----------------
+  const validateStep2 = () => {
+    const newErrors = {};
+
+    if (!productName.trim()) newErrors.productName = "Product name is required";
+    if (!platform.trim()) newErrors.platform = "Platform selection is required";
+    if (!description.trim())
+      newErrors.description = "Brief description is required";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // ---------------- Save & Next ----------------
+  const handleNext = async () => {
+    if (!validateStep2()) return;
+
+    if (!formId) {
+      alert("Form ID missing — Step 1 was not completed properly.");
+      return;
+    }
+
+    // Payload for backend
+    const payload = {
+      productName,
+      websiteLink,
+      platform,
+      description,
+    };
+
+    const res = await updateStep(2, payload);
+
+    if (res) {
+      router.push("/Audit/focus-areas");
+    }
   };
 
   return (
@@ -22,68 +65,92 @@ export default function YourProduct() {
       <Head>
         <meta name="robots" content="noindex,nofollow" />
       </Head>
+
       <Header />
+
       <div className="util-flex util-flex-1 util-mx-1-5 ">
-        <div className="step-form-container ">
+        <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
             onClick={() => router.push("/Audit/about-you")}
           />
+
+          {/* STEP INDICATOR */}
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 2</span>
           </div>
+
           <div className="custom-left-border">
             <h1 className="heading-systems">Your Product</h1>
           </div>
+
+          {/* PRODUCT NAME */}
           <div className="select-wrapper">
             <AnimatedInput
               placeholder="Enter Product name"
               type="text"
               name="productname"
-              autoComplete="name"
+              value={productName}
+              onChange={(e) => setProductName(e.target.value)}
             />
+            {errors.productName && (
+              <p className="error-text">{errors.productName}</p>
+            )}
           </div>
+
+          {/* WEBSITE LINK */}
           <div className="select-wrapper">
             <AnimatedInput
-              placeholder="Enter  Website/App Link"
-              type="link"
+              placeholder="Enter Website/App Link"
+              type="text"
               name="link"
-              autoComplete="link"
+              value={websiteLink}
+              onChange={(e) => setWebsiteLink(e.target.value)}
             />
           </div>
-          <p className="form-subheading ">Platform </p>
+
+          {/* PLATFORM */}
+          <p className="form-subheading">Platform</p>
+
           <div className="space-y-2 select-wrapper">
-            {["IOS", "Android", "Web", "Other"].map((range) => (
+            {["IOS", "Android", "Web", "Other"].map((item) => (
               <label
-                key={range}
+                key={item}
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <input
                   type="radio"
-                  name="experience"
-                  value={range}
-                  checked={experience === range}
-                  onChange={(e) => setExperience(e.target.value)}
-                  className="form-radio text-yellow-500"
+                  name="platform"
+                  value={item}
+                  checked={platform === item}
+                  onChange={(e) => setPlatform(e.target.value)}
+                  className="form-radio"
                 />
-                <span className="text-md">{range}</span>
+                <span className="text-md">{item}</span>
               </label>
             ))}
+            {errors.platform && <p className="error-text">{errors.platform}</p>}
           </div>
 
-          <p className="form-subheading ">Brief Description</p>
+          {/* DESCRIPTION */}
+          <p className="form-subheading">Brief Description</p>
+
           <div className="select-wrapper">
             <textarea
-              value={intentText}
-              onChange={(e) => setIntentText(e.target.value)}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
               rows={5}
               className="custom-select"
               placeholder="Tell us what excites you ..."
             />
+            {errors.description && (
+              <p className="error-text">{errors.description}</p>
+            )}
           </div>
 
+          {/* NEXT BUTTON */}
           <button onClick={handleNext} className="next-button">
             Next <ArrowRight size={16} />
           </button>
