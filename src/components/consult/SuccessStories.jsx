@@ -167,7 +167,7 @@ export default function SuccessStories() {
         </div>
 
         {/* Arrows for mobile */}
-        <div className="flex justify-center mt-6 sm:hidden">
+        <div className="flex justify-center mt-6 lg:hidden">
           <button className="arrow-button" onClick={scrollLeft}>
             <img
               src="https://ik.imagekit.io/a9uxeuyhx/white%20outline%20arrow%201.png?updatedAt=1761296509366"

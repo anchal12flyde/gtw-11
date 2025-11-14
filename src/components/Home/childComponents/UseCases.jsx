@@ -68,7 +68,7 @@ export default function Usecases() {
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="across-card flex w-full sm:w-[48%] lg:w-[24%] max-w-sm "
+            className="across-card flex w-full md:w-[38%] lg:w-[24%] max-w-sm"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}

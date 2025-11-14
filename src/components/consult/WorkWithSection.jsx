@@ -64,7 +64,7 @@ export default function WorkWithSection() {
                   <p className="industry-description mt-4">{description}</p>
                 </div>
 
-                <div className="block sm:hidden border-b border-primary w-full mt-2"></div>
+                <div className="block lg:hidden border-b border-primary w-full mt-2"></div>
 
                 <div className="product-right ">
                   {tags.map((tag, i) => (

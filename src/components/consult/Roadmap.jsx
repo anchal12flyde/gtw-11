@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 export default function Roadmap() {
@@ -18,28 +16,29 @@ export default function Roadmap() {
   };
 
   const arrow = {
-    hidden: { opacity: 0, x: -50 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hidden: { opacity: 0, y: -30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
     <section className="bg-white-color1 util-flex util-flex-1 util-mx-1-5 mt-26">
-      <div className="relative flex ">
+      <div className="relative flex">
         <h2 className="flex-1 heading-systems">
           How It <span className="text-primary">Works</span>
         </h2>
       </div>
 
       <motion.div
-        className="w-full flex mt-12"
+        className="w-full mt-12"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="flex flex-wrap lg:flex-nowrap">
+        <div className="flex flex-col md:flex-col lg:flex-row gap-10 lg:gap-0 items-center">
+          {/* 1st Card */}
           <motion.div
-            className="work-card flex flex-col gap-10  h-[300px] sm:h-auto justify-end"
+            className="work-card flex flex-col gap-10 h-auto justify-end"
             variants={card}
           >
             <img
@@ -56,21 +55,28 @@ export default function Roadmap() {
             </div>
           </motion.div>
 
+          {/* Tablet Vertical Arrow */}
           <motion.div
-            className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
+            className="
+              hidden 
+              md:flex 
+              
+              justify-center 
+              items-center 
+              w-full
+            "
           >
-            <div className="justify-items-center sm:mt-37 sm:block hidden ">
-              <img
-                src="/images/assets/Arrow 2.png"
-                alt="Arrow"
-                className="w-38 h-4 filter grayscale opacity-70"
-              />
-            </div>
+            <img
+              src="/images/assets/Arrow 2.png"
+              alt="Arrow"
+              className="roadmap-arrow"
+            />
           </motion.div>
 
+          {/* 2nd Card */}
           <motion.div
-            className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
+            className="work-card flex flex-col gap-10 h-auto justify-end"
             variants={card}
           >
             <img
@@ -87,21 +93,28 @@ export default function Roadmap() {
             </div>
           </motion.div>
 
+          {/* Tablet Vertical Arrow */}
           <motion.div
-            className="work-card flex flex-col gap-10  h-auto hide-on-mobile "
             variants={arrow}
+            className="
+              hidden 
+              md:flex 
+           
+              justify-center 
+              items-center 
+              w-full
+            "
           >
-            <div className="justify-items-center sm:mt-37 sm:block hidden ">
-              <img
-                src="/images/assets/Arrow 2.png"
-                alt="Arrow"
-                className="w-38 h-4 filter grayscale opacity-70"
-              />
-            </div>
+            <img
+              src="/images/assets/Arrow 2.png"
+              alt="Arrow"
+              className="roadmap-arrow"
+            />
           </motion.div>
 
+          {/* 3rd Card */}
           <motion.div
-            className="work-card flex flex-col gap-10 h-[300px] sm:h-auto justify-end"
+            className="work-card flex flex-col gap-10 h-auto justify-end"
             variants={card}
           >
             <img

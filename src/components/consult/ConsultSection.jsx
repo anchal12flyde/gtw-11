@@ -1,22 +1,21 @@
 "use client";
 import { useRef } from "react";
 
-
-
-
-
 export default function ConsultSection() {
-     const scrollRef = useRef(null);
-    const scrollLeft = () => {
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
     scrollRef.current?.scrollBy({ left: -260, behavior: "smooth" });
   };
-    const scrollRight = () => {
+
+  const scrollRight = () => {
     scrollRef.current?.scrollBy({ left: 260, behavior: "smooth" });
   };
+
   return (
-    <section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26 ">
+    <section className="bg-gray-100 util-flex util-flex-1 util-mx-1-5 py-20 mt-26">
       <div className="relative flex items-left justify-between mb-12 w-full">
-        <h2 className=" flex-1 heading-systems ">
+        <h2 className="flex-1 heading-systems">
           <span className="text-primary">Why GTW</span> Consult
         </h2>
       </div>
@@ -32,9 +31,10 @@ export default function ConsultSection() {
         }}
         className="scrollbar-hide"
       >
-        <div className="flex flex-nowrap gap-4  w-full">
+        <div className="flex flex-nowrap gap-4 w-full">
+          {/* CARD 1 */}
           <div className="tech-card justify-between rounded-3xl space-y-26">
-            <div className="campus-image-wrapper ">
+            <div className="campus-image-wrapper">
               <img
                 src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse.png?updatedAt=1763033972331"
                 alt="Campus"
@@ -42,7 +42,7 @@ export default function ConsultSection() {
               />
             </div>
 
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2">
               <h3 className="ecom-headings text-left">Systems-first</h3>
               <p className="paragraphs-default text-gray-dark">
                 Systems-first, not software-first.
@@ -50,21 +50,25 @@ export default function ConsultSection() {
             </div>
           </div>
 
-          <div className="tech-card justify-between  rounded-3xl space-y-26">
-            <div className="campus-image-wrapper ">
+          {/* CARD 2 */}
+          <div className="tech-card justify-between rounded-3xl space-y-26">
+            <div className="campus-image-wrapper">
               <img
                 src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse1.png?updatedAt=1763034014005"
                 alt="Campus"
                 className="image"
               />
             </div>
-            <div className="flex flex-col gap-2 ">
+
+            <div className="flex flex-col gap-2">
               <h3 className="ecom-headings text-left">Tech-aware empathy</h3>
               <p className="paragraphs-default text-gray-dark">
                 Deep technical understanding + founder empathy.
               </p>
             </div>
           </div>
+
+          {/* CARD 3 */}
           <div className="tech-card justify-between rounded-3xl space-y-26">
             <div className="campus-image-wrapper">
               <img
@@ -73,6 +77,7 @@ export default function ConsultSection() {
                 className="image"
               />
             </div>
+
             <div className="flex flex-col gap-2">
               <h3 className="ecom-headings text-left">
                 Execution-ready strategy
@@ -82,15 +87,18 @@ export default function ConsultSection() {
               </p>
             </div>
           </div>
+
+          {/* CARD 4 */}
           <div className="tech-card justify-between rounded-3xl space-y-26">
-            <div className="campus-image-wrapper ">
+            <div className="campus-image-wrapper">
               <img
                 src="https://ik.imagekit.io/a9uxeuyhx/New%20Folder/eclipse3.png?updatedAt=1763034088003"
                 alt="Campus"
                 className="image"
               />
             </div>
-            <div className="flex flex-col gap-2 ">
+
+            <div className="flex flex-col gap-2">
               <h3 className="ecom-headings text-left">End-to-end continuity</h3>
               <p className="paragraphs-default text-gray-dark">
                 Seamless handoff to in-house GTW product and dev teams.
@@ -100,7 +108,12 @@ export default function ConsultSection() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-6 lg:hidden">
+      {/* 
+        ✔ Mobile → visible
+        ✔ Tablet → visible
+        ✖ Desktop (lg and up) → hidden
+      */}
+      <div className="flex justify-center mt-6 md:flex lg:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img
             src="/images/LeftArrow.png"
@@ -108,6 +121,7 @@ export default function ConsultSection() {
             className="w-10 h-10"
           />
         </button>
+
         <button className="arrow-button" onClick={scrollRight}>
           <img
             src="/images/RightArrow.png"
