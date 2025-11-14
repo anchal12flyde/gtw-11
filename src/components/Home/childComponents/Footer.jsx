@@ -31,7 +31,7 @@ const categories = [
     title: "Company",
     items: [
       { label: "GTW Home", path: "/" },
-      { label: "Our Philosophy", path: "/philosophy" },
+      { label: "What We Do", path: "/what-we-do" },
       { label: "Become a Client", path: "/step-one-form" },
       { label: "Join Our Team", path: "/join-our-team/personal-details" },
     ],

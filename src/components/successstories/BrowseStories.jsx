@@ -34,43 +34,7 @@ export default function BrowseStories() {
       title: "TransExpert ",
       slug: "transexpert",
     },
-    // {
-    //   imageSrc: "/images/assets/story_img1.png",
-    //   details: "Reinventing the Cloud Kitchen Ordering Experience. ",
-    //   title: "Numyum",
-    //   link: "/Story_Details",
-    // },
-    // {
-    //   imageSrc: "/images/assets/story_img2.png",
-    //   details: "Operating System for Student Housing. ",
-    //   title: "EzStays",
-    //   link: "/Story_Details",
-    // },
-    // {
-    //   imageSrc: "/images/assets/story_img3.png",
-    //   details:
-    //     " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
-    //   title: "Itel",
-    //   link: "/Story_Details",
-    // },
-    // {
-    //   imageSrc: "/images/assets/story_img4.png",
-    //   details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
-    //   title: "TransExpert ",
-    //   link: "/Story_Details",
-    // },
-    // {
-    //   imageSrc: "/images/assets/story_img1.png",
-    //   details: "Reinventing the Cloud Kitchen Ordering Experience. ",
-    //   title: "Numyum",
-    //   link: "/Story_Details",
-    // },
-    // {
-    //   imageSrc: "/images/assets/story_img2.png",
-    //   details: "Operating System for Student Housing. ",
-    //   title: "EzStays",
-    //   link: "/Story_Details",
-    // },
+ 
   ];
   const [hasMounted, setHasMounted] = useState(false);
   const [visibleCount, setVisibleCount] = useState(4);

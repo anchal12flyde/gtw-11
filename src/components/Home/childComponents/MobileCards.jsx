@@ -80,7 +80,7 @@ export default function MobileCards() {
       </motion.div>
 
       {/* ✅ Arrow buttons (for mobile) */}
-      <div className="flex justify-center mt-6 sm:hidden">
+      <div className="flex justify-center mt-6 lg:hidden">
         <button className="arrow-button" onClick={scrollLeft}>
           <img
             src="/images/LeftArrow.png"

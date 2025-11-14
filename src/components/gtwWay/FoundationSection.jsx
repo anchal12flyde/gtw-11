@@ -15,7 +15,7 @@ export default function FoundationSection() {
     >
       
       <div className="util-flex util-flex-1 util-mx-1-5 justify-center">
-        <div className="w-full md:w-[700px] flex flex-col items-center md:items-start">
+        <div className="w-full max-w-[600px] flex flex-col items-center md:items-start">
           <motion.div
             className="heading-systems flex flex-wrap w-full md:w-[500px] justify-center md:justify-start text-center md:text-left"
             variants={fadeInUp}

@@ -64,7 +64,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="hero-wrapper relative overflow-hidden min-h-screen">
+    <div className="hero-wrapper relative  min-h-screen">
       <Header />
 
       <motion.div
@@ -110,7 +110,7 @@ export default function HeroSection() {
             <h1 className="heading-heros">
               Design Slow. Build Smart. <br /> Launch Fast.
             </h1>
-            <p className="heading-subtitles w-full sm:w-[900px] mt-4">
+            <p className="heading-subtitles w-full max-w-[600px] mt-4">
               Our philosophy isn’t just a tagline. It’s a deliberate discipline
               we bring to every product we craft.
             </p>
