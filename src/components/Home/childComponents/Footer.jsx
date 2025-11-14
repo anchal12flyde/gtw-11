@@ -23,7 +23,7 @@ const categories = [
     items: [
       { label: "Expro", path: "https://expro.store" },
       { label: "Difooch", path: "https://difooch.com" },
-      { label: "Auditchef", path: "/Audit/about-you" },
+      { label: "Auditchef", path: "https://www.auditchef.com/" },
       { label: "Startup Launcher", path: "#" },
     ],
   },
