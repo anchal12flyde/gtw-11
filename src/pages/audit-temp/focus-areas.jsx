@@ -62,7 +62,7 @@ export default function FocusAreas() {
     const res = await updateStep(3, payload);
 
     if (res) {
-      router.push("/audit/your-goals");
+      router.push("/audit-temp/your-goals");
     }
   };
   
@@ -80,7 +80,7 @@ export default function FocusAreas() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/audit/your-product")}
+            onClick={() => router.push("/audit-temp/your-product")}
           />
 
           {/* Step Indicator */}
