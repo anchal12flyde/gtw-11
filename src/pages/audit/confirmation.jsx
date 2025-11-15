@@ -6,7 +6,8 @@ import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import Head from "next/head";
-import { useAuditForm } from "@/context"; // CONTEXT API
+import { useAuditForm } from "@/context"; 
+import ThankYouPage from "../thankyou-page/thank-you";
 
 export default function Confirmation() {
   const router = useRouter();
@@ -41,7 +42,9 @@ export default function Confirmation() {
       toast.success("Form submitted successfully!");
 
       // Redirect to homepage or success page
-      router.push("/");
+      router.push(
+        "/thankyou-page/thank-you"
+      );
     }
   };
 
