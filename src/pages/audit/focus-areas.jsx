@@ -22,8 +22,8 @@ export default function FocusAreas() {
   // ------------------- Local State ---------------------
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [notes, setNotes] = useState("");
-
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   // ------------------- Context API ---------------------
   const { updateStep, formId } = useAuditForm();
@@ -54,6 +54,8 @@ export default function FocusAreas() {
       return;
     }
 
+    setIsLoading(true);
+
     const payload = {
       focusAreas: selectedSkills,
       notes: notes || "",
@@ -61,11 +63,12 @@ export default function FocusAreas() {
 
     const res = await updateStep(3, payload);
 
+    setIsLoading(false);
+
     if (res) {
       router.push("/audit/your-goals");
     }
   };
-  
 
   return (
     <>
@@ -99,7 +102,9 @@ export default function FocusAreas() {
             {skillsList.map((skill) => (
               <label
                 key={skill}
-                className="flex items-center gap-2 cursor-pointer"
+                className={`flex items-center gap-2 cursor-pointer ${
+                  errors.focusAreas ? "input-error" : ""
+                }`} // <-- NEW: red border for validation
               >
                 <input
                   type="checkbox"
@@ -123,13 +128,19 @@ export default function FocusAreas() {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={5}
-              className="custom-select"
+              className={`custom-select ${errors.notes ? "input-error" : ""}`} // <-- optional red border
               placeholder="Other – please specify"
             />
+            {errors.notes && <p className="error-text">{errors.notes}</p>}
           </div>
 
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          <button
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"}
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>

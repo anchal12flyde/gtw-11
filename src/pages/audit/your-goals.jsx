@@ -15,8 +15,8 @@ export default function YourGoals() {
   const [primaryGoal, setPrimaryGoal] = useState("");
   const [otherText, setOtherText] = useState("");
   const [specificChallenge, setSpecificChallenge] = useState("");
-
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   // ---------------- Context ----------------
   const { updateStep, formId } = useAuditForm();
@@ -45,7 +45,8 @@ export default function YourGoals() {
       return;
     }
 
-    // Convert "Other (text)" into actual text
+    setIsLoading(true);
+
     const finalGoal = primaryGoal === "Other (text)" ? otherText : primaryGoal;
 
     const payload = {
@@ -53,19 +54,13 @@ export default function YourGoals() {
       specificChallenge: specificChallenge || "",
     };
 
-    console.log("one");
-
     const res = await updateStep(4, payload);
 
-    console.log("two", res);
+    setIsLoading(false);
 
     if (res) {
-      console.log("pushing now");
       router.push("/audit/confirmation");
-      return; // ⛔ stops further execution instantly
     }
-
-    console.log("four"); // will never run after navigation
   };
 
   return (
@@ -129,6 +124,7 @@ export default function YourGoals() {
                   value={otherText}
                   onChange={(e) => setOtherText(e.target.value)}
                   placeholder="Please specify"
+                  className={errors.otherText ? "input-error" : ""}
                 />
                 {errors.otherText && (
                   <p className="error-text">{errors.otherText}</p>
@@ -157,8 +153,13 @@ export default function YourGoals() {
           </div>
 
           {/* NEXT BUTTON */}
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          <button
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"}
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>

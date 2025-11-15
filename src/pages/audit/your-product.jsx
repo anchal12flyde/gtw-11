@@ -16,8 +16,8 @@ export default function YourProduct() {
   const [websiteLink, setWebsiteLink] = useState("");
   const [platform, setPlatform] = useState("");
   const [description, setDescription] = useState("");
-
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   // ---------------- Context ----------------
   const { updateStep, formId } = useAuditForm();
@@ -27,6 +27,8 @@ export default function YourProduct() {
     const newErrors = {};
 
     if (!productName.trim()) newErrors.productName = "Product name is required";
+    if (!websiteLink.trim())
+      newErrors.websiteLink = "Website/App Link is required";
     if (!platform.trim()) newErrors.platform = "Platform selection is required";
     if (!description.trim())
       newErrors.description = "Brief description is required";
@@ -45,7 +47,8 @@ export default function YourProduct() {
       return;
     }
 
-    // Payload for backend
+    setIsLoading(true);
+
     const payload = {
       productName,
       websiteLink,
@@ -54,6 +57,8 @@ export default function YourProduct() {
     };
 
     const res = await updateStep(2, payload);
+
+    setIsLoading(false);
 
     if (res) {
       router.push("/audit/focus-areas");
@@ -94,6 +99,7 @@ export default function YourProduct() {
               name="productname"
               value={productName}
               onChange={(e) => setProductName(e.target.value)}
+              className={errors.productName ? "input-error" : ""}
             />
             {errors.productName && (
               <p className="error-text">{errors.productName}</p>
@@ -108,17 +114,22 @@ export default function YourProduct() {
               name="link"
               value={websiteLink}
               onChange={(e) => setWebsiteLink(e.target.value)}
+              className={errors.websiteLink ? "input-error" : ""}
             />
+            {errors.websiteLink && (
+              <p className="error-text">{errors.websiteLink}</p>
+            )}
           </div>
 
           {/* PLATFORM */}
           <p className="form-subheading">Platform</p>
-
           <div className="space-y-2 select-wrapper">
             {["IOS", "Android", "Web", "Other"].map((item) => (
               <label
                 key={item}
-                className="flex items-center gap-2 cursor-pointer"
+                className={`flex items-center gap-2 cursor-pointer ${
+                  errors.platform ? "input-error" : ""
+                }`}
               >
                 <input
                   type="radio"
@@ -136,13 +147,14 @@ export default function YourProduct() {
 
           {/* DESCRIPTION */}
           <p className="form-subheading">Brief Description</p>
-
           <div className="select-wrapper">
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={5}
-              className="custom-select"
+              className={`custom-select ${
+                errors.description ? "input-error" : ""
+              }`}
               placeholder="Tell us what excites you ..."
             />
             {errors.description && (
@@ -151,8 +163,13 @@ export default function YourProduct() {
           </div>
 
           {/* NEXT BUTTON */}
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          <button
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"}
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>

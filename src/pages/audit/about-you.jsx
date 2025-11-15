@@ -15,10 +15,11 @@ export default function AboutYou() {
   // ---------------- Local States ----------------
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(""); // STRING ONLY
-  const [countryCode, setCountryCode] = useState("+91"); // OPTIONAL
+  const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("+91");
 
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   // ---------------- Context API ----------------
   const { startForm, updateStep, formId } = useAuditForm();
@@ -36,25 +37,26 @@ export default function AboutYou() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  
 
   // ---------------- NEXT HANDLER ----------------
   const handleNext = async () => {
     if (!validateStep1()) return;
 
-    // If form doesn't exist → start new one
+    setIsLoading(true);
+
     let activeFormId = formId;
+
     if (!activeFormId) {
       const res = await startForm(email);
       activeFormId = res?._id;
 
       if (!activeFormId) {
         alert("Could not start form");
+        setIsLoading(false);
         return;
       }
     }
 
-    // Payload for backend
     const payload = {
       fullName,
       email,
@@ -63,6 +65,8 @@ export default function AboutYou() {
     };
 
     const result = await updateStep(1, payload);
+
+    setIsLoading(false);
 
     if (result) {
       router.push("/audit/your-product");
@@ -96,6 +100,7 @@ export default function AboutYou() {
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              className={errors.fullName ? "input-error" : ""}
             />
             {errors.fullName && <p className="error-text">{errors.fullName}</p>}
           </div>
@@ -107,22 +112,28 @@ export default function AboutYou() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={errors.email ? "input-error" : ""}
             />
             {errors.email && <p className="error-text">{errors.email}</p>}
           </div>
 
-          {/* PHONE + COUNTRY CODE */}
+          {/* PHONE */}
           <div className="select-wrapper">
             <CountryCode
               value={phone}
               onChange={(value) => setPhone(value)}
-              onCodeChange={(code) => setCountryCode(code)} // if your component supports this
+              onCodeChange={(code) => setCountryCode(code)}
+              className={errors.phone ? "input-error" : ""}
             />
             {errors.phone && <p className="error-text">{errors.phone}</p>}
           </div>
 
-          <button onClick={handleNext} className="next-button">
-            Next <ArrowRight size={16} />
+          <button
+            onClick={handleNext}
+            className="next-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

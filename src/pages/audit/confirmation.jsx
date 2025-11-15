@@ -6,8 +6,7 @@ import Header from "@/components/Home/childComponents/Header";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import Head from "next/head";
-import { useAuditForm } from "@/context"; 
-import ThankYouPage from "../thankyou-page/thank-you";
+import { useAuditForm } from "@/context";
 
 export default function Confirmation() {
   const router = useRouter();
@@ -15,16 +14,24 @@ export default function Confirmation() {
   // ---------------- Local States ----------------
   const [summary, setSummary] = useState("");
   const [agreed, setAgreed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState({}); // <-- NEW
 
   // ---------------- Context ----------------
   const { updateStep, formId } = useAuditForm();
 
+  // ---------------- Validation ----------------
+  const validate = () => {
+    let newErrors = {};
+    if (!agreed)
+      newErrors.agreed = "You must confirm your agreement to submit.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   // ---------------- Submit Handler ----------------
   const handleSubmit = async () => {
-    if (!agreed) {
-      toast.error("Please confirm your agreement to submit.");
-      return;
-    }
+    if (!validate()) return;
 
     if (!formId) {
       toast.error("Form session missing — restart the audit.");
@@ -36,15 +43,15 @@ export default function Confirmation() {
       agreed: true,
     };
 
+    setIsLoading(true);
+
     const res = await updateStep(5, payload);
+
+    setIsLoading(false);
 
     if (res) {
       toast.success("Form submitted successfully!");
-
-      // Redirect to homepage or success page
-      router.push(
-        "/thankyou-page/thank-you"
-      );
+      router.push("/thankyou-page/thank-you");
     }
   };
 
@@ -56,7 +63,7 @@ export default function Confirmation() {
 
       <Header />
 
-      <div className="util-flex util-flex-1 util-mx-1-5 ">
+      <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
@@ -82,9 +89,11 @@ export default function Confirmation() {
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
               rows={5}
-              className="custom-select"
+              className={`custom-select ${errors.summary ? "input-error" : ""}`} // <-- NEW
               placeholder="Anything you want to add..."
             />
+            {errors.summary && <p className="error-text">{errors.summary}</p>}{" "}
+            {/* <-- NEW */}
           </div>
 
           {/* AGREEMENT */}
@@ -94,18 +103,25 @@ export default function Confirmation() {
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-1"
+                className={`mt-1 ${errors.agreed ? "input-error" : ""}`} // <-- NEW
               />
               <span>
                 I understand that GTW is a high-performance, hands-on
                 environment and I’m excited to contribute meaningfully.
               </span>
             </label>
+            {errors.agreed && <p className="error-text">{errors.agreed}</p>}{" "}
+            {/* <-- NEW */}
           </div>
 
           {/* SUBMIT */}
-          <button className="next-button" onClick={handleSubmit}>
-            Submit <ArrowRight size={16} />
+          <button
+            className="next-button"
+            onClick={handleSubmit}
+            disabled={isLoading}
+          >
+            {isLoading ? "Submitting..." : "Submit"}
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>

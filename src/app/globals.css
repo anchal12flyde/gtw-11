@@ -3297,3 +3297,14 @@ letter-spacing: 0.7;
     text-align: center;
   }
 }
+/* Error text under inputs */
+.error-text {
+  color: #ef4444; /* Tailwind red-500 */
+  font-size: 0.875rem; /* text-sm */
+  margin-top: 0.5rem; /* mt-2 */
+}
+
+/* Red border for invalid inputs */
+.input-error {
+  border-color: #ef4444 !important;
+}
