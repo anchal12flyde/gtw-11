@@ -61,7 +61,7 @@ export default function YourGoals() {
 
     if (res) {
       console.log("pushing now");
-      router.push("/audit/Confirmation");
+      router.push("/audit/confirmation");
       return; // ⛔ stops further execution instantly
     }
 
