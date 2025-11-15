@@ -61,7 +61,7 @@ export default function YourGoals() {
 
     if (res) {
       console.log("pushing now");
-      router.push("/audit-temp/Confirmation");
+      router.push("/audit/Confirmation");
       return; // ⛔ stops further execution instantly
     }
 
@@ -81,7 +81,7 @@ export default function YourGoals() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/audit-temp/focus-areas")}
+            onClick={() => router.push("/audit/focus-areas")}
           />
 
           {/* Step Indicator */}
