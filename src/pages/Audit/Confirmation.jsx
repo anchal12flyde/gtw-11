@@ -58,7 +58,7 @@ export default function Confirmation() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Audit/your-goals")}
+            onClick={() => router.push("/audit/your-goals")}
           />
 
           {/* Step Indicator */}

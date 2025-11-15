@@ -56,7 +56,7 @@ export default function YourProduct() {
     const res = await updateStep(2, payload);
 
     if (res) {
-      router.push("/Audit/focus-areas");
+      router.push("/audit/focus-areas");
     }
   };
 
@@ -73,7 +73,7 @@ export default function YourProduct() {
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
             size={30}
-            onClick={() => router.push("/Audit/about-you")}
+            onClick={() => router.push("/audit/about-you")}
           />
 
           {/* STEP INDICATOR */}

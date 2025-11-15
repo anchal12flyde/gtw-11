@@ -65,7 +65,7 @@ export default function AboutYou() {
     const result = await updateStep(1, payload);
 
     if (result) {
-      router.push("/Audit/your-product");
+      router.push("/audit/your-product");
     }
   };
 
