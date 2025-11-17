@@ -15,6 +15,7 @@ export default function AgencyDetails() {
 
   const [localData, setLocalData] = useState({
     agencyName: '',
+    email: '',
     websiteUrl: '',
     socialMedia: '',
     location: '',
@@ -24,11 +25,12 @@ export default function AgencyDetails() {
   useEffect(() => {
     if (formData) {
       setLocalData({
-        agencyName: formData.agencyName || '',
-        websiteUrl: formData.websiteUrl || '',
-        socialMedia: formData.socialMedia || '',
-        location: formData.location || '',
-        teamSize: formData.teamSize || '',
+        agencyName: formData.agencyName || "",
+        email: formData.email || "",
+        websiteUrl: formData.websiteUrl || "",
+        socialMedia: formData.socialMedia || "",
+        location: formData.location || "",
+        teamSize: formData.teamSize || "",
       });
     }
   }, [formData]);
@@ -40,6 +42,10 @@ export default function AgencyDetails() {
   const validateForm = () => {
     if (!localData.agencyName.trim()) {
       toast.error('Please enter your agency/studio name');
+      return false;
+    }
+    if (!localData.email.trim()) {
+      toast.error("Please enter your Email");
       return false;
     }
     if (!localData.location.trim()) {
@@ -64,9 +70,9 @@ export default function AgencyDetails() {
 
   return (
     <>
-    <Head>
-    <meta name="robots" content="noindex,nofollow"/>
-    </Head>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <Header />
       <div className="util-flex util-flex-1 util-mx-1-5">
         <div className="step-form-container ">
@@ -88,7 +94,16 @@ export default function AgencyDetails() {
               placeholder="Enter your Agency/Studio name"
               className="custom-select"
               value={localData.agencyName}
-              onChange={(e) => handleInputChange('agencyName', e.target.value)}
+              onChange={(e) => handleInputChange("agencyName", e.target.value)}
+            />
+          </div>
+          <div className="select-wrapper">
+            <input
+              type="text"
+              placeholder="Enter your Email"
+              className="custom-select"
+              value={localData.email}
+              onChange={(e) => handleInputChange("email", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
@@ -97,7 +112,7 @@ export default function AgencyDetails() {
               placeholder="Enter your Website or Portfolio URL"
               className="custom-select"
               value={localData.websiteUrl}
-              onChange={(e) => handleInputChange('websiteUrl', e.target.value)}
+              onChange={(e) => handleInputChange("websiteUrl", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
@@ -106,7 +121,7 @@ export default function AgencyDetails() {
               placeholder="Enter your Instagram or Dribble"
               className="custom-select"
               value={localData.socialMedia}
-              onChange={(e) => handleInputChange('socialMedia', e.target.value)}
+              onChange={(e) => handleInputChange("socialMedia", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
@@ -115,7 +130,7 @@ export default function AgencyDetails() {
               placeholder="Enter your City or Country"
               className="custom-select"
               value={localData.location}
-              onChange={(e) => handleInputChange('location', e.target.value)}
+              onChange={(e) => handleInputChange("location", e.target.value)}
             />
           </div>
           <p className="form-subheading ">Team Size</p>
@@ -130,7 +145,7 @@ export default function AgencyDetails() {
                   name="teamSize"
                   value={option}
                   checked={localData.teamSize === option}
-                  onChange={() => handleInputChange('teamSize', option)}
+                  onChange={() => handleInputChange("teamSize", option)}
                   className="form-radio text-yellow-500"
                 />
                 <span className="text-md">{option}</span>
@@ -138,12 +153,12 @@ export default function AgencyDetails() {
             ))}
           </div>
 
-          <button 
-            onClick={handleNext} 
+          <button
+            onClick={handleNext}
             className="next-button"
             disabled={loading}
           >
-            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
+            {loading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>
