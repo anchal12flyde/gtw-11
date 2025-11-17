@@ -1,56 +1,29 @@
-'use client'
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ClientButton from '@/components/globalcomponents/Button';
-
+import ClientButton from "@/components/globalcomponents/Button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const [scrolled, setScrolled] = useState(true);
   const pathname = usePathname();
-  const [logoSrc, setLogoSrc] = useState("/images/gtw_new.png");
 
-// useEffect(() => {
-//     const handleScroll = () => {
-//       console.log(window.scrollY);
-//       if (window.scrollY > 50) {
-//         console.log("hello");
-//         setScrolled(true);
-//       } else {
-//         setScrolled(false);
-//       }
-//     };
+  // ---------------------------------------
+  // 🔥 FIXED LOGIC: No useEffect required
+  // ---------------------------------------
+  const isTransparent =
+    pathname === "/" || pathname === "/digital-transformation-service";
 
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
+  const logoSrc =
+    pathname === "/expro"
+      ? "/images/exproLogo.png"
+      : isTransparent
+      ? "/images/gtw_new1.png" // white version
+      : "/images/gtw_new.png"; // black version
 
-
- useEffect(() => {
-  const header = document.querySelector(".site-header");
-  if (header) {
-    if (
-      pathname === "/digital-transformation-service" ||
-      pathname === "/"
-    ) {
-      header.classList.add("transparent-header");
-      setLogoSrc("/images/gtw_new1.png");
-    } else if (pathname === "/expro") {
-      header.classList.remove("transparent-header");
-      setLogoSrc("/images/exproLogo.png");
-    } else {
-      header.classList.remove("transparent-header");
-      setLogoSrc("/images/gtw_new.png");
-    }
-  }
-}, [pathname]);
-
- const isActive = (href) => {
+  const isActive = (href) => {
     return (
       pathname === href ||
       (href === "/" && pathname.startsWith("/")) ||
@@ -61,28 +34,25 @@ export default function Header() {
 
   return (
     <header
-      className={`site-header  util-flex util-flex-1 util-mx-1-5 pt-4 
-    ${pathname === "/" ? "home-header" : ""}
-  `}
+      className={`site-header util-flex util-flex-1 util-mx-1-5 pt-4 
+        ${isTransparent ? "transparent-header" : ""}`}
     >
-      <div className="  flex items-center justify-between h-12">
+      <div className="flex items-center justify-between h-12">
+        {/* LOGO */}
         <Link href="/">
-          <img
-            key={pathname}
-            src={logoSrc}
-            alt="GTW Logo"
-            className="gtw-logo h-8 w-auto"
-          />
+          <img src={logoSrc} alt="GTW Logo" className="gtw-logo h-8 w-auto" />
         </Link>
 
+        {/* NAVIGATION */}
         {pathname !== "/expro" && (
-          <nav className="hidden xl:flex gap-6 ">
+          <nav className="hidden xl:flex gap-6">
             <Link
               className={`nav-link ${isActive("/what-we-do") ? "active" : ""}`}
               href="/what-we-do"
             >
-             What We Do
+              What We Do
             </Link>
+
             <Link
               className={`nav-link ${
                 isActive("/mobile-apps-development") ? "active" : ""
@@ -91,7 +61,7 @@ export default function Header() {
             >
               Mobile Apps
             </Link>
-            {/* <Link className={`nav-link ${isActive("/StyleGuide") ? 'active' : ''}`} href="/StyleGuide">GTW SaaS Cloud</Link> */}
+
             <Link
               className={`nav-link ${
                 isActive("/digital-transformation-service") ? "active" : ""
@@ -100,6 +70,7 @@ export default function Header() {
             >
               Digital Transformation
             </Link>
+
             <a
               className="nav-link"
               href="https://expro.store"
@@ -115,6 +86,7 @@ export default function Header() {
             >
               Insights
             </Link>
+
             <Link
               className={`nav-link ${
                 isActive("/success-stories") ? "active" : ""
@@ -126,13 +98,12 @@ export default function Header() {
           </nav>
         )}
 
+        {/* GET STARTED BUTTON */}
         <div className="hidden xl:block">
           <ClientButton
             href="/step-one-form"
             className={`${
-              pathname === "/digital-transformation-service" ||
-              pathname === "/" ||
-              pathname === "/expro"
+              isTransparent || pathname === "/expro"
                 ? "bg-primary text-white-color1 hover:bg-primary"
                 : "bg-secondary text-white-color1 hover:bg-primary hover:text-white-color1"
             }`}
@@ -141,39 +112,28 @@ export default function Header() {
           </ClientButton>
         </div>
 
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={toggleMenu}
           className="toggle-menu xl:hidden flex flex-col justify-center gap-[6px] w-8 h-8 focus:outline-none"
         >
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
-              [
-                "/digital-transformation-service",
-                "/",
-                "/expro",
-              ].includes(pathname)
+              isTransparent || pathname === "/expro"
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
           ></span>
           <span
             className={`block h-[2px] w-[30px] rounded-sm ${
-              [
-                "/digital-transformation-service",
-                "/",
-                "/expro",
-              ].includes(pathname)
+              isTransparent || pathname === "/expro"
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
           ></span>
           <span
             className={`block h-[2px] w-[24px] rounded-sm ml-[6px] ${
-              [
-                "/digital-transformation-service",
-                "/",
-                "/expro",
-              ].includes(pathname)
+              isTransparent || pathname === "/expro"
                 ? "bg-white-color1"
                 : "bg-white-gray"
             }`}
@@ -181,6 +141,7 @@ export default function Header() {
         </button>
       </div>
 
+      {/* MOBILE MENU DRAWER */}
       <div
         className={`fixed inset-0 z-99999 bg-secondary/40 backdrop-saturate-150 xl:hidden mobile-drawer ${
           isOpen ? "backdrop-visible" : "backdrop-hidden"
@@ -196,10 +157,10 @@ export default function Header() {
           <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-white-gray text-2xl focus:outline-none"
-            aria-label="Close menu"
           >
             &times;
           </button>
+
           {pathname !== "/expro" && (
             <div className="space-y-10">
               <Link href="/what-we-do" className="block nav-link mt-12 ">
@@ -208,23 +169,22 @@ export default function Header() {
               <Link href="/mobile-apps-development" className="block nav-link">
                 Mobile Apps
               </Link>
-              {/* <Link href="/StyleGuide" className="block nav-link ">GTW SaaS Cloud</Link> */}
               <Link
                 href="/digital-transformation-service"
-                className="block nav-link "
+                className="block nav-link"
               >
                 Digital Transformation
               </Link>
               <Link href="https://expro.store/" className="block nav-link">
                 ExPro
               </Link>
-              <Link href="/blog" className="block nav-link ">
+              <Link href="/blog" className="block nav-link">
                 Insights
               </Link>
-              <Link href="/success-stories" className="block nav-link ">
+              <Link href="/success-stories" className="block nav-link">
                 Success Stories
               </Link>
-              <Link href="/step-one-form" className="mobile-login-btn  block">
+              <Link href="/step-one-form" className="mobile-login-btn block">
                 Get Started
               </Link>
             </div>
@@ -234,4 +194,3 @@ export default function Header() {
     </header>
   );
 }
-
