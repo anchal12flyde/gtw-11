@@ -3308,3 +3308,36 @@ letter-spacing: 0.7;
 .input-error {
   border-color: #ef4444 !important;
 }
+ /* Lead Gen Form */
+
+.form-container {
+  width: 100%;
+  min-height: 100vh;
+ 
+}
+
+
+
+
+
+
+.welcome-screen {
+  min-height: 100vh;           
+  display: flex;                
+  flex-direction: column;        
+  justify-content:center;  
+  align-items: center;           
+  text-align: center;            
+  
+  gap: 16px;                 
+}
+
+@media (min-width: 640px) {
+  .welcome-screen {
+    justify-content: center;     
+  }
+}
+
+.welcome-screen button {
+  margin-top: 20px;
+}
