@@ -5,6 +5,7 @@ module.exports = {
     policies: [
       {
         userAgent: "*",
+        allow: "/",
         disallow: [
           "/private/",
           "/temp/",
@@ -25,10 +26,6 @@ module.exports = {
           "/style-guide/",
           "/lead-gen-form/",
         ],
-      },
-      {
-        userAgent: "*",
-        allow: "/",
       },
     ],
   },

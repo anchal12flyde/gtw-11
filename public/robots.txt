@@ -1,5 +1,6 @@
 # *
 User-agent: *
+Allow: /
 Disallow: /private/
 Disallow: /temp/
 Disallow: /agency-partnership/
@@ -18,10 +19,6 @@ Disallow: /step-three-web/
 Disallow: /step-two-form/
 Disallow: /style-guide/
 Disallow: /lead-gen-form/
-
-# *
-User-agent: *
-Allow: /
 
 # Host
 Host: https://www.generaltechworks.com
