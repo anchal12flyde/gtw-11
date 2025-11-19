@@ -1,5 +1,35 @@
 module.exports = {
-  siteUrl: "https://generaltechworks.com/",
+  siteUrl: "https://www.generaltechworks.com",
   generateRobotsTxt: true,
-  sitemapSize: 7000,
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: "*",
+        disallow: [
+          "/private/",
+          "/temp/",
+          "/agency-partnership/",
+          "/animation/",
+          "/audit/",
+          "/join-our-team/",
+          "/thankyou-page/",
+          "/step-one-form/",
+          "/step-five/",
+          "/step-four/",
+          "/step-three-consult/",
+          "/step-three-infra/",
+          "/step-three-mobile/",
+          "/step-three-saas/",
+          "/step-three-web/",
+          "/step-two-form/",
+          "/style-guide/",
+          "/lead-gen-form/",
+        ],
+      },
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+    ],
+  },
 };
