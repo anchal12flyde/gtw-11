@@ -38,8 +38,16 @@ export default function PeronalDetails() {
   }, [formData]);
 
   const handleInputChange = (field, value) => {
-    setLocalData(prev => ({ ...prev, [field]: value }));
+    let formattedValue = value.trim().toLowerCase();
+
+    if (field === "willingToRelocate") {
+      if (formattedValue === "yes") formattedValue = "Yes";
+      else if (formattedValue === "no") formattedValue = "No";
+    }
+
+    setLocalData((prev) => ({ ...prev, [field]: formattedValue }));
   };
+  
 
   const validateForm = () => {
     if (!localData.name.trim()) {
