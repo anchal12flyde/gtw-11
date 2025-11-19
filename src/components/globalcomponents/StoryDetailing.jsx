@@ -175,7 +175,7 @@ export default function StoryDetaling({
                   key={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUp}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
@@ -236,7 +236,7 @@ export default function StoryDetaling({
       </div>
 
       {/* Testimonal */}
-      <div className="bg-gray-light text-center mt-16 util-flex util-flex-1 util-mx-1-5">
+      <div className="bg-gray-light text-center  mt-16 util-flex util-flex-1 util-mx-1-5">
         <div className="mx-0 sm:mx-30">
           {sections
             .filter((section) => section.type === "testimonial")

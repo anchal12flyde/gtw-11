@@ -820,8 +820,11 @@ line-height: normal;
   line-height: 100%;
   letter-spacing: 0%;
   margin-bottom: 34px;
+  transition: color 0.3s ease;
 }
-
+.footer-list li:hover {
+  color: var(--primary-color);
+}
 .company-name {
   font-family: 'Inter', sans-serif;
   font-weight: 400; 
@@ -1490,6 +1493,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
 }
 
 @media (min-width: 768px) {
