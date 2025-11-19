@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://generaltechworks.com
+Host: https://generaltechworks.com/
 
 # Sitemaps
 Sitemap: https://generaltechworks.com/sitemap.xml
