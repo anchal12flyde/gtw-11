@@ -39,7 +39,7 @@ const categories = [
   {
     title: "Quick Links",
     items: [
-      { label: "Insights", path: "/blog" },
+      // { label: "Insights", path: "/blog" },
       { label: "Success Stories", path: "/success-stories" },
       { label: "Pay Online", path: "#" },
       { label: "Raise a Ticket", path: "#" },
