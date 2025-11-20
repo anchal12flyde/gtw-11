@@ -14,8 +14,8 @@ const categories = [
         label: "Digital Transformation",
         path: "/digital-transformation-service",
       },
-      { label: "Website Development", path: "#" },
-      { label: "Software Development", path: "#" },
+      // { label: "Website Development", path: "#" },
+      // { label: "Software Development", path: "#" },
     ],
   },
   {
@@ -24,7 +24,7 @@ const categories = [
       { label: "Expro", path: "https://expro.store" },
       { label: "Difooch", path: "https://difooch.com" },
       { label: "Auditchef", path: "https://www.auditchef.com/" },
-      { label: "Startup Launcher", path: "#" },
+      // { label: "Startup Launcher", path: "#" },
     ],
   },
   {
@@ -41,8 +41,8 @@ const categories = [
     items: [
       // { label: "Insights", path: "/blog" },
       { label: "Success Stories", path: "/success-stories" },
-      { label: "Pay Online", path: "#" },
-      { label: "Raise a Ticket", path: "#" },
+      // { label: "Pay Online", path: "#" },
+      // { label: "Raise a Ticket", path: "#" },
     ],
   },
 ];

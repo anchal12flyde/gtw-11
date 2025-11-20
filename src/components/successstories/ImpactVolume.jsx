@@ -1,11 +1,8 @@
 'use client'
 import BlogCard from "../globalcomponents/BlogCards";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-const fadeInUp = {
-    hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
 
 
 const items = [
@@ -14,31 +11,40 @@ const items = [
   { number: "02", text: "Ready in weeks, not months" },
   { number: "02", text: "Ready in weeks, not months" },
 ];
-  const blogData = [
-    {
-      imageSrc:
-        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Ezstays.png?updatedAt=1763033744937",
-      details: "Operating System for Student Housing. ",
-      title: "EzStays",
-      slug: "ezstays",
-    },
-    {
-      imageSrc:
-        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Itel%20-%20Mobiles.png?updatedAt=1763033783590",
-      details:
-        " A Custom-Built E-commerce Platform for a D2C Electronics Brand. ",
-      title: "Itel",
-      slug: "itel",
-    },
-    {
-      imageSrc:
-        "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/transexpert%20mockup.jpg?updatedAt=1763033819180",
-      details: "A Complete Corporate Rebuild for a Logistics Powerhouse. ",
-      title: "TransExpert ",
-      slug: "transexpert",
-    },
-  ];
+const blogData = [
+  {
+    imageSrc:
+      "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Ezstays.png?updatedAt=1763033744937",
+    details: "Operating System for Student Housing.",
+    title: "EzStays",
+    slug: "ezstays",
+  },
+  {
+    imageSrc:
+      "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Itel%20-%20Mobiles.png?updatedAt=1763033783590",
+    details: "A Custom-Built E-commerce Platform for a D2C Electronics Brand.",
+    title: "Itel",
+    slug: "itel",
+  },
+  {
+    imageSrc:
+      "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/transexpert%20mockup.jpg?updatedAt=1763033819180",
+    details: "A Complete Corporate Rebuild for a Logistics Powerhouse.",
+    title: "TransExpert",
+    slug: "transexpert",
+  },
+  {
+    imageSrc:
+      "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/Numyum.png?updatedAt=1763033714108",
+    details: "New food tech case study",
+    title: "Numyum",
+    slug: "numyum",
+  },
+];
 export default function ImpactVolume() {
+  const pathname = usePathname(); 
+  const currentSlug = pathname.split("/").pop(); 
+  const filteredBlogs = blogData.filter((item) => item.slug !== currentSlug);
   return (
     <>
       <section className=" bg-white-color1 util-flex util-flex-1 util-mx-1-5 ">
@@ -62,7 +68,7 @@ export default function ImpactVolume() {
             <h1 className="heading-systems text-center">Related Articles</h1>
 
             <div className="grid-cols-blog mt-10">
-              {blogData.map((blog, index) => (
+              {filteredBlogs.map((blog, index) => (
                 <BlogCard
                   key={index}
                   imageSrc={blog.imageSrc}

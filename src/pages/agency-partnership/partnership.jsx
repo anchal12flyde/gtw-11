@@ -128,7 +128,7 @@ export default function Partnership() {
             Have you worked with dev partners before?
           </p>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Yes/No"
               className="custom-select"
@@ -149,12 +149,12 @@ export default function Partnership() {
             />
           </div>
 
-          <button 
-            onClick={handleNext} 
+          <button
+            onClick={handleNext}
             className="next-button"
             disabled={loading}
           >
-            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
+            {loading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

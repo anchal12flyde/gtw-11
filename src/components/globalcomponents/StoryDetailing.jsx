@@ -51,7 +51,7 @@ export default function StoryDetaling({
                     alt="Back"
                     className="w-2 h-3 mr-2"
                   />
-                  Previous
+                  All Success Stories
                 </Link>
               </div>
 
