@@ -1,30 +1,32 @@
-'use client';
+"use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Head from "next/head";
 
-export default function AnimatedInput({ 
-  label, 
-  placeholder, 
-  type = "text", 
-  name, 
+export default function AnimatedInput({
+  label,
+  placeholder,
+  type = "text",
+  name,
   autoComplete,
   value: externalValue,
   onChange: externalOnChange,
-  className
+  className,
+  required,
 }) {
   const [isFocused, setIsFocused] = useState(false);
   const [internalValue, setInternalValue] = useState("");
 
-  // Use external value if provided, otherwise use internal state
   const value = externalValue !== undefined ? externalValue : internalValue;
   const isActive = isFocused || value.length > 0;
 
   const handleChange = (e) => {
+    const val = e?.target?.value ?? e; // ⭐ event ho ya value — dono handle
+
     if (externalOnChange) {
-      externalOnChange(e);
+      externalOnChange(val); // ⭐ always return clean value
     } else {
-      setInternalValue(e.target.value);
+      setInternalValue(val);
     }
   };
 
@@ -33,6 +35,7 @@ export default function AnimatedInput({
       <Head>
         <meta name="robots" content="noindex,nofollow" />
       </Head>
+
       <div className="relative mb-4">
         <label
           style={{
@@ -53,6 +56,7 @@ export default function AnimatedInput({
 
         <motion.input
           type={type}
+          required={required}
           value={value}
           onChange={handleChange}
           onFocus={() => setIsFocused(true)}

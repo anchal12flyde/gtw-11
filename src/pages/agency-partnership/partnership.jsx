@@ -133,9 +133,10 @@ export default function Partnership() {
               placeholder="Yes/No"
               className="custom-select"
               value={workedWithDevPartners}
-              onChange={(e) => setWorkedWithDevPartners(e.target.value)}
+              onChange={(value) => setWorkedWithDevPartners(value)}
             />
           </div>
+
           <p className="form-subheading ">
             What type of work would you love to collaborate on?
           </p>

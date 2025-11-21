@@ -108,60 +108,62 @@ export default function PeronalDetails() {
               placeholder="Enter your name"
               className="custom-select"
               value={localData.name}
-              onChange={(e) => handleInputChange("name", e.target.value)}
+              onChange={(value) => handleInputChange("name", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="email"
               placeholder="Enter your email address"
               className="custom-select"
               value={localData.email}
-              onChange={(e) => handleInputChange("email", e.target.value)}
+              onChange={(value) => handleInputChange("email", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="tel"
               placeholder="Enter your Phone number"
               className="custom-select"
               value={localData.phone}
-              onChange={(e) => handleInputChange("phone", e.target.value)}
+              onChange={(value) => handleInputChange("phone", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="url"
               placeholder="Enter your Linkedin Profile"
               className="custom-select"
               value={localData.linkedinProfile}
-              onChange={(e) =>
-                handleInputChange("linkedinProfile", e.target.value)
-              }
+              onChange={(value) => handleInputChange("linkedinProfile", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="url"
               placeholder="Enter your Portfolio or Github profile"
               className="custom-select"
               value={localData.portfolioOrGithub}
-              onChange={(e) =>
-                handleInputChange("portfolioOrGithub", e.target.value)
+              onChange={(value) =>
+                handleInputChange("portfolioOrGithub", value)
               }
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="text"
               placeholder="Enter your current location"
               className="custom-select"
               value={localData.currentLocation}
-              onChange={(e) =>
-                handleInputChange("currentLocation", e.target.value)
-              }
+              onChange={(value) => handleInputChange("currentLocation", value)}
             />
           </div>
+
           <p className="form-subheading">Willing to relocate to Gurgaon?</p>
           <div className="select-wrapper">
             <AnimatedInput
@@ -169,8 +171,8 @@ export default function PeronalDetails() {
               placeholder="Yes/No"
               className="custom-select"
               value={localData.willingToRelocate}
-              onChange={(e) =>
-                handleInputChange("willingToRelocate", e.target.value)
+              onChange={(value) =>
+                handleInputChange("willingToRelocate", value)
               }
             />
           </div>

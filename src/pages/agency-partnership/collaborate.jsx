@@ -112,7 +112,7 @@ export default function Collaborate() {
                 placeholder="Enter Time Zone"
                 className="custom-select"
                 value={timeZone}
-                onChange={(e) => setTimeZone(e.target.value)}
+                onChange={(value) => setTimeZone(value)}
               />
             </div>
 
