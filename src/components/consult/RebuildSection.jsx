@@ -16,26 +16,43 @@ export default function RebuildSection() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ type: "", text: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setMessage({ type: "", text: "" });
 
     try {
-      await axios.post("http://localhost:5000/api/framework-pdf", formData);
-
-      setSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
+      const res = await fetch("http://localhost:5000/api/framework-pdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } catch (error) {
-      console.error("Submission error:", error);
-    } finally {
-      setLoading(false);
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        // ❌ ERROR — show message under inputs
+        setMessage({ type: "error", text: data.message });
+        setLoading(false);
+        return;
+      }
+
+      // ✅ SUCCESS — switch to submitted screen
+      setSubmitted(true);
+      setFormData({ name: "", email: "", phone: "" });
+      setMessage({ type: "", text: "" }); // Clear inline message
+    } catch (err) {
+      setMessage({
+        type: "error",
+        text: "Server error. Please try again later.",
+      });
     }
+
+    setLoading(false);
   };
+  
   
   return (
     <>
@@ -147,6 +164,17 @@ export default function RebuildSection() {
                     setFormData({ ...formData, phone: value })
                   }
                 />
+                {message.text && (
+                  <p
+                    className={`text-sm ${
+                      message.type === "error"
+                        ? "text-red-600"
+                        : "text-green-600"
+                    }`}
+                  >
+                    {message.text}
+                  </p>
+                )}
                 <button
                   type="submit"
                   className="next-button cursor-pointer !m-auto"
