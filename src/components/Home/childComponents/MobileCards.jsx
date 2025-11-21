@@ -27,18 +27,21 @@ export default function MobileCards() {
 
   const cards = [
     {
-      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%201.png?updatedAt=1762336517813",
+      src: "https://ik.imagekit.io/a9uxeuyhx/meal%20booking%202.png",
       alt: "Card 4",
     },
     {
-      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%202.png?updatedAt=1762336550195",
+      src: "https://ik.imagekit.io/a9uxeuyhx/meal%20booking%204.png",
       alt: "Card 1",
     },
     {
-      src: "https://ik.imagekit.io/a9uxeuyhx/mobile%20apps%203.png?updatedAt=1762336580495",
+      src: "https://ik.imagekit.io/a9uxeuyhx/space%20booking.png",
       alt: "Card 3",
     },
-    { src: "https://ik.imagekit.io/a9uxeuyhx/Mobile%20apps%204.png?updatedAt=1762336612211", alt: "Card 2" },
+    {
+      src: "https://ik.imagekit.io/a9uxeuyhx/Transport.png",
+      alt: "Card 2",
+    },
   ];
 
   const scrollLeft = () => {
