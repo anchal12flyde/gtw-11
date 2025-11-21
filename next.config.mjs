@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
+  skipTrailingSlashRedirect: true,
+
   images: {
-    domains: ["ik.imagekit.io"],
+    domains: [
+      "lightblue-rhinoceros-219580.hostingersite.com",
+      "ik.imagekit.io",
+    ],
   },
 };
 

@@ -94,7 +94,7 @@ export default function Availability() {
             Are you open to freelance / trial assignments?
           </p>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Yes/No"
               className="custom-select"
@@ -103,12 +103,12 @@ export default function Availability() {
             />
           </div>
 
-          <button 
-            className="next-button" 
+          <button
+            className="next-button"
             onClick={handleNext}
             disabled={loading}
           >
-            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
+            {loading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

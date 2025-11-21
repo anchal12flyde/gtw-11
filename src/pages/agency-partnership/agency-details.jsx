@@ -89,7 +89,7 @@ export default function AgencyDetails() {
             <h1 className="heading-systems">Studio / Agency Details</h1>
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your Agency/Studio name"
               className="custom-select"
@@ -98,7 +98,7 @@ export default function AgencyDetails() {
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your Email"
               className="custom-select"
@@ -107,7 +107,7 @@ export default function AgencyDetails() {
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="url"
               placeholder="Enter your Website or Portfolio URL"
               className="custom-select"
@@ -116,7 +116,7 @@ export default function AgencyDetails() {
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your Instagram or Dribble"
               className="custom-select"
@@ -125,7 +125,7 @@ export default function AgencyDetails() {
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your City or Country"
               className="custom-select"

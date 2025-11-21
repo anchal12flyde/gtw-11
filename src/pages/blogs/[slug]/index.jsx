@@ -245,7 +245,7 @@ export default function BlogDetails() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <div
             dangerouslySetInnerHTML={{
@@ -256,7 +256,7 @@ export default function BlogDetails() {
 
         {/* Related Articles */}
         {related.length > 0 && (
-          <div className="mt-26 mb-26 md:mb-0">
+          <div className="mt-26 mb-26 ">
             <h1 className="heading-systems text-center">Related Articles</h1>
 
             <div className="grid-cols-blog mt-10">

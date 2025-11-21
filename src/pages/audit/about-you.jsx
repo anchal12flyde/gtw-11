@@ -38,7 +38,6 @@ export default function AboutYou() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // ---------------- NEXT HANDLER ----------------
   const handleNext = async () => {
     if (!validateStep1()) return;
 
@@ -46,9 +45,10 @@ export default function AboutYou() {
 
     let activeFormId = formId;
 
+    // Start form if not started
     if (!activeFormId) {
       const res = await startForm(email);
-      activeFormId = res?._id;
+      activeFormId = res?._id; // always use returned id
 
       if (!activeFormId) {
         alert("Could not start form");
@@ -64,14 +64,16 @@ export default function AboutYou() {
       countryCode,
     };
 
-    const result = await updateStep(1, payload);
+    // --- IMPORTANT: pass activeFormId directly ---
+    const result = await updateStep(1, payload, activeFormId);
 
     setIsLoading(false);
 
     if (result) {
-      router.push("/audit/your-product");
+      router.push("/audit/your-product"); 
     }
   };
+  
 
   return (
     <>

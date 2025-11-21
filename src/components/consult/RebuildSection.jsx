@@ -1,7 +1,10 @@
 "use client";
 import ClientButton from "../globalcomponents/Button";
-
+import { Dialog } from "@headlessui/react";
+import axios from "axios";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import AnimatedInput from "@/pages/animation/animated-input";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -9,6 +12,29 @@ const fadeInUp = {
 };
 
 export default function RebuildSection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await axios.post("/api/framework-pdf", formData);
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <div
@@ -55,17 +81,97 @@ export default function RebuildSection() {
               >
                 Schedule a Call
               </ClientButton>
-              <a
-                href="/transformation-framework.pdf"
-                className="custom-mobile-button "
-                download
+              <button
+                onClick={() => setIsOpen(true)}
+                className="custom-mobile-button"
               >
                 Download Framework PDF
-              </a>
+              </button>
             </motion.div>
           </div>
         </div>
       </div>
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="fixed z-50 inset-0 overflow-y-auto"
+      >
+        <div className="flex items-center justify-center min-h-screen p-4 bg-secondary bg-opacity-30">
+          <Dialog.Panel className="bg-white-color1 rounded-xl shadow-xl p-6 w-full max-w-md">
+            <div className="flex justify-center mb-4">
+              <img
+                src="https://ik.imagekit.io/a9uxeuyhx/Favicon%20%20(1).png?updatedAt=1762409164334"
+                alt="Logo"
+                className="w-20 h-auto"
+              />
+            </div>
+
+            <Dialog.Title className="form-subheading  text-center">
+              {submitted ? "Thank You!" : "Please fill your details"}
+            </Dialog.Title>
+
+            {submitted ? (
+              <p className="text-green-600 text-center">
+                Your details have been submitted. We will forward PDF via mail.
+              </p>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <AnimatedInput
+                  type="text"
+                  placeholder="Enter your Full name"
+                  required
+                  value={formData.name}
+                  onChange={(value) =>
+                    setFormData({ ...formData, name: value })
+                  }
+                />
+
+                <AnimatedInput
+                  type="email"
+                  placeholder="Enter your email addres"
+                  required
+                  value={formData.email}
+                  onChange={(value) =>
+                    setFormData({ ...formData, email: value })
+                  }
+                />
+
+                <AnimatedInput
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  required
+                  value={formData.phone}
+                  onChange={(value) =>
+                    setFormData({ ...formData, phone: value })
+                  }
+                />
+                <button
+                  type="submit"
+                  className="next-button cursor-pointer !m-auto"
+                  disabled={loading}
+                >
+                  {loading ? "Submitting..." : "Submit"}
+                </button>
+              </form>
+            )}
+
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setSubmitted(false);
+                setFormData({
+                  name: "",
+                  email: "",
+                  phone: "",
+                });
+              }}
+              className="mt-4 text-lg text-dark-gray2 underline flex items-center justify-center w-full cursor-pointer"
+            >
+              Close
+            </button>
+          </Dialog.Panel>
+        </div>
+      </Dialog>
     </>
   );
 }

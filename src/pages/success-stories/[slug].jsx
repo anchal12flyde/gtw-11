@@ -1,37 +1,30 @@
 import Head from "next/head";
+import blogs from "@/data/blogs.json";
 import Header from "@/components/Home/childComponents/Header";
 import Footer from "@/components/Home/childComponents/Footer";
 import ImpactVolume from "@/components/successstories/ImpactVolume";
 import RebuildSection from "@/components/consult/RebuildSection";
 import StoryDetaling from "@/components/globalcomponents/StoryDetailing";
-import api from "@/utils/api";
-
 
 export async function getStaticPaths() {
+  const paths = blogs.map((blog) => ({
+    params: { slug: blog.slug },
+  }));
+
   return {
-    paths: [],
-    fallback: "blocking", // Server generate karega slug page ko
+    paths,
+    fallback: false, // false = 404 for unknown slug
   };
 }
 
 export async function getStaticProps({ params }) {
-  try {
-    // 🔥 API CALL USING api.js (NO ENV)
-    const res = await api.get(`/case-studies/${params.slug}`);
-    const data = res.data;
+  const blog = blogs.find((item) => item.slug === params.slug);
 
-    if (!data) {
-      return { notFound: true };
-    }
-
-    return {
-      props: { blog: data },
-      revalidate: 60, // ISR (optional)
-    };
-  } catch (err) {
-    console.error("API ERROR:", err);
-    return { notFound: true };
-  }
+  return {
+    props: {
+      blog: blog || null,
+    },
+  };
 }
 
 export default function BlogDetailPage({ blog }) {
@@ -45,12 +38,8 @@ export default function BlogDetailPage({ blog }) {
         <title>{blog.meta_title}</title>
         <meta name="description" content={blog.meta_description} />
       </Head>
-
       <Header />
-
-      {/* API fetch now handled INSIDE the component using blog.slug */}
       <StoryDetaling slug={blog.slug} />
-
       <ImpactVolume />
       <RebuildSection />
       <Footer />

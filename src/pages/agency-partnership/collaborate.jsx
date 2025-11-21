@@ -107,7 +107,7 @@ export default function Collaborate() {
 
             <p className="form-subheading ">Time zone / availability</p>
             <div className="select-wrapper">
-              <input
+              <AnimatedInput
                 type="text"
                 placeholder="Enter Time Zone"
                 className="custom-select"
@@ -133,12 +133,12 @@ export default function Collaborate() {
               <ChevronDown className="chevron-icon" size={20} />
             </div>
 
-            <button 
-              onClick={handleNext} 
+            <button
+              onClick={handleNext}
               className="next-button"
               disabled={loading}
             >
-              {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
+              {loading ? "Saving..." : "Next"} <ArrowRight size={16} />
             </button>
           </div>
         </div>

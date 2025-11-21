@@ -38,8 +38,16 @@ export default function PeronalDetails() {
   }, [formData]);
 
   const handleInputChange = (field, value) => {
-    setLocalData(prev => ({ ...prev, [field]: value }));
+    let formattedValue = value.trim().toLowerCase();
+
+    if (field === "willingToRelocate") {
+      if (formattedValue === "yes") formattedValue = "Yes";
+      else if (formattedValue === "no") formattedValue = "No";
+    }
+
+    setLocalData((prev) => ({ ...prev, [field]: formattedValue }));
   };
+  
 
   const validateForm = () => {
     if (!localData.name.trim()) {
@@ -95,76 +103,84 @@ export default function PeronalDetails() {
             <h1 className="heading-systems">Personal Details</h1>
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your name"
               className="custom-select"
               value={localData.name}
-              onChange={(e) => handleInputChange('name', e.target.value)}
+              onChange={(e) => handleInputChange("name", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="email"
               placeholder="Enter your email address"
               className="custom-select"
               value={localData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
+              onChange={(e) => handleInputChange("email", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="tel"
               placeholder="Enter your Phone number"
               className="custom-select"
               value={localData.phone}
-              onChange={(e) => handleInputChange('phone', e.target.value)}
+              onChange={(e) => handleInputChange("phone", e.target.value)}
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="url"
               placeholder="Enter your Linkedin Profile"
               className="custom-select"
               value={localData.linkedinProfile}
-              onChange={(e) => handleInputChange('linkedinProfile', e.target.value)}
+              onChange={(e) =>
+                handleInputChange("linkedinProfile", e.target.value)
+              }
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="url"
               placeholder="Enter your Portfolio or Github profile"
               className="custom-select"
               value={localData.portfolioOrGithub}
-              onChange={(e) => handleInputChange('portfolioOrGithub', e.target.value)}
+              onChange={(e) =>
+                handleInputChange("portfolioOrGithub", e.target.value)
+              }
             />
           </div>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Enter your current location"
               className="custom-select"
               value={localData.currentLocation}
-              onChange={(e) => handleInputChange('currentLocation', e.target.value)}
+              onChange={(e) =>
+                handleInputChange("currentLocation", e.target.value)
+              }
             />
           </div>
           <p className="form-subheading">Willing to relocate to Gurgaon?</p>
           <div className="select-wrapper">
-            <input
+            <AnimatedInput
               type="text"
               placeholder="Yes/No"
               className="custom-select"
               value={localData.willingToRelocate}
-              onChange={(e) => handleInputChange('willingToRelocate', e.target.value)}
+              onChange={(e) =>
+                handleInputChange("willingToRelocate", e.target.value)
+              }
             />
           </div>
 
-          <button 
-            onClick={handleNext} 
+          <button
+            onClick={handleNext}
             className="next-button"
             disabled={loading}
           >
-            {loading ? 'Saving...' : 'Next'} <ArrowRight size={16} />
+            {loading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
       </div>

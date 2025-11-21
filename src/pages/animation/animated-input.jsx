@@ -30,39 +30,41 @@ export default function AnimatedInput({
 
   return (
     <>
-    <Head>
-    <meta name="robots" content="noindex,nofollow"/>
-    </Head>
-    <div className="relative mb-4">
-      <label
-        style={{
-          position: "absolute",
-          top: isActive ? "0rem" : "50%",
-          left: "0.75rem",
-          fontSize: isActive ? "0.7rem" : "0.875rem",
-          color: isActive ? "#FFB100" : "#666",
-          transform: "translateY(-50%)",
-          backgroundColor: "#ffffff",
-          padding: "0 0.25rem",
-          transition: "all 0.2s ease",
-          pointerEvents: "none",
-        }}
-      >
-        {placeholder}
-      </label>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
+      <div className="relative mb-4">
+        <label
+          style={{
+            position: "absolute",
+            top: isActive ? "0rem" : "50%",
+            left: "0.75rem",
+            fontSize: isActive ? "0.7rem" : "0.875rem",
+            color: isActive ? "#0040CE" : "#666",
+            transform: "translateY(-50%)",
+            backgroundColor: "#ffffff",
+            padding: "0 0.25rem",
+            transition: "all 0.2s ease",
+            pointerEvents: "none",
+          }}
+        >
+          {placeholder}
+        </label>
 
-      <motion.input
-        type={type}
-        value={value}
-        onChange={handleChange}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        placeholder={placeholder}
-        name={name}
-        autoComplete={autoComplete}
-        className={`w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none ${className || ''}`}
-      />
-    </div>
+        <motion.input
+          type={type}
+          value={value}
+          onChange={handleChange}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          placeholder={placeholder}
+          name={name}
+          autoComplete={autoComplete}
+          className={`w-full border border-gray-300 rounded-md px-3 py-[10px] pt-[14px] text-sm focus:outline-none ${
+            className || ""
+          }`}
+        />
+      </div>
     </>
   );
 }

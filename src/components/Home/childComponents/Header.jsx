@@ -80,12 +80,12 @@ export default function Header() {
               ExPro
             </a>
 
-            <Link
+            {/* <Link
               className={`nav-link ${isActive("/blog") ? "active" : ""}`}
               href="/blog"
             >
               Insights
-            </Link>
+            </Link> */}
 
             <Link
               className={`nav-link ${
@@ -178,9 +178,9 @@ export default function Header() {
               <Link href="https://expro.store/" className="block nav-link">
                 ExPro
               </Link>
-              <Link href="/blog" className="block nav-link">
+              {/* <Link href="/blog" className="block nav-link">
                 Insights
-              </Link>
+              </Link> */}
               <Link href="/success-stories" className="block nav-link">
                 Success Stories
               </Link>
