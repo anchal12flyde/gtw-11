@@ -20,8 +20,10 @@ export default function RebuildSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      await axios.post("/api/framework-pdf", formData);
+      await axios.post("http://localhost:5000/api/framework-pdf", formData);
+
       setSubmitted(true);
       setFormData({
         name: "",
@@ -30,11 +32,11 @@ export default function RebuildSection() {
       });
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   };
+  
   return (
     <>
       <div

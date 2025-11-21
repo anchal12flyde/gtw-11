@@ -94,45 +94,50 @@ export default function AgencyDetails() {
               placeholder="Enter your Agency/Studio name"
               className="custom-select"
               value={localData.agencyName}
-              onChange={(e) => handleInputChange("agencyName", e.target.value)}
+              onChange={(value) => handleInputChange("agencyName", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="text"
               placeholder="Enter your Email"
               className="custom-select"
               value={localData.email}
-              onChange={(e) => handleInputChange("email", e.target.value)}
+              onChange={(value) => handleInputChange("email", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="url"
               placeholder="Enter your Website or Portfolio URL"
               className="custom-select"
               value={localData.websiteUrl}
-              onChange={(e) => handleInputChange("websiteUrl", e.target.value)}
+              onChange={(value) => handleInputChange("websiteUrl", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="text"
               placeholder="Enter your Instagram or Dribble"
               className="custom-select"
               value={localData.socialMedia}
-              onChange={(e) => handleInputChange("socialMedia", e.target.value)}
+              onChange={(value) => handleInputChange("socialMedia", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="text"
               placeholder="Enter your City or Country"
               className="custom-select"
               value={localData.location}
-              onChange={(e) => handleInputChange("location", e.target.value)}
+              onChange={(value) => handleInputChange("location", value)}
             />
           </div>
+
           <p className="form-subheading ">Team Size</p>
           <div className="space-y-2 select-wrapper">
             {["1", "2–5", "5–15", "15+"].map((option) => (

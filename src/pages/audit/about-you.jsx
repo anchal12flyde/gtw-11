@@ -101,7 +101,7 @@ export default function AboutYou() {
               placeholder="Enter your Full name"
               type="text"
               value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              onChange={(value) => setFullName(value)} // ✔️ fixed
               className={errors.fullName ? "input-error" : ""}
             />
             {errors.fullName && <p className="error-text">{errors.fullName}</p>}
@@ -113,7 +113,7 @@ export default function AboutYou() {
               placeholder="Enter your email address"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(value) => setEmail(value)} // ✔️ fixed
               className={errors.email ? "input-error" : ""}
             />
             {errors.email && <p className="error-text">{errors.email}</p>}
@@ -123,7 +123,7 @@ export default function AboutYou() {
           <div className="select-wrapper">
             <CountryCode
               value={phone}
-              onChange={(value) => setPhone(value)}
+              onChange={(value) => setPhone(value)} // already correct
               onCodeChange={(code) => setCountryCode(code)}
               className={errors.phone ? "input-error" : ""}
             />

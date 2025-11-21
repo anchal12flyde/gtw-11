@@ -95,17 +95,18 @@ export default function StepTwoForm() {
             <h1 className="heading-systems">Project Overview</h1>
           </div>
           <div className="select-wrapper">
-            <AnimatedInput 
-              placeholder="Enter your name" 
+            <AnimatedInput
+              placeholder="Enter your name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(value) => setName(value)}
             />
           </div>
+
           <div className="select-wrapper">
-            <AnimatedInput 
-              placeholder="Enter your email address" 
+            <AnimatedInput
+              placeholder="Enter your email address"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(value) => setEmail(value)}
             />
           </div>
 
@@ -114,9 +115,10 @@ export default function StepTwoForm() {
               placeholder="Enter your company name"
               className="custom-select"
               value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
+              onChange={(value) => setCompanyName(value)}
             />
           </div>
+
           <p className="form-subheading   ">
             What best describes your company?
           </p>

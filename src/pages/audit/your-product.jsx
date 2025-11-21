@@ -96,9 +96,9 @@ export default function YourProduct() {
             <AnimatedInput
               placeholder="Enter Product name"
               type="text"
-              name="productname"
+              name="productName"
               value={productName}
-              onChange={(e) => setProductName(e.target.value)}
+              onChange={setProductName}
               className={errors.productName ? "input-error" : ""}
             />
             {errors.productName && (
@@ -111,9 +111,9 @@ export default function YourProduct() {
             <AnimatedInput
               placeholder="Enter Website/App Link"
               type="text"
-              name="link"
+              name="websiteLink"
               value={websiteLink}
-              onChange={(e) => setWebsiteLink(e.target.value)}
+              onChange={setWebsiteLink}
               className={errors.websiteLink ? "input-error" : ""}
             />
             {errors.websiteLink && (

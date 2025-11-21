@@ -99,7 +99,7 @@ export default function Availability() {
               placeholder="Yes/No"
               className="custom-select"
               value={openToFreelance}
-              onChange={(e) => setOpenToFreelance(e.target.value)}
+              onChange={setOpenToFreelance}
             />
           </div>
 

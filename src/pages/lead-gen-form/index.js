@@ -19,8 +19,11 @@ export default function MultiStepForm() {
     timeline: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (name, value) => {
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleCheckbox = (value) => {
@@ -78,19 +81,21 @@ export default function MultiStepForm() {
               name="fullName"
               placeholder="Full Name *"
               value={formData.fullName}
-              onChange={handleChange}
+              onChange={(value) => handleChange("fullName", value)}
               required
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="text"
               name="companyName"
               placeholder="Company Name *"
               value={formData.companyName}
-              onChange={handleChange}
+              onChange={(value) => handleChange("companyName", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <select
               className="custom-select "
@@ -113,16 +118,17 @@ export default function MultiStepForm() {
               name="mobile"
               placeholder="Mobile / WhatsApp *"
               value={formData.mobile}
-              onChange={handleChange}
+              onChange={(value) => handleChange("mobile", value)}
             />
           </div>
+
           <div className="select-wrapper">
             <AnimatedInput
               type="email"
               name="email"
               placeholder="Email (optional)"
               value={formData.email}
-              onChange={handleChange}
+              onChange={(value) => handleChange("email", value)}
             />
           </div>
 
@@ -334,7 +340,7 @@ export default function MultiStepForm() {
           </h2>
           <Link href="/">
             <button className="next-button">
-             Submit & Get Demo <ArrowRight size={16} />
+              Submit & Get Demo <ArrowRight size={16} />
             </button>
           </Link>
         </div>
