@@ -1,39 +1,78 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import api from "@/utils/api";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
-export default function StoryDetaling({
-  title = "",
-  date = "",
-  category = "",
-  tags = [],
-  heroImage = null,
-  sections = [],
-  quote = "",
-  author = "",
-  position = "",
-}) {
+export default function StoryDetaling({ slug }) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+  const [caseData, setCaseData] = useState({
+    title: "",
+    date: "",
+    category: "",
+    tags: [],
+    heroImage: "",
+    sections: [],
+  });
+
+  // -------------------------
+  // 🔥 FETCH CASE STUDY DATA
+  // -------------------------
+  useEffect(() => {
+    if (!slug) return;
+    fetchCaseStudy();
+  }, [slug]);
+
+  const fetchCaseStudy = async () => {
+    try {
+      const res = await api.get(`/case-studies/${slug}`);
+      const data = res.data;
+
+      setCaseData({
+        title: data.title,
+        date: new Date(data.date).toLocaleDateString(),
+        category: data.category,
+        tags: data.tags || [],
+        heroImage: data.heroImage,
+        sections: data.sections || [],
+      });
+    } catch (err) {
+      console.error("ERROR FETCHING CASE STUDY:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleCopy = () => {
-    // Copy current page URL
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => {
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000); // Reset after 2s
+        setTimeout(() => setCopied(false), 2000);
       })
       .catch((err) => console.error("Failed to copy: ", err));
   };
+
   const currentURL = typeof window !== "undefined" ? window.location.href : "";
+
+  if (loading) {
+    return (
+      <div className="text-center py-20">
+        <p className="opacity-60">Loading case study…</p>
+      </div>
+    );
+  }
+
+  const { title, date, category, tags, heroImage, sections } = caseData;
 
   return (
     <>
@@ -76,7 +115,6 @@ export default function StoryDetaling({
                     />
                   </a>
 
-                  {/* LinkedIn */}
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
                       currentURL
@@ -92,7 +130,6 @@ export default function StoryDetaling({
                     />
                   </a>
 
-                  {/* Threads / X / Twitter */}
                   <a
                     href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
                       currentURL
@@ -147,8 +184,9 @@ export default function StoryDetaling({
               <div className="flex items-center gap-[26px]">
                 <span className="category">Category:</span>
                 <p className="insight-tags">
-                  {Array.isArray(tags) &&
-                    tags.map((tag, i) => <span key={i}>{tag}</span>)}
+                  {tags.map((tag, i) => (
+                    <span key={i}>{tag}</span>
+                  ))}
                 </p>
               </div>
               <div className="mt-8 md:mt-0">
@@ -157,7 +195,7 @@ export default function StoryDetaling({
             </div>
           </div>
 
-          {heroImage ? (
+          {heroImage && (
             <div className="background-hero mt-16">
               <img
                 src={heroImage}
@@ -166,82 +204,82 @@ export default function StoryDetaling({
                 loading="lazy"
               />
             </div>
-          ) : null}
+          )}
 
+          {/* ----------- SECTION RENDER ----------- */}
           <div className="mt-20 blog-reading flex flex-col gap-y-8">
-            {Array.isArray(sections) &&
-              sections.map((section, index) => (
-                <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  variants={fadeInUp}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                >
-                  {section.type === "text" && section.head && (
-                    <h3>{section.head}</h3>
-                  )}
+            {sections.map((section, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeInUp}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              >
+                {/* TEXT H3 */}
+                {section.type === "text" && section.head && (
+                  <h3>{section.head}</h3>
+                )}
 
-                  {section.type === "text" && section.content && (
-                    <p>{section.content}</p>
-                  )}
+                {/* TEXT PARAGRAPH */}
+                {section.type === "text" && section.content && (
+                  <p>{section.content}</p>
+                )}
 
-                  {section.type === "image" && section.imageSrc && (
-                    <>
-                      <img
-                        src={section.imageSrc}
-                        alt={section.imageAlt || "Image"}
-                        className="w-full h-auto object-cover pb-4"
-                        loading="lazy"
-                      />
-                      {section.content && <p>{section.content}</p>}
-                    </>
-                  )}
+                {/* IMAGE SECTION */}
+                {section.type === "image" && (
+                  <>
+                    <img
+                      src={section.imageSrc}
+                      alt={section.imageAlt || "Image"}
+                      className="w-full h-auto object-cover pb-4"
+                      loading="lazy"
+                    />
+                    {section.content && <p>{section.content}</p>}
+                  </>
+                )}
 
-                  {section.type === "list" &&
-                    Array.isArray(section.content) && (
-                      <ul className="mt-2 list-disc pl-5">
-                        {section.content.map((item, idx) => (
-                          <li key={idx} className="mb-2">
-                            <strong>{item.listing}</strong>
-                            <p className="ml-4 text-sm text-gray-700">
-                              {item["sub-listing"]}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                {/* LIST */}
+                {section.type === "list" && Array.isArray(section.content) && (
+                  <ul className="mt-2 list-disc pl-5">
+                    {section.content.map((item, idx) => (
+                      <li key={idx} className="mb-2">
+                        <strong>{item.listing}</strong>
+                        <p className="ml-4 text-sm text-gray-700">
+                          {item["sub-listing"]}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-                  {section.type === "list2" &&
-                  Array.isArray(section.content) &&
-                  section.content.every(
-                    (item) => typeof item === "object" && "listing" in item
-                  ) ? (
-                    <div>
-                      <h3 className="font-bold mb-2">{section.head}</h3>
-                      <ul className="mt-2 list-disc pl-5">
-                        {section.content.map((item, idx) => (
-                          <li key={idx} className="mb-2">
-                            {item.listing}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </motion.div>
-              ))}
+                {/* LIST2 */}
+                {section.type === "list2" && Array.isArray(section.content) && (
+                  <div>
+                    <h3 className="font-bold mb-2">{section.head}</h3>
+                    <ul className="mt-2 list-disc pl-5">
+                      {section.content.map((item, idx) => (
+                        <li key={idx} className="mb-2">
+                          {item.listing}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Testimonal */}
+      {/* ----------- TESTIMONIAL ----------- */}
       <div className="bg-gray-light text-center mt-16 util-flex util-flex-1 util-mx-1-5">
         <div className="mx-0 sm:mx-30">
           {sections
-            .filter((section) => section.type === "testimonial")
-            .map((testimonial, index) => (
-              <div key={index}>
+            .filter((s) => s.type === "testimonial")
+            .map((testimonial, i) => (
+              <div key={i}>
                 <img
                   src="/images/assets/quote1.png"
                   alt="opening quote"
