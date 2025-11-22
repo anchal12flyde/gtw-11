@@ -32,8 +32,8 @@ const categories = [
     items: [
       // { label: "GTW Home", path: "/" },
       { label: "What We Do", path: "/what-we-do" },
-      { label: "Email Us", path: "mailto:yourmail@gmail.com" },
-      { label: "Contact Us", path: "tel:+91XXXXXXXXXX" },
+      { label: "Email Us", path: "mailto:hello@generaltechworks.com" },
+      { label: "Contact Us", path: "tel:+918826519904" },
     ],
   },
   {
