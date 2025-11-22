@@ -11,8 +11,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 // Simple axios instance
 var api = _axios["default"].create({
-  // baseURL: "https://gtw-backend-qhwv.onrender.com/api",
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://gtw-backend-qhwv.onrender.com/api",
+  // baseURL: "http://localhost:5000/api",
   headers: {
     "Content-Type": "application/json"
   },
