@@ -6,7 +6,6 @@ import ImpactVolume from "@/components/successstories/ImpactVolume";
 import RebuildSection from "@/components/consult/RebuildSection";
 import StoryDetaling from "@/components/globalcomponents/StoryDetailing";
 
-
 export async function getStaticPaths() {
   const paths = blogs.map((blog) => ({
     params: { slug: blog.slug },
@@ -35,23 +34,12 @@ export default function BlogDetailPage({ blog }) {
 
   return (
     <>
-    
       <Head>
         <title>{blog.meta_title}</title>
         <meta name="description" content={blog.meta_description} />
       </Head>
       <Header />
-      <StoryDetaling
-        title={blog.title || ""}
-        date={blog.date || ""}
-        category={blog.category || ""}
-        tags={blog.tags || []}
-        heroImage={blog.heroImage || null}
-        sections={blog.sections || []}
-        quote={blog.quote || ""}
-        author={blog.author || ""}
-        position={blog.position || ""}
-      />
+      <StoryDetaling slug={blog.slug} />
       <ImpactVolume />
       <RebuildSection />
       <Footer />

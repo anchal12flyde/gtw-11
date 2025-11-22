@@ -24,7 +24,7 @@ export default function StoriesHeroSection() {
           name: story.founderName,
           title: story.founderPost,
           text: story.description,
-          link: `/success-stories/${story._id}`,
+          link: `/success-stories/${story.slug}`,
         }));
 
         setCards(mapped);
