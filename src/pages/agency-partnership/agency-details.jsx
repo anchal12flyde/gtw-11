@@ -42,23 +42,35 @@ export default function AgencyDetails() {
 
   const validateForm = () => {
     if (!localData.agencyName.trim()) {
-      toast.error('Please enter your agency/studio name');
+      toast.error("Please enter your agency/studio name");
       return false;
     }
+
     if (!localData.email.trim()) {
       toast.error("Please enter your Email");
       return false;
     }
+
+    // ✅ Email validation added
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(localData.email)) {
+      toast.error("Please enter a valid email address");
+      return false;
+    }
+
     if (!localData.location.trim()) {
-      toast.error('Please enter your location');
+      toast.error("Please enter your location");
       return false;
     }
+
     if (!localData.teamSize) {
-      toast.error('Please select your team size');
+      toast.error("Please select your team size");
       return false;
     }
+
     return true;
   };
+  
 
   const handleNext = async () => {
     if (!validateForm()) return;
