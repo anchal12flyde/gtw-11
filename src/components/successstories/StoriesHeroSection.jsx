@@ -167,6 +167,30 @@ export default function StoriesHeroSection() {
           <div className="flex-shrink-0 w-[20px] sm:w-[400px] lg:w-[800px]" />
         </motion.div>
       </motion.div>
+      <div className="flex justify-center mt-6 sm:hidden">
+        <button className="arrow-button" onClick={scrollLeft}>
+          <img
+            src={
+              currentIndex === 0
+                ? "/images/LeftArrow.png"
+                : "https://ik.imagekit.io/a9uxeuyhx/RightArrow1.png?updatedAt=1761297095162"
+            }
+            alt="Left Arrow"
+            className="w-10 h-10"
+          />
+        </button>
+        <button className="arrow-button" onClick={scrollRight}>
+          <img
+            src={
+              currentIndex === cards.length - 1
+                ? "https://ik.imagekit.io/a9uxeuyhx/LeftArrow%201.png?updatedAt=1761297353159"
+                : "/images/RightArrow.png"
+            }
+            alt="Right Arrow"
+            className="w-10 h-10"
+          />
+        </button>
+      </div>
     </>
   );
 }
