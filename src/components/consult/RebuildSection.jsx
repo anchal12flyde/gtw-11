@@ -5,6 +5,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import AnimatedInput from "@/pages/animation/animated-input";
+import api from "@/utils/api";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -24,11 +25,7 @@ export default function RebuildSection() {
     setMessage({ type: "", text: "" });
 
     try {
-      const res = await fetch("http://localhost:5000/api/framework-pdf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res =await api.post("/api/framework-pdf", formData)
 
       const data = await res.json();
 
