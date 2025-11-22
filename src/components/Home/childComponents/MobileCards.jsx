@@ -27,20 +27,20 @@ export default function MobileCards() {
 
   const cards = [
     {
-      src: "https://ik.imagekit.io/a9uxeuyhx/meal%20booking%202.png",
+      src: "https://ik.imagekit.io/a9uxeuyhx/Dashboard%20screen.png",
       alt: "Card 4",
     },
     {
-      src: "https://ik.imagekit.io/a9uxeuyhx/meal%20booking%204.png",
+      src: "https://ik.imagekit.io/a9uxeuyhx/Single%20property%20View.png",
       alt: "Card 1",
-    },
-    {
-      src: "https://ik.imagekit.io/a9uxeuyhx/space%20booking.png",
-      alt: "Card 3",
     },
     {
       src: "https://ik.imagekit.io/a9uxeuyhx/Transport.png",
       alt: "Card 2",
+    },
+    {
+      src: "https://ik.imagekit.io/a9uxeuyhx/space%20booking.png",
+      alt: "Card 3",
     },
   ];
 
