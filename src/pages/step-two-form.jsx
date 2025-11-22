@@ -27,17 +27,23 @@ export default function StepTwoForm() {
       return;
     }
 
+    // Email Validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
     setIsLoading(true);
-    setError('');
+    setError("");
 
     try {
       const currentFormId = formData.formId;
 
       if (!currentFormId) {
-        throw new Error('Form not initialized. Please start from Step 1.');
+        throw new Error("Form not initialized. Please start from Step 1.");
       }
 
-      // Update step 2 with all details
       await updateStep2(currentFormId, {
         name,
         email,
@@ -55,23 +61,22 @@ export default function StepTwoForm() {
         currentStep: 3,
       });
 
-      // Navigate based on project type
-      const projectType = formData.projectType || 'Web';
+      const projectType = formData.projectType || "Web";
       const routeMap = {
-        'Web': '/step-three-web',
-        'Mobile': '/step-three-mobile',
-        'SaaS': '/step-three-saas',
-        'Infra': '/step-three-infra',
-        'Consult': '/step-three-consult',
+        Web: "/step-three-web",
+        Mobile: "/step-three-mobile",
+        SaaS: "/step-three-saas",
+        Infra: "/step-three-infra",
+        Consult: "/step-three-consult",
       };
-      
-      router.push(routeMap[projectType] || '/step-three-web');
+
+      router.push(routeMap[projectType] || "/step-three-web");
     } catch (err) {
       setError(err.message || "Failed to save. Please try again.");
       setIsLoading(false);
     }
   };
-
+  
   return (
     <>
       <Head>

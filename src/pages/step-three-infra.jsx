@@ -21,6 +21,17 @@ export default function StepThreeInfra() {
    const [isLoading, setIsLoading] = useState(false);
    const [error, setError] = useState('');
 
+   const handleCheckbox = (option) => {
+     if (adminPanel.includes(option)) {
+       // remove option
+       setAdminPanel(adminPanel.filter((item) => item !== option));
+     } else {
+       // add option
+       setAdminPanel([...adminPanel, option]);
+     }
+   };
+
+   
    const handleNext = async () => {
      if (!companyType || !startTime || !adminPanel || !d2cMobileApp) {
        setError("Please answer all required questions");
@@ -54,7 +65,9 @@ export default function StepThreeInfra() {
       <motion.div
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }} className="util-flex util-flex-1 util-mx-1-5 ">
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        className="util-flex util-flex-1 util-mx-1-5 "
+      >
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
@@ -125,14 +138,15 @@ export default function StepThreeInfra() {
                   type="checkbox"
                   name="adminPanel"
                   value={option}
-                  checked={adminPanel === option}
-                  onChange={() => setAdminPanel(option)}
-                  className="form-radio "
+                  checked={adminPanel.includes(option)}
+                  onChange={() => handleCheckbox(option)}
+                  className="form-checkbox"
                 />
                 <span className="text-md">{option}</span>
               </label>
             ))}
           </div>
+
           <p className="form-subheading ">Do you also need a D2C mobile app?</p>
           <div className="space-y-2 select-wrapper">
             {["Yes", "NO"].map((option) => (
@@ -155,7 +169,7 @@ export default function StepThreeInfra() {
 
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
 
-          <button 
+          <button
             onClick={handleNext}
             className="next-button"
             disabled={isLoading}
