@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import Head from 'next/head';
 import { useFormContext } from "@/context/FormContext";
 import { updateStep4 } from "@/services/formApi";
+import { motion } from "framer-motion";
+import { Upload } from "lucide-react";
 
 export default function StepFour() {
   const router = useRouter();
@@ -17,7 +19,16 @@ export default function StepFour() {
   const [documents, setDocuments] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [portfolio, setPortfolio] = useState(null);
 
+  const handlePortfolioUpload = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type !== "application/pdf") {
+      toast.error("Only PDF files are allowed");
+      return;
+    }
+    setPortfolio(file);
+  };
   const handleNext = async () => {
     if (!budgetRange || !postLaunchSupport) {
       setError("Please answer all required questions");
@@ -47,7 +58,12 @@ export default function StepFour() {
         <meta name="robots" content="noindex,nofollow" />
       </Head>
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5">
+      <motion.div
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        className="util-flex util-flex-1 util-mx-1-5"
+      >
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-arrow-color"
@@ -107,25 +123,31 @@ export default function StepFour() {
           <p className="form-subheading">
             Upload any relevant documents or briefs (optional)
           </p>
-          <input 
-            type="text" 
-            name="documents" 
-            className="input-box" 
-            value={documents}
-            onChange={(e) => setDocuments(e.target.value)}
+          <label htmlFor="portfolioUpload" className="custom-upload-btn">
+            <Upload size={18} className="mr-2" />
+            Upload
+          </label>
+          <input
+            id="portfolioUpload"
+            type="file"
+            accept=".pdf"
+            onChange={handlePortfolioUpload}
+            className="hidden"
           />
 
-          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          {portfolio && (
+            <p className="text-md mt-6">{portfolio.name} uploaded</p>
+          )}
 
-          <button 
-            onClick={handleNext} 
+          <button
+            onClick={handleNext}
             className="next-button"
             disabled={isLoading}
           >
             {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

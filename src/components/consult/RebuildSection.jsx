@@ -28,7 +28,7 @@ export default function RebuildSection() {
     try {
       const res = await api.post("/framework-pdf", formData);
 
-      const data = res.data; // axios data
+      const data = res.data;
 
       if (!data.success) {
         setMessage({ type: "error", text: data.message });

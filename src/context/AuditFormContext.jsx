@@ -51,13 +51,14 @@ export const AuditFormProvider = ({ children }) => {
   // ---------------------------------------------------
   // UPDATE ANY STEP
   // ---------------------------------------------------
-  const updateStep = async (stepNum, payload) => {
-    if (!formId) return null;
+  const updateStep = async (stepNum, payload, id = formId) => {
+    const finalId = id || formId;
+    if (!finalId) return null;
 
     try {
       setLoading(true);
 
-      const res = await api.put(`/audit/${formId}/step/${stepNum}`, payload);
+      const res = await api.put(`/audit/${finalId}/step/${stepNum}`, payload);
 
       setFormData(res.data.data);
       setCurrentStep(res.data.data.currentStep);
@@ -70,6 +71,7 @@ export const AuditFormProvider = ({ children }) => {
       setLoading(false);
     }
   };
+  
 
   return (
     <AuditFormContext.Provider

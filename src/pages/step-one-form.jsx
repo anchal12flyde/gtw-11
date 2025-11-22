@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Head from "next/head";
 import { useFormContext } from "@/context/FormContext";
 import { updateStep1 } from "@/services/formApi";
+import { motion } from "framer-motion";
 
 export default function StepOneForm() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -62,47 +63,52 @@ export default function StepOneForm() {
         <meta name="robots" content="noindex,nofollow" />
       </Head>
       <Header />
-      <div className=" util-flex util-flex-1 util-mx-1-5 ">
-        <div className="step-form-container ">
+      <motion.div
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        className="util-flex util-flex-1 util-mx-1-5"
+      >
+        <div className="step-form-container">
           <div className="step-indicator">
             <span className="dot"></span>
             <span className="step-label">Step 1</span>
           </div>
+
           <div className="custom-left-border">
             <h1 className="heading-systems">What are we building together?</h1>
           </div>
+
           <p className="form-subheading">
             Select the primary track for your project
           </p>
 
-          <div className="select-wrapper ">
+          <div className="select-wrapper">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="custom-select "
+              className="custom-select"
             >
               <option value="">Select</option>
               <option value="Web">
-                🌐 Web (Flyde Studio – Informational, Brand, Marketing Sites)
+                🌐 Web (Flyde Studio – Informational Websites)
               </option>
               <option value="Mobile">
-                📱 Mobile (Flyde Apps – Native Mobile Apps)
+                📱 Mobile (Flyde Apps – Native Apps)
               </option>
               <option value="SaaS">
-                ☁️ SaaS (GTW SaaS Cloud – Launch-Ready SaaS Platforms)
+                ☁️ SaaS (GTW SaaS Cloud – Launch SaaS)
               </option>
-              <option value="Infra">
-                🏬 Infra (ExPro Infra – Scalable E-commerce Solutions)
-              </option>
+              <option value="Infra">🏬 Infra (ExPro – E-commerce Infra)</option>
               <option value="Consult">
-                🧠 Consult (GTW Consult – Digital Transformation & Strategy)
+                🧠 Consult (GTW Consult – Strategy)
               </option>
             </select>
             <ChevronDown className="chevron-icon" size={20} />
           </div>
 
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
-          
+
           <button
             className="next-button"
             onClick={handleNext}
@@ -111,7 +117,7 @@ export default function StepOneForm() {
             {isLoading ? "Saving..." : "Next"} <ArrowRight size={16} />
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
