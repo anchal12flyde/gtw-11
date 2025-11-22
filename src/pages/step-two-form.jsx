@@ -107,6 +107,7 @@ export default function StepTwoForm() {
 
           <div className="select-wrapper">
             <AnimatedInput
+            type='email'
               placeholder="Enter your email address"
               value={email}
               onChange={(value) => setEmail(value)}

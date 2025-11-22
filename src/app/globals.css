@@ -2583,6 +2583,8 @@ text-transform: capitalize;
   font-size: 1.125rem; 
   color:  var(--icon-color);
   text-decoration: none;
+  margin-top: auto; 
+  align-self: flex-end;
    
 }
 
