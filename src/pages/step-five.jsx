@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { useFormContext } from "@/context/FormContext";
 import { updateStep5 } from "@/services/formApi";
+import { motion } from "framer-motion";
 
 export default function StepFive() {
   const router = useRouter();
@@ -42,7 +43,10 @@ export default function StepFive() {
       </Head>
 
       <Header />
-      <div className="util-flex util-flex-1 util-mx-1-5 ">
+      <motion.div
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }} className="util-flex util-flex-1 util-mx-1-5 ">
         <div className="step-form-container ">
           <ArrowLeft
             className="cursor-pointer mb-5 text-gray-400"
@@ -77,7 +81,7 @@ export default function StepFive() {
             {isLoading ? "Submitting..." : "Submit"} <ArrowRight size={16} />
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
