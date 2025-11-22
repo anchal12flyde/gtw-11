@@ -9,10 +9,10 @@ export default function ChallengeSection() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const images = {
-    1: "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img4.png?updatedAt=1763032532381g",
-    2: "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img1.png?updatedAt=1763032610595",
-    3: "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img2.png?updatedAt=1763032636136",
-    4: "https://ik.imagekit.io/a9uxeuyhx/New%20Folder/img3.png?updatedAt=1763032704974",
+    1: "https://ik.imagekit.io/a9uxeuyhx/Manual%20error%20prone.png",
+    2: "https://ik.imagekit.io/a9uxeuyhx/Legacy%20tools.png",
+    3: "https://ik.imagekit.io/a9uxeuyhx/Stuck%20between%20spreadsheets.png",
+    4: "https://ik.imagekit.io/a9uxeuyhx/No%20central%20system.png",
   };
 
   const defaultImage = images[1];
