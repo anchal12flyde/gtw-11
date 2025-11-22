@@ -28,12 +28,10 @@ export default function ConsultHerosection() {
 
   return (
     <div className="hero-wrapper relative overflow-hidden min-h-screen">
-     
       <Header />
 
-    
       <motion.div
-        className="absolute inset-0 h-screen"
+        className="absolute inset-0 h-screen bg-black"
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: isLoaded ? 1 : 0 }}
         transition={{

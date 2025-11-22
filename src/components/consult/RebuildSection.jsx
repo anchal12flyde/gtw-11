@@ -5,6 +5,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import AnimatedInput from "@/pages/animation/animated-input";
+import api from "@/utils/api";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -16,27 +17,38 @@ export default function RebuildSection() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ type: "", text: "" });
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setMessage({ type: "", text: "" });
 
     try {
-      await axios.post("http://localhost:5000/api/framework-pdf", formData);
+      const res = await api.post("/framework-pdf", formData);
+
+      const data = res.data; // axios data
+
+      if (!data.success) {
+        setMessage({ type: "error", text: data.message });
+        setLoading(false);
+        return;
+      }
 
       setSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
+      setFormData({ name: "", email: "", phone: "" });
+    } catch (err) {
+      setMessage({
+        type: "error",
+        text: err.response?.data?.message || "Server error. Try again later.",
       });
-    } catch (error) {
-      console.error("Submission error:", error);
-    } finally {
-      setLoading(false);
     }
+
+    setLoading(false);
   };
   
+
   return (
     <>
       <div
@@ -147,6 +159,17 @@ export default function RebuildSection() {
                     setFormData({ ...formData, phone: value })
                   }
                 />
+                {message.text && (
+                  <p
+                    className={`text-sm ${
+                      message.type === "error"
+                        ? "text-red-600"
+                        : "text-green-600"
+                    }`}
+                  >
+                    {message.text}
+                  </p>
+                )}
                 <button
                   type="submit"
                   className="next-button cursor-pointer !m-auto"

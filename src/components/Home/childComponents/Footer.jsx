@@ -30,10 +30,10 @@ const categories = [
   {
     title: "Company",
     items: [
-      { label: "GTW Home", path: "/" },
+      // { label: "GTW Home", path: "/" },
       { label: "What We Do", path: "/what-we-do" },
-      { label: "Become a Client", path: "/step-one-form" },
-      { label: "Join Our Team", path: "/join-our-team/personal-details" },
+      { label: "Email Us", path: "mailto:hello@generaltechworks.com" },
+      { label: "Contact Us", path: "tel:+918826519904" },
     ],
   },
   {
@@ -41,6 +41,9 @@ const categories = [
     items: [
       // { label: "Insights", path: "/blog" },
       { label: "Success Stories", path: "/success-stories" },
+      { label: "Become a Client", path: "/step-one-form" },
+      { label: "Join Our Team", path: "/join-our-team/personal-details" },
+
       // { label: "Pay Online", path: "#" },
       // { label: "Raise a Ticket", path: "#" },
     ],
