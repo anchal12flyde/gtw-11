@@ -19,38 +19,36 @@ export default function RebuildSection() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: "", text: "" });
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage({ type: "", text: "" });
 
     try {
-      const res =await api.post("/api/framework-pdf", formData)
+      const res = await api.post("/framework-pdf", formData);
 
-      const data = await res.json();
+      const data = res.data; // axios data
 
-      if (!res.ok) {
-        // ❌ ERROR — show message under inputs
+      if (!data.success) {
         setMessage({ type: "error", text: data.message });
         setLoading(false);
         return;
       }
 
-      // ✅ SUCCESS — switch to submitted screen
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "" });
-      setMessage({ type: "", text: "" }); // Clear inline message
     } catch (err) {
       setMessage({
         type: "error",
-        text: "Server error. Please try again later.",
+        text: err.response?.data?.message || "Server error. Try again later.",
       });
     }
 
     setLoading(false);
   };
   
-  
+
   return (
     <>
       <div
