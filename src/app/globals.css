@@ -89,7 +89,7 @@ html, body {
 }
 
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
@@ -2584,8 +2584,7 @@ text-transform: capitalize;
   color:  var(--icon-color);
   text-decoration: none;
   margin-top: auto; 
-  align-self: flex-end;
-   
+  width: fit-content;
 }
 
 .insight-link::after {
@@ -3022,6 +3021,9 @@ letter-spacing: -3.604px;
   background-color: var(--color-gray-light);
   padding: 40px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .across {
